@@ -1,6 +1,6 @@
 #[Info]
 site_name: hhhjyz #your site name 显示在左上角
-site_url: http://hhhjyz.github.io
+site_url: https://hhhjyz.github.io
 site_author: hhhjyz # your name
 #[UI]
 theme:
