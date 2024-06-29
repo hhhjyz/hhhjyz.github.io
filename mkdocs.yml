@@ -70,7 +70,7 @@ repo_name: hhhjyz.github.io # 右上角的名字
 nav:
   - 主页: index.md
   - 课程笔记: docs/notebok/fds
-  - 技术积累: docs/selflearning/self_learning.md
+  - 技术积累:
     - cs61B: docs/selflearning/CS61B/note/Data Structure.md
   
   
