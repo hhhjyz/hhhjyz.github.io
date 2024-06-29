@@ -69,9 +69,7 @@ repo_name: hhhjyz.github.io # 右上角的名字
 # [Navigtion]
 nav:
   - 主页: index.md
-  - 课程笔记:
-  - 技术积累:
-  - 自学记录:
+  
 
 copyright: Copyright &copy; 2022~2024 Wcowin/All Rights Reserved. # 左下角的版权声明
 
