@@ -117,7 +117,7 @@ plugins:
   - search #搜索配置
   - git-committers:
       enabled: !ENV [CI, false]
-      repository: Wcowin/Mkdocs-Wcowin
+      repository: hhhjyz/hhhjyz.github.io
       branch: main
       exclude:
         - index.md
