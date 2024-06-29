@@ -42,14 +42,14 @@ ____    __    ____  ______   ______   ____    __    ____  __  .__   __.
 -->
                                    
 
-<center><font  color= #518FC1 size=6 class="ml3">Mkdocs-Wcowin博客主题</font></center>
+<center><font  color= #518FC1 size=6 class="ml3">hhhjyz的个人主页</font></center>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 
 
 
 <center>
 <font  color= #608DBD size=3>
-<span id="jinrishici-sentence">正在加载今日诗词....</span>
+<span id="jinrishici-sentence">hello</span>
 <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
 </font>
 </center>
@@ -187,6 +187,6 @@ ____    __    ____  ______   ______   ____    __    ____  __  .__   __.
 
 
 
-<script src="//code.tidio.co/6jmawe9m5wy4ahvlhub2riyrnujz7xxi.js" async></script>
+
 
 
