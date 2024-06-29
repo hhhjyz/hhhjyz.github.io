@@ -153,7 +153,7 @@ ____    __    ____  ______   ______   ____    __    ____  __  .__   __.
 
 个人邮箱(1)
 { .annotate }
-2. 3230102996@zju.edu.cn
+1. 3230102996@zju.edu.cn
 ***  
 
 <!-- <strong>推荐文章:material-book:</strong>
@@ -185,8 +185,6 @@ ____    __    ____  ______   ______   ____    __    ____  __  .__   __.
 
 
 
-[^Knowing-that-loving-you-has-no-ending]:太阳总是能温暖向日葵  
-[^see-how-much-I-love-you]:All problems in computer science can be solved by another level of indirection
 
 
 <script src="//code.tidio.co/6jmawe9m5wy4ahvlhub2riyrnujz7xxi.js" async></script>
