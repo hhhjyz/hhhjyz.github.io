@@ -72,6 +72,7 @@ nav:
   - 课程笔记:
     - HPC: courses/hpc/note.md
   - 技术积累: 
+    - Makefile入门: selflearning/Makefile.md
     - CS61B: selflearning/CS61B/note/note.md
   
   
