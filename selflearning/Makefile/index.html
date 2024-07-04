@@ -10,11 +10,13 @@
         <meta name="author" content="hhhjyz">
       
       
-        <link rel="canonical" href="https://hhhjyz.github.io/selflearning/CS61B/note/note/">
+        <link rel="canonical" href="https://hhhjyz.github.io/selflearning/Makefile/">
       
       
-        <link rel="prev" href="../../../Makefile/">
+        <link rel="prev" href="../../courses/hpc/note/">
       
+      
+        <link rel="next" href="../CS61B/note/note/">
       
       
       <link rel="icon" href="https://s2.loli.net/2024/04/26/PmRdM9iGnvOJHgu.png">
@@ -22,14 +24,14 @@
     
     
       
-        <title>CS61B - hhhjyz</title>
+        <title>Makefile入门 - hhhjyz</title>
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6543a935.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,17 +50,17 @@
       
     
     
-      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="../../../../stylesheets/link.css">
+      <link rel="stylesheet" href="../../stylesheets/link.css">
     
-      <link rel="stylesheet" href="../../../../stylesheets/customize.css">
+      <link rel="stylesheet" href="../../stylesheets/customize.css">
     
       <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
     
-    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -75,7 +77,7 @@
     
     
     
-    <link rel="stylesheet" href="../../../../assets/stylesheets/custom.00c04c01.min.css">
+    <link rel="stylesheet" href="../../assets/stylesheets/custom.00c04c01.min.css">
   
   </head>
   
@@ -96,7 +98,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#my-notebook-of-cs61b" class="md-skip">
+        <a href="#makefile" class="md-skip">
           跳转至
         </a>
       
@@ -140,7 +142,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../../../.." title="hhhjyz" class="md-header__button md-logo" aria-label="hhhjyz" data-md-component="logo">
+    <a href="../.." title="hhhjyz" class="md-header__button md-logo" aria-label="hhhjyz" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
@@ -165,7 +167,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              CS61B
+              Makefile入门
             
           </span>
         </div>
@@ -289,7 +291,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../.." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
     
@@ -308,7 +310,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../courses/hpc/note/" class="md-tabs__link">
+        <a href="../../courses/hpc/note/" class="md-tabs__link">
           
   
     
@@ -330,7 +332,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../../Makefile/" class="md-tabs__link">
+        <a href="./" class="md-tabs__link">
           
   
     
@@ -365,7 +367,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../.." title="hhhjyz" class="md-nav__button md-logo" aria-label="hhhjyz" data-md-component="logo">
+    <a href="../.." title="hhhjyz" class="md-nav__button md-logo" aria-label="hhhjyz" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
@@ -400,7 +402,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -466,7 +468,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../courses/hpc/note/" class="md-nav__link">
+      <a href="../../courses/hpc/note/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -542,27 +544,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Makefile/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Makefile入门
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -575,7 +556,110 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Makefile入门
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Makefile入门
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#makefile_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Makefile：进行编译的脚本文件
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Makefile：进行编译的脚本文件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#version1" class="md-nav__link">
+    <span class="md-ellipsis">
+      version1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version2" class="md-nav__link">
+    <span class="md-ellipsis">
+      version2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version3" class="md-nav__link">
+    <span class="md-ellipsis">
+      VERSION3
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version4" class="md-nav__link">
+    <span class="md-ellipsis">
+      VERSION4
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CS61B/note/note/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -584,7 +668,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -617,6 +700,65 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#makefile_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Makefile：进行编译的脚本文件
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Makefile：进行编译的脚本文件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#version1" class="md-nav__link">
+    <span class="md-ellipsis">
+      version1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version2" class="md-nav__link">
+    <span class="md-ellipsis">
+      version2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version3" class="md-nav__link">
+    <span class="md-ellipsis">
+      VERSION3
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version4" class="md-nav__link">
+    <span class="md-ellipsis">
+      VERSION4
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -630,7 +772,7 @@
                   
 
   
-    <a href="https://github.com/hhhjyz/hhhjyz.github.iod/edit/main/docs/selflearning/CS61B/note/note.md" title="编辑此页" class="md-content__button md-icon">
+    <a href="https://github.com/hhhjyz/hhhjyz.github.iod/edit/main/docs/selflearning/Makefile.md" title="编辑此页" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -639,14 +781,120 @@
     
       
     
-    <a href="https://github.com/hhhjyz/hhhjyz.github.iod/raw/main/docs/selflearning/CS61B/note/note.md" title="查看本页的源代码" class="md-content__button md-icon">
+    <a href="https://github.com/hhhjyz/hhhjyz.github.iod/raw/main/docs/selflearning/Makefile.md" title="查看本页的源代码" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
     </a>
   
 
 
-<h1 id="my-notebook-of-cs61b">My Notebook of cs61B<a class="headerlink" href="#my-notebook-of-cs61b" title="Permanent link">&para;</a></h1>
+<h1 id="makefile">Makefile 的撰写<a class="headerlink" href="#makefile" title="Permanent link">&para;</a></h1>
+<ul>
+<li>多文件编程中，分别编译并链接，生成可执行文件</li>
+</ul>
+<h2 id="makefile_1">Makefile：进行编译的脚本文件<a class="headerlink" href="#makefile_1" title="Permanent link">&para;</a></h2>
+<h3 id="version1">version1<a class="headerlink" href="#version1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c">## VERSION1</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="nf">hello</span><span class="o">:</span><span class="w"> </span><span class="n">main</span>.<span class="n">cpp</span> <span class="n">printhello</span>.<span class="n">cpp</span> <span class="n">factorial</span>.<span class="n">cpp</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span>g++<span class="w"> </span>-o<span class="w"> </span>hell<span class="w"> </span>main.cpp<span class="w"> </span>printhello.cpp<span class="w"> </span>factorial
+</code></pre></div></td></tr></table></div>
+<p><code>make</code>命令会自动在当前目录下寻找makefile文件</p>
+<ul>
+<li>会自动检查源文件和可执行文件之间的先后顺序</li>
+<li>通过执行下面的这行命令来生成hello可执行文件，依赖于hello后面的这三个文件</li>
+</ul>
+<p>生成hello可执行文件</p>
+<h3 id="version2">version2<a class="headerlink" href="#version2" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nv">CXX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>g++
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="nv">TARGET</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>hello
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="nv">OBJ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>main.o<span class="w"> </span>printhello.o<span class="w"> </span>factorial.o
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="nf">$(TARGET)</span><span class="o">:</span><span class="w"> </span>$<span class="n">OBJ</span> <span class="c">#hello依赖于后面的这些文件，如果OBJ文件更新，执行下面的文件</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="k">$(</span>CXX<span class="k">)</span><span class="w"> </span>-o<span class="w"> </span><span class="k">$(</span>TARGET<span class="k">)</span><span class="w"> </span><span class="k">$(</span>OBJ<span class="k">)</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="c"># OBJ文件怎么来的</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="nf">main.o</span><span class="o">:</span><span class="w"> </span><span class="n">main</span>.<span class="n">cpp</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">    </span><span class="k">$(</span>CXX<span class="k">)</span><span class="w"> </span>-c<span class="w"> </span>main.cpp
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="nf">printhello.o</span><span class="o">:</span><span class="w"> </span><span class="n">printhello</span>.<span class="n">cpp</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">    </span><span class="k">$(</span>CXX<span class="k">)</span><span class="w"> </span>-c<span class="w"> </span>printhello.cpp
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="nf">factorial.o</span><span class="o">:</span><span class="w"> </span><span class="n">factorial</span>.<span class="n">cpp</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">    </span><span class="k">$(</span>CXX<span class="k">)</span><span class="w"> </span>-c<span class="w"> </span>factorial.cpp
+</code></pre></div></td></tr></table></div>
+<p>先生成三个<code>.o</code>文件</p>
+<h3 id="version3">VERSION3<a class="headerlink" href="#version3" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span>
+<span class="normal"><a href="#__codelineno-2-12">12</a></span>
+<span class="normal"><a href="#__codelineno-2-13">13</a></span>
+<span class="normal"><a href="#__codelineno-2-14">14</a></span>
+<span class="normal"><a href="#__codelineno-2-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nv">CXX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>g++
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="nv">TARGET</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>hello
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="nv">OBJ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>main.o<span class="w"> </span>printhello.o<span class="w"> </span>factorial.o
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="nv">CXXFLAGS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>-c<span class="w"> </span>-Wall#<span class="o">(</span>编译选项<span class="o">)</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="nf">$(TARGET)</span><span class="o">:</span><span class="w"> </span><span class="k">$(</span><span class="nv">OBJ</span><span class="k">)</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">    </span><span class="k">$(</span>CXX<span class="k">)</span><span class="w"> </span>-o<span class="w"> </span><span class="nv">$@</span><span class="w"> </span>$^#<span class="w"> </span><span class="nv">$@</span>代表冒号前面的,$^代表冒号后面的，箭头往上指指的是所有的
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="nf">%.o</span><span class="o">:</span><span class="w"> </span>%.<span class="n">cpp</span><span class="c">#所有的cpp文件生成.o文件</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">    </span><span class="k">$(</span>CXX<span class="k">)</span><span class="w"> </span><span class="k">$(</span>CXXFLAGS<span class="k">)</span><span class="w"> </span>$&lt;<span class="w"> </span>-o<span class="w"> </span><span class="nv">$@</span><span class="c1">#箭头往左指知的是冒号后的第一个</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="nf">.PHONY</span><span class="o">:</span><span class="w"> </span><span class="n">clean</span><span class="c">#伪目标，永远不会生成</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="nf">clean</span><span class="o">:</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="w">    </span>rm<span class="w"> </span>-f<span class="w"> </span>*.o<span class="w"> </span><span class="k">$(</span>TARGET<span class="k">)</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="c">#清除所有.o文件</span>
+</code></pre></div></td></tr></table></div>
+<p><code>-Wall</code>指报所有的warning</p>
+<h3 id="version4">VERSION4<a class="headerlink" href="#version4" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span>
+<span class="normal"><a href="#__codelineno-3-13">13</a></span>
+<span class="normal"><a href="#__codelineno-3-14">14</a></span>
+<span class="normal"><a href="#__codelineno-3-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="nv">CXX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>g++
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="nv">TARGET</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>hello
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="nv">SRC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">$(</span>wildCARD<span class="w"> </span>*.cpp<span class="k">)</span><span class="c1">#所有当前目录下的.cpp文件都放到这个变量里</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="nv">OBJ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">$(</span>patsubst<span class="w"> </span>%.cpp,<span class="w"> </span>%.O,<span class="w"> </span><span class="k">$(</span>SRC<span class="k">))</span><span class="c1">#patsubst：路径替换</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="nv">CXXFLAGS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>-c<span class="w">  </span>-Wall
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="nf">$(TARGET)</span><span class="o">:</span><span class="w"> </span><span class="k">$(</span><span class="nv">OBJ</span><span class="k">)</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="w">    </span><span class="k">$(</span>CXX<span class="k">)</span><span class="w"> </span>-o<span class="w"> </span><span class="nv">$@</span><span class="w"> </span>$^#<span class="w"> </span><span class="nv">$@</span>代表冒号前面的,$^代表冒号后面的，箭头往上指指的是所有的
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="nf">%.o</span><span class="o">:</span><span class="w"> </span>%.<span class="n">cpp</span><span class="c">#所有的cpp文件生成.o文件</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="w">    </span><span class="k">$(</span>CXX<span class="k">)</span><span class="w"> </span><span class="k">$(</span>CXXFLAGS<span class="k">)</span><span class="w"> </span>$&lt;<span class="w"> </span>-o<span class="w"> </span><span class="nv">$@</span><span class="c1">#箭头往左指知的是冒号后的第一个</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="nf">.PHONY</span><span class="o">:</span><span class="w"> </span><span class="n">clean</span><span class="c">#伪目标，永远不会生成</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="nf">clean</span><span class="o">:</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="w">    </span>rm<span class="w"> </span>-f<span class="w"> </span>*.o<span class="w"> </span><span class="k">$(</span>TARGET<span class="k">)</span>
+</code></pre></div></td></tr></table></div>
 <!--
   Copyright (c) 2016-2023 Martin Donath <martin.donath@squidfunk.com>
 
@@ -714,7 +962,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-06-29</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-07-04</span>
   </span>
 
     
@@ -856,9 +1104,9 @@
         
           
           <a
-            href="../../../Makefile/"
+            href="../../courses/hpc/note/"
             class="md-footer__link md-footer__link--prev"
-            aria-label="上一页: Makefile入门"
+            aria-label="上一页: HPC"
           >
             <div class="md-footer__button md-icon">
               
@@ -869,7 +1117,7 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                Makefile入门
+                HPC
               </div>
             </div>
             
@@ -877,6 +1125,26 @@
         
 
         <!-- Link to next page -->
+        
+          
+          <a
+            href="../CS61B/note/note/"
+            class="md-footer__link md-footer__link--next"
+            aria-label="下一页: CS61B"
+          >
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                CS61B
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
         
       </nav>
     
@@ -939,15 +1207,15 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["announce.dismiss", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "search.share", "navigation.expand", "navigation.indexes", "content.tabs.link", "content.tooltips", "content.code.copy", "content.action.edit", "content.action.view", "content.code.annotate"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "search.share", "navigation.expand", "navigation.indexes", "content.tabs.link", "content.tooltips", "content.code.copy", "content.action.edit", "content.action.view", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
     
-      <script src="../../../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      <script src="../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
       
-        <script src="../../../../javascripts/extra.js"></script>
+        <script src="../../javascripts/extra.js"></script>
       
-        <script src="../../../../javascripts/mathjax.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
@@ -956,7 +1224,7 @@
         <script src="https://cdn.jsdelivr.net/npm/mermaid@10.0.2/dist/add-html-label-6e56ed67.min.js"></script>
       
     
-    <script src="../../../../assets/javascripts/custom.9458f965.min.js"></script>
+    <script src="../../assets/javascripts/custom.9458f965.min.js"></script>
   
   </body>
 </html>
