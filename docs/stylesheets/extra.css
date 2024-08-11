@@ -1,7 +1,7 @@
 :root > * {
-  --md-primary-fg-color:        #518FC1;
-  --md-primary-fg-color--light:#518FC1;
-  --md-primary-fg-color--dark:  #518FC1;
+  --md-primary-fg-color:        #4b06ad;
+  --md-primary-fg-color--light:#4b06ad;
+  --md-primary-fg-color--dark:  #4b06ad;
     
 }
 /* 给所有元素加上边框 */
@@ -13,7 +13,7 @@ button.md-top {
   font-family: LXGW WenKai; /* 修改字体 */
   font-size: 16px; /* 修改字体大小 */
   font-weight: lighter;/* 修改字体粗细 */
-  color: #518FC1; /* 修改字体颜色 */
+  color: #4b06ad; /* 修改字体颜色 */
 }
 
 :root {
@@ -155,7 +155,7 @@ border-radius: 2em;
 }
 
 ::-webkit-scrollbar-thumb {
-background-color: #49b1f5;
+background-color: #610be2;
 background-image: -webkit-linear-gradient(
   45deg,
   rgba(255, 255, 255, 0.4) 25%,
