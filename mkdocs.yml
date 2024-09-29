@@ -84,13 +84,13 @@ nav:
   - 课程笔记:
     - HPC: 
       - ./notes/courses/hpc/index.md
-      - note ./notes/courses/hpc/note.md
+      - note: ./notes/courses/hpc/note.md
     - 高级数据结构与算法分析:
       - ./notes/courses/ads/index.md
-      - note ./notes/courses/hpc/note.md
+      - note: ./notes/courses/hpc/note.md
     - 计算机组成:
       - HW1.md
-      - Chapter 1 ./notes/courses/organization/Chapter 1.md
+      - Chapter 1:  ./notes/courses/organization/Chapter 1.md
     - 概率论与数理统计:
       - Chapter 1: ./notes/courses/probility/Chapter 1.md
       - Chapter 2: ./notes/courses/probility/Chapter 2.md
