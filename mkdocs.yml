@@ -82,11 +82,24 @@ repo_name: hhhjyz.github.io # 右上角的名字
 nav:
   - 主页: ./index.md 
   - 课程笔记:
-    - HPC: ./courses/hpc/note.md
+    - HPC: 
+      - ./notes/courses/hpc/index.md
+      - note ./notes/courses/hpc/note.md
+    - 高级数据结构与算法分析:
+      - ./notes/courses/ads/index.md
+      - note ./notes/courses/hpc/note.md
+    - 计算机组成:
+      - HW1.md
+      - Chapter 1 ./notes/courses/organization/Chapter 1.md
+    - 概率论与数理统计:
+      - Chapter 1: ./notes/courses/probility/Chapter 1.md
+      - Chapter 2: ./notes/courses/probility/Chapter 2.md
+    - 大学物理:
+      - ./notes/courses/physics/physics.md
   - 技术积累: 
-    - Makefile入门: ./selflearning/Makefile.md
-    - CS61B: ./selflearning/CS61B/note/note.md
-    - conda: ./selflearning/conda.md
+    - Makefile入门: ./notes/selflearning/Makefile.md
+    - CS61B: ./notes/selflearning/CS61B/note/note.md
+    - conda: ./notes/selflearning/conda.md
   
 
 extra:

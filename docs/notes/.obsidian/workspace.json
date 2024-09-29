@@ -1,0 +1,174 @@
+{
+  "main": {
+    "id": "7b792acdffeb2b1a",
+    "type": "split",
+    "children": [
+      {
+        "id": "2f9e42d07c73f266",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c398e95ba1caf1e4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "courses/ads/index.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "250db3c1f184ed38",
+    "type": "split",
+    "children": [
+      {
+        "id": "78fbe30c44ff4ff8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4923fe71d5679443",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "8562f2c127f9964e",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "path:\"大二上/\" ",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "b3ae1bf54fab3927",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "096679337ec0e429",
+    "type": "split",
+    "children": [
+      {
+        "id": "eb31e5983c203dff",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e3ef7c148d46c55b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "courses/ads/index.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "0aa80ec9f5bc9909",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "courses/ads/index.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "498e7783517248ef",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "325f5c208c8b0126",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "courses/ads/index.md"
+              }
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "c398e95ba1caf1e4",
+  "lastOpenFiles": [
+    "学习清单.md",
+    "概率论与数理统计/Chapter 2.md",
+    "大二上/大学与文化传承.md",
+    "大二上/高级数据结构与算法/note.md",
+    "概率论与数理统计/Chapter 1.md",
+    "未命名.md",
+    "大二上/计算机组成/Chapter 1.md",
+    "大二上/大学物理乙2.md",
+    "文案.md",
+    "大二上/计算机组成/HW1.md",
+    "大二上/高级数据结构与算法/未命名.md",
+    "未命名",
+    "概率论与数理统计",
+    "大二上",
+    "大二上/计算机组成",
+    "CS61B",
+    "2024-09-03.md",
+    "大二上/高级数据结构与算法",
+    "未命名.canvas",
+    "创建链接.md",
+    "欢迎.md"
+  ]
+}
