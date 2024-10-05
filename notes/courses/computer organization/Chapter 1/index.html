@@ -1544,6 +1544,24 @@ Booth's Algorithm 的主要思想在于，减少乘数中“<code>1</code>”的
 - mulhu： 无符号，高64位
 - mulhsu：一有一无</p>
 <h2 id="7-division">7 Division除法<a class="headerlink" href="#7-division" title="Permanent link">&para;</a></h2>
+<p><img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202409301347061.png" /></p>
+<h3 id="71-division-v1">7.1 Division V1<a class="headerlink" href="#71-division-v1" title="Permanent link">&para;</a></h3>
+<p>首先，除数在除数寄存器的左半部分，被除数在结果的右半部分
+每一步之后右移一位
+<img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202409301351520.png" />
+<strong><em>为什么被除数要被放在右半部分？</em></strong>
+<img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202409301429782.png" /></p>
+<h3 id="72-division-v2">7.2 Division V2<a class="headerlink" href="#72-division-v2" title="Permanent link">&para;</a></h3>
+<p><img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202409301431450.png" />
+remainders左移，商补充在右边</p>
+<h3 id="73-signed-division">7.3 Signed division<a class="headerlink" href="#73-signed-division" title="Permanent link">&para;</a></h3>
+<p><img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202409301434696.png" /></p>
+<h3 id="74-risc-v-division">7.4 RISC-V Division<a class="headerlink" href="#74-risc-v-division" title="Permanent link">&para;</a></h3>
+<p><strong>instructions</strong>:
+- div ,rem: 有符号，remainder
+- divu,remu: 无符号，remainder
+<img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202409301436958.png" /></p>
+<h3 id="75-floating-point-numbers">7.5 Floating point numbers<a class="headerlink" href="#75-floating-point-numbers" title="Permanent link">&para;</a></h3>
 <!--
   Copyright (c) 2016-2023 Martin Donath <martin.donath@squidfunk.com>
 
