@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "courses/ads/index.md",
+                "file": "courses/physics/physics.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "courses/ads/index.md",
+                "file": "courses/physics/physics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "courses/ads/index.md",
+                "file": "courses/physics/physics.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "courses/ads/index.md"
+                "file": "courses/physics/physics.md"
               }
             }
           }
@@ -150,6 +150,9 @@
   "active": "c398e95ba1caf1e4",
   "lastOpenFiles": [
     "学习清单.md",
+    "courses/computer organization/Chapter 1.md",
+    "courses/computer organization/HW1.md",
+    "courses/ads/index.md",
     "概率论与数理统计/Chapter 2.md",
     "大二上/大学与文化传承.md",
     "大二上/高级数据结构与算法/note.md",

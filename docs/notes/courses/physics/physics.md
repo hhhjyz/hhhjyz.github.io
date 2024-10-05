@@ -198,9 +198,46 @@ $\gamma=\frac 1\rho$:电导率
 $$\varepsilon=\frac {A_K}{q}$$
 ![image.png](https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202409291129365.png)
 ![image.png](https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202409291129198.png)
+### 3.2 电源的路端电压
+$$U_+-U_-=\varepsilon - IR$$
+# 稳恒磁场
+![image.png](https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202410042338187.png)
 
-## 4 磁力
-两根平行载流导线中每一根的单位长度上所受到的磁相互作用力$F_m$
-$$F_m=k\frac {I_1I_2}b=\frac {\mu I_1I_2}{2\pi b}$$
-$$\mu=4\pi\times10^{-7}N/A^2$$
-## 5 磁场
+## 1 磁场，磁感应强度
+### 1.1 基本磁现象
+磁现象可归结为运动电荷的相互作用，这种相互作用通过磁场传递
+### 1.2 磁感应强度
+当速度v垂直于磁感应强度B时，力达到最大值
+$$B=F_{max}/(qv)$$
+***洛伦兹力***：
+$$\overrightarrow F=q\overrightarrow v\times\overrightarrow B$$
+***若电场和磁场同时存在***：
+$$\overrightarrow F=q\overrightarrow E+q\overrightarrow v\times\overrightarrow B$$
+### 1.3 磁感应线
+***磁感应线：***
+磁感应线上任一点的切线方向和该点的磁场方向一致。磁感应线是闭合曲线，环流方向与电流构成右手螺旋关系。
+## 2 毕奥-萨伐尔定律
+$$d\overrightarrow B=\frac {\mu_0} {4\pi}\frac {Id\overrightarrow l\times\hat{r}}{r^2} $$
+$$\overrightarrow B = \frac{\mu_0}{4\pi}\int_L\frac{Id\overrightarrow l\times \hat r}{r^2}$$
+### 2.1 毕奥-萨伐尔定律的应用
+#### 2.1.1 载流长直导线的磁场
+![image.png](https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202410051540705.png)
+$$B=\frac{\mu_0 I}{4\pi a}(cos\theta_1-cos\theta_2)$$
+当$L>>a,\theta_1=0,\theta_2=\pi$时
+$$B=\frac {\mu_0I}{2\pi a}$$
+#### 2.1.2 载流圆线圈轴线上的磁场
+![image.png](https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202410051554144.png)
+$$B=\frac{\mu_0IR^2}{2(R^2+x^2)^{\frac 32}}$$
+$B$的方向沿OP轴，与电流方向成右螺旋关系
+***两特殊点的情况***
+- 在圆心O处，x=0,则$B(0)=\frac {\mu_0I}{2R}$
+	若密绕N匝，则：$B(0)=\frac {\mu_0IN}{2R}$
+- 在轴线上远离原线圈$(x>>R)$:
+	$$B=\frac {\mu_0IS}{2\pi x^3}$$
+***载流线圈的磁矩，磁偶极子***
+磁矩$p_m=NIS_n$
+引入磁矩概念后，在轴线撒谎给你远离载流圆线圈的磁场为：$$\overrightarrow B=\frac {\mu_0\overrightarrow p_m}{2\pi x^3}$$
+场点到场源的距离远大于线圈尺寸的载流线圈——磁偶极子
+#### 2.1.3 载流直螺线管内部的磁场
+![image.png](https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202410051617560.png)
+$$\mathrm dB=\frac{\mu_0IR^2n\mathrm dl}{2(R^2+l^2)^{\frac 32}}$$
