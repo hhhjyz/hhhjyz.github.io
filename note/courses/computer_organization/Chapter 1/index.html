@@ -1,0 +1,1907 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../ads/Lec14/">
+      
+      
+        <link rel="next" href="../Chapter%202/">
+      
+      
+      <link rel="icon" href="../../../../image/head.jpg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>Chapter 1 - hhhjyz</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../css/extra.css">
+    
+      <link rel="stylesheet" href="https://fonts.loli.net/css2?family=Noto+Serif+SC&display=swap">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-computer-organization" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="hhhjyz" class="md-header__button md-logo" aria-label="hhhjyz" data-md-component="logo">
+      
+  <img src="../../../../image/head.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            hhhjyz
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Chapter 1
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="hhhjyz" class="md-nav__button md-logo" aria-label="hhhjyz" data-md-component="logo">
+      
+  <img src="../../../../image/head.jpg" alt="logo">
+
+    </a>
+    hhhjyz
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    课程笔记
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            课程笔记
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    高级数据结构与算法分析
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            高级数据结构与算法分析
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ads/Lec11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lec11 Approximation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ads/Lec14/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lec14 Parallel Algorithm
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    计算机组成
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            计算机组成
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Chapter 1
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 1
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-computer-organization" class="md-nav__link">
+    <span class="md-ellipsis">
+      1 Computer organization
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1 Computer organization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-software-categorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Software categorization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2 图灵测试/图灵完备
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2 图灵测试/图灵完备">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 图灵测试
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 图灵测试">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#211" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.1 图灵测试的基本过程：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 图灵完备
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 图灵完备">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#221" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.1 图灵完备的基本条件：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.2 图灵完备的意义：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-from-a-high-level-language-to-the-language-of-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 From a High-Level Language to the Language of Hardware
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-integrated-circuits" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4 Integrated circuits/集成电路
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-computer-design-performance-and-idea" class="md-nav__link">
+    <span class="md-ellipsis">
+      3 Computer design: performance and idea
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3 Computer design: performance and idea">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-relative-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Relative Performance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-measuring-execution-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Measuring Execution Time
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 Measuring Execution Time">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#321-cpu-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.1 CPU Time
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-power-trends" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 Power Trends
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-multiprocessors" class="md-nav__link">
+    <span class="md-ellipsis">
+      4 Multiprocessors
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4 Multiprocessors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-amdahls-law" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Amdahl's Law
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-eight-great-ideas" class="md-nav__link">
+    <span class="md-ellipsis">
+      5 Eight Great Ideas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-3-arithmetic-for-computer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 3: Arithmetic for computer
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chapter 3: Arithmetic for computer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      1 Numbers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1 Numbers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-number-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Number Types
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-overflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      2 Overflow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-complete-alu" class="md-nav__link">
+    <span class="md-ellipsis">
+      3 Complete ALU
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3 Complete ALU">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-with-zero-detector" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 with Zero detector
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-fast-adders" class="md-nav__link">
+    <span class="md-ellipsis">
+      4 Fast adders
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4 Fast adders">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-carry-look-ahead-addercla" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Carry look-ahead adder(CLA)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-carry-select-addercsa" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Carry select adder(CSA)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-multiplication" class="md-nav__link">
+    <span class="md-ellipsis">
+      5 Multiplication
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5 Multiplication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-v1" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 V1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-v2" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 V2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-v3" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 V3
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-signed-multiplication" class="md-nav__link">
+    <span class="md-ellipsis">
+      6 Signed multiplication(有符号数的乘积)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6 Signed multiplication(有符号数的乘积)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-booths-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 Booth's Algorithm
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-faster-multiplication" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 Faster Multiplication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-risc-v-multiplication" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3 RISC-V Multiplication
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-division" class="md-nav__link">
+    <span class="md-ellipsis">
+      7 Division除法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7 Division除法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-division-v1" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1 Division V1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-division-v2" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2 Division V2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-signed-division" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3 Signed division
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74-risc-v-division" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.4 RISC-V Division
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#75-floating-point-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.5 Floating point numbers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.5 Floating point numbers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#751" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.5.1 浮点加法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#752" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.5.2 浮点乘法
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#76" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.6 精确算术
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Chapter%202/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Chapter%204/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Chapter%205/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Chapter%206/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 6
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-computer-organization" class="md-nav__link">
+    <span class="md-ellipsis">
+      1 Computer organization
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1 Computer organization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-software-categorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Software categorization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2 图灵测试/图灵完备
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2 图灵测试/图灵完备">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 图灵测试
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 图灵测试">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#211" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.1 图灵测试的基本过程：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 图灵完备
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 图灵完备">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#221" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.1 图灵完备的基本条件：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.2 图灵完备的意义：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-from-a-high-level-language-to-the-language-of-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 From a High-Level Language to the Language of Hardware
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-integrated-circuits" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4 Integrated circuits/集成电路
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-computer-design-performance-and-idea" class="md-nav__link">
+    <span class="md-ellipsis">
+      3 Computer design: performance and idea
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3 Computer design: performance and idea">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-relative-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Relative Performance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-measuring-execution-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Measuring Execution Time
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 Measuring Execution Time">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#321-cpu-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.1 CPU Time
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-power-trends" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 Power Trends
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-multiprocessors" class="md-nav__link">
+    <span class="md-ellipsis">
+      4 Multiprocessors
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4 Multiprocessors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-amdahls-law" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Amdahl's Law
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-eight-great-ideas" class="md-nav__link">
+    <span class="md-ellipsis">
+      5 Eight Great Ideas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-3-arithmetic-for-computer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter 3: Arithmetic for computer
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chapter 3: Arithmetic for computer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      1 Numbers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1 Numbers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-number-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Number Types
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-overflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      2 Overflow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-complete-alu" class="md-nav__link">
+    <span class="md-ellipsis">
+      3 Complete ALU
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3 Complete ALU">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-with-zero-detector" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 with Zero detector
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-fast-adders" class="md-nav__link">
+    <span class="md-ellipsis">
+      4 Fast adders
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4 Fast adders">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-carry-look-ahead-addercla" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Carry look-ahead adder(CLA)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-carry-select-addercsa" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Carry select adder(CSA)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-multiplication" class="md-nav__link">
+    <span class="md-ellipsis">
+      5 Multiplication
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5 Multiplication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-v1" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 V1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-v2" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 V2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-v3" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 V3
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-signed-multiplication" class="md-nav__link">
+    <span class="md-ellipsis">
+      6 Signed multiplication(有符号数的乘积)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6 Signed multiplication(有符号数的乘积)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-booths-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 Booth's Algorithm
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-faster-multiplication" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 Faster Multiplication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-risc-v-multiplication" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3 RISC-V Multiplication
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-division" class="md-nav__link">
+    <span class="md-ellipsis">
+      7 Division除法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7 Division除法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-division-v1" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1 Division V1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-division-v2" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2 Division V2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-signed-division" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3 Signed division
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74-risc-v-division" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.4 RISC-V Division
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#75-floating-point-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.5 Floating point numbers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.5 Floating point numbers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#751" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.5.1 浮点加法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#752" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.5.2 浮点乘法
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#76" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.6 精确算术
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h2 id="1-computer-organization">1 Computer organization<a class="headerlink" href="#1-computer-organization" title="Permanent link">&para;</a></h2>
+<p><a class="glightbox" href="https://cdn.jsdelivr.net/gh/hhhjyz/photos/20240909151618.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos/20240909151618.png" /></a>
+<a class="glightbox" href="https://cdn.jsdelivr.net/gh/hhhjyz/photos/20240909151914.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos/20240909151914.png" /></a></p>
+<h3 id="11-software-categorization">1.1 Software categorization<a class="headerlink" href="#11-software-categorization" title="Permanent link">&para;</a></h3>
+<ul>
+<li>operating system</li>
+<li>compiler</li>
+<li>fireware（驱动）</li>
+</ul>
+<h2 id="2">2 图灵测试/图灵完备<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<h3 id="21">2.1 图灵测试<a class="headerlink" href="#21" title="Permanent link">&para;</a></h3>
+<p><strong>图灵测试</strong>（Turing Test）是由英国数学家和计算机科学家艾伦·图灵（Alan Turing）在1950年提出的一种测试，用于判断机器是否具有智能。图灵测试的基本思想是，如果一台机器能够在对话中表现得与人类无异，那么这台机器就可以被认为具有智能。</p>
+<h4 id="211">2.1.1 图灵测试的基本过程：<a class="headerlink" href="#211" title="Permanent link">&para;</a></h4>
+<ol>
+<li><strong>参与者</strong>：测试中有三方参与者：一个人类评审员（C），一个人类参与者（A），和一个机器参与者（B）。</li>
+<li><strong>隔离</strong>：评审员与参与者之间通过文本进行交流，评审员无法看到或听到参与者，只能通过打字进行交流。</li>
+<li><strong>对话</strong>：评审员与人类参与者和机器参与者分别进行对话，评审员的任务是判断哪个是人类，哪个是机器。</li>
+<li><strong>判断</strong>：如果评审员无法可靠地区分人类和机器，或者机器能够成功地欺骗评审员，使其认为机器是人类，那么机器就通过了图灵测试。</li>
+</ol>
+<p>图灵测试的核心在于机器能否在自然语言对话中表现出与人类无异的智能，而不是机器的内部工作原理或其实现方式。</p>
+<h3 id="22">2.2 图灵完备<a class="headerlink" href="#22" title="Permanent link">&para;</a></h3>
+<p><strong>图灵完备</strong>（Turing Completeness）是计算理论中的一个概念，用于描述一个系统（通常是编程语言或计算模型）的计算能力。一个系统被称为图灵完备的，如果它能够模拟图灵机的计算能力，即能够执行任何图灵机可以执行的计算。</p>
+<h4 id="221">2.2.1 图灵完备的基本条件：<a class="headerlink" href="#221" title="Permanent link">&para;</a></h4>
+<ol>
+<li><strong>条件分支</strong>：系统必须能够执行条件分支（如if-else语句），以便根据不同的条件执行不同的操作。</li>
+<li><strong>循环</strong>：系统必须能够执行循环（如for、while语句），以便重复执行某些操作。</li>
+<li><strong>存储和操作数据</strong>：系统必须能够存储和操作数据，包括读写变量和数据结构。</li>
+</ol>
+<h4 id="222">2.2.2 图灵完备的意义：<a class="headerlink" href="#222" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>通用性</strong>：图灵完备意味着该系统具有通用计算能力，可以解决任何可计算的问题，只要有足够的时间和资源。</li>
+<li><strong>编程语言</strong>：大多数现代编程语言（如C、Java、Python等）都是图灵完备的，因为它们具备条件分支、循环和数据操作的能力。</li>
+<li><strong>计算模型</strong>：图灵完备的计算模型包括图灵机、λ演算（Lambda Calculus）等，这些模型为计算理论提供了基础。</li>
+</ul>
+<h3 id="23-from-a-high-level-language-to-the-language-of-hardware">2.3 From a High-Level Language to the Language of Hardware<a class="headerlink" href="#23-from-a-high-level-language-to-the-language-of-hardware" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Machine language
+    由二进制数表示指令</li>
+<li>Assembly language
+    the assembler translates them into machine instruction</li>
+<li>High-level programming language
+    the compiler translates into assembly language</li>
+</ul>
+<h3 id="24-integrated-circuits">2.4 Integrated circuits/集成电路<a class="headerlink" href="#24-integrated-circuits" title="Permanent link">&para;</a></h3>
+<p>Both processor and memory are made of integrated circuits
+<a class="glightbox" href="https://cdn.jsdelivr.net/gh/hhhjyz/photos/20240914133315.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos/20240914133315.png" /></a>
+<a class="glightbox" href="https://cdn.jsdelivr.net/gh/hhhjyz/photos/20240914133337.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos/20240914133337.png" /></a></p>
+<h2 id="3-computer-design-performance-and-idea">3 Computer design: performance and idea<a class="headerlink" href="#3-computer-design-performance-and-idea" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Response time/ execution time</li>
+<li>throughput(total work done per unit time)</li>
+</ul>
+<h3 id="31-relative-performance">3.1 Relative Performance<a class="headerlink" href="#31-relative-performance" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" href="https://cdn.jsdelivr.net/gh/hhhjyz/photos/20240909154944.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos/20240909154944.png" /></a></p>
+<h3 id="32-measuring-execution-time">3.2 Measuring Execution Time<a class="headerlink" href="#32-measuring-execution-time" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Elapse time
+    total response time: processing, I/O, OS overhead, idle time</li>
+<li>CPU time
+    <strong>CPU时间</strong>（CPU Time）是指程序在CPU上实际执行的时间。它只计算CPU在处理程序指令时所花费的时间，不包括程序等待I/O操作或其他进程执行的时间。</li>
+<li>clock period: duration of a clock cycle</li>
+<li>clock frequency(rate): cycles per second</li>
+</ul>
+<h4 id="321-cpu-time">3.2.1 CPU Time<a class="headerlink" href="#321-cpu-time" title="Permanent link">&para;</a></h4>
+<div class="arithmatex">\[CPU~Time=\frac {CPU~Clock ~Cycles}{Clock ~Rate}$$
+- Performance improved by
+    - Reducing number of clock cycles
+    - Increasing clock rate
+    - Hardware designer must often trade off clock rate against cycle count
+$${Clock~Cycles=Instruction Count\times {Cycles ~per~ Instruction}}
+\newline $$
+$${CPU ~Time}= Instuctinon ~Count\times \frac{CPI} {Clock Rate} $$
+    如果不同的指令集消耗了不同的时钟周期，分开计算
+    - Weighted average CPI则取平均
+    $$CPI=\frac {Clock~cycles}{Instruction Count}$$
+**Performance Summary**
+$$CPU~Time=\frac {Instructions}{Program}\times\frac{Clock Cycles}{Instruction}\times\frac{Seconds}{Clock cycle}\]</div>
+<p><strong>performance depends on</strong>:
+- Algorithm: affects IC, possibly CPI
+- Programming language: affects IC, CPI
+- Compiler : affects IC， CPI
+- Instruction set architecture: affects IC,CPI, <span class="arithmatex">\(T_c\)</span>
+<a class="glightbox" href="https://cdn.jsdelivr.net/gh/hhhjyz/photos/20240914142926.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos/20240914142926.png" /></a></p>
+<h3 id="33-power-trends">3.3 Power Trends<a class="headerlink" href="#33-power-trends" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" href="https://cdn.jsdelivr.net/gh/hhhjyz/photos/20240914143018.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos/20240914143018.png" /></a></p>
+<h2 id="4-multiprocessors">4 Multiprocessors<a class="headerlink" href="#4-multiprocessors" title="Permanent link">&para;</a></h2>
+<p>More than one processor per chip
+- requires explicitly parallel programming
+- hard to do:
+    - programming for performance
+    - load balancing负载平衡
+    - optimizing communication and synchronization通信和同步</p>
+<h3 id="41-amdahls-law">4.1 Amdahl's Law<a class="headerlink" href="#41-amdahls-law" title="Permanent link">&para;</a></h3>
+<p>通过优化系统的单个部分而获得的整体性能提升受到改进部分实际使用的时间的限制
+有一部分的程序只能通过串行进行访问
+<a class="glightbox" href="https://cdn.jsdelivr.net/gh/hhhjyz/photos/20240914145858.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos/20240914145858.png" /></a>
+5.2 MIPS
+<a class="glightbox" href="https://cdn.jsdelivr.net/gh/hhhjyz/photos/20240918100444.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos/20240918100444.png" /></a></p>
+<h2 id="5-eight-great-ideas">5 Eight Great Ideas<a class="headerlink" href="#5-eight-great-ideas" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Design for Moore's Law
+    integrated circuit resources double every 18–24 months</li>
+<li>Use Abstraction to Simplify Design
+    use abstraction to characterize the design at different levels of representation;
+    抽象，封装</li>
+<li>Make the Common Case Fast (加速大概率事件)</li>
+<li>performance via parallelism(通过并行提高性能)</li>
+<li>performance via pipelining(通过流水线提高性能)</li>
+<li>performance via prediction(通过预测提高性能)</li>
+<li>hierarchy of memories(存储器层次)</li>
+<li>dependability via redundancy(通过冗余提高可靠性)</li>
+</ul>
+<h1 id="chapter-3-arithmetic-for-computer">Chapter 3: Arithmetic for computer<a class="headerlink" href="#chapter-3-arithmetic-for-computer" title="Permanent link">&para;</a></h1>
+<h2 id="1-numbers">1 Numbers<a class="headerlink" href="#1-numbers" title="Permanent link">&para;</a></h2>
+<ul>
+<li>sign-magnitude 原码</li>
+<li>1's complement code 反码</li>
+<li>2's complement code 补码</li>
+<li>biased notation 移码（在补码的基础上，符号位取反）
+<a class="glightbox" href="https://cdn.jsdelivr.net/gh/hhhjyz/photos/20240918111844.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos/20240918111844.png" /></a></li>
+</ul>
+<h3 id="11-number-types">1.1 Number Types<a class="headerlink" href="#11-number-types" title="Permanent link">&para;</a></h3>
+<h2 id="2-overflow">2 Overflow<a class="headerlink" href="#2-overflow" title="Permanent link">&para;</a></h2>
+<p><a class="glightbox" href="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202409231336402.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202409231336402.png" /></a>
+<strong>slt</strong>: set on less than 
+<a class="glightbox" href="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202409231340460.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202409231340460.png" /></a></p>
+<h2 id="3-complete-alu">3 Complete ALU<a class="headerlink" href="#3-complete-alu" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Input<ul>
+<li>A,B</li>
+</ul>
+</li>
+<li>Control lines<ul>
+<li>Binvert</li>
+<li>Operation</li>
+<li>Carry in</li>
+</ul>
+</li>
+<li>Output<ul>
+<li>Result</li>
+<li>overflow</li>
+</ul>
+</li>
+<li>Slow, but simple<ul>
+<li>Inputs parallel</li>
+<li>Carry is cascaded<ul>
+<li>Ripple carry adder</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="31-with-zero-detector">3.1 with Zero detector<a class="headerlink" href="#31-with-zero-detector" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" href="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202409231348182.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202409231348182.png" /></a></p>
+<h2 id="4-fast-adders">4 Fast adders<a class="headerlink" href="#4-fast-adders" title="Permanent link">&para;</a></h2>
+<h3 id="41-carry-look-ahead-addercla">4.1 Carry look-ahead adder(CLA)<a class="headerlink" href="#41-carry-look-ahead-addercla" title="Permanent link">&para;</a></h3>
+<p>提前计算会不会产生进位
+- <span class="arithmatex">\(A_i,B_i\)</span>都是1
+- <span class="arithmatex">\(A_i,B_i\)</span>其中一个是1，且有进位
+two signal conditions are called
+- generate<span class="arithmatex">\(G_i\)</span>
+- propagate <span class="arithmatex">\(P_i\)</span>
+推导公式
+$$\begin{align}
+&amp;P_i=A_i\oplus B_i\
+&amp;G_i=A_iB_i\
+&amp;S_i=P_i\oplus C_i\
+&amp;C_{i+1}=G_i+P_iC_i
+\end{align}
+$$
+<strong>四位全加器</strong>
+<a class="glightbox" href="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202409231411158.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202409231411158.png" /></a>
+PFA（Partial Fully Adder, 用于上述四个变量的计算
+对于位数更多的加法器，我们利用这样构成的4-比他CLA通过类似的方式串起来</p>
+<h3 id="42-carry-select-addercsa">4.2 Carry select adder(CSA)<a class="headerlink" href="#42-carry-select-addercsa" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" href="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202409231425845.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202409231425845.png" /></a></p>
+<h2 id="5-multiplication">5 Multiplication<a class="headerlink" href="#5-multiplication" title="Permanent link">&para;</a></h2>
+<p>移位<span class="arithmatex">\(\rightarrow\)</span>相乘<span class="arithmatex">\(\rightarrow\)</span>相加
+<a class="glightbox" href="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202409231431924.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202409231431924.png" /></a></p>
+<h3 id="51-v1">5.1 V1<a class="headerlink" href="#51-v1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>需要64次迭代<ul>
+<li>Addition</li>
+<li>Shift</li>
+<li>Comparison</li>
+</ul>
+</li>
+</ul>
+<p><a class="glightbox" href="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202409231439086.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202409231439086.png" /></a></p>
+<h3 id="52-v2">5.2 V2<a class="headerlink" href="#52-v2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Don't shift the multiplicand</li>
+<li>Instead, shift the product</li>
+<li>Shift the multiplier
+129位的product 寄存器是为了保留进位
+<a class="glightbox" href="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202409231449109.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202409231449109.png" /></a>
+<a class="glightbox" href="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202409231451343.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202409231451343.png" /></a></li>
+</ul>
+<h3 id="53-v3">5.3 V3<a class="headerlink" href="#53-v3" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" href="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202409231510938.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202409231510938.png" /></a>
+- 积寄存器设为0
+<a class="glightbox" href="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202409231516093.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202409231516093.png" /></a>
+就是把原来的product和multiplier首尾相连放在同一个寄存器里面，在每一次乘积之后都一起右移</p>
+<h2 id="6-signed-multiplication">6 Signed multiplication(有符号数的乘积)<a class="headerlink" href="#6-signed-multiplication" title="Permanent link">&para;</a></h2>
+<p><strong>basic approach</strong>:
+- 存储符号位
+- 判断同号还是异号
+- 数值部分相乘
+- 再加上符号位</p>
+<h3 id="61-booths-algorithm">6.1 Booth's Algorithm<a class="headerlink" href="#61-booths-algorithm" title="Permanent link">&para;</a></h3>
+<p>优化符号数乘法
+<strong>idea</strong>:
+Booth's Algorithm 的主要思想在于，减少乘数中“<code>1</code>”的数量。具体来说，在我们原先的乘法策略中，每当乘数中有一位 <code>1</code> 时，都会需要一个加法（将位移后的被乘数累加到结果中）。但是，如果乘数中有较长的一串 <code>1</code> 时，我们可以将它转化为一个大数字减一个小数，如：<code>00111100 = 01000000 - 00000100</code>，此时 4 个 <code>1</code> 变为 2 个 <code>1</code>，我们就可以减少做加法的次数
+<a class="glightbox" href="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202409231542941.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202409231542941.png" /></a>
+<a class="glightbox" href="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202409231542526.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202409231542526.png" /></a></p>
+<h3 id="62-faster-multiplication">6.2 Faster Multiplication<a class="headerlink" href="#62-faster-multiplication" title="Permanent link">&para;</a></h3>
+<h3 id="63-risc-v-multiplication">6.3 RISC-V Multiplication<a class="headerlink" href="#63-risc-v-multiplication" title="Permanent link">&para;</a></h3>
+<p><strong>Four multiply instructions</strong>:
+- mul: 给出乘积的低64位
+- mulh：高64位
+- mulhu： 无符号，高64位
+- mulhsu：一有一无</p>
+<h2 id="7-division">7 Division除法<a class="headerlink" href="#7-division" title="Permanent link">&para;</a></h2>
+<p><a class="glightbox" href="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202409301347061.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202409301347061.png" /></a></p>
+<h3 id="71-division-v1">7.1 Division V1<a class="headerlink" href="#71-division-v1" title="Permanent link">&para;</a></h3>
+<p>首先，除数在除数寄存器的左半部分，被除数在结果的右半部分
+每一步之后右移一位
+<a class="glightbox" href="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202409301351520.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202409301351520.png" /></a>
+<strong><em>为什么被除数要被放在右半部分？</em></strong>
+<a class="glightbox" href="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202409301429782.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202409301429782.png" /></a></p>
+<h3 id="72-division-v2">7.2 Division V2<a class="headerlink" href="#72-division-v2" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" href="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202409301431450.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202409301431450.png" /></a>
+remainders左移，商补充在右边</p>
+<h3 id="73-signed-division">7.3 Signed division<a class="headerlink" href="#73-signed-division" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" href="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202409301434696.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202409301434696.png" /></a>
+若同号则quotient为正，异号则为负，若dividend为正，则remainder为正，否则remainder为负
+<strong><em>Faster Division</em></strong>
+<a class="glightbox" href="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202410081356125.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202410081356125.png" /></a></p>
+<h3 id="74-risc-v-division">7.4 RISC-V Division<a class="headerlink" href="#74-risc-v-division" title="Permanent link">&para;</a></h3>
+<p><strong>instructions</strong>:
+- div ,rem: 有符号，remainder
+- divu,remu: 无符号，remainder
+<a class="glightbox" href="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202409301436958.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202409301436958.png" /></a></p>
+<h3 id="75-floating-point-numbers">7.5 Floating point numbers<a class="headerlink" href="#75-floating-point-numbers" title="Permanent link">&para;</a></h3>
+<p>我们将小数点左边只有 1 位数字的表示数的方法称为 <strong>科学记数法, scientific notation</strong>，而如果小数点左边的数字不是 0，我们称这个数的表示是一个 <strong>规格化数, normalized number</strong>。科学记数法能用来表示十进制数，当然也能用来表示二进制数。</p>
+<p>我们将浮点数表示为<span class="arithmatex">\((-1)^S\times F\times 2^E\)</span>的形式
+<a class="glightbox" href="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202410081833780.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202410081833780.png" /></a>
+<a class="glightbox" href="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202410081833414.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202410081833414.png" /></a>
+<strong>0用特殊的方式保存</strong>
+<a class="glightbox" href="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202410081840529.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202410081840529.png" /></a>
+在上表中：
+- 第一条表示0
+- 第二条表示非规格化数，主要是为了用来表示一些很小的数，它的取值为<span class="arithmatex">\((-1)^S\cdot(0+fraction)\cdot 2^{-bias}\)</span>
+- 第三条表示正常的浮点数
+- 第四条表示无穷大或者无穷小，出现在exponent overflow或者浮点数运算中非0除以0的情况
+- 第五条表示非数，出现在<span class="arithmatex">\(\frac 00,\frac{inf}{inf},inf-inf,inf*0\)</span>的情况
+<strong><em>范围</em></strong>
+<a class="glightbox" href="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202410081845755.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202410081845755.png" /></a>
+<strong><em>精度</em></strong>
+<a class="glightbox" href="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202410081927810.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202410081927810.png" /></a></p>
+<h4 id="751">7.5.1 浮点加法<a class="headerlink" href="#751" title="Permanent link">&para;</a></h4>
+<p>浮点数的加减法分为以下几步：
+- Alignment:指数对齐，将小指数对齐到大指数
+- Addiction Fraction：部分相加减
+- Normalization: 将结果规格化，并检查是否出席那overflow或者underflow，如果出现则出发Exception
+- Rounding: 将Fraction部分舍入到正确的位数；舍入结果可能还需要规格化，此时回到上一个步骤继续运行
+<a class="glightbox" href="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202410081956881.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202410081956881.png" /></a>
+<a class="glightbox" href="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202410081957121.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202410081957121.png" /></a></p>
+<h4 id="752">7.5.2 浮点乘法<a class="headerlink" href="#752" title="Permanent link">&para;</a></h4>
+<p>分别处理符号位，exponent，fraction
+- 将两个Exponent 相加并减去一个bias,因为bias 加了两次
+- 将两个(1+Fraction)想乘，并将其规格哈，此时同样要考虑overflow和underflow，然后舍入，如果还需要规格化则重复执行
+- 根据两个操作数的符号决定结果的符号
+<a class="glightbox" href="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202410082007263.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202410082007263.png" /></a></p>
+<h3 id="76">7.6 精确算术<a class="headerlink" href="#76" title="Permanent link">&para;</a></h3>
+<p><strong>Round modes</strong>
+- guard/round/sticky
+<a class="glightbox" href="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202410082011813.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202410082011813.png" /></a>
+Round to nearest even 只对0.5有效，别的都和四舍五入一样
+一般的浮点数后面还会有2bits，分别称为guard和round，其主要目的是让计算结果的舍入更加精确</p>
+<p>事实上加法只需要用到guard，但是对于乘法，如果存在前导0，需要将结果作业，这时候round bit 就成了有效位</p>
+<p>另外还有一个位叫 sticky bit，其定义是：只要 round 右边出现过非零位，就将 sticky 置 1，这一点可以用在加法的右移中，可以记住是否有 1 被移出，从而能够实现 "round to nearest even"。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": [], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+        <script src="../../../../javascripts/mathjax.js"></script>
+      
+        <script src="../../../../javascripts/katex.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
