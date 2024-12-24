@@ -1,0 +1,72 @@
+site_name: hhhjyz
+nav: 
+    - Home: index.md
+    - 课程笔记:
+        - 高级数据结构与算法分析:
+            - Lec11 Approximation: note/courses/ads/Lec11.md
+            - Lec14 Parallel Algorithm: note/courses/ads/Lec14.md
+        - 计算机组成:
+            - Chapter 1: note/courses/computer_organization/Chapter 1.md
+            - Chapter 2: note/courses/computer_organization/Chapter 2.md
+            - Chapter 4: note/courses/computer_organization/Chapter 4.md
+            - Chapter 5: note/courses/computer_organization/Chapter 5.md
+            - Chapter 6: note/courses/computer_organization/Chapter 6.md
+theme: 
+    favicon: image/head.jpg
+    logo: image/head.jpg
+    name: material
+    palette:
+        primary: teal
+
+markdown_extensions:
+    - admonition
+    - attr_list
+    - codehilite:
+        guess_lang: true
+    - meta
+    - md_in_html
+    - pymdownx.arithmatex:
+        generic: true
+    - pymdownx.betterem
+    - pymdownx.blocks.caption
+    - pymdownx.caret
+    - pymdownx.critic
+    - pymdownx.details
+    - pymdownx.emoji:
+        emoji_index: !!python/name:material.extensions.emoji.twemoji
+        emoji_generator: !!python/name:material.extensions.emoji.to_svg
+    - pymdownx.highlight:
+        anchor_linenums: true
+        line_spans: __span
+        pygments_lang_class: true
+    - pymdownx.inlinehilite
+    - pymdownx.keys
+    - pymdownx.mark
+    - pymdownx.snippets
+    - pymdownx.superfences
+    - pymdownx.tabbed:
+        alternate_style: true
+    - pymdownx.tasklist:
+        custom_checkbox: true
+    - toc:
+        permalink: true
+        title: 目录
+
+plugins: 
+    - search
+    - glightbox
+
+extra_css:
+    #字体配置
+    - css/extra.css
+    - https://fonts.loli.net/css2?family=Noto+Serif+SC&display=swap
+    - https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
+    - https://unpkg.com/katex@0/dist/katex.min.css
+
+extra_javascript:
+    - javascripts/mathjax.js
+    - javascripts/katex.js
+    - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+    - https://unpkg.com/katex@0/dist/katex.min.js
+    - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
+

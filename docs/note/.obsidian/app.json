@@ -1,0 +1,18 @@
+{
+  "defaultViewMode": "preview",
+  "livePreview": true,
+  "showLineNumber": true,
+  "strictLineBreaks": true,
+  "showInlineTitle": false,
+  "pdfExportSettings": {
+    "includeName": true,
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 80
+  },
+  "autoPairMarkdown": true,
+  "attachmentFolderPath": "./.assets",
+  "newLinkFormat": "relative",
+  "useMarkdownLinks": true
+}

@@ -1,0 +1,1439 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../image/head.jpg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>计算机系统知识 - hhhjyz</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../css/extra.css">
+    
+      <link rel="stylesheet" href="https://fonts.loli.net/css2?family=Noto+Serif+SC&display=swap">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="hhhjyz" class="md-header__button md-logo" aria-label="hhhjyz" data-md-component="logo">
+      
+  <img src="../../../../image/head.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            hhhjyz
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              计算机系统知识
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="hhhjyz" class="md-nav__button md-logo" aria-label="hhhjyz" data-md-component="logo">
+      
+  <img src="../../../../image/head.jpg" alt="logo">
+
+    </a>
+    hhhjyz
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    课程笔记
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            课程笔记
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    高级数据结构与算法分析
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            高级数据结构与算法分析
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ads/Lec11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lec11 Approximation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ads/Lec14/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lec14 Parallel Algorithm
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    计算机组成
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            计算机组成
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computer_organization/Chapter%201/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computer_organization/Chapter%202/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computer_organization/Chapter%204/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computer_organization/Chapter%205/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computer_organization/Chapter%206/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 6
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      计算机概述
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      计算机中数的表示
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      计算机系统组成
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="计算机系统组成">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      处理器
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      存储器
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      输入输出系统
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      操作系统
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="_1">计算机系统知识<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<details class="success">
+<summary>这是啥</summary>
+<p>haha</p>
+</details>
+<ul>
+<li>并行计算：<ul>
+<li>传统意义上是指计算资源应包括一台配有多处理机（并行处理）的计算机</li>
+<li>具有超级计算能力的计算机系统</li>
+<li>也指一个痛殴过网络连接的计算机群</li>
+</ul>
+</li>
+<li>分布式计算<ul>
+<li>包括分布式硬件结构和分布式软件设计</li>
+<li>一个分布式系统是为解决单个问题而紧密结合在一起工作的多处理机的集合</li>
+<li>一个分布式系统可能意味着一个由地理上分散的、各自独立的计算机组成的网络</li>
+</ul>
+</li>
+<li>集群计算：<ul>
+<li>基于并行系统和网络的</li>
+<li>集群系统——是以高速网络连接起来的高性能工作站或微机组成</li>
+</ul>
+</li>
+<li>云计算：</li>
+</ul>
+<h2 id="_2">计算机概述<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li>程序（program）：简单地被理解为按照预定的步骤进行工作，程序是处理数据的算法的具体实现</li>
+<li>计算机系统分为硬件系统和软件系统</li>
+<li>硬件系统：指计算机的物理设备，实现计算机操作过程、输入、输出的各种电子设备</li>
+<li>计算机是如何运行的：</li>
+<li>通电后 CPU执行启动程序BIOS，操作系统调入内存</li>
+<li>BIOS引导后计算机由操作系统管理和控制</li>
+</ul>
+<h2 id="_3">计算机中数的表示<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<ul>
+<li>整数：原码、反码、补码，正数的补码等于他的原码，负数的补码等于它的反码加1（<mark>进位不改变符号位</mark>）</li>
+<li>
+<p>存储采用补码形式，将符号位与其他位可以统一处理，补码实现减法运算</p>
+</li>
+<li>
+<p>数的两种形式：定点数和浮点数</p>
+</li>
+<li>计算机中的定点数：二进制，固定长度，小数点固定在某一个位置，定点纯小数，定点纯整数</li>
+<li>浮点数，类似科学计数法，表示数的范围更大</li>
+<li>浮点数：</li>
+<li>
+<p>浮点数分阶码和尾数</p>
+<ul>
+<li>阶码：小数点位置——带符号的整数——类似科学计数法中数的指数部分</li>
+<li>尾数表示数的有效数值：纯整数或者纯小数</li>
+</ul>
+</li>
+<li>
+<p>编码和文本</p>
+</li>
+<li>常用编码：ASCII，汉字编码，多媒体数据</li>
+<li>
+<p>文本：文本中的每一个符号包括字母、标点，都以一个唯一的二进制位序列表示，在计算机中，文本就是位模式的二进制数据长串</p>
+<ul>
+<li>基础的文本编码就是ASCII</li>
+<li>文本编码是计算机进行数据交换的基础（ASCII、Unicode、汉字编码）</li>
+<li>在汉字系统中，每个汉字对应两个英文字符宽度</li>
+<li><a class="glightbox" href="../assets/image-20240701165209501.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image-20240701165209501" src="../assets/image-20240701165209501.png" /></a></li>
+<li>为了输出汉字，必须存储汉字的字形<ul>
+<li>矢量化——它由一组指令来描述字符的外形——轮廓字体</li>
+<li>点阵图形——将汉字分解为若干个“点”组成的点阵字型方式</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>图形和图像：（两种技术：矢量图和位图）</p>
+</li>
+<li>位图：使用像素阵列，每一个像素是一个点</li>
+<li>矢量图：任何图形、图形可以分解位曲线和直线的组合，直线、曲线公式的 组合作为图形数据存储起来</li>
+</ul>
+<h2 id="_4">计算机系统组成<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p><a class="glightbox" href="../assets/image-20240701170232465.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image-20240701170232465" src="../assets/image-20240701170232465.png" /></a></p>
+<ul>
+<li>PC机大多数功能电路，都安装在主板上</li>
+<li>主板区分：芯片组，安装在主板上，协助cpu</li>
+<li>北桥：主要负责管理、控制机内的总线</li>
+<li>
+<p>南桥：主要负责外设接口的控制</p>
+</li>
+<li>
+<p>NUMA：非统一内存访问，描述了当代多处理</p>
+</li>
+</ul>
+<h3 id="_5">处理器<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>处理器由运算器和控制器构成</p>
+</li>
+<li>
+<p>摩尔法则</p>
+</li>
+<li>
+<p>处理器的结构模型：</p>
+</li>
+</ul>
+<p><a class="glightbox" href="../assets/image-20240701171229115.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image-20240701171229115" src="../assets/image-20240701171229115.png" /></a></p>
+<ul>
+<li>内部总线：</li>
+<li>总线就是一组导线，是信号的公共通路</li>
+<li>主板范围内的总线叫内部总线，它是CPU与存储器及输入/输出控制电路进行数据交换的通路</li>
+<li>
+<p>总线分为：</p>
+<ul>
+<li>数据总线：接受或输出数据</li>
+<li>地址总线：向外输出地址信号</li>
+<li>控制总线：输出控制信号或者接受来自外部的控制信号</li>
+</ul>
+</li>
+<li>
+<p>处理器的性能指标</p>
+</li>
+<li>主频</li>
+<li>集成度</li>
+<li>字长</li>
+<li>协处理器</li>
+<li>内部高速缓存器</li>
+<li>工作温度范围</li>
+<li>电源电压范围</li>
+<li>芯片封装材料及结构</li>
+<li>
+<p>CISC（复杂指令集计算机）：使用数量和种类较多的指令</p>
+</li>
+<li>
+<p>RISC（精简指令集计算机）：只包含常用指令且指令的长度和执行时间都相同</p>
+</li>
+</ul>
+<h3 id="_6">存储器<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>存储单元以字节位单位，一个字节由8位二进制组成</li>
+<li>存储器由若干字节组成，每个字节都有唯一的标识叫做存储器的地址，用二进制位模式标识</li>
+<li>存储容量即存储器中存储单元的总数，也叫做字节数，或者称为地址空间</li>
+<li>存储器分为内存和外存</li>
+<li>内存：<ul>
+<li>与CPU经内总线连接的存储器是“内存” ， 也称主存储器，简称主存。 由半导体存储器组成，主要分： </li>
+<li>随机存取存储器（RAM），易失性。 </li>
+<li>○动态RAM（Dynamic RAM） </li>
+<li>○静态RAM（Static RAM） </li>
+<li>只读存储器（ROM），断电后数据不丢失，一个重要应用：存放 BIOS程序。 </li>
+<li>○PROM —— 一旦数据被写入，就不能再改变</li>
+<li>○EPROM ——如果数据需要被改写，就需要用一种紫外线光设备将原数据擦 除后再重新写数据 </li>
+<li>○EEPROM ——可以对部分单元进行重新写入</li>
+</ul>
+</li>
+</ul>
+<p><a class="glightbox" href="../assets/image-20240701232027907.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image-20240701232027907" src="../assets/image-20240701232027907.png" /></a></p>
+<ul>
+<li>外存：</li>
+<li>辅助存储器系统——(外部存储器、外存) <ul>
+<li>具有外设特性 </li>
+<li>作为数据永久存储的设备 </li>
+</ul>
+</li>
+<li>主存<ul>
+<li>辅存结构和虚拟存储器 n</li>
+</ul>
+</li>
+<li>
+<p>辅助存储器主要采用： </p>
+<ul>
+<li>磁介质存储设备 </li>
+<li>光存储设备</li>
+</ul>
+</li>
+<li>
+<p>CPU执行程序时 ，将磁盘中的数据映射存放到虚拟内存中 ，需要时再从映射的虚拟内存中重新取出è内存。 </p>
+</li>
+<li>由于虚拟内存与内存地址是对应的，因此存取速度快于一般磁盘操作 n提升了系统的运行效率。 </li>
+<li>由OS和CPU共同完成管理和控制存储系统的任务</li>
+</ul>
+<h3 id="_7">输入输出系统<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li>端口和主机的数据传输模式有两种：并行或串行。</li>
+<li>并行：一次传输8位数据</li>
+<li>
+<p>串行：每次传输1位数据</p>
+</li>
+<li>
+<p>外部设备通过一组(束)导线的接插件端口与主机连接</p>
+</li>
+<li>外部设备的总线标准，规定了连接线如何排列且具有何种功能（如数 据位宽度、数据传输速率）</li>
+<li>USB：</li>
+<li>是一种总写标准，也是一种技术</li>
+<li>
+<p>由Intel公司发起并制定的通用串行总线标准。 </p>
+<ul>
+<li>使用4线结构 </li>
+<li>自身无须配备电源，可以通过USB中的VBUS获得从主机提供的电源 </li>
+<li>它的连接端口主要有两种规格：A型和B型，分别连接计算机和外设。 </li>
+<li>USB自动配置设备，支持热插拔（Hot-Plugging） </li>
+<li>可以连接多达127个设备。</li>
+</ul>
+</li>
+<li>
+<p>接口</p>
+</li>
+<li>用来解决高速主机和低速外设之间的矛盾，使得它们在速度之间实现匹配</li>
+<li>分为两个部分：<ul>
+<li>一部分通过内部总线连接CPU和存储器</li>
+<li>另一部分则通过外部总线连接外设</li>
+</ul>
+</li>
+</ul>
+<h3 id="_8">操作系统<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p><strong>操作系统是计算机硬件与 其他软件之间的接口，能有效地对计算机软件 、硬件资源进行管理和使用， 使用户能方便地操作计算机。</strong></p>
+<ul>
+<li>操作系统有许多不同的分类方法，按照其使用环境和对程序执行的处理方式进行分类， 可分为：</li>
+<li>实时系统 <ul>
+<li>要求在规定的时间内响应，并快速处理，大部分实时操作系统都是专用系统</li>
+<li>实时操作系统本身对资源的使用和控制都必须优化以 满足系统要求。</li>
+</ul>
+</li>
+<li>单用户单任务系统 <ul>
+<li>只能由一个人使用，且一次只能执行一个任务</li>
+</ul>
+</li>
+<li>单用户多任务系统 <ul>
+<li>采用任务是一种分时处理技术，将CPU的执行时间划分为若干个时间片，在一个时间片内 执行一个任务，在下一个时间片内执行另外一个任务</li>
+<li>可以在多个程序之间进行数据交换</li>
+</ul>
+</li>
+<li>多用户多任务系统 <ul>
+<li>允许多个用户使用一台主机，而且支持每个用户的多任务处理</li>
+</ul>
+</li>
+<li>分布式系统 <ul>
+<li>通过网络将物理上分布（分散）的具有独立功能的计算 机系统互连起来，实现信息交换、资源共享、可互操作和 协作处理的系统。</li>
+</ul>
+</li>
+<li>
+<p>并行系统</p>
+<ul>
+<li>并行操作系统是针对计算机系统的多处理器要求设计的， 它除了完成单一处理器系统同样的作业与进程控制任务外， 还需要完成在系统的多个处理器之间活动的分配、调度。</li>
+<li>并行系统要解决 “负载平衡”（Load Balancing） 问题和“缩放”问题</li>
+</ul>
+</li>
+<li>
+<p><strong>操作系统的结构</strong></p>
+</li>
+<li>
+<p>操作系统的结构基于软件的层次结构，把操作系统分为 内核（Kernel）和外壳 （Shell）两层</p>
+<ul>
+<li>kernel</li>
+<li>包括操控计算机各种资源的基本模块，设备驱动，内存管理</li>
+<li>kernel的调度程序决定哪一个任务被执行，控制程序为这些任务分配时间片</li>
+<li>shell</li>
+<li>负责接受用户和应用程序的操作命令，并将这个命令解释后交给kernel去执行</li>
+</ul>
+</li>
+<li>
+<p><strong>操作系统的功能</strong></p>
+</li>
+<li>
+<p>进程管理</p>
+<ul>
+<li>​ processes指正在执行中的程序，processes越多，进程管理越复杂</li>
+<li>进程管理最重要的任务就是进程调度，其目的就是有效管理而且防止死锁</li>
+<li>死锁就是多个进程同时占有对方需要的资源而同时请求对方的资源，而它们在得 到请求之前不会释放所占有的资源。</li>
+<li>发生死锁会导致系统处于无效等待状态，因此必须撤销其中的一个进程。例如 在Windows中，可用“任务管理器” 终止没有响应也就是无效的进程。</li>
+<li>进程概念的延伸。如果程序只有一个进程就可以处理所有的 任务，那么它就是单一线程的。如果程序可以被分解为多个 进程共同完成程序的任务，那么被分解的不同进程就叫做线 程，也叫轻量级进程（Light Weight Processes）</li>
+</ul>
+</li>
+<li>
+<p>存储器管理，负责调度内存、监控内存运行状态，还负责管理内存和外存之间的数据交换。输入输出管理模块也承担了对外存的默写管理任务</p>
+</li>
+<li>
+<p>内存管理的主要任务是内存资源的合理分配和使用，要确保整个内存被各个进程合理使用</p>
+<ul>
+<li>在操作系统中，MMU负责处理： </li>
+<li>何时将程序或数据从外存装载到内存中？ </li>
+<li>CPU如何在内存中寻找所需要的程序和数据的地址。 </li>
+<li>如何对内存分区或者分块，以存放不同的程序。</li>
+</ul>
+</li>
+<li>
+<p>虚拟存储</p>
+<p>​   在磁盘上开辟一个比内存要大的空间（Windows建议为1.5 倍），把被执行的程序装载到这个区域中，按照内存的结构进行 组织 。</p>
+</li>
+<li>
+<p><strong>设备管理</strong></p>
+</li>
+<li>块设备：信息存放在固定长度块中，每个块都有自己的地址， 磁盘、激光打印机就是典型的块设备。 </li>
+<li>字符设备：以字符为单位发送或者接受字符流，如键盘、鼠 标器都属于这一类。</li>
+<li>
+<p>设备管理提供了许多与输入/输出(I/O)有关的服务 </p>
+<ul>
+<li>设备调度 – 确定进程按顺序执行I/O请求，使各个进程公平地共享设备 ，提供I/O访问的效率，减少I/O操作需要的平均等待时间 。 </li>
+<li>缓冲区 – 即缓冲存储区，它在两个设备之间，或在设备和应用程序之间 缓存数据。 </li>
+<li>错误处理</li>
+</ul>
+</li>
+<li>
+<p>设备驱动程序（Driver）</p>
+<ul>
+<li>OS通过驱动程序操作设备</li>
+<li>Device Driver是控制、操作设备的程序，是一组接口，可以被操作系统和其他应用程式所调用</li>
+</ul>
+</li>
+<li>
+<p>启动和停机：</p>
+<ul>
+<li>按下开关,通电——执行BIOS，启动装载程序，完成系统引导</li>
+<li>长按电源开关——启动关机过程：数据写入，结束进程，关闭电源</li>
+</ul>
+</li>
+<li>
+<p><strong>文件和文件管理</strong></p>
+</li>
+<li>
+<p><a class="glightbox" href="../assets/image-20240702090045919.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image-20240702090045919" src="../assets/image-20240702090045919.png" /></a></p>
+</li>
+<li>
+<p><strong>计算机网络</strong></p>
+</li>
+<li>TCP/IP<ul>
+<li>Transmission Control Protocol/Internet Protocol</li>
+<li>TCP 数据打包、编号，在接收端将数据按原格式组合</li>
+<li>IP 为每个数据包加上接收机地址后在网络信道中传输</li>
+<li><a class="glightbox" href="../assets/image-20240702093728922.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image-20240702093728922" src="../assets/image-20240702093728922.png" /></a></li>
+<li><a class="glightbox" href="../assets/image-20240702093802712.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image-20240702093802712" src="../assets/image-20240702093802712.png" /></a></li>
+<li><a class="glightbox" href="../assets/image-20240702093832368.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image-20240702093832368" src="../assets/image-20240702093832368.png" /></a></li>
+<li><a class="glightbox" href="../assets/image-20240702093845725.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image-20240702093845725" src="../assets/image-20240702093845725.png" /></a></li>
+<li><a class="glightbox" href="../assets/image-20240702093905990.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image-20240702093905990" src="../assets/image-20240702093905990.png" /></a></li>
+<li>IP地址</li>
+<li>IP协议规定，每台入网的计算机都必须有一个唯一的网络地址，即IP地址</li>
+<li>Host：拥有IP地址的机器叫做主机，路由根据IP地址传输数据包、</li>
+<li><a class="glightbox" href="../assets/image-20240702222646940.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image-20240702222646940" src="../assets/image-20240702222646940.png" /></a></li>
+<li>子网和子网掩码：</li>
+<li>把一个较大的网络分成若干个较小的网络，并通过路由器连接起来，这些具有相同网络标识的小网络就称为子网</li>
+<li><a class="glightbox" href="../assets/image-20240702222839654.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image-20240702222839654" src="../assets/image-20240702222839654.png" /></a></li>
+<li><a class="glightbox" href="../assets/image-20240702222856149.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image-20240702222856149" src="../assets/image-20240702222856149.png" /></a></li>
+</ul>
+</li>
+</ul>
+<h1 id="_9">超算简介<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h1>
+<p><a class="glightbox" href="../assets/image-20240702225119442.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image-20240702225119442" src="../assets/image-20240702225119442.png" /></a></p>
+<p><a class="glightbox" href="../assets/image-20240702225137686.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image-20240702225137686" src="../assets/image-20240702225137686.png" /></a></p>
+<p><a class="glightbox" href="../assets/image-20240702225414345.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image-20240702225414345" src="../assets/image-20240702225414345.png" /></a></p>
+<h1 id="a-crash-course-on-computer-system">A Crash Course on Computer System<a class="headerlink" href="#a-crash-course-on-computer-system" title="Permanent link">&para;</a></h1>
+<h2 id="isa">ISA<a class="headerlink" href="#isa" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Primitives for processors to execute</li>
+<li>Defined by an instruction set architecture</li>
+<li>usually generated by compilers of high-level languages</li>
+<li>
+<p>code forms:</p>
+</li>
+<li>
+<p>Machine Code</p>
+</li>
+<li>Assembly Code</li>
+</ul>
+<h1 id="hpc-methodology">HPC Methodology<a class="headerlink" href="#hpc-methodology" title="Permanent link">&para;</a></h1>
+<h2 id="basic-theories-for-hpc">Basic Theories for HPC<a class="headerlink" href="#basic-theories-for-hpc" title="Permanent link">&para;</a></h2>
+<h3 id="factors-affecting-performance">Factors Affecting Performance<a class="headerlink" href="#factors-affecting-performance" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" href="../assets/image-20240703144526712.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image-20240703144526712" src="../assets/image-20240703144526712.png" /></a></p>
+<h3 id="high-level-models">High-Level Models<a class="headerlink" href="#high-level-models" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Compute </li>
+<li>Program，Function，Programming language，Computation Graph</li>
+<li>
+<p>Lynn Models，SIMT</p>
+</li>
+<li>
+<p>Storage</p>
+</li>
+<li>Storage Database: Relational, KV, Graph </li>
+<li>Storage System: Block, Object, File . </li>
+<li>Networking </li>
+<li>I/O :Blocking, Signal-Driven, Asynchronous </li>
+<li>Communication Mode: P2P, Collective Communication</li>
+</ul>
+<h3 id="software-implementation-of-models">Software： Implementation of Models<a class="headerlink" href="#software-implementation-of-models" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Host OS </li>
+<li>Compute Library </li>
+<li>BLAS, FFT </li>
+<li>OpenMP, pthreads, TBB, Intel MKL, Nvidia CUDA .</li>
+<li>Storage </li>
+<li>File System: Local, Remote, Distributed . </li>
+<li>Communication Library </li>
+<li>MPI, Gloo, NCCL</li>
+</ul>
+<h3 id="hardware-operated-by-software">Hardware: Operated by Software<a class="headerlink" href="#hardware-operated-by-software" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Server </li>
+<li>Processing Units </li>
+<li>CPU, GPU, NPU, FPGA </li>
+<li>Related: Cache, Memory . </li>
+<li>Storage Hardware </li>
+<li>HDD, SSD, NVMe </li>
+<li>RAID . </li>
+<li>Networking </li>
+<li>Ethernet, IB </li>
+<li>Smart NIC, DP</li>
+</ul>
+<p><mark>Example: Matrix Multiplication</mark></p>
+<p><a class="glightbox" href="./assets/image-20240704111623737.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="./assets/image-20240704111623737.png" width=60%></a></p>
+<p>​   We  decide  to run it in parallel(即将矩阵分成几个部分进行并行计算)</p>
+<ul>
+<li>Assuming we divide it into 3 small matrix multiplication tasks</li>
+<li>Compute  on 3 different processing units</li>
+<li>Distribute workload &amp; gather results via net work</li>
+</ul>
+<p>对于每一个小矩阵的计算，使用BLAS进行efficient computing</p>
+<p>对于工作量分配和结果收集，我们使用MPI来进行通信</p>
+<ul>
+<li>We use BLAS on CPU/GPU</li>
+<li>CPU/GPU性能<span class="arithmatex">\(\rightarrow\)</span>higher performance</li>
+<li>GPU通常计算会更快</li>
+<li>use MPI on InfiniBand(I/O网络)</li>
+<li>larger throughput &amp; lower latency</li>
+</ul>
+<h2 id="performance-analysis-and-optimization-methodology">Performance Analysis and Optimization Methodology<a class="headerlink" href="#performance-analysis-and-optimization-methodology" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Performance Test： Just directly run the program and see how long it takes </li>
+</ul>
+<h3 id="optimization-space-analysis">Optimization Space Analysis<a class="headerlink" href="#optimization-space-analysis" title="Permanent link">&para;</a></h3>
+<p><strong>we can find the theoretical upper bounds</strong></p>
+<ul>
+<li>CPU/GPU Flops</li>
+<li>Memory Accessing Speed</li>
+<li>PCIe Bandwidth</li>
+<li>Disk/Net IO Speed</li>
+</ul>
+<p><strong>Some Open question</strong></p>
+<ul>
+<li>turn to use black-box models</li>
+</ul>
+<p><strong>Opt. Space Analysis - Roofline Model</strong></p>
+<ul>
+<li>Work</li>
+<li>The work W denotes the number of operations performed, and in most cases W is expressed as FLOPS</li>
+<li>Memory traffic</li>
+<li>The memory traffic Q denotes the number of bytes of memory transfers during the execution</li>
+<li>Arithmetic intensity</li>
+<li>The arithmetic intensity I is the ratio of the work W to the memory traffic Q</li>
+</ul>
+<p>Roofline model only focus on 1~2 dominant components</p>
+<h3 id="where-to-optimize">Where to optimize<a class="headerlink" href="#where-to-optimize" title="Permanent link">&para;</a></h3>
+<p><em>Amdahll's Law</em></p>
+<p>can be formulated in the following way:<span class="arithmatex">\(S_{latency}(s)=\frac{1}{(1-p)+\frac{p}{s}}\leq\frac{1}{1-p}\)</span></p>
+<ul>
+<li>$S_{latency}(s): $整个过程的理论优化速度</li>
+<li>s:系统资源引起的速度优化</li>
+<li>p:执行过程受优化的时间</li>
+</ul>
+<p><strong>hotspot analysis</strong>:</p>
+<p>use hotspots analysis to find the bottleneck of the program</p>
+<ul>
+<li>Methods：</li>
+<li>Analytical</li>
+<li>Hardware simulator</li>
+<li>Profile: sampling some usage of a resource by a program</li>
+<li>Trace : collecting highly detailed data about the execution</li>
+</ul>
+<h3 id="general-optimizaton-pipeline">General Optimizaton Pipeline<a class="headerlink" href="#general-optimizaton-pipeline" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Determine your baseline code </li>
+<li>Run performance test </li>
+<li>Is optimization target reached? (Optimization Space Analysis) </li>
+<li>Find bottleneck (Hotspot Analysis) </li>
+<li>Optimize the bottleneck </li>
+<li>Go to 2.</li>
+</ol>
+<h2 id="practical-optimization-stretagies">Practical Optimization Stretagies<a class="headerlink" href="#practical-optimization-stretagies" title="Permanent link">&para;</a></h2>
+<h3 id="algorithm-optimization">Algorithm Optimization<a class="headerlink" href="#algorithm-optimization" title="Permanent link">&para;</a></h3>
+<ul>
+<li>reduce complexity</li>
+<li>trade space for time</li>
+<li>parallelization</li>
+<li>prefetch &amp; prediction</li>
+<li>locality of high-level logic</li>
+<li>instruction level<ul>
+<li>branch prediction</li>
+</ul>
+</li>
+</ul>
+<h4 id="caching">Caching<a class="headerlink" href="#caching" title="Permanent link">&para;</a></h4>
+<ul>
+<li>stores results from previous executions</li>
+<li>limited cache size</li>
+</ul>
+<h4 id="lock-free">Lock-Free<a class="headerlink" href="#lock-free" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Locks are needed for concurrency </li>
+<li>Lock--waiting: waste cpu resources</li>
+<li>use atomic primitives</li>
+</ul>
+<h4 id="load-balancing">Load Balancing<a class="headerlink" href="#load-balancing" title="Permanent link">&para;</a></h4>
+<h3 id="code-optimization">Code Optimization<a class="headerlink" href="#code-optimization" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>reduce redundancy(冗余)</p>
+</li>
+<li>
+<p>reduce precision</p>
+</li>
+</ul>
+<p>high-precision data:</p>
+<ul>
+<li>take up lots of space </li>
+<li>large computation cost</li>
+<li>
+<p>consume lots of  resources</p>
+</li>
+<li>
+<p>reduce branching减少分支语句</p>
+</li>
+<li>Vectorization（矢量化）</li>
+<li>optimize memory access locality</li>
+<li>adjust modifiers 调整修饰符</li>
+<li>Instruction/Data Alignment</li>
+<li>Optimize CPU memory access</li>
+</ul>
+<h3 id="compilerunning-parameter-optimization">Compile/Running Parameter Optimization<a class="headerlink" href="#compilerunning-parameter-optimization" title="Permanent link">&para;</a></h3>
+<h4 id="parameter-tuning">Parameter Tuning<a class="headerlink" href="#parameter-tuning" title="Permanent link">&para;</a></h4>
+<p>Adjust Running Scale</p>
+<p>Adjust Cache Size </p>
+<p>Adjust Core Affinity</p>
+<h3 id="hardware-optimization">hardware optimization<a class="headerlink" href="#hardware-optimization" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" href="../assets/image-20240704204315427.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image-20240704204315427" src="../assets/image-20240704204315427.png" /></a></p>
+<ul>
+<li>DPU</li>
+</ul>
+<p><a class="glightbox" href="../assets/image-20240704204523093.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image-20240704204523093" src="../assets/image-20240704204523093.png" /></a></p>
+<h1 id="linux">Linux 实践<a class="headerlink" href="#linux" title="Permanent link">&para;</a></h1>
+<h2 id="_10">获取帮助<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<ul>
+<li>man</li>
+<li>tldr： too long, didn't read</li>
+<li>cht.sh: unified cheat sheet</li>
+</ul>
+<h2 id="_11">使用集群代理<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
+<p><code>proxychains4</code></p>
+<h2 id="linux_1">Linux 用户和用户组<a class="headerlink" href="#linux_1" title="Permanent link">&para;</a></h2>
+<p><a class="glightbox" href="../assets/image-20240704141101692.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image-20240704141101692" src="../assets/image-20240704141101692.png" /></a></p>
+<p>集群使用中心化的用户认证：NIS，LDAP</p>
+<p>不要滥用root账户</p>
+<h2 id="everything-is-a-file">Everything is a file<a class="headerlink" href="#everything-is-a-file" title="Permanent link">&para;</a></h2>
+<ul>
+<li>文件 file</li>
+<li>目录 directory </li>
+<li>设备 device </li>
+<li>管道 pipe </li>
+<li>套接字 socket </li>
+<li>符号链接 symbolic link</li>
+</ul>
+<h2 id="linux_2">Linux文件系统层次<a class="headerlink" href="#linux_2" title="Permanent link">&para;</a></h2>
+<p><a class="glightbox" href="./assets/image-20240704141525518.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="./assets/image-20240704141525518.png" width=70%></a></p>
+<h2 id="linux_3">Linux 文件权限<a class="headerlink" href="#linux_3" title="Permanent link">&para;</a></h2>
+<p>read write execute</p>
+<p>SUID：临时拥有文件持有者的权限</p>
+<p><a class="glightbox" href="../assets/image-20240704143027140.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image-20240704143027140" src="../assets/image-20240704143027140.png" /></a></p>
+<p><a class="glightbox" href="../assets/image-20240704142051706.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image-20240704142051706" src="../assets/image-20240704142051706.png" /></a></p>
+<h2 id="_12">常用命令<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">echo</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>date/timedatectl
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>reboot/poweroff
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>wget/curl
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>ps/pstree/top/htop/btop/nice/pidof/kill/killall
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1">#系统状态</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>ifconfig/ping/traceroute/netstat
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>uname/uptime/free
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>who/last
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="nb">history</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="c1">#文件</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>pwd/cd/ls
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>find/locate/whereis/which
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>cat/more/head/tail/tr/wc/stat/grep/cut/diff/sort
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>touch/mkdir/cp/mv/rm/dd/file/tar
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="c1">#磁盘和文件系统管理</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>mount/unmount
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>lsblk
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>df
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>parted
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>fdisk
+</span></code></pre></div>
+<h3 id="_13">源代码管理和构建工具<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<p>GNU Compiler Collection</p>
+<p>LLVM Compiler Infrastructure</p>
+<p>Git</p>
+<p>Make</p>
+<p>CMake</p>
+<h3 id="_14">管道与重定向<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">|</span><span class="w"> </span>&gt;<span class="w"> </span>&lt;
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>&gt;&gt;
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="m">2</span><span class="p">&amp;</span>&gt;1
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>tee
+</span></code></pre></div>
+<p>Tip:记录自己的操作和log</p>
+<h2 id="linux_4">Linux内核知识<a class="headerlink" href="#linux_4" title="Permanent link">&para;</a></h2>
+<h3 id="_15">内核的角色和作用<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<p>Physical Hardware -&gt; Kernel Space -&gt; User Space</p>
+<p>将内核空间和用户空间分开：   </p>
+<ul>
+<li>​ Why？硬件层面上指令分级（特权与非特权）危险指令只有操作系统能够执行</li>
+<li>
+<p>提高操作系统的稳定性</p>
+</li>
+<li>
+<p>用户态下执行的命令受到诸多检查</p>
+</li>
+<li>需要访问系统资源是，执行系统调用，切换到内核态</li>
+</ul>
+<h3 id="_16">宏内核与微内核<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<h3 id="linux_5">Linux 内核模块<a class="headerlink" href="#linux_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>内核代码树拥有所有可用的东西</li>
+<li>但不可能在内核启动时加载所有可能的相关代码</li>
+<li>厂商的闭源驱动</li>
+<li>运行时动态加载模块</li>
+</ul>
+<h3 id="_17">驱动是一种内核模块<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
+<p>驱动知道怎么和硬件交互</p>
+<ul>
+<li>特殊的指令</li>
+<li>内存空间映射</li>
+<li>中断</li>
+</ul>
+<h3 id="_18">使用内核模块<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" href="./assets/image-20240704150035844.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="./assets/image-20240704150035844.png" width=60%></a></p>
+<h2 id="hpc">HPC中的软件<a class="headerlink" href="#hpc" title="Permanent link">&para;</a></h2>
+<p><strong>集群概况：NFSRoot</strong></p>
+<ul>
+<li>大型技术群往往不会选择NFSRoot（网络负担太重）</li>
+<li>RAM Disk和镜像部署时比较常见的选择</li>
+</ul>
+<h3 id="_19">环境管理<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h3>
+<p>参考集群管理文档</p>
+<h3 id="mpi">MPI<a class="headerlink" href="#mpi" title="Permanent link">&para;</a></h3>
+<h3 id="cuda">CUDA<a class="headerlink" href="#cuda" title="Permanent link">&para;</a></h3>
+<h2 id="hpc_1">HPC中的硬件<a class="headerlink" href="#hpc_1" title="Permanent link">&para;</a></h2>
+<p>HPC集群</p>
+<p>服务器</p>
+<p>CPU</p>
+<p>PCIe</p>
+<h2 id="_20">功耗控制<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h2>
+<p><strong>限制CPU的功耗</strong>：</p>
+<ul>
+<li>间接：限制频率，减少使用的核心数</li>
+<li>直接： Intel DCM ，Powercap</li>
+</ul>
+<h2 id="_21">算力发展与运维的演进<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h2>
+<h1 id="_22">向量化计算<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h1>
+<h2 id="numpy">NumPy<a class="headerlink" href="#numpy" title="Permanent link">&para;</a></h2>
+<p>向量化核心思想：一次同时参与运算的不是一个值，而是同时多个值一起算，即一个向量</p>
+<h2 id="numpy_1">NumPy基础<a class="headerlink" href="#numpy_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li>创建一个矩阵：将原有列表转为NumPy矩阵</li>
+</ul>
+<h2 id="simd">SIMD向量化<a class="headerlink" href="#simd" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Single Instruction Multiple Data,单指令多数据流</li>
+<li>在x86架构下，SIMD一般和SSE和AVX等指令集联系在一起</li>
+<li>SSE和AVX指令集中 提供了大量可以单指令操作多个数据单元的指令</li>
+</ul>
+<h1 id="graphics-processing-units">Graphics Processing Units<a class="headerlink" href="#graphics-processing-units" title="Permanent link">&para;</a></h1>
+<h2 id="von-neumann-model">von Neumann Model<a class="headerlink" href="#von-neumann-model" title="Permanent link">&para;</a></h2>
+<p><a class="glightbox" href="../assets/image-20240707111616125.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image-20240707111616125" src="../assets/image-20240707111616125.png" /></a></p>
+<p><a class="glightbox" href="../assets/image-20240707111658188.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image-20240707111658188" src="../assets/image-20240707111658188.png" /></a></p>
+<ul>
+<li>Von Neumann Model is also called stored program computer(instructions in memory)</li>
+<li>has two key properties</li>
+<li>stored program<ul>
+<li>指令被存储在liner memory array中</li>
+<li>内存在指令和数据之间是统一的：翻译存储的内容取决于控制命令</li>
+</ul>
+</li>
+<li>sequential instruction processing<ul>
+<li>一个指令执行一次</li>
+<li>Program counter识别当前的指令，时序上是提前的除非控制transfer instruction</li>
+</ul>
+</li>
+</ul>
+<h2 id="single-cycle-microarchitecture">single-cycle microarchitecture<a class="headerlink" href="#single-cycle-microarchitecture" title="Permanent link">&para;</a></h2>
+<p><a class="glightbox" href="../assets/image-20240707112611669.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image-20240707112611669" src="../assets/image-20240707112611669.png" /></a></p>
+<p>Each instruction takes a single clock cycle to execute</p>
+<p>only combinational logic is used to implement instruction execution</p>
+<h2 id="multi-cycle-microarchitectures">Multi-Cycle Microarchitectures<a class="headerlink" href="#multi-cycle-microarchitectures" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Goal: Let each instruction take only as much time is reslly needs</li>
+<li>Idea:</li>
+<li>减少时钟周期的时间</li>
+<li>一条指令期间进行多次状态传输</li>
+<li>每一条指令后的状态是不同的</li>
+</ul>
+<p><a class="glightbox" href="../assets/image-20240707113636495.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image-20240707113636495" src="../assets/image-20240707113636495.png" /></a></p>
+<h2 id="pipeline">Pipeline<a class="headerlink" href="#pipeline" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Goal: More concurrency --&gt;Higher instruction throughput</li>
+<li>
+<p>Key idea: When an instruction is using some resources in its processing phase, process other instructions on idle4 resources not needed by that instruction</p>
+</li>
+<li>
+<p>idea  of  pipeling : </p>
+</li>
+<li>divide the instruction processing cycle int distinct "stages" of processing </li>
+<li>ensure enough hardware resources to process on instruction in each stage</li>
+<li>process a different instruction in each stage</li>
+</ul>
+<h2 id="gpu">GPU<a class="headerlink" href="#gpu" title="Permanent link">&para;</a></h2>
+<p><strong>CPU</strong>： Few complex cores;Larger cache for low memory latency ; Large and slow memory</p>
+<p><strong>GPU</strong> : Lots of simple cores; Small cache for low memory latency; Small and fast memory</p>
+<h3 id="gpu-computing">GPU Computing<a class="headerlink" href="#gpu-computing" title="Permanent link">&para;</a></h3>
+<p><strong>key idea</strong>: Computation is offloaded to the GPU</p>
+<p>Three steps:</p>
+<p><a class="glightbox" href="../assets/image-20240707134704529.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image-20240707134704529" src="../assets/image-20240707134704529.png" /></a></p>
+<ul>
+<li>CPU-GPU Co-processing</li>
+<li>CPU： Sequential or modestly parallel sections</li>
+<li>
+<p>GPU: Massively parallel sections</p>
+<h3 id="hardware-execution-model">Hardware Execution Model<a class="headerlink" href="#hardware-execution-model" title="Permanent link">&para;</a></h3>
+</li>
+</ul>
+<p>A GPU is not programmed using threads(SIMD programming model ), Each thread execute the same code but operates a different piece of data. Each Thread has its own context.</p>
+<ul>
+<li>sequential (SISD)流水线处理</li>
+<li>data-parallel (SIMD)</li>
+<li><a class="glightbox" href="../assets/image-20240707163143694.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image-20240707163143694" src="../assets/image-20240707163143694.png" /></a></li>
+<li>Multithreaded(SPMD)</li>
+</ul>
+<p><a class="glightbox" href="../assets/image-20240707163438323.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image-20240707163438323" src="../assets/image-20240707163438323.png" /></a></p>
+<h1 id="introduction-to-machine-learning">Introduction to Machine Learning<a class="headerlink" href="#introduction-to-machine-learning" title="Permanent link">&para;</a></h1>
+<h2 id="basic-of-machine-leatning">Basic of machine leatning<a class="headerlink" href="#basic-of-machine-leatning" title="Permanent link">&para;</a></h2>
+<p><strong>Machine learning problems</strong>:</p>
+<ul>
+<li>Supervised learning给标签</li>
+<li>unsupervised learning不给标签</li>
+<li>transfer learning</li>
+<li>reinforcement learning</li>
+</ul>
+<p>Classifiation,Regression， Clustering， Dimensionality</p>
+<p><strong>Formulation of machine learning</strong></p>
+<p><a class="glightbox" href="../assets/image-20240711085004949.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image-20240711085004949" src="../assets/image-20240711085004949.png" /></a></p>
+<p><strong>How to solve params in <span class="arithmatex">\(f\)</span></strong>：</p>
+<ul>
+<li>gradient: the direction in which the function increases most quickly</li>
+</ul>
+<p><strong>Minibatch Stochastic Gradient Descent</strong>:</p>
+<p><a class="glightbox" href="../assets/image-20240711085700360.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image-20240711085700360" src="../assets/image-20240711085700360.png" /></a></p>
+<p><strong>overfitting and underfitting</strong></p>
+<p><a class="glightbox" href="../assets/image-20240711090025720.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image-20240711090025720" src="../assets/image-20240711090025720.png" /></a></p>
+<h2 id="basic-of-deep-learning">Basic of deep learning<a class="headerlink" href="#basic-of-deep-learning" title="Permanent link">&para;</a></h2>
+<h3 id="multilayer-perceptrons">Multilayer perceptrons<a class="headerlink" href="#multilayer-perceptrons" title="Permanent link">&para;</a></h3>
+<p>active function: 解决拟合过程中无法拟合的问题</p>
+<p><a class="glightbox" href="../assets/image-20240711091207968.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image-20240711091207968" src="../assets/image-20240711091207968.png" /></a></p>
+<h1 id="openmp">OpenMP<a class="headerlink" href="#openmp" title="Permanent link">&para;</a></h1>
+<p><a class="glightbox" href="../assets/image-20240711231529849.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image-20240711231529849" src="../assets/image-20240711231529849.png" /></a></p>
+<h2 id="false-sharing">False Sharing<a class="headerlink" href="#false-sharing" title="Permanent link">&para;</a></h2>
+<p>False sharing是OpenMP并行编程中常见的性能问题之一。它发生在多个线程并行修改相云的内存位置时，即使它们修改的是不同的变量。由于缓存系统的设计，CPU核心通常不会直接从主内存中读写数据，而是操作缓存中的数据。现代计算机的缓存系统通常以缓存行（cache line）为单位存储数据，一个缓存行通常是64字节。</p>
+<p>当一个线程修改了它的缓存行中的数据时，如果这个缓存行也被其他核心缓存了（因为其他核心的线程需要访问同一个缓存行中的其他数据），那么这个缓存行会被标记为无效。结果是，其他核心必须从主内存中重新读取这个缓存行，即使它们需要的数据没有被修改。这就是所谓的"false sharing"：虽然线程操作的是不同的数据，但由于这些数据位于同一个缓存行中，它们的操作互相干扰，导致性能下降。</p>
+<p>避免false sharing的一种方法是确保并行工作的数据分布在不同的缓存行中。这可以通过增加数据结构的大小（padding）来实现，确保每个线程工作的数据位于不同的缓存行上。</p>
+<h1 id="mpi_1">MPI编程<a class="headerlink" href="#mpi_1" title="Permanent link">&para;</a></h1>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": [], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+        <script src="../../../../javascripts/mathjax.js"></script>
+      
+        <script src="../../../../javascripts/katex.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
