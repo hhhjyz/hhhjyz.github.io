@@ -743,6 +743,84 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#3-buses-and-other-connections-between-processors-memory-and-io-devices" class="md-nav__link">
+    <span class="md-ellipsis">
+      3 Buses and Other Connections between Processors Memory, and I/O Devices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3 Buses and Other Connections between Processors Memory, and I/O Devices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-bus-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Bus Basics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-synchronous-vs-asynchronous" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Synchronous vs Asynchronous
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-bus-arbitration" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 Bus Arbitration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-increasing-the-bancwidth" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4 Increasing the Bancwidth
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-interfacing-io-devices-to-the-memory-processor-and-operating-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      4 Interfacing I/O Devices to the Memory, Processor, and Operating System
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-io-performance-measures" class="md-nav__link">
+    <span class="md-ellipsis">
+      5 I/O Performance Measures
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-designing-an-io-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      6 Designing an I/O System
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -930,6 +1008,84 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#3-buses-and-other-connections-between-processors-memory-and-io-devices" class="md-nav__link">
+    <span class="md-ellipsis">
+      3 Buses and Other Connections between Processors Memory, and I/O Devices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3 Buses and Other Connections between Processors Memory, and I/O Devices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-bus-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Bus Basics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-synchronous-vs-asynchronous" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Synchronous vs Asynchronous
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-bus-arbitration" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 Bus Arbitration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-increasing-the-bancwidth" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4 Increasing the Bancwidth
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-interfacing-io-devices-to-the-memory-processor-and-operating-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      4 Interfacing I/O Devices to the Memory, Processor, and Operating System
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-io-performance-measures" class="md-nav__link">
+    <span class="md-ellipsis">
+      5 I/O Performance Measures
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-designing-an-io-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      6 Designing an I/O System
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -948,8 +1104,17 @@
 <h1 id="the-hardwaresoftware-interface">The  Hardware/Software Interface<a class="headerlink" href="#the-hardwaresoftware-interface" title="Permanent link">&para;</a></h1>
 <h2 id="1-introduction">1 Introduction<a class="headerlink" href="#1-introduction" title="Permanent link">&para;</a></h2>
 <ul>
-<li>I/O设计考虑多方面的因素</li>
-<li>度量I/O系统的表现是非常困难的</li>
+<li>
+<p>I/O设计考虑多方面的因素</p>
+<ul>
+<li>可扩展性（Expandability）</li>
+<li>恢复力（Resilience）</li>
+<li>性能（Performance）</li>
+</ul>
+</li>
+<li>
+<p>度量I/O系统的表现是非常困难的</p>
+</li>
 <li>I/O系统的性能依赖于设备和系统之间的链接，内存层次，操作系统</li>
 </ul>
 <blockquote>
@@ -1077,6 +1242,10 @@
 <p><a class="glightbox" href="../assets/Chapter%206/file-20241227204430205.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/Chapter%206/file-20241227204430205.png" width="400" /></a>
  <a class="glightbox" href="../assets/Chapter%206/file-20241227204654903.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/Chapter%206/file-20241227204654903.png" width="400" /></a></p>
 </div>
+<div class="admonition warning">
+<p class="admonition-title">注意</p>
+<p>不能同时对一个磁盘进行多个操作，因为磁盘是通过旋转······来实现访问的，例如之后会提到的对一个校验磁盘不能同时进行写或者读操作，构成了瓶颈</p>
+</div>
 <div class="admonition info types of raid">
 <p class="admonition-title">Info</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:6"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><input id="__tabbed_2_5" name="__tabbed_2" type="radio" /><input id="__tabbed_2_6" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">RAID 0</label><label for="__tabbed_2_2">RAID 1</label><label for="__tabbed_2_3">RAID 3</label><label for="__tabbed_2_4">RAID 4</label><label for="__tabbed_2_5">RAID 5</label><label for="__tabbed_2_6">RAID 6</label></div>
@@ -1105,8 +1274,9 @@ RAID 3 为位交错奇偶校验硬盘（Bit-Interleaved Parity Disk）</p>
 </ul>
 </div>
 <div class="tabbed-block">
-<p>RAID 4 为块交错奇偶校验（Block-Interleaved Parity）</p>
-<p>我们希望自己的盘有自己的错误检测，不需要校验盘来检验自己对不对，盘与盘之间没有依赖关系。事实上，硬盘的每个扇区都有一个错误检测字段</p>
+<p>RAID 4 为块交错奇偶校验（Block-Interleaved Parity）
+<a class="glightbox" href="../assets/Chapter%206/file-20241228175918807.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/Chapter%206/file-20241228175918807.png" /></a>
+我们希望自己的盘有自己的错误检测，不需要校验盘来检验自己对不对，盘与盘之间没有依赖关系。事实上，硬盘的每个扇区都有一个错误检测字段</p>
 <ul>
 <li>把自己每个 Block 做了校验位，放到备份盘中</li>
 <li>该方法允许同步、独立地读取不同硬盘的数据,同一行也可以同时写，small write 有问题（不在同一行上）</li>
@@ -1116,19 +1286,367 @@ RAID 3 为位交错奇偶校验硬盘（Bit-Interleaved Parity Disk）</p>
 </ul>
 </div>
 <div class="tabbed-block">
-<p>RAID 5 为高 I/O 速率交错奇偶校验（High I/O Rate Interleaved Parity）</p>
-<ul>
-<li>交错的奇偶校验块</li>
-<li>独立的读写操作</li>
-</ul>
+<p>RAID 5 为高 I/O 速率交错奇偶校验（High I/O Rate Interleaved Parity）
+<a class="glightbox" href="../assets/Chapter%206/file-20241228175659694.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/Chapter%206/file-20241228175659694.png" /></a>
+- 交错的奇偶校验块
+- 独立的读写操作
+- 校验信息在不同的磁盘上,这种组织方式使得多个写操作可以同时进行</p>
 </div>
 <div class="tabbed-block">
 <p>RAID 6 为 P+Q 冗余校验</p>
-<p>有 P, Q 两位，当单次错误纠正仍然无法满足要求时，可以从数据中再次计算得到奇偶校验位，以进行额外的信息检查，可以恢复出两个盘的内容。</p>
+<p>有 P, Q 两位，当单次错误纠正仍然无法满足要求时，可以从数据中再次计算得到奇偶校验位，以进行额外的信息检查，可以恢复出两个盘的内容。二次校验块机制可使系统从二次错误中恢复过来，因此它的开销是RAID的两倍，进行小数据量写的时候要访问6个盘</p>
 </div>
 </div>
 </div>
 </div>
+<h2 id="3-buses-and-other-connections-between-processors-memory-and-io-devices">3 Buses and Other Connections between Processors Memory, and I/O Devices<a class="headerlink" href="#3-buses-and-other-connections-between-processors-memory-and-io-devices" title="Permanent link">&para;</a></h2>
+<div align=center><a class="glightbox" href="../assets/Chapter%206/Pasted%20image%2020241211162651.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../assets/Chapter%206/Pasted%20image%2020241211162651.png" alt="structure" width="50%" height="50%" ></a></div>
+
+<ul>
+<li>Bus 总线： 共用的通信线路（包含一根或者多根线路）</li>
+</ul>
+<p><strong>总线设计上的困难：</strong></p>
+<ul>
+<li>总线长度和设备数量限制了最高总线速度</li>
+<li>要支持一系列的延迟和数据传输率各不相同的设备</li>
+<li>时钟偏差和信号反射的问题导致高速的并行线路很难设计</li>
+</ul>
+<h3 id="31-bus-basics">3.1 Bus Basics<a class="headerlink" href="#31-bus-basics" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>总线包含两类线路：</p>
+<ul>
+<li>控制线路：信号的请求（Request）和确认（Acknowledgement），并表明数据线路上信息的类型</li>
+<li>数据线路：在源和目的之间传递信息（数据、地址、复杂命令等）</li>
+</ul>
+</li>
+<li>
+<p>总线事务（Transaction）：发送地址，以及接收或发送数据</p>
+</li>
+<li>输出操作：</li>
+</ul>
+<div align=center><a class="glightbox" href="../assets/Chapter%206/file-20241228190137615.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../assets/Chapter%206/file-20241228190137615.png"></a></div>
+
+<ul>
+<li>输入操作：</li>
+</ul>
+<div align=center><a class="glightbox" href="../assets/Chapter%206/file-20241228190847363.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../assets/Chapter%206/file-20241228190847363.png" alt="Input operation" ></a></div>
+
+<ul>
+<li>总线类型：<ul>
+<li>处理器 - 内存：较高的速度，个性化设计</li>
+<li>底板（Backplane）：高速，标准化设计（例如 PCI）</li>
+<li>I/O：低速，不同设备，标准化（例如 SCSI）</li>
+</ul>
+</li>
+</ul>
+<div align=center><a class="glightbox" href="../assets/Chapter%206/file-20241228191133906.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../assets/Chapter%206/file-20241228191133906.png" alt="Image 1" ></a></div>
+
+<div align=center><a class="glightbox" href="../assets/Chapter%206/file-20241228191146868.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../assets/Chapter%206/file-20241228191146868.png" alt="Image 2"  ></a></div>
+
+<h3 id="32-synchronous-vs-asynchronous">3.2 Synchronous vs Asynchronous<a class="headerlink" href="#32-synchronous-vs-asynchronous" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>同步总线：使用<strong>时钟</strong>和固定的协议，快而小，但是所有设备需要保持相同的运作速率，且为避免时钟偏斜（Clock Skew）问题，总线需要短一些</p>
+</li>
+<li>
+<p>异步总线：不用时钟，而采用<strong>握手</strong>协议（Handshaking Protocol）——一种用于协调异步总线传输的串行步骤，具体过程如下：
+<a class="glightbox" href="../assets/Chapter%206/file-20241228191753259.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/Chapter%206/file-20241228191753259.png" /></a></p>
+</li>
+<li>
+<p>当 <code>ReadReq</code> 处于高电平时，内存从数据总线中读取地址，执行读操作，然后抬高 <code>Ack</code> 的电平，告诉设备它看到了 <code>ReadReq</code> 信号</p>
+</li>
+<li>I/O 设备看到 <code>Ack</code> 处于高电平后，将 <code>ReadReq</code> 置于低电平状态</li>
+<li>内存看到 <code>ReadReq</code> 处于低电平后，将 <code>Ack</code> 置于低电平状态</li>
+<li>当内存完成数据读取后，它将数据放在数据线路上，并抬高 <code>DataRdy</code> 的电平</li>
+<li>I/O 设备看到 <code>DataRdy</code> 处于高电平后，将从总线中读取数据，然后抬高 <code>Ack</code> 电平来表明 I/O 设备完成对数据的读取</li>
+<li>内存看到 <code>Ack</code> 处于高电平后，将 <code>DataRdy</code> 置于低电平状态</li>
+<li>I/O 设备看到 <code>DataRdy</code> 处于低电平后，将 <code>Ack</code> 置于低电平状态，表明完成了整个传输过程</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">二者性能比较</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Question</label><label for="__tabbed_3_2">Answer</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>假设同步总线时钟周期为 50ns，每条总线的传输需要一个时钟周期；异步总线每次握手需要 40ns。两种总线的数据宽度都为 32 位</p>
+<p>求出每种总线从一个 200ns 的内存当中读取数据的带宽</p>
+</div>
+<div class="tabbed-block">
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Synchronous</label><label for="__tabbed_4_2">Asynchronous</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>对于同步总线，它执行以下步骤：</p>
+<ul>
+<li>将地址送给内存：50ns</li>
+<li>读取内存：200ns</li>
+<li>将数据送回设备：50ns</li>
+</ul>
+<p>所以需要的总时间为 300ns，带宽 <span class="arithmatex">\(\text{Bandwidth}=\frac{4\text{ Bytes}}{300ns}=13.3\text{ MB/s}\)</span></p>
+</div>
+<div class="tabbed-block">
+<p>对于异步总线来说，七个步骤有些可以同时进行，具体来说，Step1 结束时内存已经拿到地址了，这个过程中 Step234 可以同时做：</p>
+<ul>
+<li>Step 1: 40ns</li>
+<li>Step 2,3,4: <span class="arithmatex">\(\max(2\times 40ns+40ns, 200ns)=200ns\)</span></li>
+<li>Step 5,6,7: <span class="arithmatex">\(3\times 40ns=120ns\)</span></li>
+</ul>
+<p>所以需要的总时间为 360ns，带宽 <span class="arithmatex">\(\text{Bandwidth}=\frac{4\text{ Bytes}}{360ns}=11.1\text{ MB/s}\)</span></p>
+</div>
+</div>
+</div>
+<p>综上所述同步总线大约快 20%</p>
+</div>
+</div>
+</div>
+</div>
+<h3 id="33-bus-arbitration">3.3 Bus Arbitration<a class="headerlink" href="#33-bus-arbitration" title="Permanent link">&para;</a></h3>
+<ul>
+<li>如果不加任何控制，许多设备都期望获得对控制 / 数据总线的控制权，以便实现自己这部分的数据传递，这样显然会出乱子</li>
+<li>因此需要用一个<strong>总线控制器</strong>（Bus master）来发起和控制所有的总线请求</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">单个控制器在总线事务中的初始化</p>
+<p><a class="glightbox" href="../assets/Chapter%206/file-20241228193341428.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/Chapter%206/file-20241228193341428.png" /></a>
+<a class="glightbox" href="../assets/Chapter%206/file-20241228193346993.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/Chapter%206/file-20241228193346993.png" /></a></p>
+</div>
+<p>我们有以下方法进行总线仲裁：</p>
+<ul>
+<li>菊式链（Daisy Chain）仲裁（并不是很公平）</li>
+<li>集中（Centralized）并行仲裁（需要一个仲裁者，例如 PCI）</li>
+<li>自选（Self Selection）（例如 Macintosh 用的 NuBus）</li>
+<li>冲突检测（Collision Detection）（例如以太网）</li>
+</ul>
+<p>为设备分配总线需要考虑的因素：</p>
+<ul>
+<li>总线优先级</li>
+<li>公平性（Fairness）</li>
+</ul>
+<h3 id="34-increasing-the-bancwidth">3.4 Increasing the Bancwidth<a class="headerlink" href="#34-increasing-the-bancwidth" title="Permanent link">&para;</a></h3>
+<p>假设我们有一个具有如下特征的系统：</p>
+<ul>
+<li>一个内存和总线系统，支持 4 到 16 字大小的块访问</li>
+<li>一条 64 位同步总线，时钟频率为 200MHz，每次传输 64 位数据需要一个时钟周期，每次把地址传给内存需要一个时钟周期</li>
+<li>每次总线操作之间需要两个时钟周期</li>
+<li>从内存读取前 4 个字需要的时间为 200ns，每多读取 4 字需要 20ns，并且假设传输最近读取的数据和读取接下来的四个字操作可以同时进行</li>
+</ul>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Question</label><label for="__tabbed_5_2">Answer</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>分别求出访问 4 字大小块用于传输和访问 16 字大小块用于传输时，读取 256 字数据的带宽和延迟。同时分别计算出每秒的有效总数事务数</p>
+</div>
+<div class="tabbed-block">
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">4 字大小块</label><label for="__tabbed_6_2">16 字大小块</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>每个块需要：</p>
+<ul>
+<li>1 个时钟周期把地址送给内存</li>
+<li><span class="arithmatex">\(\frac{200ns}{5ns/cycle}=40\)</span> 个时钟周期来读取内存</li>
+<li>2 个时钟周期把数据从内存送回来</li>
+<li>在每次总线操作之间需要 2 个时钟周期</li>
+</ul>
+<p>总共 45 个时钟周期，而总共有 <span class="arithmatex">\(\frac{256}{4}=64\)</span> 个块</p>
+<p>所以传输 256 个字需要 <span class="arithmatex">\(45\times 64=2880\)</span> 个时钟周期</p>
+<p>传输 256 个字的延迟为 <span class="arithmatex">\(2880Cycles\times(5ns/cycle)=14400ns\)</span></p>
+<p>所以总线带宽为 <span class="arithmatex">\((256\times 4)Bytes\times\frac{1\text{ second}}{14400ns}=71.11MB/s\)</span></p>
+<p>每秒的总线事务数为 <span class="arithmatex">\(64\text{transactions}\times\frac{1\text{ second}}{14400ns}=4.44M\text{ transactions/s}\)</span></p>
+</div>
+<div class="tabbed-block"></div>
+</div>
+</div>
+<p><a class="glightbox" href="../assets/Chapter%206/file-20241228215241116.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/Chapter%206/file-20241228215241116.png" /></a>
+    第一个块需要：</p>
+<div class="codehilite"><pre><span></span><code><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span>个时钟周期把地址送给内存
+<span class="o">-</span><span class="w"> </span><span class="p">$</span>\<span class="nv">frac</span><span class="p">{</span><span class="mi">200</span><span class="nv">ns</span><span class="p">}{</span><span class="mi">5</span><span class="nv">ns</span><span class="o">/</span><span class="nv">cycle</span><span class="p">}</span><span class="o">=</span><span class="mi">40</span><span class="p">$</span><span class="w"> </span>个时钟周期来读取内存
+<span class="o">-</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span>个时钟周期将数据传送回来，同时接下来<span class="w"> </span><span class="mi">4</span><span class="w"> </span>个字被读取
+<span class="o">-</span><span class="w"> </span>在每次总线操作之间需要<span class="w"> </span><span class="mi">2</span><span class="w"> </span>个时钟周期
+
+根据上面的示意图，总共需要<span class="w"> </span><span class="p">$</span><span class="mi">1</span><span class="o">+</span><span class="mi">40</span><span class="o">+</span><span class="mi">4</span>\<span class="nv">times</span><span class="w"> </span><span class="mi">3</span><span class="o">+</span><span class="mi">2</span><span class="o">+</span><span class="mi">2</span><span class="o">=</span><span class="mi">57</span><span class="p">$</span><span class="w"> </span>个时钟周期，而总共有<span class="w"> </span><span class="p">$</span>\<span class="nv">frac</span><span class="p">{</span><span class="mi">256</span><span class="p">}{</span><span class="mi">16</span><span class="p">}</span><span class="o">=</span><span class="mi">16</span><span class="p">$</span><span class="w"> </span>个块
+
+所以传输<span class="w"> </span><span class="mi">256</span><span class="w"> </span>个字需要<span class="w"> </span><span class="p">$</span><span class="mi">57</span>\<span class="nv">times</span><span class="w"> </span><span class="mi">16</span><span class="o">=</span><span class="mi">912</span><span class="p">$</span><span class="w"> </span>个时钟周期
+
+传输<span class="w"> </span><span class="mi">256</span><span class="w"> </span>个字的延迟为<span class="w"> </span><span class="p">$</span><span class="mi">912</span><span class="nv">Cycles</span>\<span class="nf">times</span><span class="p">(</span><span class="mi">5</span><span class="nv">ns</span><span class="o">/</span><span class="nv">cycle</span><span class="p">)</span><span class="o">=</span><span class="mi">4560</span><span class="nv">ns</span><span class="p">$</span>
+
+所以总线带宽为<span class="w"> </span><span class="p">$(</span><span class="mi">256</span>\<span class="nv">times</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span><span class="nv">Bytes</span>\<span class="nv">times</span>\<span class="nv">frac</span><span class="p">{</span><span class="mi">1</span>\<span class="nv">text</span><span class="p">{</span><span class="w"> </span><span class="nv">second</span><span class="p">}}{</span><span class="mi">45600</span><span class="nv">ns</span><span class="p">}</span><span class="o">=</span><span class="mf">224.56</span><span class="nv">MB</span><span class="o">/</span><span class="nv">s</span><span class="p">$</span>
+
+每秒的总线事务数为<span class="w"> </span><span class="p">$</span><span class="mi">16</span>\<span class="nv">text</span><span class="p">{</span><span class="nv">transactions</span><span class="p">}</span>\<span class="nv">times</span>\<span class="nv">frac</span><span class="p">{</span><span class="mi">1</span>\<span class="nv">text</span><span class="p">{</span><span class="w"> </span><span class="nv">second</span><span class="p">}}{</span><span class="mi">4560</span><span class="nv">ns</span><span class="p">}</span><span class="o">=</span><span class="mf">3.51</span><span class="nv">M</span>\<span class="nv">text</span><span class="p">{</span><span class="w"> </span><span class="nv">transactions</span><span class="o">/</span><span class="nv">s</span><span class="p">}$</span>
+</code></pre></div>
+
+<p>所以 16 字大小的块带宽比 4 字大小的块带宽高 3.16 倍</p>
+</div>
+</div>
+</div>
+</div>
+<p>从上面例子我们可以得知，如果想要提高带宽，可以：</p>
+<ul>
+<li>增大数据总线的宽度</li>
+<li>使用分开的地址和数据块</li>
+<li>传输多个字</li>
+</ul>
+<h2 id="4-interfacing-io-devices-to-the-memory-processor-and-operating-system">4 Interfacing I/O Devices to the Memory, Processor, and Operating System<a class="headerlink" href="#4-interfacing-io-devices-to-the-memory-processor-and-operating-system" title="Permanent link">&para;</a></h2>
+<p>I/O 系统的三大特征：</p>
+<ul>
+<li>多个程序共用（Share）I/O 系统</li>
+<li>通常使用<strong>中断</strong>（Interrupt）来实现 I/O 操作的信息传递（Communicate）<ul>
+<li>必需的传递类型有：<ul>
+<li>OS 必须能够为 I/O 设备提供<strong>命令</strong>（Commands）<ul>
+<li>内存映射 I/O：部分的内存地址空间会被分配给 I/O 设备，且 <code>lw</code> 和 <code>sw</code> 指令能够访问 I/O 端口</li>
+<li>特殊 I/O 指令<ul>
+<li>输入：<code>in al, port</code></li>
+<li>输出：<code>out port, al</code></li>
+</ul>
+</li>
+<li>命令端口、数据端口<ul>
+<li>状态寄存器（记录完成位（Done Bit）、错误位（Error Bit）等）</li>
+<li>数据寄存器、命令寄存器</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>当 I/O 设备完成操作或遇到错误时，必须<strong>通知</strong>（Notify）OS</li>
+<li>数据必须在内存和 I/O 设备之间传输</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>对 I/O 设备的底层控制较为复杂</li>
+</ul>
+<p>处理器与 I/O 设备之间的通信：</p>
+<ul>
+<li><strong>轮询</strong>（Polling）：处理器周期性地检查状态位，观察当前是否需要进行下一步 I/O 操作<ul>
+<li>缺点：浪费大量的处理器时间</li>
+</ul>
+</li>
+<li>
+<p><strong>中断</strong>（Interrupt）</p>
+<ul>
+<li>中断驱动的 I/O 模式，中断用来通知处理器I/O设备需要处理器 的注意优点是并发操作（Concurrent Operation）</li>
+<li>一个I/O中断就像异常一样，但是有两个重要区别：从指令执行的角度说，I/O中断是异步的，中断与任何指令不想管且不影响任何指令的完成；中断代表的设备有不同的优先级
+<a class="glightbox" href="../assets/Chapter%206/file-20241228201059813.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/Chapter%206/file-20241228201059813.png" /></a></li>
+</ul>
+</li>
+</ul>
+<p><strong>直接内存访问</strong>（Direct Memory Access, DMA）：设备控制器直接向/从内存传输数据，不需要处理器的介入</p>
+<ul>
+<li>
+<p>DMA 传输模式</p>
+<ul>
+<li>首先处理器通过提供一些信息来设置 DMA 模式，具体包括：设备 ID、操作、待传输数据的内存源地址和目标地址、需要传输的字节数等</li>
+<li>DMA 开始执行操作，并对总线进行仲裁。若某个请求需要在总线上多次传输数据，那么 DMA 单元生成下一个内存的地址，并发起下一次传输</li>
+<li>一旦 DMA 传输完成，控制器向处理器发起中断，随后检查是否发生错误
+<a class="glightbox" href="../assets/Chapter%206/file-20241228202228540.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/Chapter%206/file-20241228202228540.png" /></a></li>
+</ul>
+</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">比较三种通信方式的开销</p>
+<p>假设：</p>
+<ul>
+<li>处理器的时钟频率为 500 MHz</li>
+<li>软盘以 16 位为单元传输数据给处理器，并且传输速度为 50KB/s</li>
+<li>硬盘以 4 字的块为单元传输数据，传输速度为 4MB/s</li>
+<li>没有错漏任何数据传输</li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:3"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><input id="__tabbed_7_3" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">轮询</label><label for="__tabbed_7_2">中断</label><label for="__tabbed_7_3">DMA</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">Question</label><label for="__tabbed_8_2">Answer</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>假设：</p>
+<ul>
+<li>轮询操作需要的时钟周期数为 400</li>
+<li>轮询操作足够频繁，所有的数据都没有缺失</li>
+<li>所有设备大概率一直都非常忙碌（应该是被占用的意思）</li>
+<li>鼠标必须每秒钟轮询 30 次，确保我们没有错漏用户的任何动作</li>
+</ul>
+<p>求出 CPU 浪费在鼠标、软盘和硬盘的时间比例</p>
+</div>
+<div class="tabbed-block">
+<p>对于鼠标来说：每秒为了轮询需要的时钟周期为 <span class="arithmatex">\(30\times 400=12000\text{ Cycles}\)</span>，则浪费比例为 <span class="arithmatex">\(\frac{12\times 10^3}{500\times 10^6}=0.002\%\)</span></p>
+<p>对于软盘来说，每秒需要的轮询次数为 <span class="arithmatex">\(\frac{50KB}{2B}=25K\)</span>，需要的时钟周期为 <span class="arithmatex">\(25K\times 400=10\times 10^6\)</span>，则浪费比例为 <span class="arithmatex">\(\frac{10\times 10^6}{500\times 10^6}=2\%\)</span></p>
+<p>对于硬盘来说，每秒需要的轮询次数为 <span class="arithmatex">\(\frac{4MB}{16B}=0.25M\)</span>，需要的时钟周期为 <span class="arithmatex">\(0.25M\times 400=10\times 10^7\)</span>，则浪费比例为 <span class="arithmatex">\(\frac{10\times 10^7}{500\times 10^6}=20\%\)</span></p>
+<p>可以看出，对于鼠标来说，轮询是不会太大影响到处理器的性能的，但是对于硬盘来说就是不可接受的了</p>
+</div>
+</div>
+</div>
+</div>
+<div class="tabbed-block">
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">Question</label><label for="__tabbed_9_2">Answer</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>假设每次数据传输，包括中断时间，加起来一共需要 500 个时钟周期</p>
+<p>如果硬盘只在 5% 的时间中传输数据，求出处理器浪费的时间比例</p>
+</div>
+<div class="tabbed-block">
+<p>我们首先假设硬盘在 100% 的时间中传输数据，此时中断率和轮询率是一样的，对于硬盘来说每秒的时钟周期为 <span class="arithmatex">\(0.25M\times 500=125\times 10^6\text{ Cycles Per Second}\)</span>，此时的浪费比例为 <span class="arithmatex">\(\frac{125\times 10^6}{500\times 10^6}=25\%\)</span></p>
+<p>实际上硬盘只在 5% 的时间中传输数据，那么浪费比例即为 <span class="arithmatex">\(25%\times 5\%=1.25\%\)</span></p>
+<p>我们可以看到，一个中断驱动的 I/O 设备如果并没有在传输数据时，是不需要 CPU 时间的。这便是终端驱动相对于轮询的优点。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="tabbed-block">
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">Question</label><label for="__tabbed_10_2">Answer</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>假设：</p>
+<ul>
+<li>DMA 传输的初始设置需要 1000 个时钟周期</li>
+<li>DMA 结束后的中断处理需要 500 个时钟周期</li>
+<li>从磁盘中传输数据的平均大小为 8KB</li>
+<li>磁盘在 100% 的时间都在传输数据</li>
+</ul>
+<p>求出处理器浪费的时间比例</p>
+</div>
+<div class="tabbed-block">
+<p>每次传输 8KB 的时间为 <span class="arithmatex">\(\frac{8KB}{4MB/\text{second}}=2\times 10^{-3}\text{seconds}\)</span></p>
+<p>那么每秒需要的时钟周期数为 <span class="arithmatex">\(\frac{(1000+500)\frac{\text{Cycles}}{\text{Transfer}}}{2\times 10^{-3}\frac{\text{Seconds}}{\text{Transfer}}}=750\times 10^3\frac{\text{Clock Cycles}}{\text{Second}}\)</span></p>
+<p>则浪费时间比例为 <span class="arithmatex">\(\frac{750\times 10^3}{500\times 10^6}=0.2%\)</span></p>
+<p>与轮询和中断驱动的 I/O 都不相同，DMA 可以被用于连接硬盘，而不会消耗单个 I/O 的所有处理器周期</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="5-io-performance-measures">5 I/O Performance Measures<a class="headerlink" href="#5-io-performance-measures" title="Permanent link">&para;</a></h2>
+<p>几类关于 I/O 的基准测试（Benchmark）：</p>
+<ul>
+<li>超级计算机 I/O 基准测试</li>
+<li>事务处理 I/O 基准测试<ul>
+<li>I/O 速率：每秒访问硬盘的数量（数据速率的倒数）</li>
+</ul>
+</li>
+<li>文件系统 I/O 基准测试：包括 MakeDir、Copy、ScanDir、ReadAll、Make 操作等</li>
+</ul>
+<hr />
+<h2 id="6-designing-an-io-system">6 Designing an I/O System<a class="headerlink" href="#6-designing-an-io-system" title="Permanent link">&para;</a></h2>
+<p>设计 I/O 系统的通用方法：</p>
+<ul>
+<li>找到 I/O 系统最弱的连接，它是 I/O 通路上限制设计的一个组件。工作负载和配置限制都可以决定最弱链接的位置</li>
+<li>通过配置该部件来维持所需带宽。确定系统其余部分的要求，并配置它们以支持此带宽</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><input id="__tabbed_11_2" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="__tabbed_11_1">Question</label><label for="__tabbed_11_2">Answer</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="glightbox" href="../assets/Chapter%206/file-20241228202417643.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/Chapter%206/file-20241228202417643.png" /></a></p>
+</div>
+<div class="tabbed-block">
+<p><a class="glightbox" href="../assets/Chapter%206/file-20241228202423801.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/Chapter%206/file-20241228202423801.png" /></a></p>
+</div>
+</div>
+</div>
+</div>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> zhongguo </li>
+</ul>
 
 
 
