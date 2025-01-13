@@ -1,15 +1,21 @@
+:root {
+  --md-text-font: "JetBrains Mono", "LXGW WenKai Screen"; 
+  --md-code-font: "JetBrains Mono";
+}
 
-  body {
-    font-family: "LXGW WenKai", sans-serif;
-    /* Lite version */
-    /* font-family: "LXGW WenKai Lite", sans-serif; */
-    /* TC version */
-    /* font-family: "LXGW WenKai TC", sans-serif; */
-    /* Screen version */
-    /* font-family: "LXGW WenKai Screen", sans-serif; */
-  }
+body {
+  font-family: "LXGW WenKai", sans-serif;
+  /* Lite version */
+  /* font-family: "LXGW WenKai Lite", sans-serif; */
+  /* TC version */
+  /* font-family: "LXGW WenKai TC", sans-serif; */
+  /* Screen version */
+  /* font-family: "LXGW WenKai Screen", sans-serif; */
+}
 
-  :root {
-    --md-text-font: "JetBrains Mono", "LXGW WenKai Screen"; 
-    --md-code-font: "JetBrains Mono", "Noto Serif SC";
-  }
+/*设置主题颜色*/
+[data-md-color-scheme="jyzcolor"] {
+  --md-primary-fg-color:        #61e3bc;
+  --md-primary-fg-color--light: #1aeec0;
+  --md-primary-fg-color--dark:  #31877a;
+}
