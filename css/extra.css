@@ -15,7 +15,7 @@ body {
 
 /*设置主题颜色*/
 [data-md-color-scheme="jyzcolor"] {
-  --md-primary-fg-color:        #61e3bc;
+  --md-primary-fg-color:        #58d4c5;
   --md-primary-fg-color--light: #1aeec0;
   --md-primary-fg-color--dark:  #31877a;
 }
