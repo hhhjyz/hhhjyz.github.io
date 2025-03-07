@@ -15,7 +15,22 @@ body {
 
 /*设置主题颜色*/
 [data-md-color-scheme="jyzcolor"] {
-  --md-primary-fg-color:        #58d4c5;
-  --md-primary-fg-color--light: #1aeec0;
-  --md-primary-fg-color--dark:  #31877a;
+  --md-primary-fg-color:#62c0b097;
+  --md-primary-fg-color--light: #e2fcf7;
+  --md-primary-fg-color--dark:  #87d9cd;
+  --md-primary-bg-color: #197966;
+  --md-accent-bg-color: #9ae7e3;
+  --md-default-bg-color: #ecfffc;
 }
+
+[data-md-color-scheme="jyzdark"] {
+  --md-primary-fg-color:#b03e3e97;
+  --md-primary-fg-color--light: #f99f9f;
+  --md-primary-fg-color--dark:  #873131;
+  --md-primary-bg-color: #fbe5e5;
+  --md-default-bg-color: #fbd5d5;
+  --md-admonition-bg-color: var(--md-primary-bg-color);
+  --md-accent-bg-color: var(--md-primary-bg-color);
+  --md-code-bg-color: var(--md-primary-bg-color);
+}
+

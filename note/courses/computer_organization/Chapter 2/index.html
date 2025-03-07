@@ -42,6 +42,8 @@
       
     
     
+      <link rel="stylesheet" href="../../../../css/round.css">
+    
       <link rel="stylesheet" href="../../../../css/extra.css">
     
       <link rel="stylesheet" href="https://fonts.loli.net/css2?family=Noto+Serif+SC&display=swap">
@@ -57,24 +59,17 @@
     
     
     
-   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-    html.glightbox-open { overflow: initial; height: 100%; }
-    .gslide-title { margin-top: 0px; user-select: text; }
-    .gslide-desc { color: #666; user-select: text; }
-    .gslide-image img { background: white; }
-    .gscrollbar-fixer { padding-right: 15px; }
-    .gdesc-inner { font-size: 0.75rem; }
-    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
+  </head>
   
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="jyzcolor" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    
+    <body dir="ltr" data-md-color-scheme="jyzcolor" data-md-color-primary="indigo" data-md-color-accent="light">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -126,7 +121,33 @@
     </div>
     
       
+        <form class="md-header__option" data-md-component="palette">
+  
     
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="jyzcolor" data-md-color-primary="indigo" data-md-color-accent="light"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="jyzdark" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -174,6 +195,18 @@
   </div>
 </div>
     
+    
+      <div class="md-header__source">
+        <a href="https://github.com/hhhjyz/hhhjyz.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
     
   </nav>
   
@@ -310,6 +343,18 @@
     </a>
     hhhjyz
   </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hhhjyz/hhhjyz.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -755,6 +800,255 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    数据库系统
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            数据库系统
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database%20system/chaper%201%20Introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chpater 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database%20system/Chapter%202%20Relational%20Modeling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database%20system/Chapter%203/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    计算机体系结构
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            计算机体系结构
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Computer%20Architecture/Chapter%201%20Fundamentals%20of%20computer%20design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    人工智能
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            人工智能
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/Chapter%202/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1001,6 +1295,9 @@
                 
                   
 
+  
+  
+
 
 <h1 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h1>
 <h1 id="operations">Operations<a class="headerlink" href="#operations" title="Permanent link">&para;</a></h1>
@@ -1038,9 +1335,9 @@
 <li>RISC-V  是小端的（<strong>就是低位字节排放在内存的低地址端，高位字节排放在内存的高地址端</strong>）</li>
 <li>RISC-V不需要数据自然对齐，但是会变慢</li>
 <li><strong>对齐</strong>：word的起始地址必须是4的倍数，doubleword的起始地址必须是8的倍数，对齐会使数据的传输更快
-<a class="glightbox" href="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202410201041475.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202410201041475.png" /></a></li>
+<img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202410201041475.png" /></li>
 </ul>
-<p><a class="glightbox" href="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202410121519144.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202410121519144.png" /></a>
+<p><img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202410121519144.png" />
 <strong>RISC-V instructions</strong>
 - 指令都是32位</p>
 <h1 id="representing-instructions-in-the-computer">Representing Instructions in the computer<a class="headerlink" href="#representing-instructions-in-the-computer" title="Permanent link">&para;</a></h1>
@@ -1058,7 +1355,7 @@
 <h2 id="1-translating-assembly-into-machine-code">1 Translating assembly into machine code<a class="headerlink" href="#1-translating-assembly-into-machine-code" title="Permanent link">&para;</a></h2>
 <p>![[file-20241028160825421.png]]</p>
 <h2 id="2-risc-v">2 RISC-V 指令格式<a class="headerlink" href="#2-risc-v" title="Permanent link">&para;</a></h2>
-<p><a class="glightbox" href="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202410121527462.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202410121527462.png" /></a></p>
+<p><img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202410121527462.png" /></p>
 <h3 id="21-r">2.1 R 型指令<a class="headerlink" href="#21-r" title="Permanent link">&para;</a></h3>
 <p>用于寄存器</p>
 <table>
@@ -1148,12 +1445,12 @@
 </tbody>
 </table>
 <p>在移位指令中前六位funct6
-<a class="glightbox" href="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202410201102663.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202410201102663.png" /></a>
+<img alt="" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202410201102663.png" />
 - rs1: source or base address register number
 - immediate: constant operand, or offset added to base address</p>
 <p>p 2s-complement, sign extended</p>
 <h3 id="23-s">2.3 S型指令<a class="headerlink" href="#23-s" title="Permanent link">&para;</a></h3>
-<p><a class="glightbox" href="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202410201103646.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202410201103646.png" /></a></p>
+<p><img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202410201103646.png" /></p>
 <ul>
 <li>rs1: 寄存器基址</li>
 <li>rs2: 源操作数寄存器</li>
@@ -1175,10 +1472,10 @@
 <li>程序在程序上操作（编译器）</li>
 </ul>
 <h2 id="3-logical-operations">3 Logical Operations<a class="headerlink" href="#3-logical-operations" title="Permanent link">&para;</a></h2>
-<p><a class="glightbox" href="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202410201112080.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202410201112080.png" /></a>
-<a class="glightbox" href="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202410201115433.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202410201115433.png" /></a></p>
+<p><img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202410201112080.png" />
+<img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202410201115433.png" /></p>
 <h3 id="31-shift-operations">3.1 Shift Operations<a class="headerlink" href="#31-shift-operations" title="Permanent link">&para;</a></h3>
-<p><a class="glightbox" href="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202410141441996.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202410141441996.png" /></a>
+<p><img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202410141441996.png" />
 - immed 决定位置如何移动
 - 左移
     - <code>slli rd, rs1, imm</code>即<code>rd = rs1&lt;&lt; imm</code>
@@ -1259,8 +1556,8 @@
 <li>Push:<code>sp=sp-8</code></li>
 <li>pop:<code>sp=sp+8</code><blockquote>
 <p>[!info] compiling a leaf procedure
-<a class="glightbox" href="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202410201428750.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202410201428750.png" /></a>
-<a class="glightbox" href="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202410201429202.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202410201429202.png" /></a></p>
+<img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202410201428750.png" />
+<img alt="image.png" src="https://cdn.jsdelivr.net/gh/hhhjyz/photos@main/202410201429202.png" /></p>
 </blockquote>
 </li>
 </ul>
@@ -1294,7 +1591,7 @@
 </li>
 <li>
 <p>Linux 系统上 RISC-V 的内存分配示意图：</p>
-<p><a class="glightbox" href="https://note.noughtq.top/hardware/co/images/C2/19.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="https://note.noughtq.top/hardware/co/images/C2/19.png" /></a></p>
+<p><img alt="" src="https://note.noughtq.top/hardware/co/images/C2/19.png" /></p>
 <ul>
 <li>最底下的内存是保留的空间（不可访问）</li>
 <li>第二层的内存用于存放 RISC-V 的机器码，称为<strong>文本段</strong>(text segment)</li>
@@ -1512,7 +1809,7 @@ again:
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.tabs", "navigation.tabs.sticky", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "search.share"], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": "-header.autohide - navigation.instant - navigation.instant.prefetch - navigation.tabs - navigation.tabs.sticky - navigation.expand - navigation.top - search.suggest - search.highlight - search.share", "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
@@ -1528,7 +1825,5 @@ again:
         <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
       
     
-  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
-document$.subscribe(() => { lightbox.reload() });
-</script></body>
+  </body>
 </html>

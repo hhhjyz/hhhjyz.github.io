@@ -38,6 +38,8 @@
       
     
     
+      <link rel="stylesheet" href="../../css/round.css">
+    
       <link rel="stylesheet" href="../../css/extra.css">
     
       <link rel="stylesheet" href="https://fonts.loli.net/css2?family=Noto+Serif+SC&display=swap">
@@ -53,30 +55,28 @@
     
     
     
-   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-    html.glightbox-open { overflow: initial; height: 100%; }
-    .gslide-title { margin-top: 0px; user-select: text; }
-    .gslide-desc { color: #666; user-select: text; }
-    .gslide-image img { background: white; }
-    .gscrollbar-fixer { padding-right: 15px; }
-    .gdesc-inner { font-size: 0.75rem; }
-    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  </head>
   
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="jyzcolor" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    
+    <body dir="ltr" data-md-color-scheme="jyzcolor" data-md-color-primary="indigo" data-md-color-accent="light">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -117,7 +117,33 @@
     </div>
     
       
+        <form class="md-header__option" data-md-component="palette">
+  
     
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="jyzcolor" data-md-color-primary="indigo" data-md-color-accent="light"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="jyzdark" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -165,6 +191,18 @@
   </div>
 </div>
     
+    
+      <div class="md-header__source">
+        <a href="https://github.com/hhhjyz/hhhjyz.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
     
   </nav>
   
@@ -297,6 +335,18 @@
     </a>
     hhhjyz
   </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hhhjyz/hhhjyz.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -729,6 +779,255 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    数据库系统
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            数据库系统
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../courses/database%20system/chaper%201%20Introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chpater 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../courses/database%20system/Chapter%202%20Relational%20Modeling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../courses/database%20system/Chapter%203/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    计算机体系结构
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            计算机体系结构
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../courses/Computer%20Architecture/Chapter%201%20Fundamentals%20of%20computer%20design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    人工智能
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            人工智能
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../courses/AI/Chapter%202/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -960,6 +1259,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -973,28 +1274,143 @@
                 
                   
 
+  
+  
 
-  <h1>Questions</h1>
 
-<ol>
-<li>HPL 和 HPCG 基准测试（15 分）<br />
+<p>e1. HPL 和 HPCG 基准测试（15 分）<br />
     提案应包括对软件环境（操作系统、编译器、数学库、MPI 软件、软件版本等）的描述，以及性能优化与测试方法、性能测量、问题和解决方案分析等内容。如果能够对 HPL、HPCG 的算法及其源代码进行深入分析，也会是加分项。<br />
     可从以下地址下载 HPL 软件：<a href="http://www.netlib.org/benchmark/hpl/">http://www.netlib.org/benchmark/hpl/</a><br />
-    可从以下地址下载 HPCG 软件：<a href="https://github.com/hpcg-benchmark/hpcg">https://github.com/hpcg-benchmark/hpcg</a><br />
-    建议在 x86 CPU 和数据中心 GPU 平台上运行 HPL 和 HPCG 基准测试的验证与优化。如果使用了其他硬件平台，也欢迎提交相关分析与结果，以证明其拥有足够的性能表现。</li>
-</ol>
-<p>以下是翻译内容：</p>
+    可从以下地址下载 HPCG 软件：<a href="https://github.com/hpcg-benchmark/hpcg">https://github.com/hpcg-benchmark/hpcg</a>  </p>
+<h1 id="_1">签到<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>今年的签到题竟然是阅读理解，怎么回事呢，我们一起来看看吧。</p>
+<p>为了保证大家基本读完，本题需要提交四位数字，读文档的同时大家就能发现（<em>这些提示都是斜体！</em>）。</p>
+<h1 id="_2">前言<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h1>
+<p>今年我们的集群结构发生了非常大的变化。往年我们的比赛集群是学校生产集群的子集，内部具有 100Gbps RDMA 网络和高速共享文件系统，所以不需要担心网络和储存的问题。</p>
+<p>但今年的比赛我们引入了许多异构计算资源，与之前的集群放在两个校区，通过互联网连接，因此集群内部再也不具有无代价的高速网络和共享文件系统。同时，往年是传统的基于调度起的超算集群模式，不开放联网权限、没有 root 权限，选手只能通过 webshell 访问。我们收到了许多同学的反馈，表示他们没有办法在比赛中使用他们熟悉的工具和框架，连接到集群也十分麻烦，更别提用 vscode 远程开发了。</p>
+<p>所以本次比赛我们使用基于容器的方案，使用 Kubernetes 集群管理容器，选手可以自由选择容器镜像，配置容器环境，使用容器内的 root 权限。我们为选手发放 kubconfig，这样选手可以通过 kubectl 提供的反代功能直接访问集群，也可以通过 kubectl port-forward 命令将集群内部的服务映射到本地端口，方便本地开发。特别是，使用 vscode 可以非常方便管理 kubernetes 集群，可以做到类似于 devcontainer 的效果。我们也提供了一个 web 页面，供大家下载 kubeconfig，查看提交作业、查看 pod 状态、管理储存。</p>
+<h1 id="_3">如何获得帮助<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h1>
+<p>请及时加入 QQ 群679550783，获得消息推送、反馈问题。你可以联系管理员，或者在群里提问。管理员会在比赛期间保持在线，尽力解决问题。注意，在群里提问时请不要交流题目的想法和答案。</p>
+<p>管理员用<code>@标签</code>表示负责的范围。请尽量按照标签联系管理员，以便快速解决问题。如果不知道该联系哪位，请联系标签为<code>@其他</code>的同学，或者群主。</p>
+<p>由于改动比较大，本次环境必然有许多不足之处，我们在赛前进行了一些测试，但是没有办法覆盖所有情况。如果在比赛中遇到任何问题，请及时联系管理员，我们会尽力解决。</p>
+<h1 id="_4">参赛须知<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h1>
+<h2 id="1-writeup">1 WriteUp 提交<a class="headerlink" href="#1-writeup" title="Permanent link">&para;</a></h2>
+<p><strong>所有获得奖项的选手</strong>需在比赛结束后<strong>48小时内</strong>（2025年1月27日晚23:59之前）提交 WriteUp。WriteUp 需要包含以下内容：</p>
+<ul>
+<li>每一道得分超过10%的题目的简要思路、简要过程</li>
+<li>如果直接使用了开源代码、互联网代码、或者由大语言模型辅助完成，请提交对应的代码来源、与模型对话的截图</li>
+</ul>
+<p>由于时逢春节，只需要简单的描述与过程即可。对于中间过程或者原始文件，可以直接不整理打包提交（总大小限制：1GB以内）。WriteUp 提交方式将与获奖信息收集同时发送至获奖选手邮箱。</p>
+<p>WriteUp 不参与评分，只用于反作弊。如果没有及时提交 WriteUp、或者 WriteUp 可疑，组委会有权在充分公示的前提下取消选手的获奖资格、后续选手将递补名额。</p>
+<h2 id="2">2 参赛须知<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
 <ol>
-<li>AlphaFold3 推理优化（30 分）
-任务描述<br />
-蛋白质结构预测是一项基础且充满挑战的任务，半个世纪以来一直是生物学领域的重大难题。革命性的 AI 模型 AlphaFold 以非凡的性能成功解决了这一数十年来的科学难题，并因此获得了 2024 年诺贝尔化学奖的一半荣誉。最新版本 AlphaFold3 配备了全新特性，能够准确预测含有配体、蛋白质和核酸在内的复合体结构，极有可能在药物发现、疾病治疗以及我们对基础生物学过程的理解方面带来革命性进展。</li>
+<li>不得作弊。比赛是个人赛，任何多人合作完成比赛的行为都将被认为作弊。组委会在多处设置了作弊检查点，并将进行代码查重，希望大家诚信比赛，赛出风采。</li>
+<li>不得攻击网站和 比赛集群。本比赛不是 CTF，不考察任何形式的平台攻击。如果我们发现任何攻击行为，选手将会被除名。如果您发现任何 Bug 或可能的安全漏洞，请您与我们联系，我们会给予充分奖励，但不包括比赛分数上的奖励。</li>
+<li>赛题分批次放出。我们计划在 2025/01/19 12:00 和 2024/01/20 12:00 释出部分未释出的试题，释出顺序与题目难度无关。</li>
+<li>比赛的所有题目场景均为虚构，不反映现实或历史。所有人物均为虚拟人物，并非真实人物的对应。</li>
+<li>请勿滥用平台计算资源，一经发现，立即封号。开启 VSCode 任务时，请最多分配 2 核心 CPU（CPU 分区） / 1 块 GPU（GPU 分区）。这足够您的使用。否则我们会直接结束您的任务。</li>
+<li>可以使用 GPT 等大语言模型，但需要在 WriteUp 中说明。</li>
 </ol>
-<p>AlphaFold3 使用了一种基于扩散（diffusion）的架构，以单个氨基酸序列或多个生物分子的序列作为输入。该过程包含两个阶段：数据管线（data pipeline）和模型推理（model inference）。在数据管线阶段（使用 CPU），系统会利用 Jackhmmer/Nhmmer 在基因数据库中搜索蛋白质和 RNA 实体的多序列比对（MSA）。在模型推理阶段（使用 GPU），系统会使用这些多序列比对（MSA）、模板以及原始序列，通过 Pairformer 和扩散模块生成预测的结构。</p>
-<p>在初赛（Preliminary）阶段中，关注点仅在模型推理阶段。评审委员会提供了十二个单一蛋白质序列的示例，以及预先生成的多序列比对（MSA）和模板用作任务输入。因此无需执行数据管线阶段。初赛任务的目标是尽量缩短推理时间，主要关注以下两个方面：<br />
-(1) 优化 GPU 推理过程，最小化推理时间。（10 分）<br />
-(2) 将推理代码从 GPU 迁移至 CPU 架构，并进行优化以最小化相应的 CPU 推理时间。（20 分）</p>
-<p>例如，相关推理时间为 53.76 秒，这是在运行推理阶段后于屏幕截图中所示的结果。
-<a class="glightbox" href="../assets/questions/file-20250113105852993.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/questions/file-20250113105852993.png" /></a></p>
+<h2 id="3">3 隐私协议<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<ol>
+<li>我们（北京大学高性能计算综合能力竞赛组委会）高度重视您的隐私，将会采取一切必要措施保护您的隐私安全；</li>
+<li>在比赛过程中我们会收集您的个人信息、做题情况等信息。这些信息只供本次比赛所用，赛后您可要求组委会永久删除；</li>
+<li>我们可能会将您的部分个人信息（姓名、电话、邮箱等）提供给赞助商作为招聘等用途。组委会与赞助商约定，如您无回复，每半年最多打扰您一次。如您不同意本条，可以发送主题为“HPCGame+邮箱+不同意校招信息分享”的邮件至<code>hpcgame@pku.edu.cn</code>，我们将不会分享您的信息。</li>
+<li>对于本协议的最终解释权归组委会所有。</li>
+</ol>
+<h2 id="4">4 镜像使用协议与许可<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<p>您在拉取、使用镜像、或提交使用镜像评测的题目之前，视为同意对应镜像的协议与许可。所有镜像不得二次分发，仅供比赛使用。如果使用 HPCKit 镜像，视同您同意<a href="https://www.hikunpeng.com/legal/developer/hpckit/software/protocol">鲲鹏HPCKit软件许可协议 V1.0</a>。该镜像仅限于在鲲鹏平台上使用，具体使用授权由对应权利人向您唯一的、不可转让地授予，与比赛组委会无关。</p>
+<p>请注意，提交本题或其他任何赛题表示您已阅读并同意参赛须知、镜像使用协议和隐私协议。</p>
+<h1 id="_5">集群结构<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h1>
+<h2 id="1">1 地域<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<p>本次集群处于两个机房中，分别是北京大学燕园校区（位于北京市海淀区）和“新燕园校区”（位于北京市昌平区）。两个机房之间通过 10Gbps 的虚拟光纤互联。</p>
+<h2 id="2_1">2 硬件与网络<a class="headerlink" href="#2_1" title="Permanent link">&para;</a></h2>
+<p>本次我们共有如下几种硬件分区，可以使用 k8s label 选择硬件分区。<em>答案的第一位是1</em></p>
+<p>昌平校区：同分区机器具有 100Gbps 网络互联</p>
+<ul>
+<li><code>x86</code>：处理器为 Intel Xeon Platinum 8358。label： <code>hpc.lcpu.dev/partition=x86</code>。</li>
+<li><code>gpu-a800</code>：处理器为 Intel Xeon Platinum 8358，配备 A800 GPU。使用 MIG 技术，每位选手可使用约单张卡 2/7 的计算资源和 20G 显存。label：<code>nvidia.com/gpu-product=NVIDIA-A800-80GB-PCIe</code></li>
+<li><code>gpu-l40</code>：处理器为 Intel Xeon Platinum 8358，配备 L40 GPU。fp64 计算能力较低，但每个任务可以使用所有算力。label：<code>nvidia.com/gpu-product=NVIDIA-L40-40GB-PCIe</code></li>
+</ul>
+<p>燕园校区：</p>
+<ul>
+<li><code>x86_amd</code>：处理器为 AMD Epyc 9654。配备V100 GPU，有高速 SSD，适合跑 vscode</li>
+<li><code>arm</code>：处理器为 Kunpeng 920 7282C。单颗 CPU 80 核，每台机器 2 个 CPU socket。内存为DDR5 4800。由于工作失误，该机器内存通道只插满了一半，比较适合跑计算密集型任务</li>
+<li><code>npu</code>：处理器为 Kunpeng 920 5250 * 4。单机配备 8 个 920B NPU</li>
+<li><code>npu-inf</code>: Kunpeng 920 5250 * 2，单机配备 4 张 Atlas 300I DUO NPU，共有 8 个 310P NPU 核心，适合跑推理任务</li>
+</ul>
+<p>其中，<code>arm</code>，<code>npu</code>，<code>npu-inf</code> 通过 25G 网络互联。燕园校区所有机器之间是 10G 网络互联。</p>
+<h2 id="3_1">3 储存<a class="headerlink" href="#3_1" title="Permanent link">&para;</a></h2>
+<p>本次比赛我们使用了多种储存设备，可以通过 k8s 的 storage class 选择储存设备。请注意这些储存设备的地域关系。部分设备只能在特定地域使用，有时候需要跨地域传输数据。我们强烈推荐在 pod 对应的区域选择合适的储存设备，否则速度可能会相当糟糕。你可以用<code>kubectl get sc</code>查看所有的 storage class，我们在这里提供一些说明。</p>
+<ul>
+<li><code>wm2-nfs</code>：位于昌平校区，只有昌平校区机器都可以访问。储存介质为 SSD，每个机器的可用读写速度约 2GB/s</li>
+<li><code>yanyuan-nfs</code>：位于燕园校区，只有燕园校区机器都可以访问。储存介质为 SSD，每个机器的可用读写速度约 1GB/s（受限于网络）<em>second number is eight</em></li>
+<li><code>x86-amd-local-hostpath</code>：位于燕园校区，只有<code>x86_amd</code>机器可以访问，每台机器有各自的hostpath储存。储存介质为 NVME，每个机器的可用读写速度约 4GB/s</li>
+<li><code>npu-local-data</code>：用于 <code>npu</code> 训练时储存临时数据，每台机器有各自的hostpath储存。储存介质为 NVME，每个机器的可用读写速度约 4GB/s</li>
+<li><code>juicefs</code>：位于燕园校区，<strong>所有机器</strong>都可以访问。储存介质为 HDD 集群，IOPS 特别低，请不要在上面放小文件，比如<code>conda</code>环境。昌平校区每个机器的可用读写速度约 500MB/s、燕园校区每个机器的可用读写速度约 1GB/s</li>
+</ul>
+<h1 id="_6">镜像<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h1>
+<p>为了方便大家使用，我们提供了许多预构建的镜像，位于<code>crmirror.lcpu.dev</code>。你可以通过<code>docker pull crmirror.lcpu.dev/hpcgame/xxx</code>下载镜像，使用<code>latest</code>标签即可。</p>
+<p>我们提供了以下镜像：</p>
+<h2 id="1_1">1 默认镜像<a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h2>
+<p>默认镜像是推荐使用的开发镜像，包含了常用的工具和库，可以在所有架构上使用。默认镜像名称为 full，包括了<code>module</code>工具。您可以使用<code>module avail</code>查看可用的模块。</p>
+<h2 id="2_2">2 特定镜像<a class="headerlink" href="#2_2" title="Permanent link">&para;</a></h2>
+<h3 id="21">2.1 多架构镜像<a class="headerlink" href="#21" title="Permanent link">&para;</a></h3>
+<p>如下镜像支持多种架构，可以在 x86 和 arm 机器上使用：</p>
+<ul>
+<li>base：基础镜像，基于<code>rockylinux 9.5</code></li>
+<li>gcc：使用 gcc-13 作为编译器，设置了 CC、CXX 等环境变量</li>
+<li>llvm: 使用 llvm 19.1.7 作为编译器，设置了 CC、CXX 等环境变量。注意，Fortran 编译器名称为<code>flang-new</code></li>
+<li>nvhpc：使用 nvidia hpc sdk 24.11 作为编译器，设置了 CC、CXX 等环境变量。<em>叁：9</em></li>
+</ul>
+<h3 id="22">2.2 单一架构镜像<a class="headerlink" href="#22" title="Permanent link">&para;</a></h3>
+<p>如下镜像只能在特定架构上使用：</p>
+<ul>
+<li>cuda：使用 cuda 12.6，只能在 amd64 架构上使用</li>
+<li>intel：使用 intel oneapi 2024.2，只能在 amd64 架构上使用。请使用<code>module</code>工具管理环境，可以使用<code>module avail</code>查看可用的模块，<code>module load</code>进行加载。</li>
+<li>hpckit：使用鲲鹏 HPCKit，只能在 arm 架构上使用</li>
+</ul>
+<h2 id="3_2">3 镜像缓存<a class="headerlink" href="#3_2" title="Permanent link">&para;</a></h2>
+<p>该站还提供以下镜像 registry的缓存：</p>
+<ul>
+<li>docker.io</li>
+<li>gcr.io</li>
+<li>ghcr.io</li>
+<li>nvcr.io</li>
+<li>quay.io</li>
+</ul>
+<p>可以使用类似如下命令使用：</p>
+<p>docker pull crmirror.lcpu.dev/docker.io/library/hello-world:latest</p>
+<h1 id="_7">连接到比赛集群<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h1>
+<p>比赛集群是通过 kubernetes 管理的，我们提供了 kubeconfig 文件，可以通过 kubectl 访问集群。访问<code>https://hpcgame.pku.edu.cn/kube/_/ui/</code>，可以可视化管理<code>kubeconfig</code>与集群资源。</p>
+<h2 id="1-kubeui-kubeconfig">1 登录 kubeui、获取 kubeconfig<a class="headerlink" href="#1-kubeui-kubeconfig" title="Permanent link">&para;</a></h2>
+<p>访问<code>https://hpcgame.pku.edu.cn/kube/_/ui/</code>，将会跳转至<code>hpcgame</code>的应用验证页面，点击<code>登录到HPCGame 2nd cluster</code>，即可访问<code>kubeui</code>。</p>
+<p>在左侧导航栏中，进入令牌管理页面，点击右上角“添加令牌”。点击“显示Kubeconfig”，即可获取<code>kubeconfig</code>文件。</p>
+<h2 id="2-kubeconfig">2 最重要的一点：正确放置kubeconfig文件<a class="headerlink" href="#2-kubeconfig" title="Permanent link">&para;</a></h2>
+<p>如果没有特殊需要，kubeconfig文件必须放置在$HOME/.kube/config。对于 Windows、Linux、macOS 用户都一样。Windows用户的家目录是C:\Users\你的用户名。</p>
+<p>特别的，对于使用 WSL 开发的同学，必须要在WSL和Windows的家目录下各自存在相同的kubeconfig，位置都是对应的家目录/.kube/config。</p>
+<p>如果遇到了能attach到容器的终端，但是不能将整个vscode attach到容器的问题，大概率就是这个原因，请检查。</p>
+<h2 id="3-vscode">3 方式一：使用 vscode 访问集群<a class="headerlink" href="#3-vscode" title="Permanent link">&para;</a></h2>
+<p>我们推荐大家使用 vscode 的 <code>kubernetes</code> 插件访问集群。请同时安装 Dev Containers 插件，以便 attach 到 pod 中。</p>
+<p>具体步骤：</p>
+<ol>
+<li>按 <code>Ctrl+Shift+P</code> / <code>Command+Shift+P</code>(对于MacOS使用者) ，输入<code>set kubeconfig</code>，点击。</li>
+<li>选择 <code>Add new kubeconfig</code>，然后浏览并选择您之前下载的 Kubeconfig 文件。</li>
+<li>确认导入后，Kubernetes 插件将显示您的集群信息。</li>
+</ol>
+<p><em>最后一个是八</em></p>
+<h2 id="4-kubectl">4 方式二：使用 kubectl 访问集群<a class="headerlink" href="#4-kubectl" title="Permanent link">&para;</a></h2>
+<p>将 kubeconfig 文件放在<code>~/.kube/config</code>，或者设置环境变量<code>KUBECONFIG</code>指向 kubeconfig 文件。</p>
+<p>export KUBECONFIG=/path/to/kubeconfig</p>
+<p>然后使用<code>kubectl</code>访问集群。</p>
+<h2 id="5">5 连接容器进行开发<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
+<ol>
+<li>在连接的集群中，找到<code>Workloads</code>，在其中找到<code>Pods</code>，在该栏中将列出诸多Pod。</li>
+<li>选择您想要连接的容器名称，右键并点击<code>Attach VSCode</code>选项。</li>
+</ol>
+<h2 id="6-kubectl-port-forward">6 使用 kubectl port-forward<a class="headerlink" href="#6-kubectl-port-forward" title="Permanent link">&para;</a></h2>
+<p>如果您想要将集群内部的服务映射到本地端口，可以使用<code>kubectl port-forward</code>命令。例如，将 pod <code>nginx</code> 的 80 端口映射到本地 8080 端口：</p>
+<p>kubectl port-forward pod/nginx 8080:80</p>
 
 
 
@@ -1051,7 +1467,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.tabs", "navigation.tabs.sticky", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": "-header.autohide - navigation.instant - navigation.instant.prefetch - navigation.tabs - navigation.tabs.sticky - navigation.expand - navigation.top - search.suggest - search.highlight - search.share", "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
@@ -1067,7 +1483,5 @@
         <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
       
     
-  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
-document$.subscribe(() => { lightbox.reload() });
-</script></body>
+  </body>
 </html>
