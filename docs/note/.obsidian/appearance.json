@@ -1,9 +1,9 @@
 {
   "theme": "moonstone",
-  "accentColor": "#6ca0c1",
+  "accentColor": "#1ce3e0",
   "cssTheme": "Blue Topaz",
   "interfaceFontFamily": "Bookerly,Baskerville Old Face,楷体",
   "textFontFamily": "Bookerly,霞鹜文楷 GB 屏幕阅读版 R,华文仿宋,Bell MT",
-  "monospaceFontFamily": "Courier New",
+  "monospaceFontFamily": "Courier New,Maple Mono NF CN",
   "baseFontSize": 17
 }

@@ -12,13 +12,13 @@ operations of the Computer Hardware
 - word 32bit
 - doubleword 64bit
 经常用的变量放到寄存器里面
-![[file-20241028125436124.png]]
-## 1 RISC-V Registers
+
+# 1 RISC-V Registers
 在RISC-V体系结构中，寄存器的大小为64位
 ![[file-20241028125513896.png]]
-## 2 Memory Operands
+## 1 Memory Operands
 operands 只能是寄存器
-## 3 Signed and Unsigned Numbers
+## 2 Signed and Unsigned Numbers
 **对二进制补码求相反数**：所有位取反加一
 
 # Operands

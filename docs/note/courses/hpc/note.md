@@ -14,7 +14,7 @@
     - 基于并行系统和网络的
     - 集群系统——是以高速网络连接起来的高性能工作站或微机组成
 - 云计算：
-## 计算机概述
+## 1 计算机概述
 - 程序（program）：简单地被理解为按照预定的步骤进行工作，程序是处理数据的算法的具体实现
 - 计算机系统分为硬件系统和软件系统
 - 硬件系统：指计算机的物理设备，实现计算机操作过程、输入、输出的各种电子设备
@@ -22,7 +22,7 @@
   - 通电后 CPU执行启动程序BIOS，操作系统调入内存
   - BIOS引导后计算机由操作系统管理和控制
 
-## 计算机中数的表示
+## 2 计算机中数的表示
 
 - 整数：原码、反码、补码，正数的补码等于他的原码，负数的补码等于它的反码加1（==进位不改变符号位==）
   - 存储采用补码形式，将符号位与其他位可以统一处理，补码实现减法运算
@@ -50,7 +50,7 @@
   - 位图：使用像素阵列，每一个像素是一个点
   - 矢量图：任何图形、图形可以分解位曲线和直线的组合，直线、曲线公式的 组合作为图形数据存储起来
 
-## 计算机系统组成
+## 3 计算机系统组成
 
 ![image-20240701170232465](./assets/image-20240701170232465.png)
 
@@ -61,7 +61,7 @@
 
 - NUMA：非统一内存访问，描述了当代多处理
 
-### 处理器
+### 3.1 处理器
 
 - 处理器由运算器和控制器构成
 
@@ -92,7 +92,7 @@
 
 - RISC（精简指令集计算机）：只包含常用指令且指令的长度和执行时间都相同
 
-### 存储器
+### 3.2 存储器
 
 - 存储单元以字节位单位，一个字节由8位二进制组成
   - 存储器由若干字节组成，每个字节都有唯一的标识叫做存储器的地址，用二进制位模式标识
@@ -124,7 +124,7 @@
 - 由于虚拟内存与内存地址是对应的，因此存取速度快于一般磁盘操作 n提升了系统的运行效率。 
 - 由OS和CPU共同完成管理和控制存储系统的任务
 
-### 输入输出系统
+### 3.3 输入输出系统
 
 - 端口和主机的数据传输模式有两种：并行或串行。
   - 并行：一次传输8位数据
@@ -147,7 +147,7 @@
     - 一部分通过内部总线连接CPU和存储器
     - 另一部分则通过外部总线连接外设
 
-### 操作系统
+### 3.4 操作系统
 
 __操作系统是计算机硬件与 其他软件之间的接口，能有效地对计算机软件 、硬件资源进行管理和使用， 使用户能方便地操作计算机。__
 
@@ -246,7 +246,7 @@ __操作系统是计算机硬件与 其他软件之间的接口，能有效地�
 
 # A Crash Course on Computer System
 
-## ISA
+## 1 ISA
 
 - Primitives for processors to execute
 - Defined by an instruction set architecture
@@ -259,13 +259,13 @@ __操作系统是计算机硬件与 其他软件之间的接口，能有效地�
 
 # HPC Methodology
 
-## Basic Theories for HPC
+## 1 Basic Theories for HPC
 
-### Factors Affecting Performance
+### 1.1 Factors Affecting Performance
 
 ![image-20240703144526712](./assets/image-20240703144526712.png)
 
-### High-Level Models
+### 1.2 High-Level Models
 
 - Compute 
   - Program，Function，Programming language，Computation Graph
@@ -278,7 +278,7 @@ __操作系统是计算机硬件与 其他软件之间的接口，能有效地�
   - I/O :Blocking, Signal-Driven, Asynchronous 
   - Communication Mode: P2P, Collective Communication
 
-### Software： Implementation of Models
+### 1.3 Software： Implementation of Models
 
 - Host OS 
   - Compute Library 
@@ -289,7 +289,7 @@ __操作系统是计算机硬件与 其他软件之间的接口，能有效地�
 - Communication Library 
   - MPI, Gloo, NCCL
 
-### Hardware: Operated by Software
+### 1.4 Hardware: Operated by Software
 
 - Server 
 - Processing Units 
@@ -322,11 +322,11 @@ __操作系统是计算机硬件与 其他软件之间的接口，能有效地�
 - use MPI on InfiniBand(I/O网络)
   - larger throughput & lower latency
 
-## Performance Analysis and Optimization Methodology
+## 2 Performance Analysis and Optimization Methodology
 
 - Performance Test： Just directly run the program and see how long it takes 
 
-### Optimization Space Analysis
+### 2.1 Optimization Space Analysis
 
 **we can find the theoretical upper bounds**
 
@@ -350,7 +350,7 @@ __操作系统是计算机硬件与 其他软件之间的接口，能有效地�
 
 Roofline model only focus on 1~2 dominant components
 
-### Where to optimize
+### 2.2 Where to optimize
 
 _Amdahll's Law_
 
@@ -372,7 +372,7 @@ use hotspots analysis to find the bottleneck of the program
 
 
 
-### General Optimizaton Pipeline
+### 2.3 General Optimizaton Pipeline
 
 1. Determine your baseline code 
 2.  Run performance test 
@@ -381,9 +381,9 @@ use hotspots analysis to find the bottleneck of the program
 5. Optimize the bottleneck 
 6. Go to 2.
 
-## Practical Optimization Stretagies
+## 3 Practical Optimization Stretagies
 
-### Algorithm Optimization
+### 3.1 Algorithm Optimization
 
 - reduce complexity
 - trade space for time
@@ -393,20 +393,20 @@ use hotspots analysis to find the bottleneck of the program
   - instruction level
     - branch prediction
 
-#### Caching
+#### 3.1.1 Caching
 
 - stores results from previous executions
 - limited cache size
 
-#### Lock-Free
+#### 3.1.2 Lock-Free
 
 - Locks are needed for concurrency 
 - Lock--waiting: waste cpu resources
 - use atomic primitives
 
-####  Load Balancing
+#### 3.1.3 Load Balancing
 
-### Code Optimization
+### 3.2 Code Optimization
 
 - reduce redundancy(冗余)
 
@@ -425,9 +425,9 @@ use hotspots analysis to find the bottleneck of the program
 -    Instruction/Data Alignment
   - Optimize CPU memory access
 
-### Compile/Running Parameter Optimization
+### 3.3 Compile/Running Parameter Optimization
 
-#### Parameter Tuning
+#### 3.3.1 Parameter Tuning
 
 Adjust Running Scale
 
@@ -435,7 +435,7 @@ Adjust Running Scale
 
 Adjust Core Affinity
 
-### hardware optimization
+### 3.4 hardware optimization
 
 ![image-20240704204315427](./assets/image-20240704204315427.png)
 
@@ -445,17 +445,17 @@ Adjust Core Affinity
 
 # Linux 实践
 
-## 获取帮助
+## 1 获取帮助
 
 - man
 - tldr： too long, didn't read
 - cht.sh: unified cheat sheet
 
-## 使用集群代理
+## 2 使用集群代理
 
 ```proxychains4```
 
-## Linux 用户和用户组
+## 3 Linux 用户和用户组
 
 ![image-20240704141101692](./assets/image-20240704141101692.png)
 
@@ -463,7 +463,7 @@ Adjust Core Affinity
 
 不要滥用root账户
 
-## Everything is a file
+## 4 Everything is a file
 
 - 文件 file
 - 目录 directory 
@@ -472,11 +472,11 @@ Adjust Core Affinity
 - 套接字 socket 
 - 符号链接 symbolic link
 
-## Linux文件系统层次
+## 5 Linux文件系统层次
 
 <img src="./assets/image-20240704141525518.png" width=70%>
 
-## Linux 文件权限
+## 6 Linux 文件权限
 
 read write execute
 
@@ -486,7 +486,7 @@ SUID：临时拥有文件持有者的权限
 
 ![image-20240704142051706](./assets/image-20240704142051706.png)
 
-## 常用命令
+## 7 常用命令
 
 ``````shell
 echo
@@ -512,7 +512,7 @@ parted
 fdisk
 ``````
 
-### 源代码管理和构建工具
+### 7.1 源代码管理和构建工具
 
 GNU Compiler Collection
 
@@ -524,7 +524,7 @@ Make
 
 CMake
 
-### 管道与重定向
+### 7.2 管道与重定向
 
 ``````shell
 | > <
@@ -535,9 +535,9 @@ tee
 
 Tip:记录自己的操作和log
 
-## Linux内核知识
+## 8 Linux内核知识
 
-### 内核的角色和作用
+### 8.1 内核的角色和作用
 
 Physical Hardware -> Kernel Space -> User Space
 
@@ -549,16 +549,16 @@ Physical Hardware -> Kernel Space -> User Space
 - 用户态下执行的命令受到诸多检查
 - 需要访问系统资源是，执行系统调用，切换到内核态
 
-### 宏内核与微内核
+### 8.2 宏内核与微内核
 
-### Linux 内核模块
+### 8.3 Linux 内核模块
 
 - 内核代码树拥有所有可用的东西
 - 但不可能在内核启动时加载所有可能的相关代码
 - 厂商的闭源驱动
 - 运行时动态加载模块
 
-### 驱动是一种内核模块
+### 8.4 驱动是一种内核模块
 
 驱动知道怎么和硬件交互
 
@@ -566,26 +566,26 @@ Physical Hardware -> Kernel Space -> User Space
 - 内存空间映射
 - 中断
 
-### 使用内核模块
+### 8.5 使用内核模块
 
 <img src="./assets/image-20240704150035844.png" width=60%>
 
-## HPC中的软件
+## 9 HPC中的软件
 
 **集群概况：NFSRoot**
 
 - 大型技术群往往不会选择NFSRoot（网络负担太重）
 - RAM Disk和镜像部署时比较常见的选择
 
-### 环境管理
+### 9.1 环境管理
 
 参考集群管理文档
 
-### MPI
+### 9.2 MPI
 
-### CUDA
+### 9.3 CUDA
 
-## HPC中的硬件
+## 10 HPC中的硬件
 
 HPC集群
 
@@ -595,26 +595,26 @@ CPU
 
 PCIe
 
-## 功耗控制
+## 11 功耗控制
 
 **限制CPU的功耗**：
 
 - 间接：限制频率，减少使用的核心数
 - 直接： Intel DCM ，Powercap
 
-## 算力发展与运维的演进
+## 12 算力发展与运维的演进
 
 # 向量化计算
 
-## NumPy
+## 1 NumPy
 
 向量化核心思想：一次同时参与运算的不是一个值，而是同时多个值一起算，即一个向量
 
-## NumPy基础
+## 2 NumPy基础
 
 - 创建一个矩阵：将原有列表转为NumPy矩阵
 
-## SIMD向量化
+## 3 SIMD向量化
 
 - Single Instruction Multiple Data,单指令多数据流
 - 在x86架构下，SIMD一般和SSE和AVX等指令集联系在一起
@@ -622,7 +622,7 @@ PCIe
 
 # Graphics Processing Units
 
-## von Neumann Model
+## 1 von Neumann Model
 
 ![image-20240707111616125](./assets/image-20240707111616125.png)
 
@@ -637,7 +637,7 @@ PCIe
     - 一个指令执行一次
     - Program counter识别当前的指令，时序上是提前的除非控制transfer instruction
 
-## single-cycle microarchitecture
+## 2 single-cycle microarchitecture
 
 ![image-20240707112611669](./assets/image-20240707112611669.png)
 
@@ -645,7 +645,7 @@ Each instruction takes a single clock cycle to execute
 
 only combinational logic is used to implement instruction execution
 
-## Multi-Cycle Microarchitectures
+## 3 Multi-Cycle Microarchitectures
 
 - Goal: Let each instruction take only as much time is reslly needs
 - Idea:
@@ -655,7 +655,7 @@ only combinational logic is used to implement instruction execution
 
 ![image-20240707113636495](./assets/image-20240707113636495.png)
 
-## Pipeline
+## 4 Pipeline
 
 - Goal: More concurrency -->Higher instruction throughput
 - Key idea: When an instruction is using some resources in its processing phase, process other instructions on idle4 resources not needed by that instruction
@@ -665,13 +665,13 @@ only combinational logic is used to implement instruction execution
   - ensure enough hardware resources to process on instruction in each stage
   - process a different instruction in each stage
 
-## GPU
+## 5 GPU
 
 **CPU**： Few complex cores;Larger cache for low memory latency ; Large and slow memory
 
 **GPU** : Lots of simple cores; Small cache for low memory latency; Small and fast memory
 
-### GPU Computing
+### 5.1 GPU Computing
 
 **key idea**: Computation is offloaded to the GPU
 
@@ -698,7 +698,7 @@ A GPU is not programmed using threads(SIMD programming model ), Each thread exec
 
 # Introduction to Machine Learning
 
-## Basic of machine leatning
+## 1 Basic of machine leatning
 
 **Machine learning problems**:
 
@@ -725,9 +725,9 @@ Classifiation,Regression， Clustering， Dimensionality
 
 ![image-20240711090025720](./assets/image-20240711090025720.png)
 
-## Basic of deep learning
+## 2 Basic of deep learning
 
-###  Multilayer perceptrons
+### 2.1 Multilayer perceptrons
 
 active function: 解决拟合过程中无法拟合的问题
 
@@ -737,7 +737,7 @@ active function: 解决拟合过程中无法拟合的问题
 
 ![image-20240711231529849](./assets/image-20240711231529849.png)
 
-## False Sharing
+## 1 False Sharing
 
 False sharing是OpenMP并行编程中常见的性能问题之一。它发生在多个线程并行修改相云的内存位置时，即使它们修改的是不同的变量。由于缓存系统的设计，CPU核心通常不会直接从主内存中读写数据，而是操作缓存中的数据。现代计算机的缓存系统通常以缓存行（cache line）为单位存储数据，一个缓存行通常是64字节。
 
