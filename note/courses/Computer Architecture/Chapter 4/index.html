@@ -1830,7 +1830,7 @@
 
 <h1 id="instruction-level-parallelismilp">Instruction-Level parallelism(ILP)<a class="headerlink" href="#instruction-level-parallelismilp" title="Permanent link">&para;</a></h1>
 <h2 id="1-the-classic-five-stage-pipeline-for-a-risc-processor">1 The Classic Five-Stage Pipeline for a RISC Processor<a class="headerlink" href="#1-the-classic-five-stage-pipeline-for-a-risc-processor" title="Permanent link">&para;</a></h2>
-<div align = center><img src="../assets/Chapter%204/file-20250516192239023.png"></div>
+<div align = center><img src=".assets/Chapter%204/file-20250516192239023.png"></div>
 
 <p>重命名可以用于解决Name Dependences</p>
 <p>A major limitation of simple pipelining techniques:使用顺序的发射和执行</p>
@@ -1850,14 +1850,14 @@
 <p>为了能够实现乱序执行，我们将ID阶段分解为两个阶段：
 - Issue Stage (IS): 解码指令，检查结构冲突(in - order issue)
 - Read Operands Stage (RO): Wait 直到没有数据冲突， 接着读取操作数(out - of - order issue)</p>
-<div align = center><img src="./assets/image-2.png" width = 70%></div>
+<div align = center><img src="assets/image-2.png" width = 70%></div>
 
 <h3 id="21-scoreboard">2.1 Scoreboard<a class="headerlink" href="#21-scoreboard" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>功能单元状态</strong>：记分牌是面向功能部件的，在记分牌中每一个功能部件都有一组信息，信息包括部件是否正在忙、部件执行的指令类型、部件现在需要的源寄存器、部件现在的目的寄存器、源寄存器是否准备好（Rj、Rk 表示）和如果源寄存器没准备好部件该向哪里要数据（Qj、Qk 表示</li>
 <li><strong>寄存器结果状态</strong>：里面主要记录对于某一个寄存器，是否有部件正准备写入数据。</li>
 </ul>
-<div align = center><img src="./assets/v2-6b7e47a0ccd134bb87f058bc23ff2468_1440w.jpg"></div>
+<div align = center><img src="assets/v2-6b7e47a0ccd134bb87f058bc23ff2468_1440w.jpg"></div>
 
 <h3 id="22">2.2 发射<a class="headerlink" href="#22" title="Permanent link">&para;</a></h3>
 <p>对指令进行解码，并观察记分牌信息，主要观察各个功能部件的占用情况，和寄存器堆的写情况，以此来判断是否可以把解码得到的信息存进对应的部件寄存器。</p>
@@ -1866,7 +1866,7 @@
 <p>IS阶段能够进入取决于运算需要的部件是否空闲,如果功能部件被上一条指令占用，则不能进入IS阶段，在上一条指令WB阶段完成之前，不能进入IS阶段。</p>
 <p>RO阶段能否进入取决于依赖的register是否ready</p>
 <p>WB阶段能否进入取决于需要写入的寄存器是否读走</p>
-<div align = center><img src="./assets/image-3.png" width = 70%></div>
+<div align = center><img src="assets/image-3.png" width = 70%></div>
 
 <h3 id="23-tomasulos-approach">2.3 Tomasulo's Approach<a class="headerlink" href="#23-tomasulos-approach" title="Permanent link">&para;</a></h3>
 <div class="admonition example">
@@ -1878,7 +1878,7 @@ WAW和WAR冒险（即name dependency）都可以通过寄存器重命名来解�
     - 这个指令序列可以被重写为（没有任何dependencies）
 <img alt="alt text" src="../assets/image-5.png" /></p>
 </div>
-<div align = center><img src="./assets/image-20250415133849422.png" width=50%></div>
+<div align = center><img src="assets/image-20250415133849422.png" width=50%></div>
 
 <p>绿色的是保留栈，可以用于存储指令和重命名</p>
 <ul>
@@ -2044,7 +2044,7 @@ ROB为指令提供操作数，其作用类似于Tomasulo算法中保留站（res
     <img alt="alt text" src="../assets/image-9.png" />
     可以看到，data-dependent branches 和 ALU components成为了瓶颈</p>
 <div class="codehilite"><pre><span></span><code><span class="nl">Solution</span><span class="p">:</span><span class="w"> </span><span class="n">add</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">adder</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">separate</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">ALU</span><span class="w"> </span><span class="n">function</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">address</span><span class="w"> </span><span class="n">calculation</span><span class="w"> </span><span class="n">function</span>
-<span class="o">!</span><span class="p">[</span><span class="n">alt</span><span class="w"> </span><span class="n">text</span><span class="p">](.</span><span class="o">/</span><span class="n">assets</span><span class="o">/</span><span class="n">image</span><span class="mf">-10.</span><span class="n">png</span><span class="p">)</span>
+<span class="o">!</span><span class="p">[</span><span class="n">alt</span><span class="w"> </span><span class="n">text</span><span class="p">](</span><span class="n">assets</span><span class="o">/</span><span class="n">image</span><span class="mf">-10.</span><span class="n">png</span><span class="p">)</span>
 </code></pre></div>
 
 <p>=== Analysis
@@ -2074,7 +2074,7 @@ long instruction (more than 100 bits to hundreds of bits).</p>
 <li>在一个周期能流出n条指令的super pipelined processor中，n条指令不是在同一时间流出的，而是每1/n周期流出一条指令</li>
 <li>the time-space diagram of a super pipelined processor that isuues 2 instructions per cycle</li>
 </ul>
-<div align = center><img src="./assets/image-13.png" width = 60%></div>
+<div align = center><img src="assets/image-13.png" width = 60%></div>
 
 <p>• A pipeline processor with 8 or more instruction pipeline stages is called a superpipelining processor</p>
 <div class="admonition example r4000 pipeline structre">
