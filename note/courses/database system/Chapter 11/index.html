@@ -1,0 +1,2145 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://hhhjyz.github.io/note/courses/database%20system/Chapter%2011/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../image/head.jpg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>Query Processing - hhhjyz</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../../../css/round.css">
+    
+      <link rel="stylesheet" href="../../../../css/extra.css">
+    
+      <link rel="stylesheet" href="https://fonts.loli.net/css2?family=Noto+Serif+SC&display=swap">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="jyzcolor" data-md-color-primary="indigo" data-md-color-accent="light">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#query-processing" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../../.." title="hhhjyz" class="md-header__button md-logo" aria-label="hhhjyz" data-md-component="logo">
+      
+  <img src="../../../../image/head.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            hhhjyz
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Query Processing
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="jyzcolor" data-md-color-primary="indigo" data-md-color-accent="light"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="jyzdark" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/hhhjyz/hhhjyz.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ads/Final/" class="md-tabs__link">
+          
+  
+  课程笔记
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../self-study/d2l/1%20%E5%BC%95%E8%A8%80/" class="md-tabs__link">
+          
+  
+  自学
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../use/" class="md-tabs__link">
+        
+  
+    
+  
+  ZJU工具
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="hhhjyz" class="md-nav__button md-logo" aria-label="hhhjyz" data-md-component="logo">
+      
+  <img src="../../../../image/head.jpg" alt="logo">
+
+    </a>
+    hhhjyz
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hhhjyz/hhhjyz.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    课程笔记
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            课程笔记
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    高级数据结构与算法分析
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            高级数据结构与算法分析
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ads/Final/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Review
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ads/Lec8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lec8 Dynamic Programming
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ads/Lec%209/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lec9 Greedy Algorithm
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ads/Lec%2010/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lec10 NP-Completeness
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ads/Lec11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lec11 Approximation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ads/Lec%2012/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lec12 Local Search
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ads/Lec14/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lec14 Parallel Algorithm
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    计算机组成
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            计算机组成
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computer_organization/Chapter%201/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computer_organization/Chapter%202/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computer_organization/Chapter%204/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computer_organization/Chapter%205/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computer_organization/Chapter%206/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 6
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../physics/%E5%A4%A7%E7%89%A9%E5%AE%9E%E9%AA%8C%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    大学物理实验
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    数据库系统
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            数据库系统
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chaper%201%20Introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chpater 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Chapter%202%20Relational%20Modeling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Chapter%203/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Chapter%204/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Chapter%205/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    计算机体系结构
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            计算机体系结构
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Computer%20Architecture/Chapter%201%20Fundamentals%20of%20computer%20design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Computer%20Architecture/Chapter%202/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Computer%20Architecture/Chapter%203/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Computer%20Architecture/Chapter%204/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Computer%20Architecture/Chapter%205/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    人工智能
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            人工智能
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/Chapter%202/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/Chapter%203/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    面向对象程序设计
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            面向对象程序设计
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP/Lecture%208%20Stream/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lec8
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP/Lecture%209%20Exception/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lec9
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    自学
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            自学
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    dive into deep learning
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            dive into deep learning
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../self-study/d2l/1%20%E5%BC%95%E8%A8%80/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.引言
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    工具
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            工具
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../self-study/tools/conda/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    conda
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../use/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ZJU工具
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-basic-steps-in-query-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      1 Basic Steps in Query Processing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-measures-of-query-cost" class="md-nav__link">
+    <span class="md-ellipsis">
+      2 Measures of Query Cost
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2 Measures of Query Cost">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-measure-of-query-cost" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Measure of Query Cost
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-selection-operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      3 Selection Operation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3 Selection Operation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-file-scan" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 File scan
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-index-scan" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Index scan
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-selections-involving-comparisons" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 Selections Involving Comparisons
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-implementation-of-complex-selections" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4 Implementation of Complex Selections
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-algorithms-for-complex-selections" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5 Algorithms for Complex Selections
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-bitmap-index-scan" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6 Bitmap Index Scan
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-sorting" class="md-nav__link">
+    <span class="md-ellipsis">
+      4 Sorting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4 Sorting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Procedure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-cost-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Cost analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-advanced-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 Advanced version
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-join-operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      5 Join Operation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5 Join Operation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-nested-loop-join" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 Nested-Loop Join
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-block-nested-loop-join" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 Block Nested-Loop Join
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-indexed-nested-loop-join" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 Indexed Nested-Loop Join
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-merge-join" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4 Merge Join
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-hash-join" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5 Hash Join
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.5 Hash Join">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#551-recursive-partitioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5.1 Recursive partitioning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#552-cost-of-hash-join" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5.2 Cost of Hash-Join
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-other-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      6 Other Operations
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="query-processing">Query Processing<a class="headerlink" href="#query-processing" title="Permanent link">&para;</a></h1>
+<details class="abstract">
+<summary>Abstract</summary>
+<ul>
+<li>Basic Steps in Query Processing</li>
+<li>Measures of Query Cost</li>
+<li>Selection Operation  </li>
+<li>Sorting </li>
+<li>Join Operation </li>
+<li>Other Operations</li>
+<li>Evaluation of Expressions</li>
+</ul>
+</details>
+<h2 id="1-basic-steps-in-query-processing">1 Basic Steps in Query Processing<a class="headerlink" href="#1-basic-steps-in-query-processing" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Parsing and translation: <ul>
+<li>translate the query into its internal form.  This is then translated into relational algebra.</li>
+<li>parser检查语法，确认关系</li>
+</ul>
+</li>
+<li>Optimization: 选择开销最低的evaluation plan</li>
+<li>Evaluation： </li>
+</ul>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202305151000735.png" width = 60%/> </div>
+
+<p>经过语法分析、语义检查翻译成关系表达式，经过查询优化转化成执行计划（目标代码），由求值引擎得到输出。</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202305151002858.png" width = 60%/> </div></p>
+<p>逻辑优化：把选择运算往叶子上推,尽量先做；先连接的是结果比较小的。使得中间结果比较小，能够减少开销
+An <strong>evaluation plan</strong> defines exactly what algorithm is used for each operation, and how the execution of the operations is coordinated.  每个操作都有很多种算法
+<div align=center> <img src="http://cdn.hobbitqia.cc/202305151004491.png" width = 60%/> </div></p>
+<p>经过代价估算，决定使用哪个算法的代价最小。如上图左边使用了 B+ 树索引，右边使用了线性扫描。<br />
+pipeline 表示最下面两步可以流水线，即并行计算。<br />
+（火山模型）</p>
+</div>
+<h2 id="2-measures-of-query-cost">2 Measures of Query Cost<a class="headerlink" href="#2-measures-of-query-cost" title="Permanent link">&para;</a></h2>
+<p>Typically <strong><em>disk access</em></strong> is the predominant cost, and is also relatively easy to estimate. <br />
+忽略 CPU cost.<br />
+Measured by taking into account</p>
+<ul>
+<li>Number of <em>seeks</em>             </li>
+<li>Number of <em>blocks read</em>     </li>
+<li>Number of <em>blocks written</em> <br />
+通常写的时间比读的时间久，因为我们可能需要检验写的结果</li>
+</ul>
+<p>For simplicity we just use the number of <strong><em>block transfers</em></strong> from disk and the number of seeks as the cost measures</p>
+<ul>
+<li><span class="arithmatex">\(t_T\)</span> – time to transfer one block（不区分读写）</li>
+<li><span class="arithmatex">\(t_S\)</span> – time for one seek</li>
+<li>Cost for b block transfers plus S seeks <span class="arithmatex">\(b * t_T + S * t_S\)</span> </li>
+</ul>
+<p>We often use <em>worst case estimates</em>, assuming only the minimum amount of memory needed for the operation is available.<br />
+即假设缓冲区最小的时候，而且都是从文件中读取而非从 buffer 中读取。</p>
+<h3 id="21-measure-of-query-cost">2.1 Measure of Query Cost<a class="headerlink" href="#21-measure-of-query-cost" title="Permanent link">&para;</a></h3>
+<p>We often use worst case estimates, assuming only the minimum amount of memory needed for the operation is available</p>
+<h2 id="3-selection-operation">3 Selection Operation<a class="headerlink" href="#3-selection-operation" title="Permanent link">&para;</a></h2>
+<h3 id="31-file-scan">3.1 File scan<a class="headerlink" href="#31-file-scan" title="Permanent link">&para;</a></h3>
+<p>Algorithm <strong><em>A1 (linear search</em></strong>). Scan each file block and test all records to see whether they satisfy the selection condition.<br />
+（假定数据块都是连续存放的）</p>
+<ul>
+<li>worst cost = <span class="arithmatex">\(b_r*t_T+t_S\)</span><br />
+<span class="arithmatex">\(b_r\)</span> 是要找的块的数量</li>
+<li>average cost = <span class="arithmatex">\(b_r/2*t_T+t_S\)</span><br />
+这里如果搜索的是 key, 那我们扫到这个记录就可以停止。</li>
+</ul>
+<p>Linear search can be applied regardless of
+- selection condition or
+- ordering of records in the file, or
+- availability of indices</p>
+<p>binary search generally does not make sense since data is not stored consecutively</p>
+<h3 id="32-index-scan">3.2 Index scan<a class="headerlink" href="#32-index-scan" title="Permanent link">&para;</a></h3>
+<p><strong><em>A2 (primary B+-tree index / clustering B+-tree index, equality on key)</em></strong>.  <br />
+在主键上查找</p>
+<p>cost = <span class="arithmatex">\((h_i+1)* (t_T+t_S)\)</span></p>
+<details class="example">
+<summary>主索引, key 上的等值查找</summary>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202305151019397.png" width = 60%/> </div></p>
+<p>这里的高度从 1 开始（+1 表示最后到叶子节点，需要从磁盘中读）</p>
+</details>
+<p><strong><em>A3 (primary B+-tree index/ clustering B+-tree index, equality on nonkey)</em></strong>.<br />
+Records will be on consecutive blocks<br />
+此时索引的值不是主键. b 表示搜索码对应的记录数量。</p>
+<p>cost = <span class="arithmatex">\(h_i *(t_T+t_S) + t_S + t_T *b\)</span></p>
+<details class="example">
+<summary>主索引, nonkey 上的等值查找</summary>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202305151020674.png" width = 60%/> </div></p>
+</details>
+<p><strong><em>A4 (secondary B+-tree index , equality on key)</em></strong>.    </p>
+<p>cost = <span class="arithmatex">\((h_i + 1) * (t_T + t_S)\)</span></p>
+<details class="example">
+<summary>辅助索引, key 上的等值查找</summary>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202305241457448.png" width = 60%/> </div></p>
+</details>
+<p><strong><em>A4’ (secondary B+-index on nonkey, equality).</em></strong></p>
+<p>Cost = <span class="arithmatex">\((h_i + m+ n) * (t_T + t_S)\)</span><br />
+这里 m 表示放指针的块的数量, n 表示对应磁盘里的记录的数量。</p>
+<details class="example">
+<summary>辅助索引, nonkey 上的等值查找</summary>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202305241509438.png" width = 60%/> </div></p>
+</details>
+<h3 id="33-selections-involving-comparisons">3.3 Selections Involving Comparisons<a class="headerlink" href="#33-selections-involving-comparisons" title="Permanent link">&para;</a></h3>
+<p>查询 <span class="arithmatex">\(\sigma_{A\leq V}(r)\)</span> (or <span class="arithmatex">\(\sigma_{A\geq V}(r)\)</span>)</p>
+<p><strong><em>A5 (primary B+-index / clustering B+-index index, comparison). (Relation is sorted on A)</em></strong>  </p>
+<ul>
+<li>首先找到第一个 <span class="arithmatex">\(\geq v\)</span>. 的值</li>
+<li>把后面的块顺序读进去 Cost = <span class="arithmatex">\(h_i * (t_T + t_S) + t_S + t_T * b\)</span> (同情况 3)</li>
+</ul>
+<details class="example">
+<summary>主索引, key 上的比较</summary>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202305241528310.png" width = 60%/> </div></p>
+</details>
+<p><strong><em>A6 (secondary B+-tree index, comparison).</em></strong><br />
+情况类似 A4</p>
+<details class="example">
+<summary>辅助索引, nonkey 上的比较</summary>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202305241528793.png" width = 60%/> </div></p>
+</details>
+<h3 id="34-implementation-of-complex-selections">3.4 Implementation of Complex Selections<a class="headerlink" href="#34-implementation-of-complex-selections" title="Permanent link">&para;</a></h3>
+<p>Conjunction <span class="arithmatex">\(\sigma_{\theta_1} \wedge \ldots \wedge_{\theta_n}(r)\)</span><br />
+可以线性扫描，或者利用某个属性的 index 先查询，把符合的读到内存中，再检查其他属性。<br />
+如果有很多个属性都有索引，我们选择中间结果少的。</p>
+<p><strong><em>A7 (conjunctive selection using one index).</em></strong>  </p>
+<ul>
+<li>Select a combination of <span class="arithmatex">\(\theta_i\)</span> and algorithms A1 through A6 that results in the least cost for <span class="arithmatex">\(\sigma_{\theta_i}(r)\)</span>.</li>
+<li>Test other conditions on tuple after fetching it into memory buffer.</li>
+</ul>
+<p><strong><em>A8 (conjunctive selection using composite index).</em></strong> <br />
+Use appropriate composite (multiple-key) index if available.<br />
+利用复合索引</p>
+<p><strong><em>A9 (conjunctive selection by intersection of identifiers).</em></strong><br />
+对每个索引都进行查询，将结果拼起来</p>
+<h3 id="35-algorithms-for-complex-selections">3.5 Algorithms for Complex Selections<a class="headerlink" href="#35-algorithms-for-complex-selections" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Disjunction: <span class="arithmatex">\(\sigma_{\theta_1} \vee \ldots \vee_{\theta_n}(r)\)</span><br />
+<strong><em>A10 (disjunctive selection by union of identifiers).</em></strong> <ul>
+<li>Applicable if all  conditions have available indices.  </li>
+<li>Otherwise use linear scan.</li>
+<li>Use corresponding index for each condition, and take union of all the obtained sets of record pointers. </li>
+<li>Then fetch records from file</li>
+</ul>
+</li>
+<li>Negation: <span class="arithmatex">\(\sigma_{\neg \theta}(r)\)</span><ul>
+<li>Use linear scan on file   </li>
+<li>If very few records satisfy <span class="arithmatex">\(\neg \theta\)</span>, and an index is applicable to <span class="arithmatex">\(\theta\)</span> 
+Find satisfying records using index and fetch from file</li>
+</ul>
+</li>
+</ul>
+<h3 id="36-bitmap-index-scan">3.6 Bitmap Index Scan<a class="headerlink" href="#36-bitmap-index-scan" title="Permanent link">&para;</a></h3>
+<h2 id="4-sorting">4 Sorting<a class="headerlink" href="#4-sorting" title="Permanent link">&para;</a></h2>
+<p>For relations that don’t fit in memory, <strong><em>external sort-merge</em></strong> is a good choice. </p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202305151036012.png" width = 60%/> </div></p>
+<p>初始内存放不下，只能放 <span class="arithmatex">\(M\)</span> pages. 一次性读 <span class="arithmatex">\(M\)</span> 块，在内存内排序，排好后先写回，形成一个归并段。再读入第二段到内存中，排序后再写回，得到若干归并段(<span class="arithmatex">\(\dfrac{b_r}{M}\)</span>) 会有 <span class="arithmatex">\(2*\dfrac{b_r}{M}\)</span> 次 seek, <span class="arithmatex">\(2*b_r\)</span> 次 transfer. </p>
+</div>
+<h3 id="41-procedure">4.1 Procedure<a class="headerlink" href="#41-procedure" title="Permanent link">&para;</a></h3>
+<p>Let <span class="arithmatex">\(M\)</span> denote memory size (in pages). </p>
+<ul>
+<li><strong>Create sorted runs(归并段)</strong><br />
+Repeatedly do the following till the end of the relation:<ul>
+<li>Read M blocks of relation into memory     </li>
+<li>Sort the in-memory blocks</li>
+<li>Write sorted data to run <span class="arithmatex">\(R_i\)</span>; increment i.
+假设生成了 <span class="arithmatex">\(N\)</span> 个归并段</li>
+</ul>
+</li>
+<li>
+<p><strong>Merge the runs</strong>  </p>
+<ul>
+<li>
+<p><span class="arithmatex">\(N&lt;M\)</span> 如果归并段少于可用内存页<br />
+N 路归并 <br />
+归并时每一段只需要一块缓冲区（输出块也需要一块缓冲区）<br />
+    <div align=center> <img src="http://cdn.hobbitqia.cc/202305151051357.png" width = 60%/> </div></p>
+</li>
+<li>
+<p><span class="arithmatex">\(N\geq M\)</span><br />
+每次 pass, 我们不停地把 M-1 个段变成了一个大的归并段，此时数量减少为原来的 <span class="arithmatex">\(\dfrac{1}{M-1}\)</span>. 如果仍然数量超过 M, 继续 pass. <br />
+<strong><em>e.g.</em></strong> If M=11, and there are 90 runs, one pass reduces the number of runs to 9, each 10 times the size of the initial runs.  </p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="42-cost-analysis">4.2 Cost analysis<a class="headerlink" href="#42-cost-analysis" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>transfer
+    <div align=center> <img src="http://cdn.hobbitqia.cc/202305151052579.png" width = 60%/> </div></p>
+<p>我们不考虑最后一次写磁盘的 cost, 因为可能流水线会直接把结果交给下一步操作。
+* seek
+<div align=center> <img src="http://cdn.hobbitqia.cc/202305151056668.png" width = 60%/> </div></p>
+</li>
+</ul>
+<h3 id="43-advanced-version">4.3 Advanced version<a class="headerlink" href="#43-advanced-version" title="Permanent link">&para;</a></h3>
+<p>每一次读进去都要 seek, 可以改进。为每一个归并段分配多个缓冲区。这样我们定位一次之后可以读入多块进入缓冲区。<br />
+减少了 seek 次数，但这样轮次可能会增加。</p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202305151100961.png" width = 60%/> </div>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202305151100650.png" width = 60%/> </div>
+
+<h2 id="5-join-operation">5 Join Operation<a class="headerlink" href="#5-join-operation" title="Permanent link">&para;</a></h2>
+<p>Several different algorithms to implement joins</p>
+<ul>
+<li>Nested-loop join</li>
+<li>Block nested-loop join</li>
+<li>Indexed nested-loop join</li>
+<li>Merge-join</li>
+<li>Hash-join</li>
+</ul>
+<h3 id="51-nested-loop-join">5.1 Nested-Loop Join<a class="headerlink" href="#51-nested-loop-join" title="Permanent link">&para;</a></h3>
+<p>两重循环</p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202305151109602.png" width = 60%/> </div>
+
+<ul>
+<li><span class="arithmatex">\(r\)</span> is called the <strong>outer relation</strong> and <span class="arithmatex">\(s\)</span> the <strong>inner relation</strong> of the join.  </li>
+</ul>
+<p><span class="arithmatex">\(n_r * b_s + b_r\)</span> block transfers, plus <span class="arithmatex">\(n_r + b_r\)</span> seeks<br />
+对外循环每个记录，内循环的所有块都要进去. seek 时每次外循环都需要 seek, 内循环每轮只需要一次 seek. </p>
+<p>如果内存能容纳所有的关系，那我们只需要 <span class="arithmatex">\(b_r  + b_s\)</span> block transfers and 2 seeks.  </p>
+<h3 id="52-block-nested-loop-join">5.2 Block Nested-Loop Join<a class="headerlink" href="#52-block-nested-loop-join" title="Permanent link">&para;</a></h3>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202305151113821.png" width = 60%/> </div>
+
+<ul>
+<li>Worst case estimate:  <span class="arithmatex">\(b_r * b_s + b_r\)</span>  block transfers + <span class="arithmatex">\(2 * b_r\)</span> seeks<br />
+Each block in the inner relation <span class="arithmatex">\(s\)</span> is read once for each block in the outer relation</li>
+<li>Best case: <span class="arithmatex">\(b_r + b_s\)</span> block transfers + 2 seeks.</li>
+</ul>
+<p>要把小的作为外关系。</p>
+<p>Improvements to block nested loop algorithms:<br />
+假设内存有 M 块，有一块作为 output 的缓冲，剩下 M-1 块中 M-2 块均给外关系，内关系给一块。</p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202305241922018.png" width = 60%/> </div>
+
+<p>Cost = <span class="arithmatex">\(\lceil b_r  / (M-2) \rceil * b_s + b_r\)</span> block transfers + <span class="arithmatex">\(2 \lceil b_r  / (M-2)\rceil\)</span> seeks</p>
+<ul>
+<li>If equi-join attribute forms a key on the inner relation, stop inner loop on first match<br />
+如果连接的属性是 key, 那么当我们匹配上之后就可以停止内循环。</li>
+<li>Scan inner loop forward and backward alternately, to make use of the blocks remaining in buffer (with LRU replacement)<br />
+利用 LRU 策略的特点，inner 正向扫描后再反过来，这样最近的块很可能还在内存中，提高缓冲命中率。</li>
+</ul>
+<h3 id="53-indexed-nested-loop-join">5.3 Indexed Nested-Loop Join<a class="headerlink" href="#53-indexed-nested-loop-join" title="Permanent link">&para;</a></h3>
+<p>如果内循环有索引，我们就没必要扫描内循环所有块了。  </p>
+<p>Index lookups can replace file scans if</p>
+<ul>
+<li>join is an equi-join or natural join and</li>
+<li>an index is available on the inner relation’s join attribute<br />
+连接属性有索引</li>
+</ul>
+<p>Cost of the join: <span class="arithmatex">\(b_r (t_T + t_S) + n_r * c\)</span><br />
+这里假定给外关系一块内存. <span class="arithmatex">\(c\)</span> 表示遍历索引并取出所有匹配的元组的时间。</p>
+<h3 id="54-merge-join">5.4 Merge Join<a class="headerlink" href="#54-merge-join" title="Permanent link">&para;</a></h3>
+<p>假设两个关系已经基于连接属性排好序，我们可以用归并的思想连接。  </p>
+<ul>
+<li>Sort both relations on their join attribute (if not already sorted on the join attributes).  </li>
+<li>Merge the sorted relations to join them<ul>
+<li>Join step is similar to the merge stage of the sort-merge algorithm.  </li>
+<li>Main difference is handling of <em>duplicate values</em> in join attribute — every pair with same value on join attribute must be matched</li>
+</ul>
+</li>
+</ul>
+<p><span class="arithmatex">\(b_r + b_s\)</span> block transfers + <span class="arithmatex">\(\lceil b_r / b_b\rceil + \lceil b_s / b_b\rceil\)</span> seeks  </p>
+<p>If the buffer memory size is M pages, in order to minimize the cost of merge join, how to assign M blocks to r and s respectively? </p>
+<p>The estimated cost is <span class="arithmatex">\(b_r + b_s\)</span> block transfers + <span class="arithmatex">\(\lceil b_r / x_r\rceil + \lceil b_s / x_s\rceil\)</span> seeks (<span class="arithmatex">\(x_r+x_s=M\)</span>)  </p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202305241940953.png" width = 60%/> </div>
+
+<p>如果两个表都无序，我们可以先排序再 Merge-join, 这时还要算上排序的代价。</p>
+<h3 id="55-hash-join">5.5 Hash Join<a class="headerlink" href="#55-hash-join" title="Permanent link">&para;</a></h3>
+<p>用一个 Hash 函数把两个关系进行分片。能够连接上的记录，一定处于同一个 partition 里面（反之不一定）<br />
+这样大关系变成了小关系。<br />
+我们要求其中某个的小关系要能一次放到内存中。</p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202305241946519.png" width = 60%/> </div>
+
+<p>Applicable for equi-joins and natural joins.  <br />
+the value <span class="arithmatex">\(n\)</span>(partition 的个数) and the hash function <span class="arithmatex">\(h\)</span> is chosen such that each si should fit in memory.<br />
+<span class="arithmatex">\(n  \geq  \lceil b_s / M\rceil\)</span> <br />
+要求每个 partition 的大小都要小于 M, 不然不能一次性放进去。  </p>
+<p>如果我们的 <span class="arithmatex">\(n\)</span> 很大，要分出来的 partition 很大，但是内存不够，关系分区不能一次生成所有的 partition, 要经过多次分区。<br />
+每次输入先被划分，随后进行细分。</p>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202305242303933.png" width = 60%/> </div>
+
+<p>注意分片的时候，还要写出去。<br />
+匹配时我们有哈希索引。</p>
+<p>Typically n is chosen as <span class="arithmatex">\(\lceil b_s/M\rceil * f\)</span>  where <span class="arithmatex">\(f\)</span> is a “fudge factor(修正因子)”, typically around 1.2<br />
+分不匀，我们有意放大。<br />
+The <strong>probe input</strong> relation partitions <span class="arithmatex">\(r_i\)</span> <em>need not</em> fit in memory</p>
+<h4 id="551-recursive-partitioning">5.5.1 Recursive partitioning<a class="headerlink" href="#551-recursive-partitioning" title="Permanent link">&para;</a></h4>
+<p><strong>Recursive partitioning</strong> required if number of partitions n is greater than number of pages M of memory.</p>
+<p>A relation does not need recursive partitioning if <span class="arithmatex">\(M &gt; n_h + 1\)</span>, or equivalently <span class="arithmatex">\(M &gt; (b_s/M) + 1\)</span>, which simplifies (approximately) to <span class="arithmatex">\(M &gt; \sqrt{b_s}\)</span>. </p>
+<details class="example">
+<summary>Example</summary>
+<p><div align=center> <img src="http://cdn.hobbitqia.cc/202305242313016.png" width = 60%/> </div></p>
+</details>
+<h4 id="552-cost-of-hash-join">5.5.2 Cost of Hash-Join<a class="headerlink" href="#552-cost-of-hash-join" title="Permanent link">&para;</a></h4>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202305242316753.png" width = 60%/> </div>
+<div align=center> <img src="http://cdn.hobbitqia.cc/202305242320879.png" width = 60%/> </div>
+
+<h2 id="6-other-operations">6 Other Operations<a class="headerlink" href="#6-other-operations" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Duplicate elimination</strong> can be implemented via hashing or sorting. <br />
+On sorting duplicates will come adjacent to each other, and all but one set of duplicates can be deleted.<br />
+在排序的过程（生成、合并归并段就进行去重）
+Hashing is similar </li>
+<li><strong>Aggregation</strong><br />
+Sorting or hashing can be used to bring tuples in the same group together, and then the aggregate functions can be applied on each group. <br />
+生成归并段的时候，同一段的就可以统计统一结果</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; hhhjyz/All Rights Reserved.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": "-header.autohide - navigation.instant - navigation.instant.prefetch - navigation.tabs - navigation.tabs.sticky - navigation.expand - navigation.top - search.suggest - search.highlight - search.share", "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+        <script src="../../../../javascripts/mathjax.js"></script>
+      
+        <script src="../../../../javascripts/katex.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>

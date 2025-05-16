@@ -11,10 +11,10 @@
         <link rel="canonical" href="https://hhhjyz.github.io/note/courses/Computer%20Architecture/Chapter%201%20Fundamentals%20of%20computer%20design/">
       
       
-        <link rel="prev" href="../../database%20system/Chapter%203/">
+        <link rel="prev" href="../../database%20system/Chapter%205/">
       
       
-        <link rel="next" href="../../AI/Chapter%202/">
+        <link rel="next" href="../Chapter%202/">
       
       
       <link rel="icon" href="../../../../image/head.jpg">
@@ -893,6 +893,48 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database%20system/Chapter%204/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database%20system/Chapter%205/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1097,6 +1139,90 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Chapter%202/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Chapter%203/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Chapter%204/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Chapter%205/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1157,6 +1283,117 @@
   
   <span class="md-ellipsis">
     Chapter 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/Chapter%203/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    面向对象程序设计
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            面向对象程序设计
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP/Lecture%208%20Stream/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lec8
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP/Lecture%209%20Exception/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lec9
   </span>
   
 
@@ -1688,9 +1925,10 @@ add, sub, mul, move, compare, ...</li>
 <p><div align=center><ima src ="assets/Chapter%201%20Fundamentals%20of%20computer%20design/file-20250225145931305.png" width=40%></div></p>
 </div>
 <ul>
-<li>accumulator<ul>
+<li>accumulator 累加器<ul>
 <li>One implicit operand: the accumulator; one explicit operand: mem location</li>
 <li>Accumulator is both an implicit input operand and a result  </li>
+<li><div align=center><img src="assets/Chapter%201%20Fundamentals%20of%20computer%20design/file-20250311140737558.png"></div></li>
 </ul>
 </li>
 <li>register<ul>
@@ -1711,6 +1949,10 @@ add, sub, mul, move, compare, ...</li>
 <p>More: try to do with <span class="arithmatex">\(D=A*B-(A+C*B)\)</span></p>
 </div>
 <p>GPR 速度快，但是 GPR 太多也会有资源的浪费和性能下降（如寻找对应的寄存器）</p>
+<ul>
+<li>Registers are much faster than memory , even cache</li>
+<li>Register are convenient for variable storage</li>
+</ul>
 
 
 
