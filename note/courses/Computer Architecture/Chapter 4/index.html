@@ -90,9 +90,7 @@
     
       
 
-  
-
-<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+<header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
     <a href="../../../.." title="hhhjyz" class="md-header__button md-logo" aria-label="hhhjyz" data-md-component="logo">
       
@@ -210,8 +208,14 @@
     
   </nav>
   
+</header>
     
+    <div class="md-container" data-md-component="container">
       
+      
+        
+          
+            
 <nav class="md-tabs" aria-label="标签" data-md-component="tabs">
   <div class="md-grid">
     <ul class="md-tabs__list">
@@ -311,13 +315,7 @@
     </ul>
   </div>
 </nav>
-    
-  
-</header>
-    
-    <div class="md-container" data-md-component="container">
-      
-      
+          
         
       
       <main class="md-main" data-md-component="main">
@@ -1346,6 +1344,69 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/Chapter%204/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/Chapter%205/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/Chapter%206/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 6
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1830,7 +1891,7 @@
 
 <h1 id="instruction-level-parallelismilp">Instruction-Level parallelism(ILP)<a class="headerlink" href="#instruction-level-parallelismilp" title="Permanent link">&para;</a></h1>
 <h2 id="1-the-classic-five-stage-pipeline-for-a-risc-processor">1 The Classic Five-Stage Pipeline for a RISC Processor<a class="headerlink" href="#1-the-classic-five-stage-pipeline-for-a-risc-processor" title="Permanent link">&para;</a></h2>
-<div align = center><img src=".assets/Chapter%204/file-20250516192239023.png"></div>
+<div align = center><img src="../assets/Chapter%204/file-20250516192239023.png"></div>
 
 <p>重命名可以用于解决Name Dependences</p>
 <p>A major limitation of simple pipelining techniques:使用顺序的发射和执行</p>
@@ -1847,17 +1908,19 @@
 <li>Robert Tomasulo 引入了硬件中寄存器重命名来最小化
   <code>WAR</code>和<code>WAW</code>冒险</li>
 </ul>
-<p>为了能够实现乱序执行，我们将ID阶段分解为两个阶段：
-- Issue Stage (IS): 解码指令，检查结构冲突(in - order issue)
-- Read Operands Stage (RO): Wait 直到没有数据冲突， 接着读取操作数(out - of - order issue)</p>
-<div align = center><img src="assets/image-2.png" width = 70%></div>
+<p>为了能够实现乱序执行，我们将ID阶段分解为两个阶段：</p>
+<ul>
+<li>Issue Stage (IS): 解码指令，检查结构冲突(in - order issue)</li>
+<li>Read Operands Stage (RO): Wait 直到没有数据冲突， 接着读取操作数(out - of - order issue)</li>
+</ul>
+<div align = center><img src="../assets/image-2.png" width = 70%></div>
 
 <h3 id="21-scoreboard">2.1 Scoreboard<a class="headerlink" href="#21-scoreboard" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>功能单元状态</strong>：记分牌是面向功能部件的，在记分牌中每一个功能部件都有一组信息，信息包括部件是否正在忙、部件执行的指令类型、部件现在需要的源寄存器、部件现在的目的寄存器、源寄存器是否准备好（Rj、Rk 表示）和如果源寄存器没准备好部件该向哪里要数据（Qj、Qk 表示</li>
 <li><strong>寄存器结果状态</strong>：里面主要记录对于某一个寄存器，是否有部件正准备写入数据。</li>
 </ul>
-<div align = center><img src="assets/v2-6b7e47a0ccd134bb87f058bc23ff2468_1440w.jpg"></div>
+<div align = center><img src="../assets/v2-6b7e47a0ccd134bb87f058bc23ff2468_1440w.jpg"></div>
 
 <h3 id="22">2.2 发射<a class="headerlink" href="#22" title="Permanent link">&para;</a></h3>
 <p>对指令进行解码，并观察记分牌信息，主要观察各个功能部件的占用情况，和寄存器堆的写情况，以此来判断是否可以把解码得到的信息存进对应的部件寄存器。</p>
@@ -1866,19 +1929,21 @@
 <p>IS阶段能够进入取决于运算需要的部件是否空闲,如果功能部件被上一条指令占用，则不能进入IS阶段，在上一条指令WB阶段完成之前，不能进入IS阶段。</p>
 <p>RO阶段能否进入取决于依赖的register是否ready</p>
 <p>WB阶段能否进入取决于需要写入的寄存器是否读走</p>
-<div align = center><img src="assets/image-3.png" width = 70%></div>
+<div align = center><img src="../assets/image-3.png" width = 70%></div>
 
 <h3 id="23-tomasulos-approach">2.3 Tomasulo's Approach<a class="headerlink" href="#23-tomasulos-approach" title="Permanent link">&para;</a></h3>
 <div class="admonition example">
 <p class="admonition-title">Tomasulo's Approach</p>
 <p>consider the following code:
 <img alt="alt text" src="../assets/image-4.png" />
-WAW和WAR冒险（即name dependency）都可以通过寄存器重命名来解决
-    - 假设现在有两个临时寄存器S、T
-    - 这个指令序列可以被重写为（没有任何dependencies）
-<img alt="alt text" src="../assets/image-5.png" /></p>
+WAW和WAR冒险（即name dependency）都可以通过寄存器重命名来解决</p>
+<div class="codehilite"><pre><span></span><code>- 假设现在有两个临时寄存器S、T
+- 这个指令序列可以被重写为（没有任何dependencies）
+</code></pre></div>
+
+<p><img alt="alt text" src="../assets/image-5.png" /></p>
 </div>
-<div align = center><img src="assets/image-20250415133849422.png" width=50%></div>
+<div align = center><img src="../assets/image-20250415133849422.png" width=50%></div>
 
 <p>绿色的是保留栈，可以用于存储指令和重命名</p>
 <ul>
@@ -1898,36 +1963,50 @@ WAW和WAR冒险（即name dependency）都可以通过寄存器重命名来解�
 </ul>
 <p>这些步骤重命名了寄存器，避免了</p>
 <p>Issue 时寄存器内容就已经被读走了，可以进行写入</p>
-<p><strong>Execute</strong>: 
-- 当所有操作数都空闲，操作可以在对应的功能单元中执行
-- Load and Store require a two-step execu process:
-    - 当base register可用时，计算effective address(是指指令在执行时，经过寻址模式计算后得到的实际内存地址，用于访问（读取或写入）数据。它是程序运行时确定的地址，而不是指令中直接编码的地址（如立即数或标签）。) </p>
-<p><strong>Write Result</strong>:
-- 当结果可获得时，结果会被写入到Common Data Bus中，接着从CDB中写入到reservation stations中(包括store buffers)
-- 要写入内存的值存储在store buffer 中直到要被写入的值和地址都可用，接着结果在memory unit空闲时被写入</p>
-<p>There are three tables for Tomasulo's Approach:
-- Instruction Status Table: 这个表仅仅用来帮助理解算法，并非是硬件实现的一部分
-- Reservation Stations Table: 保留每个被发射的操作的状态
-- Register status table (Field Qj): The number of the reservation station 
-    - 存储应该被存储在寄存器中的操作</p>
-<p><strong>Each reservation station has 7 fields</strong>:
-- <strong>Op</strong>: 原操作上的操作数
-- <strong>Qj,Qk</strong>: 会产生对应的操作数的保留站
-- <strong>Vj,Vk</strong>: 源操作数的值
-- <strong>A</strong>: 用来记录计算store和load指令的地址需要的信息
-- <strong>Busy</strong>: 该保留站和它使用的功能单元是否被占用</p>
+<p><strong>Execute</strong>: </p>
+<ul>
+<li>当所有操作数都空闲，操作可以在对应的功能单元中执行</li>
+<li>Load and Store require a two-step execu process:<ul>
+<li>当base register可用时，计算effective address(是指指令在执行时，经过寻址模式计算后得到的实际内存地址，用于访问（读取或写入）数据。它是程序运行时确定的地址，而不是指令中直接编码的地址（如立即数或标签）。) </li>
+</ul>
+</li>
+</ul>
+<p><strong>Write Result</strong>:</p>
+<ul>
+<li>当结果可获得时，结果会被写入到Common Data Bus中，接着从CDB中写入到reservation stations中(包括store buffers)</li>
+<li>要写入内存的值存储在store buffer 中直到要被写入的值和地址都可用，接着结果在memory unit空闲时被写入</li>
+</ul>
+<p>There are three tables for Tomasulo's Approach:</p>
+<ul>
+<li>Instruction Status Table: 这个表仅仅用来帮助理解算法，并非是硬件实现的一部分</li>
+<li>Reservation Stations Table: 保留每个被发射的操作的状态</li>
+<li>Register status table (Field Qj): The number of the reservation station <ul>
+<li>存储应该被存储在寄存器中的操作</li>
+</ul>
+</li>
+</ul>
+<p><strong>Each reservation station has 7 fields</strong>:</p>
+<ul>
+<li><strong>Op</strong>: 原操作上的操作数</li>
+<li><strong>Qj,Qk</strong>: 会产生对应的操作数的保留站</li>
+<li><strong>Vj,Vk</strong>: 源操作数的值</li>
+<li><strong>A</strong>: 用来记录计算store和load指令的地址需要的信息</li>
+<li><strong>Busy</strong>: 该保留站和它使用的功能单元是否被占用</li>
+</ul>
 <p><img alt="alt text" src="../assets/image-6.png" /></p>
 <h3 id="24-hardware-based-speculation">2.4 Hardware-Based Speculation<a class="headerlink" href="#24-hardware-based-speculation" title="Permanent link">&para;</a></h3>
 <p>Cache for uncommitted instruction results:</p>
-<p>3 fields: instruction type, destination address, value
-- 当指令的execution阶段已经完成，将RS中的值替换为the number of ROB
-- Increase instruction submission stage
-- ROB提供了completion和 commit 阶段operation的数量
-- 当操作数被提交之后，结果就会被写回到寄存器中
-- 以这种方式，当预测失败时，容易存储预测执行的指令，当异常发生时，容易存储状态</p>
-<div align = center><img src="assets/Chapter%204/file-20250422141935954.png" width = 60%></div>
+<p>3 fields: instruction type, destination address, value</p>
+<ul>
+<li>当指令的execution阶段已经完成，将RS中的值替换为the number of ROB</li>
+<li>Increase instruction submission stage</li>
+<li>ROB提供了completion和 commit 阶段operation的数量</li>
+<li>当操作数被提交之后，结果就会被写回到寄存器中</li>
+<li>以这种方式，当预测失败时，容易存储预测执行的指令，当异常发生时，容易存储状态</li>
+</ul>
+<div align = center><img src="../assets/Chapter%204/file-20250422141935954.png" width = 60%></div>
 
-<div align=center><img src="assets/Chapter%204/file-20250422142045244.png"width = 60%></div>
+<div align=center><img src="../assets/Chapter%204/file-20250422142045244.png"width = 60%></div>
 
 <ul>
 <li>Issue: 从 instruction queue 取指令</li>
@@ -1936,17 +2015,27 @@ WAW和WAR冒险（即name dependency）都可以通过寄存器重命名来解�
 <li>Commit: 用reorder result更新寄存器</li>
 </ul>
 <p>就我的理解而言，本来是在WB阶段直接将结果写入寄存器堆，应用Hardware-based speculation后，WB阶段的结果是写入到ROB中，等到commit阶段再将ROB中的结果写入寄存器堆中。</p>
-<p><strong>Hardware-based speculation combines three key ideas</strong>
-- dynamic branch prediction to choose which instructions to execute
-- speculation to allow the execution of instructions before the control dependences are resolved (with the ability to undo the effects of an incorrectly speculated sequence)<strong>即加入ROB</strong>给了反悔的余地
-- dynamic scheduling to deal with the scheduling of different combinations of basic blocks</p>
+<p><strong>Hardware-based speculation combines three key ideas</strong></p>
+<ul>
+<li>dynamic branch prediction to choose which instructions to execute</li>
+<li>speculation to allow the execution of instructions before the control dependences are resolved (with the ability to undo the effects of an incorrectly speculated sequence)<strong>即加入ROB</strong>给了反悔的余地</li>
+<li>dynamic scheduling to deal with the scheduling of different combinations of basic blocks</li>
+</ul>
 <div class="admonition note">
 <p class="admonition-title">执行过程</p>
-<p>===WB
-<strong>重排序缓冲区（ROB）(Reorder Buffer)</strong>在指令操作完成到指令提交期间，临时保存该指令的结果。
-ROB为指令提供操作数，其作用类似于Tomasulo算法中保留站（reservation stations）的功能。
-===Commit
-实现推测执行的核心思想是：允许指令乱序执行，但强制按序提交，并在指令提交前阻止任何不可逆操作。
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">WB</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<p><strong>重排序缓冲区（ROB）(Reorder Buffer)</strong>在指令操作完成到指令提交期间，临时保存该指令的结果。
+ROB为指令提供操作数，其作用类似于Tomasulo算法中保留站（reservation stations）的功能。</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Commit</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<p>实现推测执行的核心思想是：允许指令乱序执行，但强制按序提交，并在指令提交前阻止任何不可逆操作。
 重排序缓冲区（ROB）通过提供额外的寄存器，其作用与Tomasulo算法中保留站扩展寄存器集的方式类似。   </p>
 </div>
 <div class="admonition example">
@@ -1973,8 +2062,8 @@ ROB为指令提供操作数，其作用类似于Tomasulo算法中保留站（res
 </ul>
 </li>
 <li>
-<p>VLIW （very long instruction word）
-    超长指令字也是通过编译器完成静态调度。</p>
+<p>VLIW （very long instruction word）</p>
+<p>超长指令字也是通过编译器完成静态调度。</p>
 <p>每个时钟周期发射的指令条数是固定的（4-16）。他们组成一条长指令或者一个指令包</p>
 <p>在指令包中，指令间的并行通过指令显示地表达</p>
 <p>It has been successfully applied to digital signal processing and</p>
@@ -1987,12 +2076,16 @@ ROB为指令提供操作数，其作用类似于Tomasulo算法中保留站（res
 </div>
 <h3 id="31-multi-issue-technology-based-on-static-scheduling">3.1 Multi-issue Technology based on Static Scheduling<a class="headerlink" href="#31-multi-issue-technology-based-on-static-scheduling" title="Permanent link">&para;</a></h3>
 <p>在典型的超标量处理器中，每个时钟周期可以发射<strong>1至8条指令</strong>。指令<strong>按序发射</strong>，并在发射时进行冲突检测。当前指令序列中需确保不存在数据冲突或近位冲突。</p>
-<p>指令顺序流出，在流出时进行冲突检测；在并行的指令中，不存在data conflict and close conflict
-    - <strong>Data conflict</strong>: 读写同一个寄存器
-    - <strong>Close conflict</strong>: 读写同一个寄存器，且读操作在写操作之前</p>
-<p>Outgoing Component 检测结构冲突和数据冲突
-- The first Stage: 进行输出包中的冲突检测，挑选可以被流出的这令
-- The second Stage: 检查被挑选的指令执行时是否发生冲突</p>
+<p>指令顺序流出，在流出时进行冲突检测；在并行的指令中，不存在data conflict and close conflict</p>
+<div class="codehilite"><pre><span></span><code><span class="k">-</span> **Data conflict**: 读写同一个寄存器
+<span class="k">-</span> **Close conflict**: 读写同一个寄存器，且读操作在写操作之前
+</code></pre></div>
+
+<p>Outgoing Component 检测结构冲突和数据冲突</p>
+<ul>
+<li>The first Stage: 进行输出包中的冲突检测，挑选可以被流出的这令</li>
+<li>The second Stage: 检查被挑选的指令执行时是否发生冲突</li>
+</ul>
 <div class="admonition example">
 <p class="admonition-title">RISC-V多发射实现</p>
 <ul>
@@ -2014,43 +2107,51 @@ ROB为指令提供操作数，其作用类似于Tomasulo算法中保留站（res
 </div>
 <h3 id="32-multi-issue-technology-based-on-dynamic-scheduling">3.2 Multi-issue Technology based on Dynamic Scheduling<a class="headerlink" href="#32-multi-issue-technology-based-on-dynamic-scheduling" title="Permanent link">&para;</a></h3>
 <p><strong>Extended Tomasulo Algorithm</strong>: 支持2路多发射；每个时钟周期可以发射两条指令，一个是interger指令，一个是浮点指令</p>
-<p>使用两种简单方法：
-- 指令顺序流向RS，否则程序semantics会被破坏
-- 将用于整数的表结构与表结构分开</p>
+<p>使用两种简单方法：</p>
+<ul>
+<li>指令顺序流向RS，否则程序semantics会被破坏</li>
+<li>将用于整数的表结构与表结构分开</li>
+</ul>
 <p>用于浮点数，并将它们分开处理，使一个浮点指令和一个整数指令可以同一时间各自发送至保留站。</p>
 <div class="admonition example">
 <p class="admonition-title">Extended Tomasulo Algorithm</p>
-<p>=== Question 
-    For the RISC-V pipeline that uses the Tomasulo algorithm and multiissue technology, consider the following simple loop execution. This program adds the scalar in X2 to each element of a vector.
-    <div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>    ld x2, 0(x1) //X2=array element
+<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Question:</label><label for="__tabbed_3_2">Solution</label><label for="__tabbed_3_3">Analysis</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>For the RISC-V pipeline that uses the Tomasulo algorithm and multiissue technology, consider the following simple loop execution. This program adds the scalar in X2 to each element of a vector.
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>    ld x2, 0(x1) //X2=array element
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    addi x2, x2, 1 //increment X2
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    sd x2, 0(x1) //store X2
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    addi x1,x1,8//increment pointer by 8 (each data occupies 8 bytes)
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    bne x2,x3,loop //branch if not equal
 </span></code></pre></div>
-    Now make the following assumptions:
-    - 每个周期一个整数指令和一个浮点数指令，即使他们关联
-    - 一个做整数ALU操作和地址计算的整数单元，对于每一种类型的浮点数操作，有一个独立的浮点单元
-    - 指令可以流出和写入结果花费1个周期
-    - 有动态分支预测单元和一个独立的功能单元来计算分支情况
-    - Branch instructions flowed out separately, no delayed branch was used, but branch prediction was perfect. Before the branch instruction is completed, its subsequent instructions can only be fetched and flowed out, but cannot be executed</p>
-<div class="codehilite"><pre><span></span><code><span class="err">由于写回操作占据一个周期，产生结果的延迟是：</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">cycle</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">operation</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="n">cycles</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nb">load</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="n">cycles</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">floating</span><span class="w"> </span><span class="n">point</span><span class="w"> </span><span class="n">addition</span>
-
-<span class="n">List</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">issue</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">instruction</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">first</span><span class="w"> </span><span class="n">three</span><span class="w"> </span><span class="n">loops</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">program</span><span class="p">,</span><span class="w"> </span><span class="n">start</span><span class="w"> </span><span class="n">execution</span><span class="p">,</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">write</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">results</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">CDB</span><span class="o">.</span>
-</code></pre></div>
-
-<p>=== Solution 
-    在执行时，loop会动态展开，在任何可能的时候两条指令会一起发射。 For ease of analysis, the time when the memory fetch occurs is listed in the table. The running result is shown in the figure below.
-    <img alt="alt text" src="../assets/image-9.png" />
-    可以看到，data-dependent branches 和 ALU components成为了瓶颈</p>
-<div class="codehilite"><pre><span></span><code><span class="nl">Solution</span><span class="p">:</span><span class="w"> </span><span class="n">add</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">adder</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">separate</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">ALU</span><span class="w"> </span><span class="n">function</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">address</span><span class="w"> </span><span class="n">calculation</span><span class="w"> </span><span class="n">function</span>
-<span class="o">!</span><span class="p">[</span><span class="n">alt</span><span class="w"> </span><span class="n">text</span><span class="p">](</span><span class="n">assets</span><span class="o">/</span><span class="n">image</span><span class="mf">-10.</span><span class="n">png</span><span class="p">)</span>
-</code></pre></div>
-
-<p>=== Analysis
-    - In this case , 在分支成为瓶颈的时候，speculation 很有用
-    - 这个优势建立在正确的分支预测上
-    - 错误的分支预测无法提高性能，反而影响性能并极大降低能效</p>
+Now make the following assumptions:</p>
+<ul>
+<li>每个周期一个整数指令和一个浮点数指令，即使他们关联</li>
+<li>一个做整数ALU操作和地址计算的整数单元，对于每一种类型的浮点数操作，有一个独立的浮点单元</li>
+<li>指令可以流出和写入结果花费1个周期</li>
+<li>有动态分支预测单元和一个独立的功能单元来计算分支情况</li>
+<li>Branch instructions flowed out separately, no delayed branch was used, but branch prediction was perfect. Before the branch instruction is completed, its subsequent instructions can only be fetched and flowed out, but cannot be executed</li>
+</ul>
+<p>由于写回操作占据一个周期，产生结果的延迟是： 1 cycle for operation, 2 cycles for load, 3 cycles for floating point addition</p>
+<p>List the issue of each instruction in the first three loops of the program, start execution, and write the results to the CDB.</p>
+</div>
+<div class="tabbed-block">
+<p>在执行时，loop会动态展开，在任何可能的时候两条指令会一起发射。 For ease of analysis, the time when the memory fetch occurs is listed in the table. The running result is shown in the figure below.
+<img alt="alt text" src="../assets/image-9.png" />
+可以看到，data-dependent branches 和 ALU components成为了瓶颈</p>
+<p>Solution: add an adder to separate the ALU function from the address calculation function</p>
+<p><img alt="alt text" src="../assets/image-10.png" /></p>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>In this case , 在分支成为瓶颈的时候，speculation 很有用</li>
+<li>这个优势建立在正确的分支预测上</li>
+<li>错误的分支预测无法提高性能，反而影响性能并极大降低能效</li>
+</ul>
+</div>
+</div>
+</div>
 </div>
 <h3 id="33-vlim">3.3 VLIM<a class="headerlink" href="#33-vlim" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2074,7 +2175,7 @@ long instruction (more than 100 bits to hundreds of bits).</p>
 <li>在一个周期能流出n条指令的super pipelined processor中，n条指令不是在同一时间流出的，而是每1/n周期流出一条指令</li>
 <li>the time-space diagram of a super pipelined processor that isuues 2 instructions per cycle</li>
 </ul>
-<div align = center><img src="assets/image-13.png" width = 60%></div>
+<div align = center><img src="../assets/image-13.png" width = 60%></div>
 
 <p>• A pipeline processor with 8 or more instruction pipeline stages is called a superpipelining processor</p>
 <div class="admonition example r4000 pipeline structre">
@@ -2091,7 +2192,7 @@ long instruction (more than 100 bits to hundreds of bits).</p>
 <li>a 32*32 bit general register bank</li>
 <li>An ALU</li>
 <li>A dedicated Multiplition/division unit
-<img alt="" src="../assets/image-14.png" /></li>
+<img alt="400" src="../assets/image-14.png" /></li>
 </ul>
 </li>
 <li>IF: first half fetch,在此时选择PC，同时初始化 I cache 加载</li>
@@ -2162,7 +2263,7 @@ long instruction (more than 100 bits to hundreds of bits).</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": "-header.autohide - navigation.instant - navigation.instant.prefetch - navigation.tabs - navigation.tabs.sticky - navigation.expand - navigation.top - search.suggest - search.highlight - search.share", "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["header.autohide", "navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "search.share"], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
