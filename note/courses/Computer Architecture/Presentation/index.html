@@ -6,6 +6,10 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="hhhjyz的笔记本">
+      
+      
+        <meta name="author" content="hhhjyz">
       
       
         <link rel="canonical" href="https://hhhjyz.github.io/note/courses/Computer%20Architecture/Presentation/">
@@ -18,7 +22,7 @@
     
     
       
-        <title>Pseudo-Associative Cache - hhhjyz</title>
+        <title>Pseudo-Associative Cache - hhhjyz的笔记本</title>
       
     
     
@@ -65,7 +69,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="jyzcolor" data-md-color-primary="indigo" data-md-color-accent="light">
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="light">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -88,7 +92,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../../../.." title="hhhjyz" class="md-header__button md-logo" aria-label="hhhjyz" data-md-component="logo">
+    <a href="../../../.." title="hhhjyz的笔记本" class="md-header__button md-logo" aria-label="hhhjyz的笔记本" data-md-component="logo">
       
   <img src="../../../../image/head.jpg" alt="logo">
 
@@ -101,7 +105,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            hhhjyz
+            hhhjyz的笔记本
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -120,7 +124,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="jyzcolor" data-md-color-primary="indigo" data-md-color-accent="light"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="light"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
@@ -130,7 +134,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="jyzdark" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
@@ -162,18 +166,11 @@
       </label>
       <nav class="md-search__options" aria-label="查找">
         
-          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
-            
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
-          </a>
-        
         <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
-      
-        <div class="md-search__suggest" data-md-component="search-suggest"></div>
       
     </form>
     <div class="md-search__output">
@@ -197,7 +194,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
   </div>
   <div class="md-source__repository">
-    GitHub
+    hhhjyz/note
   </div>
 </a>
       </div>
@@ -249,6 +246,8 @@
         <a href="../../ads/Final/" class="md-tabs__link">
           
   
+    
+  
   课程笔记
 
         </a>
@@ -275,6 +274,8 @@
       <li class="md-tabs__item">
         <a href="../../../self-study/d2l/1%20%E5%BC%95%E8%A8%80/" class="md-tabs__link">
           
+  
+    
   
   自学
 
@@ -326,12 +327,12 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../.." title="hhhjyz" class="md-nav__button md-logo" aria-label="hhhjyz" data-md-component="logo">
+    <a href="../../../.." title="hhhjyz的笔记本" class="md-nav__button md-logo" aria-label="hhhjyz的笔记本" data-md-component="logo">
       
   <img src="../../../../image/head.jpg" alt="logo">
 
     </a>
-    hhhjyz
+    hhhjyz的笔记本
   </label>
   
     <div class="md-nav__source">
@@ -341,7 +342,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
   </div>
   <div class="md-source__repository">
-    GitHub
+    hhhjyz/note
   </div>
 </a>
     </div>
@@ -376,6 +377,22 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
     
       
       
@@ -385,9 +402,7 @@
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -416,6 +431,22 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
     
       
       
@@ -425,9 +456,7 @@
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
         
           
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
@@ -611,6 +640,18 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
     
       
       
@@ -620,9 +661,7 @@
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
         
           
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
@@ -785,6 +824,18 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
     
       
       
@@ -794,9 +845,7 @@
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
         
           
           <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
@@ -938,6 +987,18 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
     
       
       
@@ -947,9 +1008,7 @@
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
         
           
           <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
@@ -1091,6 +1150,18 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
     
       
       
@@ -1100,9 +1171,7 @@
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
         
           
           <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
@@ -1244,6 +1313,12 @@
   
     
     
+      
+        
+      
+        
+      
+    
     
       
       
@@ -1253,9 +1328,7 @@
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
         
           
           <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
@@ -1341,6 +1414,12 @@
   
     
     
+      
+        
+      
+        
+      
+    
     
       
       
@@ -1350,9 +1429,7 @@
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -1381,6 +1458,10 @@
   
     
     
+      
+        
+      
+    
     
       
       
@@ -1390,9 +1471,7 @@
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
         
           
           <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
@@ -1450,6 +1529,10 @@
   
     
     
+      
+        
+      
+    
     
       
       
@@ -1459,9 +1542,7 @@
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
         
           
           <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
@@ -1551,8 +1632,6 @@
                   <div class="md-sidebar__inner">
                     
 
-  
-
 <nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
@@ -1614,27 +1693,27 @@
 <h1 id="pseudo-associative-cache">Pseudo-Associative Cache<a class="headerlink" href="#pseudo-associative-cache" title="Permanent link">&para;</a></h1>
 <h2 id="1">1 背景<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
 <p><img alt="" src="../assets/Presentation/file-20250326234535322.png" />
-<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>一般来说，内存子系统在微处理器的芯片面积中占比很大，缓存消耗的功率超过处理器总功率的 40%
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>设计缓存以提高性能的一种简单方法是将缓存大小翻倍。然而，在移动处理器中，简单地增加缓存大小会显著影响芯片面积和功耗。随着多核趋势的日益显著，缓存结构变得复杂。为了获得更高的缓存性能，需要更大的共享二级（L2）缓存，但大缓存大小直接关系到互连面积和相关功耗。
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>cache performance can be significantly increased by doubling cache 
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>sizes and increasing set associativity, but it results in hardware
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>cost, larger area and power consumption.
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>将缓存大小翻倍并增加组相联度可以显著提高缓存性能，但这会导致硬件成本增加、芯片面积增大和功耗上升。
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>![](assets/Presentation/file-20250326102044297.png)
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>**缓存未命中率（MPKI，每千条指令的未命中数）随缓存大小和组相联度的变化**
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>随着缓存大小和组相联度的增加，应用程序的性能会达到饱和（或提升很小）。这意味着增大缓存大小并非适用于所有应用程序工作负载的完美解决方案，因为每个应用程序对硬件资源的架构行为不同。
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>在使用 IP的 SoC设计中，另一种提高缓存性能的简单方法是增加组相联度，但这会带来额外的硬件成本和更高的功耗。具有理想替换方法的全相联缓存可以大幅提升性能，但在实际中难以实现。虽然增加缓存组相联度可以带来一定程度的性能提升，但对于大多数应用程序来说，提升程度在某一点会趋于饱和。
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>通常，LRU（Least Recently Used，最近最少使用）替换策略在缓存设计中应用广泛，且有多种实现方式。大多数情况下并非所有组都需要特定的相联度，且路的利用往往偏向于主路
-</span></code></pre></div></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>一般来说，内存子系统在微处理器的芯片面积中占比很大，缓存消耗的功率超过处理器总功率的 40%
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>设计缓存以提高性能的一种简单方法是将缓存大小翻倍。然而，在移动处理器中，简单地增加缓存大小会显著影响芯片面积和功耗。随着多核趋势的日益显著，缓存结构变得复杂。为了获得更高的缓存性能，需要更大的共享二级（L2）缓存，但大缓存大小直接关系到互连面积和相关功耗。
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>cache performance can be significantly increased by doubling cache 
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>sizes and increasing set associativity, but it results in hardware
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>cost, larger area and power consumption.
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>将缓存大小翻倍并增加组相联度可以显著提高缓存性能，但这会导致硬件成本增加、芯片面积增大和功耗上升。
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>![](assets/Presentation/file-20250326102044297.png)
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>**缓存未命中率（MPKI，每千条指令的未命中数）随缓存大小和组相联度的变化**
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>随着缓存大小和组相联度的增加，应用程序的性能会达到饱和（或提升很小）。这意味着增大缓存大小并非适用于所有应用程序工作负载的完美解决方案，因为每个应用程序对硬件资源的架构行为不同。
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>在使用 IP的 SoC设计中，另一种提高缓存性能的简单方法是增加组相联度，但这会带来额外的硬件成本和更高的功耗。具有理想替换方法的全相联缓存可以大幅提升性能，但在实际中难以实现。虽然增加缓存组相联度可以带来一定程度的性能提升，但对于大多数应用程序来说，提升程度在某一点会趋于饱和。
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>通常，LRU（Least Recently Used，最近最少使用）替换策略在缓存设计中应用广泛，且有多种实现方式。大多数情况下并非所有组都需要特定的相联度，且路的利用往往偏向于主路
+</code></pre></div></p>
 <p>Overall, direct-mapped caches are often the most economical choice for use in workstations, where cost-performance is the most important criterion.</p>
 <p><strong>直接映射的优缺点：</strong>
 由于直接映射缓存只允许一个数据块驻留在由地址索引字段直接指定的缓存组中，其缺失率（缺失次数与总引用次数的比率）往往比相同总大小的组相联缓存更差。然而，直接映射缓存的较低命中访问时间减轻了较高缺失率的影响。</p>
@@ -1753,7 +1832,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["header.autohide", "navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "search.share"], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.annotate", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top"], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
