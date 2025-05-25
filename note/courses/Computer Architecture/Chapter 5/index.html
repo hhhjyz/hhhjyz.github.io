@@ -1518,6 +1518,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="5.4 Cache Coherence">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#snoopy-coherence-protocols" class="md-nav__link">
+    <span class="md-ellipsis">
+      Snoopy Coherence Protocols
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -1718,6 +1733,8 @@
       
         
       
+        
+      
     
     
       
@@ -1748,6 +1765,27 @@
             面向对象程序设计
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP/Lecture%203%20class/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lec3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -2383,6 +2421,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="5.4 Cache Coherence">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#snoopy-coherence-protocols" class="md-nav__link">
+    <span class="md-ellipsis">
+      Snoopy Coherence Protocols
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -2413,13 +2466,19 @@
 <p>在其中设置了矢量数据表示和相应矢量指令的流水线处理器称为vector processor, 对应没有的则被称为scalar processor</p>
 <h2 id="1-simd-vector-processor">1 SIMD: vector processor<a class="headerlink" href="#1-simd-vector-processor" title="Permanent link">&para;</a></h2>
 <p>vector pipeline的特点：
-- The elements in the vector are <strong>rarely correlated</strong> during operations.
-- 
-* SIMD architectures can exploit significant data-level parallelism
-    * Matrix-oriented scientific computing
-    * Media-oriented image and sound processors</p>
+- The elements in the vector are <strong>rarely correlated</strong> during operations. vector中的元素在执行时相互不关联
+- Improper vector handling can also cause related problem and frequent function switching;</p>
 <ul>
-<li>SIMD is more energy efficient than MIMD</li>
+<li>
+<p>SIMD architectures can exploit significant data-level parallelism</p>
+<ul>
+<li>Matrix-oriented scientific computing</li>
+<li>Media-oriented image and sound processors</li>
+</ul>
+</li>
+<li>
+<p>SIMD is more energy efficient than MIMD</p>
+</li>
 <li>SIMD allows programmer to continue to think sequentially</li>
 </ul>
 <h3 id="11-vector-processor-scalar-processor">1.1 Vector Processor &amp; Scalar Processor<a class="headerlink" href="#11-vector-processor-scalar-processor" title="Permanent link">&para;</a></h3>
@@ -3080,67 +3139,69 @@ S1 出现跨迭代的依赖，就不能用并行/向量链接，因为要等前�
 <p>写一个值时，要把写的值返回（通过读指令），什么时候返回。</p>
 </li>
 </ul>
-<!-- #### Snoopy Coherence Protocols
-
-For UMA, the cache coherence problem is solved by the **snoopy protocol**.
-
-对于 write-through 和 write-back，我们有不同的解决方案。
-
-* Write-through Cache Coherency Protocol
-
-    https://cdn.hobbitqia.cc/20240110211248.png
-
-Write Invalidation Protocol
-
-把块的状态分为 
-
-* Invalid
-* Shared
-
-    indicates that the block in the private cache is potentially shared.
-
-* Modified
-
-    indicates that the block has been updated in the private cache; implies that the block is exclusive.
-
-https://cdn.hobbitqia.cc/20240110211602.png
-
-MSI 可以拓展为 MESI，多一个 exclusive。将其与 modified 区别开。
-exclusive: indicates when a cache block is resident only in a single cache but is clean.
-
-exclusive 时如果要读，就不能独占了，就会变为 shared。如果要写，就必须改为 modified。
-
-MOESI
-
-owned: indicates that the associated block is owned by that cache and out-of-date in memory.
-
-Modified -> Owned without writing the shared block to memory
-
-
-MESI
-
-* Invalid: The data contained in the cache item is invalid.
-
-    这个 CPU 里的缓存数据已经无效了（即在其他 CPU 里被改过了，而且还没有共享）
-
-* Shared: This row of data exists in multiple cache items, and the data in the memory is the latest.
-
-    多个 CPU 中都有自己的缓存。
-
-* Exclusive: No other cache items include this row of data, and the data in memory is the latest.
-
-    只有在自己的 CPU 里缓存，但是没有被修改，与内存一致。（因此其他 CPU 要读就可以改为 shared）
-
-* Modified: The data of the item is valid, but the data in the memory is invalid, and there is no copy of the data in other cache items.
-
-    被修改了。处于这个状态的数据只有在自己的 CPU 里才有缓存，这个时候还没有更新到内存里。
-
-https://cdn.hobbitqia.cc/20240110212328.png
-
-!!! Example
-    假设有两个 CPU。本地发一个 local write 的请求，如果发现所有 cache 中都没有这个地址（初始是 invalid），A 要写，对应 cache line 的状态就会变为 modified。CPU B 来读，发出 remote read，就变为了 shared（A 和 B 的 cache line 都是 share 的）。
-
-    如果 A 想写，B 也想，同时 A 先发起写，那么 A 中的 cache line 就变为 invalid。（只要有别人在我后面写，就变为无效） -->
+<h4 id="snoopy-coherence-protocols">Snoopy Coherence Protocols<a class="headerlink" href="#snoopy-coherence-protocols" title="Permanent link">&para;</a></h4>
+<p>For UMA, the cache coherence problem is solved by the <strong>snoopy protocol</strong>.</p>
+<p>对于 write-through 和 write-back，我们有不同的解决方案。</p>
+<ul>
+<li>
+<p>Write-through Cache Coherency Protocol</p>
+<p><a href="https://cdn.hobbitqia.cc/20240110211248.png">https://cdn.hobbitqia.cc/20240110211248.png</a></p>
+</li>
+</ul>
+<p>Write Invalidation Protocol</p>
+<ul>
+<li>Write incalidate protocol: it invalidate protocol</li>
+<li>
+<p>Write update / write broadcast protocol: update all the cached copies of a data item when the item is written.</p>
+<p>这里的 update 是指更新所有的 cache 中的数据</p>
+</li>
+</ul>
+<p><strong>实现Write invalidate protocol</strong></p>
+<p>把块的状态分为 three block states:(MSI protocol)</p>
+<ul>
+<li>Invalid</li>
+<li>
+<p>Shared</p>
+<p>indicates that the block in the private cache is potentially shared.</p>
+</li>
+<li>
+<p>Modified</p>
+<p>indicates that the block has been updated in the private cache; implies that the block is exclusive.</p>
+</li>
+</ul>
+<p><img alt="alt text" src="../assets/image.png" /></p>
+<p><img alt="alt text" src="../assets/image-1.png" /></p>
+<p>MSI 可以拓展为 MESI，多一个 exclusive。将其与 modified 区别开。
+exclusive: indicates when a cache block is resident only in a single cache but is clean.</p>
+<p>exclusive 时如果要读，就不能独占了，就会变为 shared。如果要写，就必须改为 modified。</p>
+<p>MOESI</p>
+<p>owned: indicates that the associated block is owned by that cache and out-of-date in memory.</p>
+<p>Modified -&gt; Owned without writing the shared block to memory</p>
+<p>MESI</p>
+<ul>
+<li>
+<p>Invalid: The data contained in the cache item is invalid.</p>
+<p>这个 CPU 里的缓存数据已经无效了（即在其他 CPU 里被改过了，而且还没有共享）</p>
+</li>
+<li>
+<p>Shared: This row of data exists in multiple cache items, and the data in the memory is the latest.</p>
+<p>多个 CPU 中都有自己的缓存。</p>
+</li>
+<li>
+<p>Exclusive: No other cache items include this row of data, and the data in memory is the latest.</p>
+<p>只有在自己的 CPU 里缓存，但是没有被修改，与内存一致。（因此其他 CPU 要读就可以改为 shared）</p>
+</li>
+<li>
+<p>Modified: The data of the item is valid, but the data in the memory is invalid, and there is no copy of the data in other cache items.</p>
+<p>被修改了。处于这个状态的数据只有在自己的 CPU 里才有缓存，这个时候还没有更新到内存里。</p>
+</li>
+</ul>
+<p><a href="https://cdn.hobbitqia.cc/20240110212328.png">https://cdn.hobbitqia.cc/20240110212328.png</a></p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>假设有两个 CPU。本地发一个 local write 的请求，如果发现所有 cache 中都没有这个地址（初始是 invalid），A 要写，对应 cache line 的状态就会变为 modified。CPU B 来读，发出 remote read，就变为了 shared（A 和 B 的 cache line 都是 share 的）。</p>
+<p>如果 A 想写，B 也想，同时 A 先发起写，那么 A 中的 cache line 就变为 invalid。（只要有别人在我后面写，就变为无效） --&gt;</p>
+</div>
 
 
 

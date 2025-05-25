@@ -18,7 +18,7 @@
         <link rel="prev" href="../Chapter%205/">
       
       
-        <link rel="next" href="../../OOP/Lecture%208%20Stream/">
+        <link rel="next" href="../../OOP/Lecture%203%20class/">
       
       
       <link rel="icon" href="../../../../image/head.jpg">
@@ -1350,21 +1350,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1 强化学习问题定义">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#11" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.1 强化学习定义
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
     </ul>
@@ -1392,6 +1377,8 @@
   
     
     
+      
+        
       
         
       
@@ -1427,6 +1414,27 @@
             面向对象程序设计
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP/Lecture%203%20class/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lec3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -1731,21 +1739,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1 强化学习问题定义">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#11" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.1 强化学习定义
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
     </ul>
@@ -1768,40 +1761,12 @@
 
 <h1 id="_1">强化学习<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <h2 id="1">1 强化学习问题定义<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
-<ul>
-<li>智能体agent: 智能体是强化学习算法的主体，它能够根据经验做出主观判断并执行动作，是整个智能系统的核心。</li>
-<li>环境environment: 智能体以外的一切统称为环境，环境在与智能体的交互中，能被智能体所采取的动作影响，同时环境也能向智能体反馈状态和奖励。虽说智能体以外的一切都可视为环境，但在设计算法时常常会排除不相关的因素建立一个理想的环境模型来对算法功能进行模拟。</li>
-<li>状态state: 状态可以理解为智能体对环境的一种理解和编码，通常包含了对智能体所采取决策产生影响的信息。</li>
-<li>动作action</li>
-<li>策略policy</li>
-<li>奖励reword</li>
-</ul>
-<p>强化学习实际上是智能体在与环境交互中去学习能帮助其获得最大化奖励这一策略的过
-程。在每一次迭代中，智能体根据当前策略选择一个动作，该动作影响了环境，导致环
-境发生了改变，智能体此时从环境得到状态变化和奖励反馈等信息，并根据这些反馈来
-更新其内部的策略</p>
-<ul>
-<li>基于评估</li>
-<li>交互性：强化学习的数据在与环境的交互中产生</li>
-<li>序列决策过程：智能主体在与环境的交互中需要作出⼀系列的决策，这些决策往往是前后关联的</li>
-</ul>
-<p><img alt="" src="../assets/Chapter%206/file-20250508132617599.png" /></p>
-<p>!!! note 马尔可夫决策过程：机器人寻路问题
-    <img alt="" src="../assets/Chapter%206/file-20250508133832532.png" />
-    - 主体：机器人
-    - 环境：3* 3方格
-    - 状态： 当前位置
-    - 动作： 移动一格
-    - 奖励：到达目标奖励，越界惩罚</p>
-<p><strong>离散马尔可夫链</strong>： 引入奖励机制
-    <img alt="" src="../assets/Chapter%206/file-20250508134105586.png" /></p>
-<h3 id="11">1.1 强化学习定义<a class="headerlink" href="#11" title="Permanent link">&para;</a></h3>
-<ul>
-<li>策略函数<span class="arithmatex">\(\pi\)</span>: <span class="arithmatex">\(\pi(s,a)\)</span>状态s下做出a动作的概率。确定的策略函数：<span class="arithmatex">\(a=\pi(s)\)</span></li>
-<li>价值函数<span class="arithmatex">\(V\)</span>:<span class="arithmatex">\(V_\pi(s)=\mathbb{E}_\pi[G_t|S_t=s]\)</span> ,智能体在时刻t处于状态s时，按照策略<span class="arithmatex">\(\pi\)</span>采取行动获得的回报的期望</li>
-<li>动作-价值函数<span class="arithmatex">\(q\)</span>: <span class="arithmatex">\(q_\pi(s,a)=\mathbb{E}_\pi[G-t|S_t = s, A_t = a]\)</span></li>
-<li></li>
-</ul>
+<p>在强化学习中，学习信号以奖励形式出现</p>
+<p><strong>术语</strong>：
+- 智能体agent
+- 环境environment
+- 状态state</p>
+<p><img alt="alt text" src="../assets/image-3.png" /></p>
 
 
 

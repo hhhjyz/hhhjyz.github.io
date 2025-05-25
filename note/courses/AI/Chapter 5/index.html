@@ -1329,6 +1329,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="1 前馈神经网络与参数优化">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 单层感知机
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 前馈神经网络
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1418,6 +1442,8 @@
       
         
       
+        
+      
     
     
       
@@ -1448,6 +1474,27 @@
             面向对象程序设计
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP/Lecture%203%20class/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lec3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -1752,6 +1799,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="1 前馈神经网络与参数优化">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 单层感知机
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 前馈神经网络
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1812,14 +1883,20 @@
 <h2 id="1">1 前馈神经网络与参数优化<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
 <p>在人工神经网络中，MCP模型成为最基本的结构,可求解二分类问题</p>
 <p><img alt="MCP" src="../assets/image.png" /></p>
+<h3 id="11">1.1 单层感知机<a class="headerlink" href="#11" title="Permanent link">&para;</a></h3>
 <p>单层感知机由一个输入层和一个输出层构成，可作为一种线性二分类模型</p>
 <p><img alt="单层感知机" src="../assets/image-1.png" /></p>
-<p>$$
+<div class="arithmatex">\[
 z : z = \sum_{i=1}^{n} w_ix_i+b
-$$
-z是激活函数的输入，<span class="arithmatex">\(w_i\)</span>是权重，<span class="arithmatex">\(x_i\)</span>是输入数据，b是偏置项</p>
+\]</div>
+<p><span class="arithmatex">\(z\)</span>是激活函数的输入，<span class="arithmatex">\(w_i\)</span>是权重，<span class="arithmatex">\(x_i\)</span>是输入数据，<span class="arithmatex">\(b\)</span>是偏置项</p>
 <p>单层感知机构建
 损失函数，来计算模型预测值与数据真实值之间的“误差”，通过最小化损失函数取值，来优化模型参数。</p>
+<p>单层感知机可以模拟逻辑与，逻辑与非，逻辑或等线性可分函数，但是无法完成逻辑异或这一非线性操作</p>
+<div align = center><img src="../assets/image-2.png" width = 70%></div>
+
+<h3 id="12">1.2 前馈神经网络<a class="headerlink" href="#12" title="Permanent link">&para;</a></h3>
+<p>在感知机模型中增加若干隐藏层，增强神经网络的非线性表达能力，即由多个隐藏层构成的多层感知机</p>
 <h2 id="2">2 卷积神经网络<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
 <h2 id="3">3 循环神经网络<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
 <h2 id="4">4 注意力机制与正则化<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>

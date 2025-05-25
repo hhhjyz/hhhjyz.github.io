@@ -1,10 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;700&display=swap');
+
 :root {
   --md-text-font: "JetBrains Mono", "LXGW WenKai Screen"; 
-  --md-code-font: "JetBrains Mono";
+  --md-code-font: "mono";
+}
+
+.md-typeset h5 {
+  font-size: large;
+}
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5 {
+  font-weight: 800;
+}
+
+.md-typeset .md-button {
+  border: .15rem solid;
+  border-radius: .0rem;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 700;
+  padding: .225em 2em;
+  transition: color 125ms,background-color 125ms,border-color 125ms;
 }
 
 body {
   font-family: "LXGW WenKai", sans-serif;
+  font-weight: 530;
   /* Lite version */
   /* font-family: "LXGW WenKai Lite", sans-serif; */
   /* TC version */
@@ -13,24 +44,29 @@ body {
   /* font-family: "LXGW WenKai Screen", sans-serif; */
 }
 
+@font-face {
+  font-family: "mono";
+  src: url();
+}
+
 @media screen and (min-width: 960px) {
   /* body {
     zoom: 1.1;
   } */
   html {
-    font-size: 137.5%;
+    font-size: 142.5%;
   }
 }
 
 @media screen and (min-width: 100em) {
   html {
-    font-size: 137.5%;
+    font-size: 142.5%;
   }
 }
 
 @media screen and (min-width: 125em) {
   html {
-    font-size: 137.5%;
+    font-size: 142.5%;
   }
 }
 
@@ -58,21 +94,58 @@ body {
   font-size: inherit;
 }
 
+
 /*设置主题颜色*/
 [data-md-color-scheme="slate"] {
-  --md-primary-fg-color:#00515ee2;
-  --md-primary-fg-color--light: #000000;
-  --md-primary-fg-color--dark:  #000000;
-  --md-primary-bg-color: #bebdbd;
-  --md-primary-bg-color--light: #9b9b9b;
-  --md-accent-bg-color: #b7b5b5;
-  --md-default-bg-color: #fcfcfc;
-  --md-typeset-a-color: #000000;
-  --md-accent-fg-color: #000000;
-  --md-default-fg-color: #000000;
-  --md-default-fg-color--light: #000000;
-  --md-default-fg-color--lighter: #000000;
-  --md-default-fg-color--lightest: #000000;
+  --md-default-fg-color: rgba(11, 19, 23, 0.78);
+  --md-default-fg-color--light: rgba(72, 52, 52, .54);
+  --md-default-fg-color--lighter: rgba(72, 52, 52, .32);
+  --md-default-fg-color--lightest: rgba(72, 52, 52, .27);
+  --md-default-bg-color: #fffaf5;
+  --md-default-bg-color--light: hsla(0, 0%, 100%, .7);
+  --md-default-bg-color--lighter: hsla(0, 0%, 100%, .3);
+  --md-default-bg-color--lightest: hsla(0, 0%, 100%, .12);
+  --md-primary-fg-color: #05797b;
+  --md-primary-fg-color--light: #13ac98;
+  --md-primary-fg-color--dark: #1e1e1e;
+  --md-primary-bg-color: #FDF6EC;
+  --md-primary-bg-color--light: hsla(0, 0%, 100%, .7);
+  --md-accent-fg-color: #b1c1a2;
+  --md-accent-fg-color--light: #809A6F;
+  --md-accent-fg-color--transparent: rgba(82, 108, 254, .1);
+  --md-accent-bg-color: #fff;
+  --md-accent-bg-color--light: hsla(0, 0%, 100%, .7);
+  --md-code-fg-color: #1f2d5a;
+  --md-code-bg-color: #f5f9ff;
+  --md-code-hl-color: #d7e1c3;
+  --md-code-hl-number-color: #d52a2a;
+  --md-code-hl-special-color: #db1457;
+  --md-code-hl-function-color: #a846b9;
+  --md-code-hl-constant-color: #6e59d9;
+  --md-code-hl-keyword-color: #3f6ec6;
+  --md-code-hl-string-color: #1c7d4d;
+  --md-code-hl-name-color: var(--md-code-fg-color);
+  --md-code-hl-operator-color: var(--md-default-fg-color--light);
+  --md-code-hl-punctuation-color: var(--md-default-fg-color--light);
+  --md-code-hl-comment-color: var(--md-default-fg-color--light);
+  --md-code-hl-generic-color: var(--md-default-fg-color--light);
+  --md-code-hl-variable-color: var(--md-default-fg-color--light);
+  --md-typeset-color: var(--md-default-fg-color);
+  --md-typeset-a-color: var(--md-accent-fg-color--light);
+  --md-typeset-mark-color: rgba(255, 179, 0, 0.5);
+  --md-typeset-del-color: rgba(245, 80, 61, .15);
+  --md-typeset-ins-color: rgba(11, 213, 112, .15);
+  --md-typeset-kbd-color: #fafafa;
+  --md-typeset-kbd-accent-color: #fff;
+  --md-typeset-kbd-border-color: #b8b8b8;
+  --md-typeset-table-color: rgba(0, 0, 0, .12);
+  --md-admonition-fg-color: var(--md-default-fg-color);
+  --md-admonition-bg-color: #fff9f4;
+  --md-footer-fg-color: #fff;
+  --md-footer-fg-color--light: hsla(0, 0%, 100%, .7);
+  --md-footer-fg-color--lighter: hsla(0, 0%, 100%, .3);
+  --md-footer-bg-color: rgba(0, 0, 0, .87);
+  --md-footer-bg-color--dark: rgba(0, 0, 0, .32);
 }
 
 [data-md-color-scheme="default"] {
@@ -91,7 +164,8 @@ body {
   --md-footer-bg-color--dark: #0d0d0d;
   --md-footer-fg-color--light: #fff;
   --md-footer-fg-color--lighter: #fff;
-  --md-code-bg-color: #1d1d1d;
+  --md-code-bg-color: #323232;
+  --md-code-fg-color: #ffffff;
 }
 
 
@@ -109,7 +183,7 @@ body {
 }
 
 [data-md-color-scheme="slate"] .md-annotation__index:after {
-  background-color: #0b0b0b;
+  background-color: #171717;
 }
 
 input#mkdocs-content-password {
