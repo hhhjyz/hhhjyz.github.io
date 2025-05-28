@@ -1965,6 +1965,12 @@
       
         
       
+        
+      
+        
+      
+        
+      
     
     
       
@@ -2024,6 +2030,48 @@
   
   
     <li class="md-nav__item">
+      <a href="../../OOP/Lecture%204/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lec4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP/Lecture%205/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lec5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../OOP/Lecture%208%20Stream/" class="md-nav__link">
         
   
@@ -2050,6 +2098,27 @@
   
   <span class="md-ellipsis">
     Lec9
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP/Chapter%2010/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lec10
   </span>
   
 
@@ -2695,10 +2764,12 @@
 <p><img alt="" src="../assets/Chapter%205/file-20250506131837061.png" /></p>
 <p>在其中设置了矢量数据表示和相应矢量指令的流水线处理器称为vector processor, 对应没有的则被称为scalar processor</p>
 <h2 id="1-simd-vector-processor">1 SIMD: vector processor<a class="headerlink" href="#1-simd-vector-processor" title="Permanent link">&para;</a></h2>
-<p>vector pipeline的特点：
-- The elements in the vector are <strong>rarely correlated</strong> during operations. vector中的元素在执行时相互不关联
-- Improper vector handling can also cause related problem and frequent function switching;</p>
+<p>vector pipeline的特点：</p>
 <ul>
+<li>The elements in the vector are <strong>rarely correlated</strong> during operations. vector中的元素在执行时相互不关联</li>
+<li>
+<p>Improper vector handling can also cause related problem and frequent function switching;</p>
+</li>
 <li>
 <p>SIMD architectures can exploit significant data-level parallelism</p>
 <ul>
@@ -2849,9 +2920,16 @@ V5&amp; \leftarrow V4\times V6
 <li>Adopt <strong>recycling mining technology</strong> to speed up recycling processing.</li>
 <li>Using a <strong>multi-processor system</strong> to further improve the performance.</li>
 </ul>
-<p>这里 1、3、4 都依赖于增加部件，我们将关注于第 2 种方法。</p>
-<p>Link feature: It has two related instructions that are written first and then read. In the case of no conflicts between functional components and source vector conflicts, functional components can be linked for pipeline processing to achieve the purpose of speeding up execution.<br />
-如果我们有两条指令，第一条指令的结果是第二条指令的输入，那么我们就可以把这两条指令链接起来，这样就可以减少一次读写的时间。</p>
+<p><strong>1. Set up multiple functional units and make them work in parallel:</strong>
+    比如 CRAY-1 vector processor 有四组 12个单功能流水线部件：
+    - Vector components
+    - Floating point components
+    - Scalar components
+    - Address calculation components</p>
+<p><strong>2.Use link technology to speed up the execution of a string of a string of vector instruction:</strong></p>
+<p>Link feature: It has two related instructions that are written first and then read. In the case of no conflicts between functional components and source vector conflicts, functional components can be linked for pipeline processing to achieve the purpose of speeding up execution.  </p>
+<p>链接特性：它有两个相关的指令，先写入然后读取。在功能部件和源向量没有冲突的情况下，功能部件可以被链接起来进行流水线处理，以达到加速执行的目的。</p>
+<p>如果我们有两条指令，第一条指令的结果是第二条指令的输入，那么我们就可以把这两条指令链接起来，这样就可以减少一次读写的时间。</p>
 <div class="admonition example">
 <p class="admonition-title">Use link technology to perform vector operations on CRAY-1</p>
 <p>D = A <span class="arithmatex">\(\times\)</span> (B + C) A, B, C, D ── vector of length N，假设 <span class="arithmatex">\(N\leq 64\)</span>，均为浮点数，B 和 C 已经被存在 V0 和 V1 中。</p>
@@ -3426,7 +3504,8 @@ exclusive: indicates when a cache block is resident only in a single cache but i
 <p>被修改了。处于这个状态的数据只有在自己的 CPU 里才有缓存，这个时候还没有更新到内存里。</p>
 </li>
 </ul>
-<p><a href="https://cdn.hobbitqia.cc/20240110212328.png">https://cdn.hobbitqia.cc/20240110212328.png</a></p>
+<div align = center><img src="https://cdn.hobbitqia.cc/20240110212328.png"></div>
+
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <p>假设有两个 CPU。本地发一个 local write 的请求，如果发现所有 cache 中都没有这个地址（初始是 invalid），A 要写，对应 cache line 的状态就会变为 modified。CPU B 来读，发出 remote read，就变为了 shared（A 和 B 的 cache line 都是 share 的）。</p>

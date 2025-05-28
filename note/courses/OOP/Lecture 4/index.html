@@ -1,0 +1,2864 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="hhhjyz的笔记本">
+      
+      
+        <meta name="author" content="hhhjyz">
+      
+      
+        <link rel="canonical" href="https://hhhjyz.github.io/note/courses/OOP/Lecture%204/">
+      
+      
+        <link rel="prev" href="../Lecture%203%20class/">
+      
+      
+        <link rel="next" href="../Lecture%205/">
+      
+      
+      <link rel="icon" href="../../../../image/head.jpg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>Lec4 - hhhjyz的笔记本</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../../../css/round.css">
+    
+      <link rel="stylesheet" href="../../../../css/extra.css">
+    
+      <link rel="stylesheet" href="https://fonts.loli.net/css2?family=Noto+Serif+SC&display=swap">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="light">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../../.." title="hhhjyz的笔记本" class="md-header__button md-logo" aria-label="hhhjyz的笔记本" data-md-component="logo">
+      
+  <img src="../../../../image/head.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            hhhjyz的笔记本
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Lec4
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="light"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/hhhjyz/hhhjyz.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hhhjyz/note
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../ads/Final/" class="md-tabs__link">
+          
+  
+    
+  
+  课程笔记
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../self-study/d2l/1%20%E5%BC%95%E8%A8%80/" class="md-tabs__link">
+          
+  
+    
+  
+  自学
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../use/" class="md-tabs__link">
+        
+  
+    
+  
+  ZJU工具
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="hhhjyz的笔记本" class="md-nav__button md-logo" aria-label="hhhjyz的笔记本" data-md-component="logo">
+      
+  <img src="../../../../image/head.jpg" alt="logo">
+
+    </a>
+    hhhjyz的笔记本
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hhhjyz/hhhjyz.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hhhjyz/note
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    课程笔记
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            课程笔记
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    高级数据结构与算法分析
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            高级数据结构与算法分析
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ads/Final/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Review
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ads/Lec8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lec8 Dynamic Programming
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ads/Lec%209/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lec9 Greedy Algorithm
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ads/Lec%2010/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lec10 NP-Completeness
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ads/Lec11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lec11 Approximation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ads/Lec%2012/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lec12 Local Search
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ads/Lec14/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lec14 Parallel Algorithm
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    计算机组成
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            计算机组成
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computer_organization/Chapter%201/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computer_organization/Chapter%202/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computer_organization/Chapter%204/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computer_organization/Chapter%205/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computer_organization/Chapter%206/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 6
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../physics/%E5%A4%A7%E7%89%A9%E5%AE%9E%E9%AA%8C%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    大学物理实验
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    数据库系统
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            数据库系统
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database%20system/chaper%201%20Introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chpater 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database%20system/Chapter%202%20Relational%20Modeling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database%20system/Chapter%203/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database%20system/Chapter%204/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database%20system/Chapter%205/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database%20system/Chapter%206/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 6
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database%20system/Chapter%207/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 7
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database%20system/Chapter%208/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 8
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database%20system/Chapter%209/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 9
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database%20system/Chapter%2010/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 10
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database%20system/Chapter%2011/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 11
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database%20system/Chapter%2012/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 12
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database%20system/Chapter%2013/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 13
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database%20system/Chapter%2014/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 14
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database%20system/Chapter%2015/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 15
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    计算机体系结构
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            计算机体系结构
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Computer%20Architecture/Chapter%201%20Fundamentals%20of%20computer%20design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Computer%20Architecture/Chapter%202/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Computer%20Architecture/Chapter%203/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Computer%20Architecture/Chapter%204/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Computer%20Architecture/Chapter%205/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    人工智能
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            人工智能
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/Chapter%202/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/Chapter%203/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/Chapter%204/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/Chapter%205/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/Chapter%206/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 6
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    面向对象程序设计
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            面向对象程序设计
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Lecture%203%20class/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lec3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Lec4
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Lec4
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      类的继承与派生概念
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      基类与派生类
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="基类与派生类">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      调整派生类中访问属性的其他方法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="调整派生类中访问属性的其他方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      同名成员
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      访问声明
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      派生类的构造函数和析构函数
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="派生类的构造函数和析构函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      构造函数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      析构函数
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      多重继承
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="多重继承">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      多重继承的声明
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      多重继承的构造函数和析构函数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      多重继承中的二义性
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      子类型与赋值兼容规则
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="子类型与赋值兼容规则">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      类型适应
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      赋值兼容规则
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      虚基类
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      基类和派生类的转换
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Lecture%205/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lec5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Lecture%208%20Stream/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lec8
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Lecture%209%20Exception/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lec9
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Chapter%2010/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lec10
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    自学
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            自学
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    dive into deep learning
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            dive into deep learning
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../self-study/d2l/1%20%E5%BC%95%E8%A8%80/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.引言
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    工具
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            工具
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../self-study/tools/conda/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    conda
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../use/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ZJU工具
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      类的继承与派生概念
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      基类与派生类
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="基类与派生类">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      调整派生类中访问属性的其他方法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="调整派生类中访问属性的其他方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      同名成员
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      访问声明
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      派生类的构造函数和析构函数
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="派生类的构造函数和析构函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      构造函数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      析构函数
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      多重继承
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="多重继承">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      多重继承的声明
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      多重继承的构造函数和析构函数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      多重继承中的二义性
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      子类型与赋值兼容规则
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="子类型与赋值兼容规则">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      类型适应
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      赋值兼容规则
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      虚基类
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      基类和派生类的转换
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="_1">继承与派生<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="_2">类的继承与派生概念<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>继承就是在一个已存在的类的基础上创建一个新类，即利用已有的数据类型定义出新的数据类型</p>
+<ul>
+<li>被继承的类被称为基类</li>
+<li>定义出来的新类称为派生类</li>
+</ul>
+<p>派生类又可以作为另一个类的基类，派生出其他更“新”的类 </p>
+<ul>
+<li>单继承：一个派生类只能有一个基类</li>
+<li>多继承：一个派生类可以有多个基类</li>
+</ul>
+<h2 id="_3">基类与派生类<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>新的派生类，不仅拥有新定义的成员，同时还拥有旧的基类的成员</p>
+<p><strong>派生类的声明</strong>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">派生类名</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">继承方式</span><span class="w"> </span><span class="n">基类名</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="c1">// 成员声明</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">};</span>
+</code></pre></div></p>
+<p><strong>多继承下的派生类声明</strong>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">派生类名</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">继承方式</span><span class="w"> </span><span class="n">基类1</span><span class="p">,</span><span class="w"> </span><span class="n">继承方式</span><span class="w"> </span><span class="n">基类2</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="k">private</span><span class="o">:</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="n">新增数据成员和成员函数声明</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="p">};</span>
+</code></pre></div></p>
+<p>继承方式有以下三种：</p>
+<ul>
+<li>public：公有继承</li>
+<li>protected：保护继承</li>
+<li>private：私有继承</li>
+</ul>
+<p>派生类的成员包括三种：</p>
+<ul>
+<li>吸收基类的成员：派生类继承了基类除了构造函数、析构函数之外的所有成员</li>
+<li>新增成员：派生类新增的成员</li>
+<li>对基类成员进行改造：<ul>
+<li>对基类成员的访问控制方式进行改造</li>
+<li>定义与基类同名的成员，同名覆盖</li>
+</ul>
+</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Point</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="p">{</span><span class="w">                         </span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">protected</span><span class="o">:</span><span class="w">                        </span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">;</span><span class="w">      </span><span class="c1">//点的坐标x,y</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="k">public</span><span class="o">:</span><span class="w">                        </span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="n">Point</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="n">x</span><span class="o">=</span><span class="n">a</span><span class="p">;</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&quot;Point...&quot;</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w">  </span><span class="c1">//构造函数</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">showX</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;x=&quot;</span><span class="o">&lt;&lt;</span><span class="n">x</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;}</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">showY</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;y=&quot;</span><span class="o">&lt;&lt;</span><span class="n">y</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;}</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">Show</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&quot;x=&quot;</span><span class="o">&lt;&lt;</span><span class="n">x</span><span class="o">&lt;&lt;</span><span class="s">&quot;,y=&quot;</span><span class="o">&lt;&lt;</span><span class="n">y</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;}</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span><span class="o">~</span><span class="n">Point</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&quot;Delete Point&quot;</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;}</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="p">};</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="k">class</span><span class="w"> </span><span class="nc">Rectangle</span><span class="o">:</span><span class="k">public</span><span class="w"> </span><span class="n">Point</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="p">{</span><span class="w">        </span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">    </span><span class="k">private</span><span class="o">:</span><span class="w">                         </span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">H</span><span class="p">,</span><span class="n">W</span><span class="p">;</span><span class="w">   </span><span class="c1">//矩形的高和宽</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">    </span><span class="k">public</span><span class="o">:</span><span class="w">                    </span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">    </span><span class="n">Rectangle</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="kt">int</span><span class="w"> </span><span class="n">h</span><span class="p">,</span><span class="kt">int</span><span class="w"> </span><span class="n">w</span><span class="p">)</span><span class="o">:</span><span class="n">Point</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">    </span><span class="p">{</span><span class="n">H</span><span class="o">=</span><span class="n">h</span><span class="p">;</span><span class="n">W</span><span class="o">=</span><span class="n">w</span><span class="p">;</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&quot;Rectangle...&quot;</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;}</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">ShowH</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&quot;H=&quot;</span><span class="o">&lt;&lt;</span><span class="n">H</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;}</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">ShowW</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&quot;W=&quot;</span><span class="o">&lt;&lt;</span><span class="n">W</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;}</span><span class="w">           </span>
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">Show</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&quot;H=&quot;</span><span class="o">&lt;&lt;</span><span class="n">H</span><span class="o">&lt;&lt;</span><span class="s">&quot;,W=&quot;</span><span class="o">&lt;&lt;</span><span class="n">W</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;}</span><span class="w">  </span>
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="w">    </span><span class="o">~</span><span class="n">Rectangle</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&quot;Delete Retangle！&quot;</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;}</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="p">};</span>
+</code></pre></div>
+</div>
+<p><strong>继承方式与派生类的访问权限</strong></p>
+<ul>
+<li>在声明派生类之后，派生类就继承了基类的数据成员和成员函数，但是这些成员并不都能直接被派生类锁访问。对于不同的继承方式，会导致基类成员原来的访问属性在派生类中发生变化。</li>
+</ul>
+<p><img alt="alt text" src="../assets/image-14.png" /></p>
+<p>在c++程序设计中，访问来自于两个方面：</p>
+<ul>
+<li>派生类的新增成员对基类继承来的成员的访问</li>
+<li>派生类外部（非类成员），通过派生类对象从基类继承来的成员的访问</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">访问权限</p>
+<p>=== public inheritance</p>
+<div class="highlight"><pre><span></span><code>派生类 类内： 可以访问基类中的public 和 protected, 不能访问 private
+
+派生类类外： 只能通过派生类对象访问继承来的基类中的公有成员
+</code></pre></div>
+<p>=== private inheritance</p>
+<div class="highlight"><pre><span></span><code>protected 和 public 称为 派生类的 private ，派生类的其他成员可以直接访问，但是基类的private 仍不能访问
+
+派生类类内： 可以访问基类的Public和protected,不能访问基类的private
+
+派生类类外： 不能访问基类对象
+</code></pre></div>
+<p>=== protected</p>
+<div class="highlight"><pre><span></span><code>基类的保护成员只能被基类的成员函数或派生类的成员函数访问，不能被派生类以外的成员函数访问。
+
+派生类类内：可以访问基类中的公有成员和保护成员，而基类的私有成员则不能被访问。
+
+派生类类外：通过派生类对象不能访问基类中的任何成员。
+</code></pre></div>
+</div>
+<h3 id="_4">调整派生类中访问属性的其他方法<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<h4 id="_5">同名成员<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<p>c++允许派生类中说明的成员与基类的成员名字相同</p>
+<p>派生类的同名成员覆盖了基类的同名成员</p>
+<h4 id="_6">访问声明<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<p>可以个别调整基类的模型成员，使之在派生类中保持原来的访问属性</p>
+<p><strong>方法：</strong>在public区添加<code>基类名：：成员名字；</code></p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">X</span><span class="p">{</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="kt">void</span><span class="w"> </span><span class="nf">print</span><span class="p">();</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="p">}</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="k">class</span><span class="w"> </span><span class="nc">Y</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">private</span><span class="w"> </span><span class="n">X</span><span class="p">{</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="k">public</span><span class="o">:</span><span class="w"> </span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">    </span><span class="n">X</span><span class="o">::</span><span class="n">print</span><span class="p">;</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">    </span><span class="n">x</span><span class="o">::</span><span class="n">a</span><span class="p">;</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="kt">void</span><span class="w"> </span><span class="nf">show</span><span class="p">(){</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="p">}</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="p">}</span>
+</code></pre></div>
+</div>
+<h2 id="_7">派生类的构造函数和析构函数<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<p>基类的构造函数和析构函数时不能被继承的，需要在派生类中重新定义</p>
+<p>由于派生类继承了基类的成员，在初始化时，也要同时初始化基类对象，可通过调用基类的构造函数完成初始化</p>
+<h3 id="_8">构造函数<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>在c++ 中， 派生类构造函数的一般性声明语法如下：
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="o">&lt;</span><span class="n">派生类名</span><span class="o">&gt;::&lt;</span><span class="n">派生类名</span><span class="o">&gt;</span><span class="err">（</span><span class="n">基类形参</span><span class="err">，</span><span class="n">内嵌对象形参</span><span class="err">，</span><span class="n">本类形参</span><span class="err">）：</span><span class="o">&lt;</span><span class="n">基类名</span><span class="o">&gt;</span><span class="err">（</span><span class="n">参数表</span><span class="err">），</span><span class="o">&lt;</span><span class="n">内嵌对象1</span><span class="o">&gt;</span><span class="err">（</span><span class="n">参数表1</span><span class="err">），</span><span class="o">&lt;</span><span class="n">内嵌对象2</span><span class="o">&gt;</span><span class="err">（</span><span class="n">参数表2</span><span class="err">），…，</span><span class="o">&lt;</span><span class="n">内嵌对象n</span><span class="o">&gt;</span><span class="err">（</span><span class="n">参数表n</span><span class="err">）</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="p">{</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="n">本类成员初始化赋值语句</span><span class="err">；</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="err">…</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="p">};</span>
+</code></pre></div></p>
+<p>派生类的构造函数与派生类名相同</p>
+<ul>
+<li>冒号之后，累出需要使用参数进行初始化的基类名和内嵌成员对象名以及各自的参数表，各项之间用逗号分隔</li>
+<li>对于基类对象，如使用默认构造函数，可以不给出基类名和参数表。</li>
+<li>对于内嵌对象成员，如使用默认构造函数，也无需写出对象名和参数表</li>
+</ul>
+<p><strong>派生类构造函数的执行</strong></p>
+<div class="highlight"><pre><span></span><code>- 先调用基类的构造函数对继承成员进行初始化，再调用对新加成员部分的初始化
+- 若基类构造函数带有参数：必须由派生类构造函数的形式参数中为基类函数提供实参
+    - 定义派生类构造函数时必须显式调用基类构造函数，并用在派生类构造函数的形参部分为基类构造函数提供实际参数。
+    - 即使派生类本身的构造函数不带参数也必须在冒号“：”之后调用基类的构造函数，但这时传递给基类构造函数的实际参数通常是一些常量表达式。
+
+- 若基类构造不带参数：定义派生类构造函数时，可以不必显式地调用基类的构造函数。C++编译程序认为调用的是基类中形式参数为空的构造函数
+</code></pre></div>
+<h3 id="_9">析构函数<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<p>在派生过程中，由于基类的析构函数也不能被继承，因此在执行派生类的析构函数时，基类的析构函数也将被调用。析构函数没有类型，也无参数，与构造函数相比，情况相对比较简单。如果未显式定义某个类的析构函数，系统会自动为每一个类都生成一个默认的析构函数。</p>
+<p>派生类析构函数的定义方法与没有继承关系的类中析构函数的定义方法完全相同，只需在派生类析构函数体中把派生类<strong>新增的成员（非成员对象）</strong>的清理工作做好，系统就会自己调用基类及成员对象的析构函数来对基类及成员对象进行清理。</p>
+<p><strong>派生类构造函数的执行过程</strong></p>
+<ul>
+<li>先基类，再内嵌对象，后派生类自己</li>
+<li>先调用基类的构造函数</li>
+<li>然后按照数据成员的声明顺序，调用数据成员的构造函数</li>
+<li>最后执行派生类构造函数的函数体</li>
+</ul>
+<p><strong>派生类析构函数的执行顺序</strong></p>
+<ul>
+<li>先执行派生类的析构函数，对派生类新增普通成员进行清理</li>
+<li>然后按照内嵌对象声明的相反顺序，一次调用内嵌对象的析构函数，对派生类新增的对象成员进行清理</li>
+<li>最后调用基类的析构函数，对所有从基类继承来的成员进行清理</li>
+</ul>
+<h2 id="_10">多重继承<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<p>所谓多重继承是指派生类具有多个基类，派生类与每一个基类之间关系可以看作是一个单继承</p>
+<h3 id="_11">多重继承的声明<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">派生类名</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">继承方式</span><span class="w"> </span><span class="n">基类1</span><span class="p">,</span><span class="w"> </span><span class="n">继承方式</span><span class="w"> </span><span class="n">基类2</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="c1">// 成员声明</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="p">};</span>
+</code></pre></div>
+不同的基类可以使用不同的继承方式，如果没有显式地指出继承方式，系统默认继承方式为private.</p>
+<p>各个基类之间用逗号隔开，派生类继承了多个基类的成员，基类中的成员按照继承方式来确定其再派生类中的访问方式</p>
+<h3 id="_12">多重继承的构造函数和析构函数<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<p>派生类的构造函数声明：
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">派生类名</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">继承方式</span><span class="w"> </span><span class="n">基类1</span><span class="p">,</span><span class="w"> </span><span class="n">继承方式</span><span class="w"> </span><span class="n">基类2</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="c1">// 成员声明</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="n">派生类名</span><span class="p">(</span><span class="n">基类1形参</span><span class="p">,</span><span class="w"> </span><span class="n">基类2形参</span><span class="p">,</span><span class="w"> </span><span class="p">...)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">基类1</span><span class="p">(</span><span class="n">参数表1</span><span class="p">),</span><span class="w"> </span><span class="n">基类2</span><span class="p">(</span><span class="n">参数表2</span><span class="p">),</span><span class="w"> </span><span class="n">内嵌对象1</span><span class="err">（</span><span class="n">参数表</span><span class="err">），</span><span class="n">内嵌对象2</span><span class="err">（</span><span class="n">参数表</span><span class="err">）</span><span class="p">...</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">        </span><span class="c1">// 成员初始化</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="p">};</span>
+</code></pre></div></p>
+<h3 id="_13">多重继承中的二义性<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<p>在多重继承中，派生类对基类成员访问在下列两种情况下可能出现二义性。</p>
+<ul>
+<li>访问不同基类的相同成员时可能出现二义性</li>
+<li>访问共同基类中成员时可能出现二义性</li>
+</ul>
+<p><img alt="alt text" src="../assets/image-15.png" /></p>
+<p><img alt="alt text" src="../assets/image-16.png" /></p>
+<ul>
+<li>派生类的不同基类有同名成员<ul>
+<li>当派生类的不同基类有同名成员，则派生类中将产生二义性问题<ul>
+<li>派生类类内： 访问同名基类成员时将产生二义性问题</li>
+<li>派生类类外： 通过派生类对象访问同名基类成员时将产生二义性问题</li>
+</ul>
+</li>
+<li>解决方法：使用作用域标识符/使用同名覆盖的原则<ul>
+<li>使用作用域标识符：<code>对象名.基类名::成员名</code>,<code>对象名.基类名::成员名(参数表)</code>，在类内则使用<code>基类名::成员名</code>或<code>基类名::成员名(参数表)</code>来访问</li>
+<li>使用同名覆盖的原则：在派生类中重新定义一个同名成员，覆盖基类中的同名成员<ul>
+<li>这种方式会导致派生类中无法访问到基类中的同名成员</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>在派生类中引用公共基类中成员时出现二义性<ul>
+<li>在继承与派生的类层次结构中，被继承的多个基类如果有一个共同的基类，在派生类中访问这个共同基类的成员时也会产生二义性问题。</li>
+<li>解决这种二义性的方法：<ul>
+<li>使用作用域标识符
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="k">class</span><span class="w"> </span><span class="nc">L1</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="p">{</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">m1</span><span class="p">;</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">f1</span><span class="p">(){</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&quot;layer 1-&gt; m1=&quot;</span><span class="o">&lt;&lt;</span><span class="n">m1</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;}</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="p">};</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="k">class</span><span class="w"> </span><span class="nc">L2_1</span><span class="o">:</span><span class="k">public</span><span class="w"> </span><span class="n">L1</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="p">{</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">m2_1</span><span class="p">;</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="p">};</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="k">class</span><span class="w"> </span><span class="nc">L2_2</span><span class="o">:</span><span class="k">public</span><span class="w"> </span><span class="n">L1</span>
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="p">{</span>
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">m2_2</span><span class="p">;</span>
+<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a><span class="p">};</span>
+<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a><span class="k">class</span><span class="w"> </span><span class="nc">L3</span><span class="o">:</span><span class="k">public</span><span class="w"> </span><span class="n">L2_1</span><span class="p">,</span><span class="k">public</span><span class="w"> </span><span class="n">L2_2</span>
+<a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a><span class="p">{</span>
+<a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">m3</span><span class="p">;</span>
+<a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">f3</span><span class="p">(){</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&quot;layer 3-&gt; m3=&quot;</span><span class="o">&lt;&lt;</span><span class="n">m3</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;}</span>
+<a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a><span class="p">};</span>
+<a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
+<a id="__codelineno-7-27" name="__codelineno-7-27" href="#__codelineno-7-27"></a><span class="p">{</span><span class="w">   </span>
+<a id="__codelineno-7-28" name="__codelineno-7-28" href="#__codelineno-7-28"></a><span class="w">    </span><span class="n">L3</span><span class="w"> </span><span class="n">obj</span><span class="p">;</span>
+<a id="__codelineno-7-29" name="__codelineno-7-29" href="#__codelineno-7-29"></a><span class="w">    </span><span class="n">obj</span><span class="p">.</span><span class="n">m3</span><span class="o">=</span><span class="mi">4</span><span class="p">;</span>
+<a id="__codelineno-7-30" name="__codelineno-7-30" href="#__codelineno-7-30"></a><span class="w">    </span><span class="n">obj</span><span class="p">.</span><span class="n">f3</span><span class="p">();</span>
+<a id="__codelineno-7-31" name="__codelineno-7-31" href="#__codelineno-7-31"></a><span class="w">    </span><span class="n">obj</span><span class="p">.</span><span class="n">L2_1</span><span class="o">::</span><span class="n">m1</span><span class="o">=</span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="c1">//正确！使用直接基类</span>
+<a id="__codelineno-7-32" name="__codelineno-7-32" href="#__codelineno-7-32"></a><span class="w">    </span><span class="n">obj</span><span class="p">.</span><span class="n">L2_1</span><span class="o">::</span><span class="n">f1</span><span class="p">();</span><span class="w">                </span><span class="c1">//正确！使用直接基类</span>
+<a id="__codelineno-7-33" name="__codelineno-7-33" href="#__codelineno-7-33"></a><span class="w">    </span><span class="n">obj</span><span class="p">.</span><span class="n">L2_2</span><span class="o">::</span><span class="n">m1</span><span class="o">=</span><span class="mi">6</span><span class="p">;</span><span class="w"> </span><span class="c1">//正确！使用直接基类</span>
+<a id="__codelineno-7-34" name="__codelineno-7-34" href="#__codelineno-7-34"></a><span class="w">    </span><span class="n">obj</span><span class="p">.</span><span class="n">L2_2</span><span class="o">::</span><span class="n">f1</span><span class="p">();</span><span class="w">                </span><span class="c1">//正确！使用直接基类</span>
+<a id="__codelineno-7-35" name="__codelineno-7-35" href="#__codelineno-7-35"></a><span class="w">    </span><span class="c1">// obj.m1=1;        //错误！产生二义性</span>
+<a id="__codelineno-7-36" name="__codelineno-7-36" href="#__codelineno-7-36"></a><span class="w">    </span><span class="c1">//  obj. f1();      //错误！产生二义性</span>
+<a id="__codelineno-7-37" name="__codelineno-7-37" href="#__codelineno-7-37"></a><span class="p">}</span>
+</code></pre></div>
+<img alt="alt text" src="../assets/image-17.png" />
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">L3</span><span class="w"> </span><span class="n">obj1</span><span class="p">;</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">obj1</span><span class="p">.</span><span class="n">m1</span><span class="p">;</span><span class="w">        </span><span class="c1">//错误！存在二义性</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="n">obj1</span><span class="p">.</span><span class="n">f1</span><span class="p">();</span><span class="w">      </span><span class="c1">//错误！存在二义性</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="n">obj1</span><span class="p">.</span><span class="n">L1</span><span class="o">::</span><span class="n">m1</span><span class="p">;</span><span class="w">        </span><span class="c1">//错误！存在二义性</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="n">obj1</span><span class="p">.</span><span class="n">L1</span><span class="o">::</span><span class="n">f1</span><span class="p">();</span><span class="w">      </span><span class="c1">//错误！存在二义性</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="n">obj1</span><span class="p">.</span><span class="n">L2_1</span><span class="o">::</span><span class="n">m1</span><span class="p">;</span><span class="w">      </span><span class="c1">//正确！</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="n">obj1</span><span class="p">.</span><span class="n">L2_1</span><span class="o">::</span><span class="n">f1</span><span class="p">();</span><span class="w">        </span><span class="c1">//正确！</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="n">obj1</span><span class="p">.</span><span class="n">L2_2</span><span class="o">::</span><span class="n">m1</span><span class="p">;</span><span class="w">      </span><span class="c1">//正确！</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="n">obj1</span><span class="p">.</span><span class="n">L2_1</span><span class="o">::</span><span class="n">f1</span><span class="p">();</span>
+</code></pre></div>
+当通过派生类L3的对象或者在派生类L3中访问间接基类L1的成员时就会产生二义性。</li>
+</ul>
+</li>
+<li>
+<p>上述使用作用域标识符虽然解决了访问基类L1的成员m1和f1()的二义性问题，但是派生类L3对象在内存中同时拥有基类L1的成员m1和f1()的两份拷贝，同一成员的多份拷贝增加了内存的开销。
+    <img alt="alt text" src="../assets/image-18.png" /></p>
+<ul>
+<li>解决方法：虚基类。将共同基类设置为虚基类，这样从不同的途径继承过来的同名成员只有一个副本，这样就不会再会引起二义性问题。</li>
+<li>虚基类一般性声明语法：
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">派生类名</span><span class="o">:</span><span class="w"> </span><span class="k">virtual</span><span class="w"> </span><span class="n">继承方式</span><span class="w"> </span><span class="n">基类名</span><span class="p">{};</span>
+</code></pre></div><ul>
+<li><code>virtual</code>是虚基类的关键字</li>
+<li>在多重继承方式下，虚基类关键字的作用范围只是对紧跟其后的基类起作用</li>
+<li>声明了虚基类后，在进一步派生过程中，虚基类的成员和派生类一起维护同一个内存数据拷贝。</li>
+<li>在第一级继承时，就要将共同基类设计为虚基类。</li>
+</ul>
+</li>
+</ul>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="k">class</span><span class="w"> </span><span class="nc">L1</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="p">{</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">m1</span><span class="p">;</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">f1</span><span class="p">(){</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&quot;layer 1-&gt; m1=&quot;</span><span class="o">&lt;&lt;</span><span class="n">m1</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;}</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="p">};</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="k">class</span><span class="w"> </span><span class="nc">L2_1</span><span class="o">:</span><span class="w"> </span><span class="k">virtual</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">L1</span><span class="w">  </span><span class="c1">//L1为虚基类，公有派生L2_1类</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="p">{</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">m2_1</span><span class="p">;</span>
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="p">};</span>
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="k">class</span><span class="w"> </span><span class="nc">L2_2</span><span class="o">:</span><span class="w"> </span><span class="k">virtual</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">L1</span><span class="w">  </span><span class="c1">//L1为虚基类，公有派生L2_2类</span>
+<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="p">{</span>
+<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">m2_2</span><span class="p">;</span>
+<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="p">};</span>
+<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="k">class</span><span class="w"> </span><span class="nc">L3</span><span class="o">:</span><span class="k">public</span><span class="w"> </span><span class="n">L2_1</span><span class="p">,</span><span class="k">public</span><span class="w"> </span><span class="n">L2_2</span><span class="w"> </span><span class="c1">//L3多重继承</span>
+<a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a><span class="p">{</span>
+<a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">m3</span><span class="p">;</span>
+<a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">f3</span><span class="p">(){</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&quot;layer 3-&gt; m3=&quot;</span><span class="o">&lt;&lt;</span><span class="n">m3</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;}</span>
+<a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a><span class="p">};</span>
+</code></pre></div>
+    - 虚基类的构造函数： 如果虚基类定义有非默认构造函数（如带形参），情况就有所不同。此时，在整个继承结构中，直接或间接继承虚基类的所有派生类，都必须在构造函数的成员初始化列表中给出对虚基类的初始化。
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="k">class</span><span class="w"> </span><span class="nc">L1</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="p">{</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">m1</span><span class="p">;</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w">    </span><span class="n">L1</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">){</span><span class="n">m1</span><span class="o">=</span><span class="n">i</span><span class="p">;</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Layer 1 -&gt; m1=&quot;</span><span class="o">&lt;&lt;</span><span class="n">m1</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;}</span><span class="w">  </span><span class="c1">//类L1的构造函数</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="p">};</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="k">class</span><span class="w"> </span><span class="nc">L2_1</span><span class="o">:</span><span class="w"> </span><span class="k">virtual</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">L1</span><span class="w">    </span><span class="c1">//L1为虚基类，公有派生L2_1类</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="p">{</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">m2_1</span><span class="p">;</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="w">    </span><span class="n">L2_1</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="o">:</span><span class="n">L1</span><span class="p">(</span><span class="n">i</span><span class="p">){</span><span class="n">m2_1</span><span class="o">=</span><span class="n">i</span><span class="p">;</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&quot;Layer 2_1 -&gt; m2_1=&quot;</span><span class="o">&lt;&lt;</span><span class="n">m2_1</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;}</span>
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="w">    </span><span class="c1">//类L2_1的构造函数，需对虚基类L1进行初始化</span>
+<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="p">};</span>
+<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a><span class="k">class</span><span class="w"> </span><span class="nc">L2_2</span><span class="o">:</span><span class="k">virtual</span><span class="w"> </span><span class="k">public</span>
+<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a><span class="p">{</span>
+<a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">m2_2</span><span class="p">;</span>
+<a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a><span class="w">    </span><span class="n">L2_2</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="o">:</span><span class="n">L1</span><span class="p">(</span><span class="n">i</span><span class="p">){</span><span class="n">m2_2</span><span class="o">=</span><span class="n">i</span><span class="p">;</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&quot;Layer 2_2 -&gt; m2_2=&quot;</span><span class="o">&lt;&lt;</span><span class="n">m2_2</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;}</span>
+<a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a><span class="p">};</span>
+<a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a><span class="k">class</span><span class="w"> </span><span class="nc">L3</span><span class="o">:</span><span class="k">public</span><span class="w"> </span><span class="n">L2_1</span><span class="p">,</span><span class="k">public</span><span class="w"> </span><span class="n">L2_2</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-23" name="__codelineno-11-23" href="#__codelineno-11-23"></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-11-24" name="__codelineno-11-24" href="#__codelineno-11-24"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">m3</span><span class="p">;</span>
+<a id="__codelineno-11-25" name="__codelineno-11-25" href="#__codelineno-11-25"></a><span class="w">    </span><span class="n">L3</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="o">:</span><span class="n">L1</span><span class="p">(</span><span class="n">i</span><span class="p">),</span><span class="n">L2_1</span><span class="p">(</span><span class="n">i</span><span class="p">),</span><span class="n">L2_2</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="n">m3</span><span class="o">=</span><span class="n">i</span><span class="p">;</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="s">&quot;Layer 3-&gt; m3=&quot;</span><span class="o">&lt;&lt;</span><span class="n">m3</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;}</span>
+<a id="__codelineno-11-26" name="__codelineno-11-26" href="#__codelineno-11-26"></a><span class="p">};</span>
+<a id="__codelineno-11-27" name="__codelineno-11-27" href="#__codelineno-11-27"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">argv</span><span class="p">[])</span>
+<a id="__codelineno-11-28" name="__codelineno-11-28" href="#__codelineno-11-28"></a><span class="p">{</span>
+<a id="__codelineno-11-29" name="__codelineno-11-29" href="#__codelineno-11-29"></a><span class="w">    </span><span class="n">L3</span><span class="w"> </span><span class="n">obj</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-11-30" name="__codelineno-11-30" href="#__codelineno-11-30"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-11-31" name="__codelineno-11-31" href="#__codelineno-11-31"></a><span class="p">}</span>
+</code></pre></div>
+    虚基类L1中的构造函数带有形参，因此从虚基类L1中直接继承（类L2_1、类L2_2）或间接继承（类L3）的派生类，其构造函数的成员列表都要列出对虚基类L1构造函数的调用。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="_14">子类型与赋值兼容规则<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h2>
+<p>所谓子类型，是指当一个类型至少包含了另一个类型的所有行为，则称该类型是另一个类型的子类型。</p>
+<p>在公有继承下，派生类是基类的子类型。子类型反映类型之间的一般和特殊的关系，并且子类型关系是不可逆的。</p>
+<h3 id="_15">类型适应<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<p>类型适应是指两种类型之间的关系。如果类型B是类型A的子类型，则称类型B适应于类型A，也就是说B类型的对象能够用于A类型的对象所能使用的场合。</p>
+<p>一个函数可以适应于某个类型的对象，则它同样也适用于该类型的各个子类型的对象，这样就大可不必为处理这些子类型的对象去重载该函数。</p>
+<h3 id="_16">赋值兼容规则<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<p>在公有继承方式下，对于某些场合，一个派生类的对象可以作为基类的对象来使用。也就是说在需要基类对象的任何地方，都可以使用公有派生类的对象来替代。包括以下三种情况：</p>
+<ul>
+<li>派生类的对象可以赋值给基类对象：<code>Derived d; Base b = d;</code></li>
+<li>派生类的对象可以初始化基类的引用：<code>Derived d; Base &amp;b = d;</code></li>
+<li>派生类的对象可以初始化基类的指针：<code>Derived d; Base *b = &amp;d;</code></li>
+</ul>
+<h2 id="_17">虚基类<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h2>
+<p>定义虚基类就是要保证派生类对象中只有一个虚基类对象，要求虚基类的构造函数只能被调用一次。因此，虚基类的出现改变了构造函数的调用顺序。在初始化任何非虚基类之前，将先初始化虚基类。这时，在整个继承结构中，直接或间接继承虚基类的所有派生类，都必须在构造函数的成员初始化表中列出对虚基类的初始化。如果存在多个虚基类，初始化顺序由它们在继承结构中的位置决定，其顺序是从上到下、从左到右。调用析构函数也遵守相同的规则，但是顺序相反。</p>
+<p>虚基类的初始化与一般多继承的初始化在语法上是一样的，但构造函数的执行顺序不同。虚基类及派生类构造函数的执行顺序如下：
+（1）虚基类的构造函数在所有非虚基类之前执行；
+（2）若同一层次中包含多个虚基类，这些虚基类的构造函数按它们声明的次序调用；
+（3）若虚基类由非虚基类派生而来，则仍然先调用基类构造函数，再调用派生类的构造函数。</p>
+<h2 id="_18">基类和派生类的转换<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h2>
+<p>基类和派生类之间也能进行类似的类型转换。由于派生类包含从基类继承的成员，因此可以将派生类对象赋值给基类对象，反之不能</p>
+<ul>
+<li>派生类的对象可以赋值给基类的对象</li>
+<li>派生类的对象可以初始化基类对象的引用
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">Base</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w">         </span><span class="c1">//定义基类对象</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="n">Derived</span><span class="w"> </span><span class="n">d</span><span class="p">;</span><span class="w">      </span><span class="c1">//定义派生类对象</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="n">Base</span><span class="w"> </span><span class="o">&amp;</span><span class="n">r1</span><span class="o">=</span><span class="n">b</span><span class="p">;</span><span class="w">     </span><span class="c1">//定义基类对象的引用r1，用基类对象b初始化</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="n">Base</span><span class="w"> </span><span class="o">&amp;</span><span class="n">r2</span><span class="o">=</span><span class="n">d</span><span class="p">;</span><span class="w">     </span><span class="c1">//定义基类对象的引用r2，用派生类对象d初始化</span>
+</code></pre></div>
+    基类对象的引用r1是b的别名，b和r1共享同一存储空间。但r2并不是d的别名，它只是d中基类部分的别名，r2与d中的基类部分共享同一存储空间。</li>
+<li>派生类对象的地址可以赋给基类指针变量:若定义了指向基类对象的指针变量，也可以用派生类的对象取地址给它赋值，即指向基类对象的指针变量可以指向派生类对象。
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">Base</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w">         </span><span class="c1">//定义基类对象</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="n">Derived</span><span class="w"> </span><span class="n">d</span><span class="p">;</span><span class="w">      </span><span class="c1">//定义派生类对象</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="n">Base</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="o">=&amp;</span><span class="n">d</span><span class="p">;</span><span class="w">     </span><span class="c1">//定义基类的指针p，指向派生类的对象d</span>
+</code></pre></div>
+    以上的表现形式同样可用在函数参数中。如果函数的形参是基类的对象、基类对象的引用或是指向基类对象的指针变量，那么实参可以是一个派生类的对象</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; hhhjyz/All Rights Reserved.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.annotate", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top"], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+        <script src="../../../../javascripts/mathjax.js"></script>
+      
+        <script src="../../../../javascripts/katex.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -54,13 +54,13 @@ body {
     zoom: 1.1;
   } */
   html {
-    font-size: 142.5%;
+    font-size: 122.5%;
   }
 }
 
 @media screen and (min-width: 100em) {
   html {
-    font-size: 142.5%;
+    font-size: 132.5%;
   }
 }
 
