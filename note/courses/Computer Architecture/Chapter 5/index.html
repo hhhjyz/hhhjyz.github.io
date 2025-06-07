@@ -1674,6 +1674,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#challenge-of-parallel-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Challenge of Parallel Processing
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1688,6 +1697,24 @@
   
     <nav class="md-nav" aria-label="5.4 Cache Coherence">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#memory-consistency-and-cache-coherence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Memory Consistency and Cache Coherence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cache-coherence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cache Coherence
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#snoopy-coherence-protocols" class="md-nav__link">
@@ -2603,6 +2630,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#challenge-of-parallel-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Challenge of Parallel Processing
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2617,6 +2653,24 @@
   
     <nav class="md-nav" aria-label="5.4 Cache Coherence">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#memory-consistency-and-cache-coherence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Memory Consistency and Cache Coherence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cache-coherence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cache Coherence
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#snoopy-coherence-protocols" class="md-nav__link">
@@ -3406,87 +3460,142 @@ Multi-level shuffle exchange network is also called **Omega network**.
 </ul>
 <p>COMA (Cache-Only Memory Architecture) 是 NUMA (Non-Uniform Memory Access) 的一种特例。在每个处理器节点中没有存储层次结构（即没有传统的本地内存），所有缓存形成一个统一的地址空间。</p>
 <p>使用分布式缓存目录进行远程缓存访问。使用 COMA 时，数据在开始时可以任意分配，因为它最终会在运行时被移动到使用它的地方。</p>
+<h4 id="challenge-of-parallel-processing">Challenge of Parallel Processing<a class="headerlink" href="#challenge-of-parallel-processing" title="Permanent link">&para;</a></h4>
+<p>多处理器的应用范围从运行几乎没有通信的独立任务到运行线程必须通信才能完成任务的并行程序。</p>
+<p>第一个障碍与程序中可用的并行性有限有关。</p>
+<p>第二个障碍来自于相对较高的通信开销。</p>
+<p>这两者都可以用阿姆达尔定律来解释。</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>=== 并行度</p>
+<p>要使用100个处理器实现80倍的加速比，原始计算中只有0.25%的部分可以是串行的</p>
+<p>如果一个应用程序的95%时间可以完美地使用100个处理器，那么要达到80倍的加速比，剩下时间的4.8%必须使用50个处理器，并且只有0.2%的时间可以是串行的！ 这与图片中的结论一致。这个例子再次强调了要达到高加速比，串行部分必须非常小。</p>
+<p>=== 通信开销
+假设我们有一个应用程序运行在一个32处理器的多处理器上，处理远程内存引用有100 ns的延迟。对于这个应用程序，假设除了涉及通信的引用外，所有引用都在本地内存层次结构中命中（即缓存命中）。处理器在远程请求时会停顿，并且处理器时钟频率是4 GHz。如果基本 CPI（假设所有引用都在缓存中命中）是0.5，并且0.2%的指令涉及远程通信引用，那么多处理器在没有通信时会快多少？</p>
+<p>2.6倍</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">缓存一致性问题</p>
+<p><img alt="alt text" src="../assets/image-74.png" /></p>
+<p>两个处理器（A 和 B）读写单个内存位置（X）时的缓存一致性问题。我们最初假设两个缓存都不包含该变量，并且 X 的值为 1。我们还假设使用的是写直达（writethrough）缓存；写回（write-back）缓存会增加一些额外但类似的复杂性。在 X 的值被 A 写入之后，A 的缓存和内存都包含新值，但 B 的缓存不包含，如果 B 读取 X 的值，它将接收到 1！</p>
+</div>
 <h3 id="54-cache-coherence">5.4 Cache Coherence<a class="headerlink" href="#54-cache-coherence" title="Permanent link">&para;</a></h3>
+<h4 id="memory-consistency-and-cache-coherence">Memory Consistency and Cache Coherence<a class="headerlink" href="#memory-consistency-and-cache-coherence" title="Permanent link">&para;</a></h4>
+<p>内存一致性 (Memory Consistency) 需要内存一致性模型</p>
+<ul>
+<li>当一个写入的值何时会被读取返回。</li>
+<li>如果一个处理器先写入位置 A，接着写入位置 B，那么任何看到 B 的新值的处理器也必须看到 A 的新值。</li>
+</ul>
+<p>缓存连贯性 (Cache Coherence) 需要缓存连贯性协议</p>
+<ul>
+<li>任何处理器发出的所有读取操作都必须返回最近写入的值。</li>
+<li>任何两个处理器对同一位置的写入操作，必须以相同的顺序被所有处理器看到。</li>
+<li>正确的连贯性确保程序员通过分析加载和存储的结果无法判断系统是否有缓存以及缓存的位置。这是因为正确的连贯性确保缓存绝不会启用新的或不同的功能行为。</li>
+</ul>
+<h4 id="cache-coherence">Cache Coherence<a class="headerlink" href="#cache-coherence" title="Permanent link">&para;</a></h4>
+<p>导致缓存一致性问题的原因：一个数据在系统中有多份拷贝</p>
+<p>Cache coherence protocol:由缓存、CPU 和内存实现的一套规则，用于防止相同数据的不同版本出现在多个缓存中，从而形成缓存一致性协议。</p>
 <p>In modern parallel computers, processors often have Cache. One memory data may have multiple copies in the entire system. This leads to the Cache coherence problem.  </p>
 <p>可能有多个 cache，都放有内存拷贝的数据，可能不一致。我们一般通过一个协议来约定。</p>
 <ul>
-<li>Bus snooping protocol</li>
-<li>Directory based protocol</li>
+<li>Bus snooping protocol 总线监听协议</li>
+<li>Directory based protocol 基于目录的协议</li>
 </ul>
-<p>协议主要是为了保证 cohrence 和 consistency.</p>
-<ul>
-<li>
-<p>Coherence</p>
-<p>读数据，读出来的一定是最新的数据（即刚被写过的值）。</p>
-</li>
-<li>
-<p>Consistency</p>
-<p>写一个值时，要把写的值返回（通过读指令），什么时候返回。</p>
-</li>
-</ul>
+<p>For UMA : Snoopy coherence protocols.所有处理器都监听总线，当一个处理器修改了私有缓存中的数据时，它会在总线上广播无效信息或者更新的数据，使其他副本失效</p>
+<p>For NUMA: Directory protocol.使用一个目录来记录系统中哪些处理器在缓存中拥有特定存储块的副本。当一个处理器想要写入一个共享块时，它会通过目录以“点对点”的方式向那些拥有该块副本的处理器发送无效信号，以便使所有其他副本失效。</p>
 <h4 id="snoopy-coherence-protocols">Snoopy Coherence Protocols<a class="headerlink" href="#snoopy-coherence-protocols" title="Permanent link">&para;</a></h4>
-<p>For UMA, the cache coherence problem is solved by the <strong>snoopy protocol</strong>.</p>
-<p>对于 write-through 和 write-back，我们有不同的解决方案。</p>
+<ul>
+<li>Write-through cache 写直达缓存</li>
+<li>Write-back cache 写回缓存</li>
+</ul>
+<p><strong>Write-Through Cache Conherence Protocols</strong></p>
+<ul>
+<li>根据此协议，监听缓存执行读写操作时有四种情况：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"></th>
+<th style="text-align: left;">本地请求</th>
+<th style="text-align: left;">远程请求</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>读未命中</strong></td>
+<td style="text-align: left;">从内存访问数据</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>读命中</strong></td>
+<td style="text-align: left;">使用本地缓存数据</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>写未命中</strong></td>
+<td style="text-align: left;">修改内存中的数据</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>写命中</strong></td>
+<td style="text-align: left;">修改缓存和内存</td>
+<td style="text-align: left;">使缓存项无效</td>
+</tr>
+</tbody>
+</table>
 <ul>
 <li>
-<p>Write-through Cache Coherency Protocol</p>
-<p><a href="https://cdn.hobbitqia.cc/20240110211248.png">https://cdn.hobbitqia.cc/20240110211248.png</a></p>
-</li>
-</ul>
-<p>Write Invalidation Protocol</p>
+<p>基本协议中存在许多变化：</p>
 <ul>
-<li>Write incalidate protocol: it invalidate protocol</li>
-<li>
-<p>Write update / write broadcast protocol: update all the cached copies of a data item when the item is written.</p>
-<p>这里的 update 是指更新所有的 cache 中的数据</p>
+<li>远程写命中时是使用<strong>更新策略 (Update Strategy)</strong> 还是<strong>无效策略 (Invalidate Strategy)</strong>。</li>
+<li>当缓存写未命中时，是否将相应的字传输到缓存中，这就是是否使用<strong>写分配策略 (Write-allocate Policy)</strong>。</li>
+</ul>
+<p><img alt="" src="../assets/image-75.png" /></p>
 </li>
 </ul>
-<p><strong>实现Write invalidate protocol</strong></p>
-<p>把块的状态分为 three block states:(MSI protocol)</p>
+<p><strong>Write update/broadcast protocols</strong></p>
+<p>当写入数据项时，更新该数据项的所有缓存副本。</p>
+<h5 id="write-invalidate-protocols"><strong>Write invalidate protocols</strong><a class="headerlink" href="#write-invalidate-protocols" title="Permanent link">&para;</a></h5>
 <ul>
-<li>Invalid</li>
-<li>
-<p>Shared</p>
-<p>indicates that the block in the private cache is potentially shared.</p>
-</li>
-<li>
-<p>Modified</p>
-<p>indicates that the block has been updated in the private cache; implies that the block is exclusive.</p>
-</li>
+<li>处理器在写入数据时会将其他处理器的缓存项标记为无效。</li>
 </ul>
-<p><img alt="alt text" src="../assets/image.png" /></p>
-<p><img alt="alt text" src="../assets/image-1.png" /></p>
-<p>MSI 可以拓展为 MESI，多一个 exclusive。将其与 modified 区别开。
-exclusive: indicates when a cache block is resident only in a single cache but is clean.</p>
-<p>exclusive 时如果要读，就不能独占了，就会变为 shared。如果要写，就必须改为 modified。</p>
-<p>MOESI</p>
-<p>owned: indicates that the associated block is owned by that cache and out-of-date in memory.</p>
-<p>Modified -&gt; Owned without writing the shared block to memory</p>
-<p>MESI</p>
-<ul>
-<li>
-<p>Invalid: The data contained in the cache item is invalid.</p>
-<p>这个 CPU 里的缓存数据已经无效了（即在其他 CPU 里被改过了，而且还没有共享）</p>
-</li>
-<li>
-<p>Shared: This row of data exists in multiple cache items, and the data in the memory is the latest.</p>
-<p>多个 CPU 中都有自己的缓存。</p>
-</li>
-<li>
-<p>Exclusive: No other cache items include this row of data, and the data in memory is the latest.</p>
-<p>只有在自己的 CPU 里缓存，但是没有被修改，与内存一致。（因此其他 CPU 要读就可以改为 shared）</p>
-</li>
-<li>
-<p>Modified: The data of the item is valid, but the data in the memory is invalid, and there is no copy of the data in other cache items.</p>
-<p>被修改了。处于这个状态的数据只有在自己的 CPU 里才有缓存，这个时候还没有更新到内存里。</p>
-</li>
-</ul>
-<div align = center><img src="https://cdn.hobbitqia.cc/20240110212328.png"></div>
-
+<p><img alt="alt text" src="../assets/image-76.png" /></p>
+<p>无效协议在具有写回缓存的单个缓存块（X）的侦听总线上起作用。</p>
+<p><strong>三种状态</strong></p>
+<p>无效（Invalid）
+共享（Shared）：表示私有高速缓存中的块可能被多个核共享
+修改（Modified）：表明某个块已在私有高速缓存中被更新；并且该状态意味着该块具有独占性</p>
+<div class="admonition info">
+<p class="admonition-title">Write Invalidation Protocol(write back)</p>
+<p><img alt="alt text" src="../assets/image-77.png" />
+<img alt="alt text" src="../assets/image-78.png" />
+<img alt="alt text" src="../assets/image-79.png" />
+<img alt="alt text" src="../assets/image-80.png" />
+<img alt="alt text" src="../assets/image-81.png" /></p>
+</div>
 <div class="admonition example">
-<p class="admonition-title">Example</p>
-<p>假设有两个 CPU。本地发一个 local write 的请求，如果发现所有 cache 中都没有这个地址（初始是 invalid），A 要写，对应 cache line 的状态就会变为 modified。CPU B 来读，发出 remote read，就变为了 shared（A 和 B 的 cache line 都是 share 的）。</p>
-<p>如果 A 想写，B 也想，同时 A 先发起写，那么 A 中的 cache line 就变为 invalid。（只要有别人在我后面写，就变为无效） --&gt;</p>
+<p class="admonition-title">MSI protocol</p>
+<p><img alt="alt text" src="../assets/image-82.png" /></p>
+<p>Q（1）</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>C0, R, A10C
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>C0 Read miss
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>C2 write back A10C
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>MemoryA10C, 010C → 020C
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>C2.3 (S, A10C, 020C)
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>Memory returns 020C to C0
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>C0.3 (S, A10C, 020C)
+</code></pre></div>
+Q(2)</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>C1, W, A104, 0204
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>C1 write hit
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>C0 invalidation
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>C0.1 (I, A104, 0104)
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>C2 invalidation
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>C2.1 (I, A104, 0104)
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>C1.1 (M, A104, 0204)
+</code></pre></div>
+Q(3)</p>
+<p>```txt</p>
 </div>
 
 
