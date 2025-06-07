@@ -2967,7 +2967,7 @@ V5&amp; \leftarrow V4\times V6
 </code></pre></div>
 这里前两条指令没有冲突，可以并行完成。第三条指令需要等前两条指令完成，存在 RAW，不能并行但可以链接。</p>
 <p>这里假设把数据从寄存器送到功能部件需要一拍，功能部件的结果写回到寄存器也需要一拍。把数据从内存送到 fetch function unit 需要一拍。
-<div align = center><img src="https://cdn.hobbitqia.cc/20231215201205.png" width=70%></div></p>
+<img alt="alt text" src="../assets/image-49.png" /></p>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
 <p>计算下面的指令，假设三条指令串行执行；1 和 2 并行执行后执行 3；使用 link 技术，这三种情况下的拍数。
