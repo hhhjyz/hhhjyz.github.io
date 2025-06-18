@@ -22,7 +22,7 @@
     
     
       
-        <title>A comprehensive review and comparison of existing methods for protein function prediction - hhhjyz的笔记本</title>
+        <title>实验报告 - hhhjyz的笔记本</title>
       
     
     
@@ -86,7 +86,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#a-comprehensive-review-and-comparison-of-existing-methods-for-protein-function-prediction" class="md-skip">
+        <a href="#_1" class="md-skip">
           跳转至
         </a>
       
@@ -119,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              A comprehensive review and comparison of existing methods for protein function prediction
+              实验报告
             
           </span>
         </div>
@@ -1995,91 +1995,19 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
+  <a href="#1-task-1-saxpy" class="md-nav__link">
     <span class="md-ellipsis">
-      1 研究背景
+      1 Task 1: SAXPY 向量化
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    <span class="md-ellipsis">
-      2 现有的数据库
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2 现有的数据库">
+    <nav class="md-nav" aria-label="1 Task 1: SAXPY 向量化">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#21-uniprot" class="md-nav__link">
+  <a href="#11" class="md-nav__link">
     <span class="md-ellipsis">
-      2.1 Uniprot
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#22-go" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.2 GO
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#23-goa" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.3 GOA
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#24-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.4 STRING
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#25-interpro" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.5 InterPro
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#26-rcsb-pdb" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.6 RCSB PDB
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#27-alphafold" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.7 AlphaFold
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#28" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.8 小结
+      1.1 实现思路
     </span>
   </a>
   
@@ -2091,88 +2019,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-methods" class="md-nav__link">
+  <a href="#2-task-2-gemv" class="md-nav__link">
     <span class="md-ellipsis">
-      3 Methods
+      2 Task 2: GEMV 向量化
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="3 Methods">
+    <nav class="md-nav" aria-label="2 Task 2: GEMV 向量化">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#31-sequence-based-methods" class="md-nav__link">
+  <a href="#21" class="md-nav__link">
     <span class="md-ellipsis">
-      3.1 Sequence Based Methods
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3.1 Sequence Based Methods">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#311" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.1.1 小结
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#32-3d-structure-based-methods" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.2 3D structure-based methods
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#33-ppi-network-based-methods" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.3 PPI network-based methods
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#34-hybrid-information-based-methods" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.4 Hybrid information-based methods
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#35-ppiinterpro" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.5 整合序列、结构、PPI或InterPro特征：
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#36-go" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.6 其他整合方法 (如整合文献、GO术语、同源网络等)：
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#37-web-servers-and-stand-alone-tools" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.7 Web Servers and stand-alone tools
+      2.1 实现思路
     </span>
   </a>
   
@@ -2184,28 +2043,43 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
+  <a href="#3-task-3-int4" class="md-nav__link">
     <span class="md-ellipsis">
-      4 研究方法
+      3 Task 3: INT4 打包/解包向量化
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="4 研究方法">
+    <nav class="md-nav" aria-label="3 Task 3: INT4 打包/解包向量化">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 实现思路
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-task-4-gemv" class="md-nav__link">
+    <span class="md-ellipsis">
+      4 Task 4: 量化 GEMV 向量化
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4 Task 4: 量化 GEMV 向量化">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#41" class="md-nav__link">
     <span class="md-ellipsis">
-      4.1 使用的数据
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#42" class="md-nav__link">
-    <span class="md-ellipsis">
-      4.2 性能评估指标
+      4.1 实现思路
     </span>
   </a>
   
@@ -2213,105 +2087,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5" class="md-nav__link">
-    <span class="md-ellipsis">
-      5 实验结果
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="5 实验结果">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#51" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.1 结构预测的准确性比较
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#52" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.2 预测未注释蛋白质的准确性
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6" class="md-nav__link">
-    <span class="md-ellipsis">
-      6 前景
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="6 前景">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#61-datasets" class="md-nav__link">
-    <span class="md-ellipsis">
-      6.1 datasets
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#62" class="md-nav__link">
-    <span class="md-ellipsis">
-      6.2 特征提取方法
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#-" class="md-nav__link">
-    <span class="md-ellipsis">
-      - 需求： 开发新的特征提取方法，以提供更全面、更准确的蛋白质特征表示 。
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="- 需求： 开发新的特征提取方法，以提供更全面、更准确的蛋白质特征表示 。">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#63" class="md-nav__link">
-    <span class="md-ellipsis">
-      6.3 算法
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#7" class="md-nav__link">
-    <span class="md-ellipsis">
-      7 总结
-    </span>
-  </a>
   
 </li>
       
@@ -2333,346 +2108,151 @@
   
 
 
-<h1 id="a-comprehensive-review-and-comparison-of-existing-methods-for-protein-function-prediction">A comprehensive review and comparison of existing methods for protein function prediction<a class="headerlink" href="#a-comprehensive-review-and-comparison-of-existing-methods-for-protein-function-prediction" title="Permanent link">&para;</a></h1>
-<p><strong>abstract:</strong></p>
-<p>蛋白质功能预测对于理解细胞生理和生化过程至关重要，它为疾病研究和药物发现等领域的进步开辟了新的可能性。在过去的几十年里，随着蛋白质序列数据的指数级增长，人们提出了许多预测蛋白质功能的计算方法。因此，有必要对这些方法进行系统评价和比较。在这项研究中，将这些方法分为四个不同的类别，包括基于序列的方法、基于 3D 结构的方法、基于 PPI 网络的方法和基于混合信息的方法。此外，讨论了它们的优缺点，然后对它们的性能进行了综合评价和比较。并在最后讨论了该领域面临的挑战和机遇。</p>
-<p><strong>keywords</strong>:</p>
-<p>protein function prediction, sequence-based methods, 3D structure-based methods, PPI network-based methods and hybrid information-based methods</p>
-<h2 id="1">1 研究背景<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
-<p>蛋白质必须经历多个细胞步骤才能实现其功能并参与细胞活动。蛋白质序列中的氨基酸残基发生空间转换，导致形成三维结构。随后通过非共价力建立蛋白质-蛋白质相互作用 （PPI） 网络。调节结构和功能。随后，PPI 网络组装成蛋白质复合物。这些复合物作为实现蛋白质功能和执行生命活动的分子机器。</p>
-<p>在蛋白质研究中，遵循“序列-结构-功能”的范式。目前，蛋白质功能由基因本体论 (GO) 标准化，它包括三个方面：生物过程本体论 （BPO）、分子功能本体论 （MFO） 和细胞成分本体论 （CCO），如图 所示：
-<img alt="" src="../assets/%E6%9C%AA%E5%91%BD%E5%90%8D/file-20250529164028698.png" /></p>
-<p>这张图是“序列-结构-功能”范式的示意图。</p>
-<p>序列是指蛋白质中氨基酸的排列。结构是指蛋白质原子的三维排列。功能是指蛋白质在生物体内发挥的特殊作用 。通常，蛋白质序列决定了它的结构，而结构又决定了它的功能。</p>
-<p><strong>蛋白质功能预测是推动生命科学和医学进步的重要工具，为人类健康和可持续发展做出了重大贡献：</strong></p>
+<h1 id="_1">实验报告<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<div align =center>3230102996 蒋翼泽</div>
+
+<h2 id="1-task-1-saxpy">1 Task 1: SAXPY 向量化<a class="headerlink" href="#1-task-1-saxpy" title="Permanent link">&para;</a></h2>
+<h3 id="11">1.1 实现思路<a class="headerlink" href="#11" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">saxpy_sve</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">float</span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="o">*</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="kt">size_t</span><span class="w"> </span><span class="n">vl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">svcntw</span><span class="p">();</span><span class="w">  </span><span class="c1">// 获取向量长度（float元素数）</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">vl</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="n">svbool_t</span><span class="w"> </span><span class="n">pg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">svwhilelt_b32</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">);</span><span class="w">  </span><span class="c1">// 处理边界条件</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="n">svfloat32_t</span><span class="w"> </span><span class="n">x_vec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">svld1_f32</span><span class="p">(</span><span class="n">pg</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="n">svfloat32_t</span><span class="w"> </span><span class="n">y_vec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">svld1_f32</span><span class="p">(</span><span class="n">pg</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="c1">// 使用乘加指令</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="n">svfloat32_t</span><span class="w"> </span><span class="n">result_vec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">svmla_n_f32_x</span><span class="p">(</span><span class="n">pg</span><span class="p">,</span><span class="w"> </span><span class="n">y_vec</span><span class="p">,</span><span class="w"> </span><span class="n">x_vec</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">);</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="n">svst1_f32</span><span class="p">(</span><span class="n">pg</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">result_vec</span><span class="p">);</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="p">}</span>
+</code></pre></div>
 <ul>
-<li>对理解细胞内和细胞外生物过程以及揭示蛋白质多样性与进化之间的相关性具有深远的意义。</li>
-<li>蛋白质功能预测在阐明基因功能、理解基因调控网络和指导未表征蛋白质的功能注释方面起着至关重要的作用 。</li>
-<li>蛋白质功能的准确预测通过促进靶向特定蛋白质的药物的产生来支持药物发现和开发，从而提高治疗效果 。</li>
-<li>在个性化医疗  中，了解蛋白质功能的个体差异对于评估疾病风险和制定个体化治疗策略至关重要。</li>
+<li>使用谓词向量，通过 <code>svwhilelt_b32</code> 自动处理数组边界，加载向量后，使用<code>svmla_n_f32_x</code> 一条指令完成乘法和加法</li>
 </ul>
-<p><strong>过去的综述论文存在的问题:</strong></p>
+<h2 id="2-task-2-gemv">2 Task 2: GEMV 向量化<a class="headerlink" href="#2-task-2-gemv" title="Permanent link">&para;</a></h2>
+<h3 id="21">2.1 实现思路<a class="headerlink" href="#21" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">gemv_sve</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">float</span><span class="o">*</span><span class="w"> </span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">float</span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="o">*</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="kt">size_t</span><span class="w"> </span><span class="n">vl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">svcntw</span><span class="p">();</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="n">svfloat32_t</span><span class="w"> </span><span class="n">zero_vec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">svdup_f32</span><span class="p">(</span><span class="mf">0.0f</span><span class="p">);</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">m</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="n">svfloat32_t</span><span class="w"> </span><span class="n">acc_vec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">zero_vec</span><span class="p">;</span><span class="w">  </span><span class="c1">// 累加向量</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="c1">// 向量化内层循环</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">vl</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">      </span><span class="n">svbool_t</span><span class="w"> </span><span class="n">pg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">svwhilelt_b32</span><span class="p">(</span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">);</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">      </span><span class="n">svfloat32_t</span><span class="w"> </span><span class="n">a_vec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">svld1_f32</span><span class="p">(</span><span class="n">pg</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">j</span><span class="p">]);</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">      </span><span class="n">svfloat32_t</span><span class="w"> </span><span class="n">x_vec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">svld1_f32</span><span class="p">(</span><span class="n">pg</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">x</span><span class="p">[</span><span class="n">j</span><span class="p">]);</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">      </span><span class="n">acc_vec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">svmla_f32_x</span><span class="p">(</span><span class="n">pg</span><span class="p">,</span><span class="w"> </span><span class="n">acc_vec</span><span class="p">,</span><span class="w"> </span><span class="n">a_vec</span><span class="p">,</span><span class="w"> </span><span class="n">x_vec</span><span class="p">);</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">    </span><span class="c1">// 向量归约为标量</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">    </span><span class="n">svbool_t</span><span class="w"> </span><span class="n">pg_final</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">svptrue_b32</span><span class="p">();</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">    </span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">svaddv_f32</span><span class="p">(</span><span class="n">pg_final</span><span class="p">,</span><span class="w"> </span><span class="n">acc_vec</span><span class="p">);</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="p">}</span>
+</code></pre></div>
+<p>首先加载矩阵行元素和向量 x 的对应段,使用 <code>svmla_f32_x</code> 将乘积累加到累加器中,处理完一行之后，使用 <code>svaddv_f32</code> 将向量累加器的所有元素求和得到标量结果，最后输出到对应的y向量的位置</p>
+<h2 id="3-task-3-int4">3 Task 3: INT4 打包/解包向量化<a class="headerlink" href="#3-task-3-int4" title="Permanent link">&para;</a></h2>
+<h3 id="31">3.1 实现思路<a class="headerlink" href="#31" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">unpack_sve</span><span class="p">(</span><span class="kt">uint8_t</span><span class="o">*</span><span class="w"> </span><span class="n">dst</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="o">*</span><span class="w"> </span><span class="n">src</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">n_dst</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="kt">uint64_t</span><span class="w"> </span><span class="n">vl_bytes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">svcntb</span><span class="p">();</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="n">svbool_t</span><span class="w"> </span><span class="n">pg_all_lanes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">svptrue_b8</span><span class="p">();</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">current_src_idx</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n_src</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="n">svbool_t</span><span class="w"> </span><span class="n">pg_load</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">svwhilelt_b8_u64</span><span class="p">(</span><span class="n">current_src_idx</span><span class="p">,</span><span class="w"> </span><span class="n">n_src</span><span class="p">);</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="n">svuint8_t</span><span class="w"> </span><span class="n">z_src_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">svld1_u8</span><span class="p">(</span><span class="n">pg_load</span><span class="p">,</span><span class="w"> </span><span class="n">Psrc_base</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">current_src_idx</span><span class="p">);</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="c1">// 提取高4位和低4位</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span><span class="n">svuint8_t</span><span class="w"> </span><span class="n">z_high_nibbles</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">svlsr_n_u8_z</span><span class="p">(</span><span class="n">pg_all_lanes</span><span class="p">,</span><span class="w"> </span><span class="n">z_src_data</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">    </span><span class="n">svuint8_t</span><span class="w"> </span><span class="n">z_low_nibbles</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">svand_n_u8_z</span><span class="p">(</span><span class="n">pg_all_lanes</span><span class="p">,</span><span class="w"> </span><span class="n">z_src_data</span><span class="p">,</span><span class="w"> </span><span class="mh">0x0F</span><span class="p">);</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">    </span><span class="c1">// 交错排列</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">    </span><span class="n">svuint8_t</span><span class="w"> </span><span class="n">z_interleaved_part1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">svzip1_u8</span><span class="p">(</span><span class="n">z_high_nibbles</span><span class="p">,</span><span class="w"> </span><span class="n">z_low_nibbles</span><span class="p">);</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">    </span><span class="n">svuint8_t</span><span class="w"> </span><span class="n">z_interleaved_part2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">svzip2_u8</span><span class="p">(</span><span class="n">z_high_nibbles</span><span class="p">,</span><span class="w"> </span><span class="n">z_low_nibbles</span><span class="p">);</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">    </span><span class="c1">// 存储结果</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">    </span><span class="n">svst1_u8</span><span class="p">(</span><span class="n">pg_store1</span><span class="p">,</span><span class="w"> </span><span class="n">Pdst_base</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">current_dst_idx</span><span class="p">,</span><span class="w"> </span><span class="n">z_interleaved_part1</span><span class="p">);</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">    </span><span class="n">svst1_u8</span><span class="p">(</span><span class="n">pg_store2</span><span class="p">,</span><span class="w"> </span><span class="n">Pdst_base</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">current_dst_idx</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">vl_bytes</span><span class="p">,</span><span class="w"> </span><span class="n">z_interleaved_part2</span><span class="p">);</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="p">}</span>
+</code></pre></div>
+<p>首先计算源数组长度 <code>n_src = n_dst / 2</code>，因为每个源字节产生两个目标元素</p>
+<p>接着以 SVE 字节向量长度为步长处理源数组</p>
 <ul>
-<li>分类过时</li>
-<li>缺乏全面性</li>
-<li>缺乏比较</li>
+<li>使用 <code>svlsr_n_u8_z</code> 提取每个字节的高 4 位</li>
+<li>使用 <code>svand_n_u8_z</code> 提取每个字节的低 4 位</li>
 </ul>
-<p>在这篇综述中，对现有的蛋白质功能预测计算方法进行了全面和最新的概述，主要关注近年来提出的方法。最初，介绍用于预测蛋白质功能的数据库。随后，提出了一种新的分类方法，将计算方法分为四类。之后，使用相同的基准数据集对每类计算方法的性能进行公平评估。最后，讨论了未来的方向和挑战，探索了该研究领域的机遇。</p>
-<h2 id="2">2 现有的数据库<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
-<p><img alt="" src="../assets/%E6%9C%AA%E5%91%BD%E5%90%8D/file-20250529164741375.png" /></p>
-<h3 id="21-uniprot">2.1 Uniprot<a class="headerlink" href="#21-uniprot" title="Permanent link">&para;</a></h3>
-<p>UniProt 是一个广泛使用的蛋白质数据库，包括各种重要部分，包括 UniProtKB、UniRef 和 UniParc。UniProt 2024_01 版包含超过 2.5 亿条序列记录</p>
-<ul>
-<li>UniProtKB/Swiss-Prot： 人工整理和审查条目部分</li>
-<li>UniProtKB/TrEMBL： 未审查的部分</li>
-<li>UniRef:提供三个同一水平的蛋白质序列簇</li>
-<li>UniParc:提供了一组所有已知的蛋白质序列，它存储了来自各种来源的所有新的和更新的蛋白质序列，以实现全面覆盖</li>
-</ul>
-<h3 id="22-go">2.2 GO<a class="headerlink" href="#22-go" title="Permanent link">&para;</a></h3>
-<p>GO 是基因功能信息的综合资源，其中用于描述基因功能的功能特征分为三类：生物过程 （BP）、分子功能 （MF） 和细胞成分 （CC）。GO 版本 2024_01_17 包含超过 700 万个注释、100 万个基因产物和 5000 个物种。</p>
-<h3 id="23-goa">2.3 GOA<a class="headerlink" href="#23-goa" title="Permanent link">&para;</a></h3>
-<p>基因本体注释 （GOA） 为 UniProt 知识库 （UniProtKB） 中的蛋白质提供了高质量的 GO 注释。GOA 采用两种不同的 GO 注释方法：电子和手动 。目前，GOA 注释总数超过 13.77 亿条，其中电子 GO 注释约为 13.72 亿条，而手动 GO 注释仅约 590 万条。</p>
-<h3 id="24-string">2.4 STRING<a class="headerlink" href="#24-string" title="Permanent link">&para;</a></h3>
-<p>STRING是一个已知和预测的 PPI 数据库，它整合了来自五个主要来源的相互作用数据，包括基因组环境预测、高通量实验室实验、保守表达、自动文本挖掘和数据库中的先前知识。STRING 提供蛋白质之间的相互作用评分，反映它们在生物网络中的连接强度。STRING 数据库版本 12.0 涵盖了来自 10000 多种生物体的约 600 万种蛋白质。</p>
-<h3 id="25-interpro">2.5 InterPro<a class="headerlink" href="#25-interpro" title="Permanent link">&para;</a></h3>
-<p>InterPro 是一个综合数据库，集成了 13 个成员数据库.此外，每个成员数据库都包含重点表征数据。例如，Pfam 数据库主要收集、分类和注释与蛋白质结构域相关的信息。</p>
-<h3 id="26-rcsb-pdb">2.6 RCSB PDB<a class="headerlink" href="#26-rcsb-pdb" title="Permanent link">&para;</a></h3>
-<p>RCSB PDB 是一个专门的数据库，用于存储有关生物大分子 3D 结构的信息。目前，RCSB.org 门户提供了超过 200,000 个实验确定的 PDB 结构，其中超过 120,000 个真核蛋白结构，其中一半以上来自人类</p>
-<h3 id="27-alphafold">2.7 AlphaFold<a class="headerlink" href="#27-alphafold" title="Permanent link">&para;</a></h3>
-<p>是由 DeepMind 和 EMBL-EBI 共同开发的高精度蛋白质结构预测数据库，在 v2.0 版本中，它包含超过 2 亿个条目，包括 48 个关键生物体的蛋白质组，提供了 UniProt 的广泛覆盖。</p>
-<h3 id="28">2.8 小结<a class="headerlink" href="#28" title="Permanent link">&para;</a></h3>
-<p>除了目前广泛用于蛋白质功能预测研究的上述数据库外，还有许多其他非常重要的热力学数据库。例如，PINT [ 49]、ProNIT [ 50]、ProCaff [ 51] 和 PLD [ 52]，这些热力学数据库提供了丰富的蛋白质相互作用热力学信息，是理解蛋白质功能和相互作用机制的重要参考价值。</p>
-<h2 id="3-methods">3 Methods<a class="headerlink" href="#3-methods" title="Permanent link">&para;</a></h2>
-<p>根据预测蛋白质功能的计算方法使用的信息类型可分为四组：基于序列的方法、基于 3D 结构的方法、基于 PPI 网络的方法和基于混合信息的方法。需要注意的是，这些类别并不严格不同，它们之间存在重叠和相关性。</p>
-<h3 id="31-sequence-based-methods">3.1 Sequence Based Methods<a class="headerlink" href="#31-sequence-based-methods" title="Permanent link">&para;</a></h3>
-<p><img alt="" src="../assets/%E6%9C%AA%E5%91%BD%E5%90%8D/file-20250529172143229.png" /></p>
-<p>基于序列的方法侧重于蛋白质序列，通过从中提取与功能相关的潜在特征来预测蛋白质功能。这些方法深入研究氨基酸序列中包含的信息，并试图捕捉嵌入其中的与蛋白质功能相关的细微特征。</p>
-<p>首先，通过不同的方法从序列中提取特征。其次，将提取的特征输入到某种算法中。最后，通过训练模型预测未知蛋白质的功能，并计算它们属于特定 GO 项的概率。而BLAST 工具会在数据库中搜索与目标蛋白相似的序列，无需从序列中提取特征。</p>
-<p><strong>BLAST</strong>: 用于搜索数据库以查找与目标蛋白相似的序列，从而推断目标蛋白的潜在功能。但是仅依靠序列比对工具来预测蛋白质功能缺乏高精，因此许多计算方法开始整合神经网络</p>
-<p><strong>DEEPred</strong>利用从序列中提取的 SPMap 特征，并将其用作多任务前馈深度神经网络模型的输入来预测蛋白质功能</p>
-<p><strong>DeepGOPlus</strong>： 结合卷积神经网络的预测结果，通过搜索具有已知功能的相似蛋白质来提高预测准确性。通过移除PPI特征改进了DeepGO ，提高了预测性能。它克服了序列长度限制，用 one-hot 编码取代了氨基酸三元组嵌入层</p>
-<p><strong>HiFun</strong>： 使用 BLOSUM62 矩阵 和 FastText 嵌入 嵌入蛋白质序列。 基于 BLOSUM62 矩阵的向量被馈送到卷积层以提取潜在特征，而基于 FastText 嵌入的矩阵被馈送到由卷积神经网络 （CNN） 和具有自关注架构的双向长短期记忆 （BiLSTM） 组成的架构中 。从 CNN 中提取的特征向量被传递给 BiLSTM 两个隐藏层，它们利用前后的上下文信息来增强特征表示。HiFun 对 BiLSTM 层的输出执行自我注意机制，以估计氨基酸的重要性。</p>
-<h4 id="311">3.1.1 小结<a class="headerlink" href="#311" title="Permanent link">&para;</a></h4>
-<p>依赖于蛋白质序列的方法可以显着改善功能类别中 MFO 的预测。然而，许多蛋白质在功能上相似，但在序列上不相似，这可能导致序列相似性低的蛋白质的预测性能较差。</p>
-<h3 id="32-3d-structure-based-methods">3.2 3D structure-based methods<a class="headerlink" href="#32-3d-structure-based-methods" title="Permanent link">&para;</a></h3>
-<p>基于 3D 结构的方法侧重于蛋白质结构特征。蛋白质结构通常被翻译成接触图，从中捕获与功能密切相关的特征</p>
-<p>对于功能主要受结构特征影响的蛋白质，基于 3D 结构的方法具有更明显的优势</p>
-<p><img alt="" src="../assets/%E6%9C%AA%E5%91%BD%E5%90%8D/file-20250529181931685.png" />
-<strong>流程</strong>：</p>
-<ul>
-<li>首先，特征提取方法可分为三类：(i) 从序列中提取序列嵌入；(ii) 将结构转化为接触图 并获取残基水平的特征 。</li>
-<li>其次，将提取的特征输入到相应的算法模型中 。</li>
-<li>最后，通过训练好的模型预测未知蛋白质的功能，并计算其属于特定GO术语的概率 。</li>
-</ul>
-<p><strong>主要方法示例：</strong></p>
-<ul>
-<li><strong>DeepFRI:</strong> 该方法以图卷积网络（GCN） 为核心技术 。首先，它使用来自蛋白质家族数据库（Pfam） 的序列预训练一个长短期记忆语言模型（LSTM-LM） 来提取序列的残基水平特征 。其次，它将蛋白质结构转化为接触图。这两者都作为GCN的输入 。通过LSTM-LM从序列学习到的特征和GCN从接触图学习到的特征显著提高了蛋白质功能预测的性能 。</li>
-<li><strong>GAT-GO:</strong> 与DeepFRI不同，GAT-GO使用图注意力网络（GAT） 替代传统的GCN 。每个GAT层之后跟着一个拓扑池化层（topological pooling layer） 以进行拓扑感知的下采样，并在末端设有一个全局池化层 。此外，GAT-GO使用RaptorX 预测的残基间接触，而不是DeepFRI使用的天然接触图 。GAT-GO整合了预测的残基接触图和CNN生成的序列表示作为GAT的输入，并将GAT生成的表示与蛋白质水平的序列嵌入相结合来预测功能注释 。</li>
-<li><strong>HEAL:</strong> 该方法首先使用来自蛋白质数据库（PDB） 的蛋白质训练了HEAL-PDB模型，其性能与DeepFRI相当 。随后，通过整合AlphaFold2 预测的蛋白质结构，HEAL的性能得到了显著提升 。HEAL首先基于序列节点特征和接触图为每个蛋白质构建图，然后将其输入到一个由消息传递神经网络和层级图Transformer组成的架构中 。接着，使用监督学习和对比学习 来优化网络 。</li>
-<li><strong>Struct2GO:</strong> 该方法同时将序列和结构信息作为输入 。它利用SeqVec 模型提取序列特征，并使用基于自注意力机制的层级图池化（hierarchical graph pooling） 模型从AlphaFold2 预测的结构中提取特征 。为了最大限度地利用结构信息，Struct2GO采用Node2vec 算法在蛋白质结构网络中生成氨基酸水平的嵌入，这些嵌入被用作图池化模型的初始节点特征 。</li>
-</ul>
-<p><strong>小结：</strong> 这些方法整合了蛋白质结构和序列信息，从而显著提高了蛋白质功能预测的准确性 。与实验测定的蛋白质结构相比，AlphaFold2 提供了丰富的高分辨率结构信息，这极大地提升了模型的预测精度 。对于序列高度相似的蛋白质，仅用序列特征难以区分其细微的功能差异，结合结构特征有助于克服这一问题 。然而，这类方法的缺点是它们主要关注蛋白质结构特征，而忽略了蛋白质之间的相互作用 。</p>
-<hr />
-<h3 id="33-ppi-network-based-methods">3.3 PPI network-based methods<a class="headerlink" href="#33-ppi-network-based-methods" title="Permanent link">&para;</a></h3>
-<p>基于PPI网络的方法主要关注蛋白质-蛋白质相互作用网络 。与基于3D结构的方法类似，蛋白质序列也可以作为这些方法的输入特征之一 。</p>
-<p>其基本流程如图所示 ：
-<img alt="" src="../assets/%E6%9C%AA%E5%91%BD%E5%90%8D/file-20250529185227068.png" />
-- 首先，特征提取方法可分为三类：(i) 从序列中提取序列嵌入；(ii) 从STRING等数据库获取单物种或多物种的PPI网络 。
-- 其次，将提取的特征输入到相应的算法模型中 。
-- 最后，通过训练好的模型预测未知蛋白质的功能，并计算其属于特定GO术语的概率 。</p>
-<p><strong>主要方法示例：</strong></p>
-<ul>
-<li><strong>GeneMANIA:</strong> 这是一个网络整合算法，它结合了线性回归算法（用于从多个蛋白质数据源构建复合功能关联网络）和标签传播算法（用于在这些网络上预测功能注释）。与其它功能关联网络方法 相比，它采用了独特的优化策略，侧重于调整网络权重和判别值 。此外，GeneMANIA整合了一个改进的高斯场标签传播算法 以提高功能预测的准确性 。</li>
-<li><strong>Mashup:</strong> 与GeneMANIA类似，Mashup也是一个网络整合框架，它利用网络扩散来获取每个节点的分布，并捕捉与其他节点的关联信息 。然后，将每个节点的拓扑信息表示为低维空间向量，最后将这些向量表示作为功能预测的输入 。Mashup提高预测准确性的主要原因有二：一是单独分析每个网络的拓扑结构，二是将拓扑信息转换为紧凑的低维表示 。</li>
-<li><strong>deepNF:</strong> 随着深度学习技术的广泛应用，一个名为deepNF的网络融合方法被提出，它基于多模态深度自编码器（MDA）构建 。自编码器是一种特殊的神经网络，包含编码和解码部分，已被证明能有效去除噪声 。deepNF通过构建捕获网络信息的正点互信息（PPMI）矩阵（使用带重启的随机游走RWR方法）将异构网络转换为向量表示 。随后，它通过MDA的中间层从PPMI矩阵表示的网络中提取紧凑的低维特征，并用这些特征训练SVM分类器 。</li>
-<li><strong>NetQuilt:</strong> 该方法使用IsoRank 算法分别计算同物种和不同物种蛋白质之间的相似性得分，然后构建IsoRank相似性矩阵 。随后，它将所有物种的IsoRank矩阵组合成一个新的矩阵，用作带有maxout激活函数 的神经网络的输入 。</li>
-<li><strong>DeepGO:</strong> 作为DeepGOPlus的前一个版本，DeepGO使用多层神经网络从蛋白质序列和PPI网络中学习特征以进行蛋白质功能预测 。由于只有少数蛋白质拥有此类网络信息，DeepGOPlus移除了PPI网络信息，转而通过整合基于序列相似性的方法来提高预测性能 。</li>
-</ul>
-<p><strong>小结：</strong> 这些方法主要依赖PPI网络。研究已证明，在PPI网络中存在相互作用的蛋白质通常表现出相似的功能 ，这使得利用PPI网络预测蛋白质功能成为可能 。然而，仅基于PPI网络预测蛋白质功能存在局限性，因为高通量技术产生的数据可能包含噪声 ，这可能会影响结果的准确性 。上述方法中，GeneMANIA和Mashup等整合多个单物种PPI网络，而NetQuilt则整合了多物种的同源信息和PPI网络的全局比对信息，通过整合多物种网络的相似性得分，NetQuilt显著优于基于单物种PPI网络的方法 。</p>
-<hr />
-<h3 id="34-hybrid-information-based-methods">3.4 Hybrid information-based methods<a class="headerlink" href="#34-hybrid-information-based-methods" title="Permanent link">&para;</a></h3>
-<p>基于混合信息的方法强调结合多种类型的信息，例如整合蛋白质序列、蛋白质结构、PPI网络或InterPro特征等多种信息来源 。CAFA挑战赛 的结果表明，有效整合不同类型的信息确实可以提高蛋白质功能预测的准确性 。目前，混合信息是该领域发展的一个主要趋势 。</p>
-<p>其基本流程如图所示 ：</p>
-<p><img alt="" src="../assets/%E6%9C%AA%E5%91%BD%E5%90%8D/file-20250529185216228.png" /></p>
-<ul>
-<li>首先，可以从四种不同类型的信息中提取特征：(i) 序列信息：提取序列嵌入或残基水平向量；(ii) 3D结构信息：将结构转化为接触图并获取残基水平特征；(iii) PPI网络信息：从STRING等数据库获取PPI网络；(iv) InterPro特征：从InterPro数据库获取特征；(v) 其他信息：如构建GO术语图、基于序列构建同源网络或查询文献获取蛋白质的文本特征等 。</li>
-<li>其次，将提取的特征输入到相应的算法模型中 。</li>
-<li>最后，通过训练好的模型预测未知蛋白质的功能，并计算其属于特定GO术语的概率 。</li>
-</ul>
-<h3 id="35-ppiinterpro">3.5 <strong>整合序列、结构、PPI或InterPro特征：</strong><a class="headerlink" href="#35-ppiinterpro" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>GOLabeler:</strong> 使用学习排序（LTR） 框架整合五种类型的信息，包括GO术语频率、序列相似性、氨基酸三联体频率、ProFET特征 和InterPro特征 。然后对候选GO术语进行排序，并输出排序后的GO术语列表作为最终结果 。GOLabeler的优势在于使用了LTR框架，可以将任何分类器作为新组件集成到框架中 。</li>
-<li><strong>NetGO:</strong> 沿用了GOLabeler的LTR 框架，并引入了一个新组件Net-KNN，通过使用STRING数据库广泛的网络信息进一步提高了预测性能 。Net-KNN的基本思想与GOLabeler中的一个组件BLAST-KNN相似，不同之处在于Net-KNN使用网络中的关联分数，而不是BLAST-KNN中的序列相似性 。</li>
-<li><strong>SDN2GO:</strong> 采用一个集成的深度学习模型进行蛋白质功能预测 。它利用三个不同的神经网络模块分别从蛋白质序列、蛋白质结构域和PPI网络中提取特征 。随后，这些特征被整合到一个加权分类器中，该分类器包含一个三层非全连接网络，用于学习来自三个不同来源的特征以优化权重 。此外，SDN2GO还构建了一个子模型SN2GO，其中排除了蛋白质结构域的特征 。实验结果表明，整合蛋白质结构域信息可以显著提高预测性能，尤其是在BPO方面 。</li>
-<li><strong>Graph2GO:</strong> 这是一个基于多模态图的模型，分别为PPI网络和序列相似性网络构建了两个图 。蛋白质序列、亚细胞定位和蛋白质结构域等属性作为这两个图中的节点 。随后，使用变分图自编码器 从图中的节点学习潜在特征 。该架构从网络结构和节点属性中学习向量表示，不仅可以用于预测蛋白质功能，还可以应用于其他涉及生物网络的任务，如预测蛋白质间相互作用和蛋白质复合物 。</li>
-<li><strong>DeepGraphGO:</strong> 这是一个基于多物种图神经网络的方法。它首先利用InterProScan 工具为蛋白质生成InterPro特征向量，并结合PPI网络，将InterPro特征向量作为网络中的节点特征 。然后通过多个图卷积层捕获网络中的高阶信息 。DeepGraphGO的优势在于它采用了多物种策略，利用所有物种的蛋白质数据训练单个模型，这不仅节省了时间和计算资源，还提高了模型的泛化能力 。</li>
-<li><strong>CFAGO:</strong> 该方法基于多头注意力机制 分两个阶段交叉融合PPI网络和蛋白质属性 。第一步是预训练，采用自编码器学习PPI网络和蛋白质属性内的隐藏特征 。如前所述，自编码器能够忽略数据中的噪声 。第二步是微调，将预训练的编码器与一个两层全连接神经网络相结合来预测蛋白质功能 。此外，消融实验表明，预训练对性能提升的贡献大于注意力机制 。</li>
-<li><strong>PredGO:</strong> 由三个重要模块组成：使用预训练的蛋白质语言模型ESM-1b 提取蛋白质序列特征；采用带有几何向量感知器 的图神经网络从AlphaFold2 预测的蛋白质结构中提取特征；以及利用基于多头注意力机制的蛋白质融合层来融合序列特征和PPI特征，生成融合特征 。然后，将融合特征和结构特征连接起来进行功能预测 。消融实验表明，结构信息改善了MFO和CCO方面的性能，而PPI信息改善了BPO方面的性能 。结合序列、结构和PPI信息，能够更全面地提升预测性能 。</li>
-</ul>
-<h3 id="36-go">3.6 <strong>其他整合方法 (如整合文献、GO术语、同源网络等)：</strong><a class="headerlink" href="#36-go" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>NetGO 2.0:</strong> 与之前版本的NetGO 相比，NetGO 2.0将来自SwissProt 的蛋白质文献信息（LR-Text）和通过循环神经网络提取的序列信息（Seq-RNN）整合到LTR 框架中 。作为NetGO一部分的LR-ProFET对整体性能影响甚微，在NetGO 2.0中被移除，但整体性能得到了提升 。</li>
-<li><strong>PANDA2:</strong> 采用图神经网络对GO有向无环图 进行建模，并将其与基于蛋白质语言模型生成的序列特征相整合 。此外，PANDA2还利用了基于PSI-BLAST、DIAMOND和Priority Score的序列比对特征，以及PAAC序列属性特征 。而且，PANDA2中每个网络块的节点属性都会迭代更新，通过堆叠三个网络块可以从邻域或感受野中学习知识 。</li>
-<li><strong>SPROF-GO:</strong> 利用DIAMOND 构建序列同源网络，而非PPI网络 。它首先从预训练的蛋白质语言模型ProtT5 中提取序列嵌入，并将其输入两个多层感知器（MLP）以学习注意力分数和隐藏嵌入矩阵 。随后，基于注意力分数对隐藏嵌入进行加权平均，然后将其输入输出MLP以获得初始预测 。此外，SPROF-GO应用了层级学习策略。在测试阶段，基于训练集构建同源网络，并将初始预测和同源网络都输入到标记扩散算法中以获得最终预测 。</li>
-<li><strong>PFresGO:</strong> 使用预训练的蛋白质语言模型ProtT5 将蛋白质编码为序列嵌入 。随后，它通过将独热序列嵌入与经自编码器降维的序列嵌入相结合来生成残基水平的嵌入 。此外，PFresGO利用Anc2vec 基于自注意力机制构建GO术语嵌入 。这两种类型的嵌入被融合起来，基于多头注意力机制计算GO术语的概率 。结果表明，即使不使用序列之外的信息，GO图的层级结构也能有效提高预测性能 。</li>
-<li><strong>HNetGO:</strong> 另一种利用GO术语信息的方法是HNetGO，它使用DIAMOND 工具计算序列相似性以构建相似性网络 。它整合了基于预训练蛋白质语言模型SeqVec 提取的序列特征、GO术语相关性信息和PPI网络来构建异构网络</li>
-</ul>
-<h3 id="37-web-servers-and-stand-alone-tools">3.7 Web Servers and stand-alone tools<a class="headerlink" href="#37-web-servers-and-stand-alone-tools" title="Permanent link">&para;</a></h3>
-<p><img alt="" src="../assets/%E6%9C%AA%E5%91%BD%E5%90%8D/file-20250529190225491.png" /></p>
-<h2 id="4">4 研究方法<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
-<p>在广泛使用的基准测试数据集上对这些方法进行了全面比较。</p>
-<h3 id="41">4.1 使用的数据<a class="headerlink" href="#41" title="Permanent link">&para;</a></h3>
-<p>用于性能比较的数据集严格遵循 CAFA 挑战赛的标准 。</p>
-<p>为了确保实验结果的准确性和可靠性，在 UniProtKB/Swiss-Prot 中使用了手动整理和审查的蛋白质，并使用 GO 的层次结构传播注释</p>
-<p>选择了带有实验证据代码的蛋白质。在 MFO、BPO 和 CCO 方面，训练集的数量分别为 2747、3197 和 5263，验证集的数量为 503、304 和 577，测试集的数量为 719、182 和 119，标签的数量分别为 38、45 和 35</p>
-<p><strong>不同 计算方法 的性能比较</strong>
-<img alt="" src="../assets/%E6%9C%AA%E5%91%BD%E5%90%8D/file-20250529190547974.png" /></p>
-<p>在实施这些方法时，在以下情况下不计算蛋白质的预测。
-（i） 缺乏结构数据。
-（ii） 序列长度太长，无法输入到语言模型。 DeepFRI 构建的数据集不包含长度超过 1000 的序列，因此我们从数据集中筛选出长度超过 1000 的序列，以实现此方法。</p>
-<p><strong>四类计算方法的性能比较</strong></p>
-<p><img alt="" src="../assets/%E6%9C%AA%E5%91%BD%E5%90%8D/file-20250529190702892.png" /></p>
-<h3 id="42">4.2 性能评估指标<a class="headerlink" href="#42" title="Permanent link">&para;</a></h3>
-<p><strong>1. F-max Score (Fmax​)</strong></p>
-<ul>
-<li>
-<p><strong>定义与用途</strong>：</p>
-<ul>
-<li>
-<p>Fmax​ 是一种以<strong>蛋白质为中心 (protein-centered)</strong> 的评估指标，在CAFA (Critical Assessment of Function Annotations) 挑战赛和许多蛋白质功能预测研究中被广泛使用 。</p>
-</li>
-<li>
-<p>它的取值范围是0到1，其中1表示模型的最佳性能，0表示最差性能 。</p>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>计算方法</strong>：</p>
-<ul>
-<li>
-<p>Fmax​ 的计算公式如下（公式1）： Fmax​=maxτ​{pr(τ)+rc(τ)2×pr(τ)×rc(τ)​}</p>
-</li>
-<li>
-<p>这里的关键在于理解其组成部分：</p>
-<ul>
-<li>τ：代表预测得分的阈值。Fmax​ 是在所有可能的阈值 τ 下，计算得到的F-score（精确率和召回率的调和平均数）的最大值。这意味着该指标会找到模型表现最佳的那个阈值点。</li>
-<li>
-<p>pr(τ)：在阈值 τ 下的<strong>精确率 (precision)</strong>。其计算方式如下（公式2）： pr(τ)=m(τ)1​∑i=1m(τ)​∑f​I(f∈Pi​(τ))∑f​I(f∈Pi​(τ)∧f∈Ti​)​ 其中：</p>
-<ul>
-<li>
-<p>Pi​(τ) 是蛋白质 i 在阈值 τ 下的预测注释集合 。</p>
-</li>
-<li>
-<p>Ti​ 是蛋白质 i 的真实注释集合 。</p>
-</li>
-<li>
-<p>f 代表一个GO类别（功能注释） 。</p>
-</li>
-<li>
-<p>I(⋅) 是指示函数（条件为真时为1，否则为0） 。</p>
-</li>
-<li>
-<p>m(τ) 是在阈值 τ 下，至少预测了一个类别的蛋白质数量 。</p>
-</li>
-<li>
-<p>这个公式的含义是：对于每个在阈值 τ 下有预测结果的蛋白质，计算其预测正确的GO术语数量占其所有预测GO术语数量的比例，然后对所有这些蛋白质取平均值。
-        - rc(τ)：在阈值 τ 下的<strong>召回率 (recall)</strong>。其计算方式如下（公式3）： rc(τ)=n1​∑i=1n​∑f​I(f∈Ti​)∑f​I(f∈Pi​(τ)∧f∈Ti​)​ 其中：</p>
-</li>
-<li>
-<p>n 是蛋白质的总数量 。</p>
-</li>
-<li>
-<p>这个公式的含义是：对于数据集中的每一个蛋白质，计算其预测正确的GO术语数量占其所有真实GO术语数量的比例，然后对所有蛋白质取平均值。</p>
-</li>
-<li><strong>特点分析</strong>：<ul>
-<li><strong>蛋白质为中心</strong>：Fmax​ 的计算首先针对每个蛋白质评估预测情况（通过pr(τ)和rc(τ)中的内部求和），然后再进行聚合。这意味着它平等地看待每个蛋白质的预测好坏。</li>
-<li><strong>阈值优化</strong>：通过 maxτ​，该指标能够找到一个最佳阈值，使得在该阈值下模型的F-score最高。这使得它对于不同模型输出的预测置信度范围具有一定的鲁棒性。</li>
-<li><strong>综合性</strong>：作为精确率和召回率的调和平均数，F-score能够平衡这两者，避免在其中一个指标极高而另一个极低时给出误导性的好评。</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<hr />
-<p><strong>2. Area Under the Precision-Recall curve (AUPR)</strong></p>
-<ul>
-<li>
-<p><strong>定义与用途</strong>：</p>
-<ul>
-<li>
-<p>AUPR 是一种以<strong>功能为中心 (function-centered)</strong> 的评估指标，在许多蛋白质功能预测研究中被使用 。</p>
-</li>
-<li>
-<p>它同样取值范围是0到1，其中1表示模型的最佳性能，0表示最差性能 。</p>
-</li>
-<li>
-<p>AUPR对于评估预测结果中存在<strong>高度类别不平衡</strong>的情况是一个合理的指标 。在蛋白质功能预测中，很多GO术语（即功能类别）是稀有的（正例少），而大部分蛋白质可能不具备某个特定功能（负例多），因此类别不平衡现象非常普遍。</p>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>与AUROC的比较</strong>：</p>
-<ul>
-<li>
-<p>AUPR和AUROC（ROC曲线下面积）都是分类评估中非常通用的标准 。</p>
-</li>
-<li>
-<p>然而，在分类不平衡的情况下，AUROC可能不够敏感，因为它考虑的是真阳性率和假阳性率之间的平衡，这可能受到大量负类样本的影响 。</p>
-</li>
-<li>
-<p>相比之下，AUPR能更好地反映分类器在预测正例（即正确预测蛋白质具有某个功能）方面的性能，也就是说，它更能惩罚假阳性（错误地预测蛋白质具有某个功能） 。</p>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>计算方法</strong>：</p>
-<ul>
-<li>AUPR是精确率-召回率（PR）曲线下方的面积。PR曲线是在不同阈值下，以召回率为横轴，精确率为纵轴绘制得到的曲线。</li>
-</ul>
-</li>
-<li><strong>特点分析</strong>：<ul>
-<li><strong>功能为中心</strong>：AUPR通常是针对每个GO术语（功能）分别计算PR曲线并得到其AUPR值，然后对所有功能的AUPR进行平均（例如宏平均或微平均，文献未详述具体平均方式，但其“function-centered”特性指明了这一点）。这意味着它关注的是模型对每个“功能类别”的预测能力。</li>
-<li><strong>适用于不平衡数据</strong>：如前所述，这是AUPR在蛋白质功能预测领域特别有价值的一点。由于它关注精确率和召回率，这两个指标都主要关心正类的预测情况，因此在负类样本远多于正类样本时，AUPR比AUROC更能反映模型对稀有功能（正类）的捕捉能力。</li>
-<li><strong>对假阳性敏感</strong>：在希望严格控制假阳性（例如，不希望错误地注释一个蛋白质具有某功能）的场景下，AUPR是一个很好的选择，因为它在精确率的计算中直接体现了假阳性的影响。</li>
-</ul>
-</li>
-</ul>
-<hr />
-<p><strong>总结</strong></p>
-<p>Fmax​ 和 AUPR 从不同的维度衡量预测性能。Fmax​ 以蛋白质为单位，寻找最佳阈值下的综合表现；而AUPR以功能为单位（或综合所有功能），特别关注在类别不平衡情况下的稳健性和对正类的预测能力。同时使用这两个指标可以更全面地了解一个蛋白质功能预测模型的优劣。</p>
-<h2 id="5">5 实验结果<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
-<ul>
-<li>
-<p><strong>总体最佳：</strong> 基于混合信息的方法在多项指标上优于其他三类方法 。</p>
-<ul>
-<li>
-<p><strong>HNetGO：</strong> MFO Fmax​ (0.523)最佳，CCO Fmax​ (0.618)最佳。MFO AUPR (0.570)最佳，BPO AUPR (0.512)最佳，CCO AUPR (0.669)最佳 。</p>
-</li>
-<li>
-<p><strong>PFresGO：</strong> BPO Fmax​ (0.527)最佳 。</p>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>混合方法优势原因：</strong> 有效利用来自不同来源的互补数据（序列、结构、PPI、InterPro、GO术语等），丰富了对蛋白质功能的理解 。</p>
-<ul>
-<li>
-<p>序列：提供氨基酸组成和排列信息 。</p>
-</li>
-<li>
-<p>结构：提供3D结构、构象和功能位点信息 。</p>
-</li>
-<li>
-<p>PPI：提供蛋白质在生物体内的相互作用全局视图 。</p>
-</li>
-<li>
-<p>InterPro/GO：提供蛋白质的多类型表征和功能的详细描述 。</p>
-</li>
-</ul>
-</li>
-</ul>
-<p>序列和结构信息有助于提高 MFO 和 CCO 方面的性能，而 PPI 信息有助于提高 BPO 方面的性能。具体来说，MFO 主要描述蛋白质的分子功能，而 CCO 描述蛋白质所在细胞的组成和结构。序列信息提供有关蛋白质氨基酸组成的详细信息，并且可以从序列中提取与功能相关的功能相关语义信息。另一方面，结构信息提供了更多方面的信息，包括亚细胞位置、蛋白质结构域和内部结构特征。这些信息相辅相成，不仅揭示了蛋白质的分子功能及其在细胞内外的作用机制，还揭示了蛋白质在细胞内的定位和组成。 此外，BPO 主要描述蛋白质参与的生物过程或活动，通常涉及多种蛋白质之间的相互作用和调节。PPI 信息提供有关蛋白质相互作用网络、信号传导和代谢调节的信息，揭示了蛋白质在生物过程中的整体作用和功能。因此，序列信息、结构信息和 PPI 信息在蛋白质功能预测任务中扮演不同的角色，这也反映了它们在 MFO、BPO 和 CCO 三个方面的不同侧重点和特点。</p>
-<h3 id="51">5.1 结构预测的准确性比较<a class="headerlink" href="#51" title="Permanent link">&para;</a></h3>
-<p>由于会担心基于 3D 结构的方法中使用的结构的准确性。</p>
-<p>在这方面，深度学习方法显示出巨大的潜力。其中，包括 AlphaFold [ 120] 和 RaptorX [ 121] 在内的深度学习方法已经取得了不错的效果。此外，我们还选择了另外两种高级深度学习方法 ProSPr [ 122] 和 trRosetta [ 123] 进行比较。RaptorX 和 trRosetta 使用深度残差神经网络 （ResNet） 作为其核心深度学习架构。相比之下，AlphaFold 和 ProSPr 的核心组件是深度 CNN。</p>
-<p>值得注意的是，在最近的一项研究 [ 125] 中评估了这四种方法在 CASP13 [ 124] 测试集上的接触精度，表 4 详细总结了这四种方法的性能结果。很明显，AlphaFold 在各个方面都表现出最出色的表现。正因为如此，大多数基于 3D 结构的方法选择使用 AlphaFold 预测的蛋白质结构作为蛋白质功能预测的输入特征，而 AlphaFold 所展示的准确性和可靠性为这些方法提供了有力的支持。使用 AlphaFold 预测的高精度结构作为输入特征，这些方法可以更准确地预测蛋白质功能。</p>
-<p><img alt="" src="../assets/%E6%9C%AA%E5%91%BD%E5%90%8D/file-20250529193735241.png" /></p>
-<h3 id="52">5.2 预测未注释蛋白质的准确性<a class="headerlink" href="#52" title="Permanent link">&para;</a></h3>
-<p>从 Uniprot [ 24] 数据库中选择了最新的 100 种人类蛋白质进行预测评估</p>
-<p>MFO、BPO 和 CCO 三个功能类别的最大准确性为 0.316、 0.378 和 0.371， 平均精度分别为 0.138、0.229 和 0.220。尽管当前性能最好的计算方法没有达到所需的精度，但我们需要注意的是，这些结果只是预测值，并且受到一定程度的不确定性的影响。此外，准确性评估还受到一定程度不确定性的影响，因为评估所依赖的标签基于预测的计算方法，缺乏实验验证。因此，我们认为使用深度学习的计算方法在未注释蛋白质功能预测领域仍具有很大的发展潜力。</p>
-<h2 id="6">6 前景<a class="headerlink" href="#6" title="Permanent link">&para;</a></h2>
-<h3 id="61-datasets">6.1 datasets<a class="headerlink" href="#61-datasets" title="Permanent link">&para;</a></h3>
-<p>当前可用的蛋白质数据集存在几个问题。
-- （i） 非常有限的审查蛋白质数据。最新版本的 Uniprot 数据库中超过 99% 的蛋白质仍需要审查。实验确定蛋白质结构的高成本导致结构数据的覆盖范围相对有限 。此外，PPI 数据可能包含噪声和假阳性，这可能会影响蛋白质相互作用的准确性和可靠性。因此，应该投入更多精力来收集可靠的蛋白质数据。
-- （ii） 已经提出了许多蛋白质功能预测方法，但大多数都是使用不同的数据集进行训练和测试的。使用一种方法收集的数据训练的模型可能在其他方法构建的数据集上表现不佳，因此很难根据不同的测试集直接客观地比较不同方法的性能。</p>
-<h3 id="62">6.2 特征提取方法<a class="headerlink" href="#62" title="Permanent link">&para;</a></h3>
-<ul>
-<li>目前方法依赖于有效整合现有特征提取技术（序列相似性、蛋白质语言模型、接触图、图拓扑结构、InterPro等）。</li>
-</ul>
-<h2 id="-">- <strong>需求：</strong> 开发新的特征提取方法，以提供更全面、更准确的蛋白质特征表示 。<a class="headerlink" href="#-" title="Permanent link">&para;</a></h2>
-<ul>
-<li><img alt="" src="../assets/%E6%9C%AA%E5%91%BD%E5%90%8D/file-20250529194224847.png" /></li>
-</ul>
-<h3 id="63">6.3 算法<a class="headerlink" href="#63" title="Permanent link">&para;</a></h3>
-<ul>
-<li>
-<p><strong>深度学习热点：</strong> 图神经网络、自编码器、注意力机制等显示出提升预测性能的潜力 。</p>
-</li>
-<li>
-<p><strong>需求：</strong> 如何利用或组合这些先进的深度学习模型构建更准确的蛋白质功能预测器是当前重要议题之一 。</p>
-</li>
-<li>
-<p><strong>处理稀疏数据：</strong> 对于数据稀疏、信息不足的物种，现有方法预测性能可能不佳 。</p>
-</li>
-<li>
-<p><strong>潜在解决方案：迁移学习：</strong> 利用现有物种信息，通过不同训练策略改进新物种的预测性能，缓解数据稀疏问题</p>
-</li>
-</ul>
-<h2 id="7">7 总结<a class="headerlink" href="#7" title="Permanent link">&para;</a></h2>
-<p>本文介绍了蛋白质数据库，讨论了各种计算方法（优缺点），并列举了可用工具 。</p>
-<ul>
-<li>
-<p><strong>性能洞察：</strong></p>
-<ul>
-<li>
-<p>基于混合信息的方法通常表现更优 。</p>
-</li>
-<li>
-<p>序列/结构数据对MFO/CCO预测关键；PPI数据对BPO预测关键 。</p>
-</li>
-<li>
-<p>高精度预测结构（如AlphaFold）提升了基于3D结构方法的性能 。</p>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>未来焦点：</strong> 解决数据集、特征提取和算法（特别是利用深度学习和迁移学习）方面的挑战，对未来进展至关重要</p>
-</li>
-</ul>
+<p>然后使用 <code>svzip1_u8</code> 和 <code>svzip2_u8</code> 将高位和低位交错排列，并将重排后的数据分两次存储到目标数组中</p>
+<h2 id="4-task-4-gemv">4 Task 4: 量化 GEMV 向量化<a class="headerlink" href="#4-task-4-gemv" title="Permanent link">&para;</a></h2>
+<h3 id="41">4.1 实现思路<a class="headerlink" href="#41" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="w">   </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="p">(</span><span class="n">qk</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">blocklen</span><span class="p">));</span><span class="w"> </span><span class="n">k</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="kt">uint64_t</span><span class="w"> </span><span class="n">vl_bytes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">svcntb</span><span class="p">();</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">        </span><span class="c1">// 创建谓词寄存器</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">        </span><span class="n">svbool_t</span><span class="w"> </span><span class="n">pg_8</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">svwhilelt_b8</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">blocklen</span><span class="p">);</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">        </span><span class="n">svbool_t</span><span class="w"> </span><span class="n">pg_16</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">svwhilelt_b16</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">blocklen</span><span class="p">);</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">        </span><span class="n">svbool_t</span><span class="w"> </span><span class="n">pg_32</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">svwhilelt_b32</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">blocklen</span><span class="p">);</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">        </span><span class="c1">// 预加载激活数据</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="kt">int8_t</span><span class="o">*</span><span class="w"> </span><span class="n">a_base1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">a_ptr</span><span class="p">[</span><span class="n">l</span><span class="p">].</span><span class="n">qs</span><span class="p">[</span><span class="n">k</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">blocklen</span><span class="p">];</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="kt">int8_t</span><span class="o">*</span><span class="w"> </span><span class="n">a_base2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">a_ptr</span><span class="p">[</span><span class="n">l</span><span class="p">].</span><span class="n">qs</span><span class="p">[</span><span class="n">k</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">blocklen</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">qk</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">];</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">        </span><span class="n">svint8_t</span><span class="w"> </span><span class="n">a1_vec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">svld1_s8</span><span class="p">(</span><span class="n">pg_8</span><span class="p">,</span><span class="w"> </span><span class="n">a_base1</span><span class="p">);</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">        </span><span class="n">svint8_t</span><span class="w"> </span><span class="n">a2_vec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">svld1_s8</span><span class="p">(</span><span class="n">pg_8</span><span class="p">,</span><span class="w"> </span><span class="n">a_base2</span><span class="p">);</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">        </span><span class="c1">// 预转换激活数据到 16-bit</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">        </span><span class="n">svint16_t</span><span class="w"> </span><span class="n">a1_16</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">svunpklo_s16</span><span class="p">(</span><span class="n">a1_vec</span><span class="p">);</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">        </span><span class="n">svint16_t</span><span class="w"> </span><span class="n">a2_16</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">svunpklo_s16</span><span class="p">(</span><span class="n">a2_vec</span><span class="p">);</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">        </span><span class="c1">// 优化3：批量处理2列</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">ncols_interleaved</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">            </span><span class="c1">// 并行加载两列的权重数据</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">            </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="o">*</span><span class="w"> </span><span class="n">b_base0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">b_ptr</span><span class="p">[</span><span class="n">l</span><span class="p">].</span><span class="n">qs</span><span class="p">[</span><span class="n">k</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">ncols_interleaved</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">blocklen</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">blocklen</span><span class="p">];</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">            </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="o">*</span><span class="w"> </span><span class="n">b_base1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">b_ptr</span><span class="p">[</span><span class="n">l</span><span class="p">].</span><span class="n">qs</span><span class="p">[</span><span class="n">k</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">ncols_interleaved</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">blocklen</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">blocklen</span><span class="p">];</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="w">            </span><span class="n">svuint8_t</span><span class="w"> </span><span class="n">packed0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">svld1_u8</span><span class="p">(</span><span class="n">pg_8</span><span class="p">,</span><span class="w"> </span><span class="n">b_base0</span><span class="p">);</span>
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="w">            </span><span class="n">svuint8_t</span><span class="w"> </span><span class="n">packed1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">svld1_u8</span><span class="p">(</span><span class="n">pg_8</span><span class="p">,</span><span class="w"> </span><span class="n">b_base1</span><span class="p">);</span>
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="w">            </span><span class="c1">// 解包两列的权重</span>
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="w">            </span><span class="n">svint8_t</span><span class="w"> </span><span class="n">w0_low</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">svreinterpret_s8_u8</span><span class="p">(</span><span class="n">svlsl_n_u8_x</span><span class="p">(</span><span class="n">pg_8</span><span class="p">,</span><span class="w"> </span><span class="n">packed0</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">));</span>
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="w">            </span><span class="n">svint8_t</span><span class="w"> </span><span class="n">w0_high</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">svreinterpret_s8_u8</span><span class="p">(</span><span class="n">svand_n_u8_x</span><span class="p">(</span><span class="n">pg_8</span><span class="p">,</span><span class="w"> </span><span class="n">packed0</span><span class="p">,</span><span class="w"> </span><span class="mh">0xF0</span><span class="p">));</span>
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="w">             </span><span class="n">svint8_t</span><span class="w"> </span><span class="n">w1_low</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">svreinterpret_s8_u8</span><span class="p">(</span><span class="n">svlsl_n_u8_x</span><span class="p">(</span><span class="n">pg_8</span><span class="p">,</span><span class="w"> </span><span class="n">packed1</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">));</span>
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="w">            </span><span class="n">svint8_t</span><span class="w"> </span><span class="n">w1_high</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">svreinterpret_s8_u8</span><span class="p">(</span><span class="n">svand_n_u8_x</span><span class="p">(</span><span class="n">pg_8</span><span class="p">,</span><span class="w"> </span><span class="n">packed1</span><span class="p">,</span><span class="w"> </span><span class="mh">0xF0</span><span class="p">));</span>
+<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a><span class="w">            </span><span class="c1">// 转换到16-bit</span>
+<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a><span class="w">            </span><span class="n">svint16_t</span><span class="w"> </span><span class="n">w0_low_16</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">svunpklo_s16</span><span class="p">(</span><span class="n">w0_low</span><span class="p">);</span>
+<a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a><span class="w">            </span><span class="n">svint16_t</span><span class="w"> </span><span class="n">w0_high_16</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">svunpklo_s16</span><span class="p">(</span><span class="n">w0_high</span><span class="p">);</span>
+<a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a><span class="w">            </span><span class="n">svint16_t</span><span class="w"> </span><span class="n">w1_low_16</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">svunpklo_s16</span><span class="p">(</span><span class="n">w1_low</span><span class="p">);</span>
+<a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a><span class="w">            </span><span class="n">svint16_t</span><span class="w"> </span><span class="n">w1_high_16</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">svunpklo_s16</span><span class="p">(</span><span class="n">w1_high</span><span class="p">);</span>
+<a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a><span class="w">            </span><span class="c1">// 计算两列的乘积</span>
+<a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a><span class="w">            </span><span class="n">svint16_t</span><span class="w"> </span><span class="n">mul0_low</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">svmul_s16_x</span><span class="p">(</span><span class="n">pg_16</span><span class="p">,</span><span class="w"> </span><span class="n">w0_low_16</span><span class="p">,</span><span class="w"> </span><span class="n">a1_16</span><span class="p">);</span>
+<a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a><span class="w">            </span><span class="n">svint16_t</span><span class="w"> </span><span class="n">mul0_high</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">svmul_s16_x</span><span class="p">(</span><span class="n">pg_16</span><span class="p">,</span><span class="w"> </span><span class="n">w0_high_16</span><span class="p">,</span><span class="w"> </span><span class="n">a2_16</span><span class="p">);</span>
+<a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a><span class="w">            </span><span class="n">svint16_t</span><span class="w"> </span><span class="n">mul1_low</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">svmul_s16_x</span><span class="p">(</span><span class="n">pg_16</span><span class="p">,</span><span class="w"> </span><span class="n">w1_low_16</span><span class="p">,</span><span class="w"> </span><span class="n">a1_16</span><span class="p">);</span>
+<a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a><span class="w">            </span><span class="n">svint16_t</span><span class="w"> </span><span class="n">mul1_high</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">svmul_s16_x</span><span class="p">(</span><span class="n">pg_16</span><span class="p">,</span><span class="w"> </span><span class="n">w1_high_16</span><span class="p">,</span><span class="w"> </span><span class="n">a2_16</span><span class="p">);</span>
+<a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a><span class="w">            </span><span class="c1">// 合并乘积</span>
+<a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a><span class="w">            </span><span class="n">svint16_t</span><span class="w"> </span><span class="n">sum0_16</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">svadd_s16_x</span><span class="p">(</span><span class="n">pg_16</span><span class="p">,</span><span class="w"> </span><span class="n">mul0_low</span><span class="p">,</span><span class="w"> </span><span class="n">mul0_high</span><span class="p">);</span>
+<a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a><span class="w">            </span><span class="n">svint16_t</span><span class="w"> </span><span class="n">sum1_16</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">svadd_s16_x</span><span class="p">(</span><span class="n">pg_16</span><span class="p">,</span><span class="w"> </span><span class="n">mul1_low</span><span class="p">,</span><span class="w"> </span><span class="n">mul1_high</span><span class="p">);</span>
+<a id="__codelineno-3-40" name="__codelineno-3-40" href="#__codelineno-3-40"></a><span class="w">            </span><span class="n">svint16_t</span><span class="w"> </span><span class="n">scaled0_16</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">svasr_n_s16_x</span><span class="p">(</span><span class="n">pg_16</span><span class="p">,</span><span class="w"> </span><span class="n">sum0_16</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span>
+<a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a><span class="w">            </span><span class="n">svint16_t</span><span class="w"> </span><span class="n">scaled1_16</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">svasr_n_s16_x</span><span class="p">(</span><span class="n">pg_16</span><span class="p">,</span><span class="w"> </span><span class="n">sum1_16</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span>
+<a id="__codelineno-3-42" name="__codelineno-3-42" href="#__codelineno-3-42"></a><span class="w">            </span><span class="c1">// 转换到32-bit并归约</span>
+<a id="__codelineno-3-43" name="__codelineno-3-43" href="#__codelineno-3-43"></a><span class="w">            </span><span class="n">svint32_t</span><span class="w"> </span><span class="n">sum0_32</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">svunpklo_s32</span><span class="p">(</span><span class="n">scaled0_16</span><span class="p">);</span>
+<a id="__codelineno-3-44" name="__codelineno-3-44" href="#__codelineno-3-44"></a><span class="w">            </span><span class="n">svint32_t</span><span class="w"> </span><span class="n">sum1_32</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">svunpklo_s32</span><span class="p">(</span><span class="n">scaled1_16</span><span class="p">);</span>
+<a id="__codelineno-3-45" name="__codelineno-3-45" href="#__codelineno-3-45"></a><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">sumi0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">svaddv_s32</span><span class="p">(</span><span class="n">pg_32</span><span class="p">,</span><span class="w"> </span><span class="n">sum0_32</span><span class="p">);</span>
+<a id="__codelineno-3-46" name="__codelineno-3-46" href="#__codelineno-3-46"></a><span class="w">           </span><span class="kt">int</span><span class="w"> </span><span class="n">sumi1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">svaddv_s32</span><span class="p">(</span><span class="n">pg_32</span><span class="p">,</span><span class="w"> </span><span class="n">sum1_32</span><span class="p">);</span>
+<a id="__codelineno-3-47" name="__codelineno-3-47" href="#__codelineno-3-47"></a><span class="w">            </span><span class="c1">// 反量化</span>
+<a id="__codelineno-3-48" name="__codelineno-3-48" href="#__codelineno-3-48"></a><span class="w">            </span><span class="kt">float</span><span class="w"> </span><span class="n">scale_w0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GGML_FP16_TO_FP32</span><span class="p">(</span><span class="n">b_ptr</span><span class="p">[</span><span class="n">l</span><span class="p">].</span><span class="n">d</span><span class="p">[</span><span class="n">j</span><span class="p">]);</span>
+<a id="__codelineno-3-49" name="__codelineno-3-49" href="#__codelineno-3-49"></a><span class="w">            </span><span class="kt">float</span><span class="w"> </span><span class="n">scale_w1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GGML_FP16_TO_FP32</span><span class="p">(</span><span class="n">b_ptr</span><span class="p">[</span><span class="n">l</span><span class="p">].</span><span class="n">d</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]);</span>
+<a id="__codelineno-3-50" name="__codelineno-3-50" href="#__codelineno-3-50"></a><span class="w">            </span><span class="kt">float</span><span class="w"> </span><span class="n">scale_a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GGML_FP16_TO_FP32</span><span class="p">(</span><span class="n">a_ptr</span><span class="p">[</span><span class="n">l</span><span class="p">].</span><span class="n">d</span><span class="p">);</span>
+<a id="__codelineno-3-51" name="__codelineno-3-51" href="#__codelineno-3-51"></a><span class="w">            </span><span class="n">sumf</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">sumi0</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">scale_w0</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">scale_a</span><span class="p">;</span>
+<a id="__codelineno-3-52" name="__codelineno-3-52" href="#__codelineno-3-52"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">ncols_interleaved</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-53" name="__codelineno-3-53" href="#__codelineno-3-53"></a><span class="w">                </span><span class="n">sumf</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">sumi1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">scale_w1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">scale_a</span><span class="p">;}</span>
+</code></pre></div>
+<p>首先预加载和转换激活数据到16位精度以便在多列间复用</p>
+<p>然后批量处理两列权重数据，解包4位量化权重，通过左移和掩码操作分离高低4位</p>
+<p>接着将所有数据提升到16位精度进行乘法运算避免溢出，</p>
+<p>最后通过算术右移进行缩放、归约到标量并进行反量化</p>
+<h1 id="_2">测试结果<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h1>
+<div align = center><img src="./assets/image-20250611123913913.png" width = 50%></div>
+
+<p><img src="./assets/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-06-11%20124033.png" width = 50%></p>
+<p><img src="./assets/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-06-11%20124040.png" width=50%></p>
+<p><img src="./assets/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-06-11%20124047.png" width = 50%></p>
 
 
 

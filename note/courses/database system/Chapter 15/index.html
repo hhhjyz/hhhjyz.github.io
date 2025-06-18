@@ -2706,8 +2706,9 @@ the operation is ignored.</p>
 <li>list of pages in the buffer that have been updated</li>
 <li>PageLSN of the page</li>
 <li>RecLSN is an LSN such that log records before this LSN have already been applied to the page version on disk
-每一页都有 PageLSN 和 RecLSN, Rec 反应的是最近的被反映到数据库的日志。</li>
+每一页都有 PageLSN 和 RecLSN,</li>
 </ul>
+<p>pageLSN 和 recLSN 对应一个 page 尚未落盘的最新 log 和最老 log。</p>
 <div class="admonition example">
 <p class="admonition-title">ARIES Data Structures</p>
 <p><img alt="alt text" src="../assets/image-46.png" /></p>

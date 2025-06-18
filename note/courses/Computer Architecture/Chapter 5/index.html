@@ -1725,6 +1725,69 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#directory-based-coherence-protocols" class="md-nav__link">
+    <span class="md-ellipsis">
+      Directory-Based Coherence Protocols
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#false-sharing" class="md-nav__link">
+    <span class="md-ellipsis">
+      False Sharing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#memory-consistency" class="md-nav__link">
+    <span class="md-ellipsis">
+      Memory Consistency
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mmp" class="md-nav__link">
+    <span class="md-ellipsis">
+      MMP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cow" class="md-nav__link">
+    <span class="md-ellipsis">
+      COW
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dsa" class="md-nav__link">
+    <span class="md-ellipsis">
+      DSA
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tpu-isa" class="md-nav__link">
+    <span class="md-ellipsis">
+      TPU ISA
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2681,6 +2744,69 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#directory-based-coherence-protocols" class="md-nav__link">
+    <span class="md-ellipsis">
+      Directory-Based Coherence Protocols
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#false-sharing" class="md-nav__link">
+    <span class="md-ellipsis">
+      False Sharing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#memory-consistency" class="md-nav__link">
+    <span class="md-ellipsis">
+      Memory Consistency
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mmp" class="md-nav__link">
+    <span class="md-ellipsis">
+      MMP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cow" class="md-nav__link">
+    <span class="md-ellipsis">
+      COW
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dsa" class="md-nav__link">
+    <span class="md-ellipsis">
+      DSA
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tpu-isa" class="md-nav__link">
+    <span class="md-ellipsis">
+      TPU ISA
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3595,8 +3721,205 @@ Q(2)</p>
 <a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>C1.1 (M, A104, 0204)
 </code></pre></div>
 Q(3)</p>
-<p>```txt</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>C0, W, A118, 0308
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>C0 write miss
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>C0 write back A108
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>Memory A108, 0108 → 0208
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>Memory returns 0118 to C0
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>C0.2 (M, A118, 0118)
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>C0.2 (M, A118, 0308)
+</code></pre></div>
 </div>
+<p><strong>MESI Protocol</strong></p>
+<ul>
+<li>在 MSI 协议的基础上增加了一个状态：Exclusive（独占状态）。当一个缓存块被某个处理器独占时，它可以直接写入而不需要通知其他处理器。</li>
+</ul>
+<p>exclusive-&gt; read by others/read miss -&gt;shared</p>
+<p>exclusive-&gt; write -&gt;modified</p>
+<p>MESI writes exclusive to modified silently, without broadcast on bus</p>
+<ul>
+<li>Invalid (无效)： 缓存项中包含的数据无效。</li>
+<li>Shared (共享)： 此行数据存在于多个缓存项中，并且内存中的数据是最新数据。</li>
+<li>Exclusive (独占)： 没有其他缓存项包含此行数据，并且内存中的数据是最新数据。</li>
+<li>Modified (已修改)： 该项目的数据有效，但内存中的数据无效，并且在其他缓存项中没有该数据的副本。</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><img alt="alt text" src="../assets/image-83.png" />
+<img alt="alt text" src="../assets/image-84.png" /></p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><img alt="alt text" src="../assets/image-85.png" />
+<img alt="alt text" src="../assets/image-86.png" />
+<img alt="alt text" src="../assets/image-87.png" /></p>
+</div>
+<p><strong>MOESI Protocol</strong></p>
+<ul>
+<li>在 MESI 协议的基础上增加了一个状态：Owned（拥有状态）。indicates that the associated block is owned by that cache and out-of-date in memory</li>
+</ul>
+<p>Modified -&gt; Owned without writing the shared block to memory</p>
+<h4 id="directory-based-coherence-protocols">Directory-Based Coherence Protocols<a class="headerlink" href="#directory-based-coherence-protocols" title="Permanent link">&para;</a></h4>
+<p><img alt="alt text" src="../assets/image-88.png" /></p>
+<p>在分布式内存多处理器中，每个节点都会添加一个目录，以实现缓存一致性。</p>
+<p>目录保存每个可能被缓存的块的状态。目录中的信息包括哪些缓存包含该块的副本、该块是否为脏数据等等。</p>
+<p>for each block, maintain state:</p>
+<ul>
+<li>shared (S): 一个或多个节点已缓存该块，内存中的值是最新的（以及所有缓存中的值）。</li>
+<li>Uncached ： 该块未被任何节点缓存。</li>
+<li>Modified (M): 只有一个节点拥有该缓存块的副本，并且该副本是写入该块的，因此内存副本已过期。该处理器被称为该块的所有者。</li>
+</ul>
+<p><img alt="" src="../assets/image-89.png" /></p>
+<ul>
+<li>P = requesting node number</li>
+<li>A = requested address</li>
+<li>D = data contents</li>
+</ul>
+<p>State transition diagram for an individual cache block in a directory-based system：
+<img alt="alt text" src="../assets/image-90.png" /></p>
+<p>The state trasistion diagram for the directory </p>
+<p><img alt="alt text" src="../assets/image-91.png" /></p>
+<ul>
+<li>对于uncached block：<ul>
+<li>Read miss: requesting node收到请求的数据并且称为,the only sharing node , state <strong>shared</strong></li>
+<li>Write miss: requesting node收到请求的数据并且称为,the only sharing node , state <strong>modified</strong></li>
+</ul>
+</li>
+<li>对于shared block：<ul>
+<li>The requesting node is sent the requested data from memory, node is added to sharing set</li>
+<li>Write miss: 请求节点收到值，共享集中的所有节点都会收到无效消息，共享集仅包含请求节点，块现在是独占的。</li>
+</ul>
+</li>
+<li>对于modified block：<ul>
+<li>Read miss: 向所有者发送数据获取消息，块变为共享，所有者将数据发送到目录，数据写回内存，共享者集包含旧所有者和请求者</li>
+<li>Write miss: 向旧所有者发送消息以使值无效并将值发送到目录，请求者成为新所有者，块保持独占</li>
+<li>Data write back: Block becomes uncached, sharer set is empty</li>
+</ul>
+</li>
+</ul>
+<h4 id="false-sharing">False Sharing<a class="headerlink" href="#false-sharing" title="Permanent link">&para;</a></h4>
+<p>本身两个线程之间的变量没有关系，但是在同一个cacheline里面，会导致cache的状态频繁切换，性能降低</p>
+<p><img alt="" src="../assets/image-92.png" /></p>
+<p><img alt="alt text" src="../assets/image-93.png" /></p>
+<p><strong>Solution</strong>:</p>
+<p>通过内存填充把两个变量分别放到两个cache：</p>
+<p><img alt="alt text" src="../assets/image-94.png" /></p>
+<h4 id="memory-consistency">Memory Consistency<a class="headerlink" href="#memory-consistency" title="Permanent link">&para;</a></h4>
+<p>Sequential consistency:只要满足以下条件，执行结果就应该相同，但会降低性能</p>
+<ul>
+<li>每个处理器上的访问保持有序。</li>
+<li>不同处理器上的访问可以任意交错</li>
+</ul>
+<p>关键思想：允许读写无序完成，但使用同步操作来强制排序</p>
+<p><strong>Relaxed consistency Models</strong></p>
+<ul>
+<li>
+<p><strong>规则：</strong></p>
+<ul>
+<li>X <span class="arithmatex">\(\rightarrow\)</span> Y<ul>
+<li>操作 X 必须在操作 Y 完成之前完成。</li>
+<li>顺序一致性要求：<ul>
+<li>R <span class="arithmatex">\(\rightarrow\)</span> W, R <span class="arithmatex">\(\rightarrow\)</span> R, W <span class="arithmatex">\(\rightarrow\)</span> R, W <span class="arithmatex">\(\rightarrow\)</span> W (读写、读读、写读、写写操作都必须保持顺序)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>放宽 W <span class="arithmatex">\(\rightarrow\)</span> R (写后读)</strong></p>
+<ul>
+<li>“总存储顺序”或处理器一致性</li>
+</ul>
+</li>
+<li>
+<p><strong>放宽 W <span class="arithmatex">\(\rightarrow\)</span> W 和 W <span class="arithmatex">\(\rightarrow\)</span> R (写后写和写后读)</strong></p>
+<ul>
+<li>“部分存储顺序”</li>
+</ul>
+</li>
+<li>
+<p><strong>放宽 R <span class="arithmatex">\(\rightarrow\)</span> W, R <span class="arithmatex">\(\rightarrow\)</span> R, W <span class="arithmatex">\(\rightarrow\)</span> W 和 W <span class="arithmatex">\(\rightarrow\)</span> R (读写、读读、写写和写读)</strong></p>
+<ul>
+<li>“弱顺序”和“释放一致性”</li>
+</ul>
+</li>
+</ul>
+<h4 id="mmp">MMP<a class="headerlink" href="#mmp" title="Permanent link">&para;</a></h4>
+<p>MPP 系统是由数百个处理器组成的大规模并行计算机系统。</p>
+<p>过去，它主要用于科学计算和工程模拟等计算密集型场合，但现在也广泛应用于商业和网络应用中。</p>
+<p>开发困难，价格高昂，市场有限。它是国家综合实力的象征。</p>
+<p>特点：</p>
+<ul>
+<li>MPP 系统通常使用标准的商用 CPU 作为其处理器。</li>
+<li>MPP 系统使用高性能的专用互连网络，该网络可以低延迟、高带宽地传递消息。</li>
+<li>MPP 系统具有强大的输入/输出能力。</li>
+<li>MPP 系统能够进行特殊的容错处理。</li>
+</ul>
+<p><img alt="alt text" src="../assets/image-95.png" /></p>
+<h4 id="cow">COW<a class="headerlink" href="#cow" title="Permanent link">&para;</a></h4>
+<ul>
+<li>COW 系统由大量通过商用网络连接在一起的 PC 或工作站组成。</li>
+<li>COW 可以完全使用市售组件组装。这些商用组件是批量生产的产品，因此它们可以实现更高的性价比。</li>
+<li>COW 主要有两种类型：集中式和分散式。</li>
+</ul>
+<p><img alt="alt text" src="../assets/image-96.png" /></p>
+<p><img alt="alt text" src="../assets/image-97.png" /></p>
+<p><img alt="alt text" src="../assets/image-98.png" /></p>
+<h4 id="dsa">DSA<a class="headerlink" href="#dsa" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>摩尔定律促成了：</p>
+<ul>
+<li>深度内存层次结构</li>
+<li>宽 SIMD 单元</li>
+<li>深度流水线</li>
+<li>分支预测</li>
+<li>乱序执行</li>
+<li>推测性预取</li>
+<li>多线程</li>
+<li>多处理器</li>
+</ul>
+</li>
+<li>
+<p>目标：</p>
+<ul>
+<li>从对体系结构无感的软件中提取性能</li>
+</ul>
+</li>
+</ul>
+<p><strong>DSA（领域专用体系结构）的指导原则</strong></p>
+<ul>
+<li>使用专用内存以最小化数据移动。</li>
+<li>将资源投入到更多的算术单元或更大的内存中。</li>
+<li>使用与领域匹配的最简单的并行形式。</li>
+<li>将数据大小和类型简化为该领域所需的最简单形式。</li>
+<li>使用领域专用编程语言。</li>
+</ul>
+<h4 id="tpu-isa">TPU ISA<a class="headerlink" href="#tpu-isa" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Read_Host_Memory</strong><ul>
+<li>从 CPU 内存中读取数据到统一缓冲区。</li>
+</ul>
+</li>
+<li><strong>Read_Weights</strong><ul>
+<li>从权重内存中读取权重到权重 FIFO 作为矩阵单元的输入。</li>
+</ul>
+</li>
+<li><strong>MatrixMatrixMultiply/Convolve</strong><ul>
+<li>执行矩阵-矩阵乘法、向量-矩阵乘法、元素级矩阵乘法、元素级向量乘法，或从统一缓冲区到累加器的卷积。</li>
+<li>接受一个可变大小的 B*256 输入，将其乘以一个 256*256 的常量输入，并生成一个 B*256 输出，需要 B 个流水线周期才能完成。</li>
+</ul>
+</li>
+<li><strong>Activate</strong><ul>
+<li>计算激活函数。</li>
+</ul>
+</li>
+<li><strong>Write_Host_Memory</strong><ul>
+<li>将数据从统一缓冲区写入主机内存。</li>
+</ul>
+</li>
+</ul>
 
 
 
