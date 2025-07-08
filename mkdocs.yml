@@ -1,68 +1,78 @@
-site_name: hhhjyz
-nav: 
-    - Home: index.md
-    - 课程笔记:
-        - 高级数据结构与算法分析:
-            - Lec11 Approximation: note/courses/ads/Lec11.md
-            - Lec14 Parallel Algorithm: note/courses/ads/Lec14.md
-        - 计算机组成:
-            - Chapter 1: note/courses/computer_organization/Chapter 1.md
-            - Chapter 2: note/courses/computer_organization/Chapter 2.md
-            - Chapter 4: note/courses/computer_organization/Chapter 4.md
-            - Chapter 5: note/courses/computer_organization/Chapter 5.md
-            - Chapter 6: note/courses/computer_organization/Chapter 6.md
+site_name: hhhjyz的笔记本
+site_url: https://hhhjyz.github.io
+repo_name: hhhjyz/note
+repo_url: https://github.com/hhhjyz/hhhjyz.github.io
+site_description: hhhjyz的笔记本
+copyright: Copyright &copy; hhhjyz/All Rights Reserved.
+site_author: hhhjyz
+
 theme: 
     favicon: image/head.jpg
     logo: image/head.jpg
     name: material
     palette:
-        primary: teal
+        - media: "(prefers-color-scheme: light)" 
+          scheme: default  #配色方案：浅色模式
+          primary: brown  #原色，默认蓝，用于标题、侧边栏、文本链接和其他几个组件
+          accent: brown  #强调色，默认蓝，可以交互的元素如悬停链接、按钮和滚动条
+          toggle:
+            icon: material/weather-sunny #图标，太阳
+            name: Switch to dark mode
+        - media: "(prefers-color-scheme: dark)"  
+          scheme: slate  #配色方案：深色模式
+      # primary: Brown  #原色，默认蓝，用于标题、侧边栏、文本链接和其他几个组件
+    language: zh
+    font: false
+    features:
+        - content.code.annotate
+        - navigation.tracking
+        - navigation.tabs
+        - navigation.indexes
+        - navigation.top
+
 
 markdown_extensions:
-    - admonition
-    - attr_list
-    - codehilite:
-        guess_lang: true
-    - meta
-    - md_in_html
-    - pymdownx.arithmatex:
-        generic: true
-    - pymdownx.betterem
-    - pymdownx.blocks.caption
-    - pymdownx.caret
-    - pymdownx.critic
-    - pymdownx.details
-    - pymdownx.emoji:
-        emoji_index: !!python/name:material.extensions.emoji.twemoji
-        emoji_generator: !!python/name:material.extensions.emoji.to_svg
-    - pymdownx.highlight:
-        anchor_linenums: true
-        line_spans: __span
-        pygments_lang_class: true
-    - pymdownx.inlinehilite
-    - pymdownx.keys
-    - pymdownx.mark
-    - pymdownx.snippets
-    - pymdownx.superfences
-    - pymdownx.tabbed:
-        alternate_style: true
-    - pymdownx.tasklist:
-        custom_checkbox: true
-    - toc:
-        permalink: true
-        title: 目录
+  - toc:
+      permalink: true
+      toc_depth: 4
+  - meta
+  - def_list
+  - attr_list
+  - md_in_html
+  - sane_lists
+  - admonition
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.snippets
+  - pymdownx.magiclink
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.arithmatex:
+      generic: true
+
 
 plugins: 
     - search
-    - glightbox
 
 extra_css:
-    #字体配置
+    - css/round.css
     - css/extra.css
+    - https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
+    - https://cdn.jsdelivr.net/npm/lxgw-wenkai-lite-webfont@1.1.0/style.css
+    - https://cdn.jsdelivr.net/npm/lxgw-wenkai-tc-webfont@1.0.0/style.css
+    - https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css
     - https://fonts.loli.net/css2?family=Noto+Serif+SC&display=swap
     - https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
     - https://unpkg.com/katex@0/dist/katex.min.css
-
 extra_javascript:
     - javascripts/mathjax.js
     - javascripts/katex.js
@@ -70,3 +80,65 @@ extra_javascript:
     - https://unpkg.com/katex@0/dist/katex.min.js
     - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
 
+nav: 
+    - Home: index.md
+    - 课程笔记:
+        - 高级数据结构与算法分析:
+            - Review: note/courses/ads/Final.md
+            - Lec8 Dynamic Programming: note/courses/ads/Lec8.md
+            - Lec9 Greedy Algorithm: note/courses/ads/Lec 9.md
+            - Lec10 NP-Completeness: note/courses/ads/Lec 10.md
+            - Lec11 Approximation: note/courses/ads/Lec11.md
+            - Lec12 Local Search: note/courses/ads/Lec 12.md
+            - Lec14 Parallel Algorithm: note/courses/ads/Lec14.md
+        - 计算机组成:
+            - Chapter 1: note/courses/computer_organization/Chapter 1.md
+            - Chapter 2: note/courses/computer_organization/Chapter 2.md
+            - Chapter 4: note/courses/computer_organization/Chapter 4.md
+            - Chapter 5: note/courses/computer_organization/Chapter 5.md
+            - Chapter 6: note/courses/computer_organization/Chapter 6.md
+        - 大学物理实验: note/courses/physics/大物实验期末复习.md
+        - 数据库系统: 
+            - Chpater 1: note/courses/database system/chaper 1 Introduction.md
+            - Chapter 2: note/courses/database system/Chapter 2 Relational Modeling.md
+            - Chapter 3: note/courses/database system/Chapter 3.md
+            - Chapter 4: note/courses/database system/Chapter 4.md
+            - Chapter 5: note/courses/database system/Chapter 5.md
+            - Chapter 6: note/courses/database system/Chapter 6.md
+            - Chapter 7: note/courses/database system/Chapter 7.md
+            - Chapter 8: note/courses/database system/Chapter 8.md
+            - Chapter 9: note/courses/database system/Chapter 9.md
+            - Chapter 10: note/courses/database system/Chapter 10.md
+            - Chapter 11: note/courses/database system/Chapter 11.md
+            - Chapter 12: note/courses/database system/Chapter 12.md
+            - Chapter 13: note/courses/database system/Chapter 13.md
+            - Chapter 14: note/courses/database system/Chapter 14.md 
+            - Chapter 15: note/courses/database system/Chapter 15.md
+        - 计算机体系结构:
+            - Chapter 1: note/courses/Computer Architecture/Chapter 1 Fundamentals of computer design.md
+            - Chapter 2: note/courses/Computer Architecture/Chapter 2.md
+            - Chapter 3: note/courses/Computer Architecture/Chapter 3.md
+            - Chapter 4: note/courses/Computer Architecture/Chapter 4.md
+            - Chapter 5: note/courses/Computer Architecture/Chapter 5.md
+        - 人工智能:
+            - Chapter 2: note/courses/AI/Chapter 2.md
+            - Chapter 3: note/courses/AI/Chapter 3.md
+            - Chapter 4: note/courses/AI/Chapter 4.md
+            - Chapter 5: note/courses/AI/Chapter 5.md
+            - Chapter 6: note/courses/AI/Chapter 6.md
+
+        - 面向对象程序设计:
+            - Lec3: note/courses/OOP/Lecture 3 class.md
+            - Lec4: note/courses/OOP/Lecture 4.md
+            - Lec5: note/courses/OOP/Lecture 5.md
+            - Lec6: note/courses/OOP/Lecture 6.md
+            - Lec8: note/courses/OOP/Lecture 8 Stream.md
+            - Lec9: note/courses/OOP/Lecture 9 Exception.md
+            - Lec10: note/courses/OOP/Chapter 10.md
+
+    - 自学:
+        - dive into deep learning:
+            - 1.引言: note/self-study/d2l/1 引言.md
+        - 工具:
+            - conda: note/self-study/tools/conda.md
+    - ZJU工具: use.md
