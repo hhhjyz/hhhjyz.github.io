@@ -3,7 +3,7 @@
   "livePreview": true,
   "showLineNumber": true,
   "strictLineBreaks": false,
-  "showInlineTitle": false,
+  "showInlineTitle": true,
   "pdfExportSettings": {
     "includeName": true,
     "pageSize": "A4",
@@ -11,13 +11,14 @@
     "margin": "0",
     "downscalePercent": 100
   },
-  "autoPairMarkdown": false,
-  "attachmentFolderPath": "./.assets",
+  "autoPairMarkdown": true,
+  "attachmentFolderPath": "./assets",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
-  "autoPairBrackets": false,
-  "useTab": false,
+  "autoPairBrackets": true,
+  "useTab": true,
   "showUnsupportedFiles": false,
   "vimMode": false,
-  "promptDelete": false
+  "promptDelete": false,
+  "alwaysUpdateLinks": true
 }

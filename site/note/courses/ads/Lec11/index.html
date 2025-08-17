@@ -1,30 +1,36 @@
 
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="zh" class="no-js">
   <head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="hhhjyz的笔记本">
       
       
+        <meta name="author" content="hhhjyz">
       
-        <link rel="prev" href="../../../..">
+      
+        <link rel="canonical" href="https://hhhjyz.github.io/note/courses/ads/Lec11/">
       
       
-        <link rel="next" href="../Lec14/">
+        <link rel="prev" href="../Lec%2010/">
+      
+      
+        <link rel="next" href="../Lec%2012/">
       
       
       <link rel="icon" href="../../../../image/head.jpg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
     
     
       
-        <title>Lec11 Approximation - hhhjyz</title>
+        <title>Lec11 Approximation - hhhjyz的笔记本</title>
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6f8fc17f.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.342714a4.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -38,13 +44,9 @@
     
     
       
-        
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-      
     
+    
+      <link rel="stylesheet" href="../../../../css/round.css">
     
       <link rel="stylesheet" href="../../../../css/extra.css">
     
@@ -61,24 +63,17 @@
     
     
     
-   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-    html.glightbox-open { overflow: initial; height: 100%; }
-    .gslide-title { margin-top: 0px; user-select: text; }
-    .gslide-desc { color: #666; user-select: text; }
-    .gslide-image img { background: white; }
-    .gscrollbar-fixer { padding-right: 15px; }
-    .gdesc-inner { font-size: 0.75rem; }
-    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
+  </head>
   
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo">
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="light">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -88,7 +83,7 @@
       
         
         <a href="#approximation" class="md-skip">
-          Skip to content
+          跳转至
         </a>
       
     </div>
@@ -99,11 +94,9 @@
     
       
 
-  
-
-<header class="md-header md-header--shadow" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../.." title="hhhjyz" class="md-header__button md-logo" aria-label="hhhjyz" data-md-component="logo">
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../../.." title="hhhjyz的笔记本" class="md-header__button md-logo" aria-label="hhhjyz的笔记本" data-md-component="logo">
       
   <img src="../../../../image/head.jpg" alt="logo">
 
@@ -116,7 +109,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            hhhjyz
+            hhhjyz的笔记本
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -130,28 +123,56 @@
     </div>
     
       
+        <form class="md-header__option" data-md-component="palette">
+  
     
     
     
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="light"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
       </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Search">
+      <nav class="md-search__options" aria-label="查找">
         
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
@@ -162,7 +183,7 @@
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Initializing search
+            正在初始化搜索引擎
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -170,7 +191,20 @@
     </div>
   </div>
 </div>
+      
     
+    
+      <div class="md-header__source">
+        <a href="https://github.com/hhhjyz/hhhjyz.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hhhjyz/note
+  </div>
+</a>
+      </div>
     
   </nav>
   
@@ -180,6 +214,121 @@
       
       
         
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../Final/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  课程笔记
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../self-study/EECS498/Lec2%20Image%20Classification/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  自学
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../use/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  ZJU工具
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
           
         
       
@@ -194,16 +343,30 @@
                     
 
 
+  
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../.." title="hhhjyz" class="md-nav__button md-logo" aria-label="hhhjyz" data-md-component="logo">
+    <a href="../../../.." title="hhhjyz的笔记本" class="md-nav__button md-logo" aria-label="hhhjyz的笔记本" data-md-component="logo">
       
   <img src="../../../../image/head.jpg" alt="logo">
 
     </a>
-    hhhjyz
+    hhhjyz的笔记本
   </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hhhjyz/hhhjyz.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hhhjyz/note
+  </div>
+</a>
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -217,8 +380,10 @@
       <a href="../../../.." class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Home
+    
   </span>
   
 
@@ -237,20 +402,45 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
+  
   
   <span class="md-ellipsis">
     课程笔记
+    
   </span>
   
 
@@ -274,6 +464,26 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
@@ -286,8 +496,10 @@
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     高级数据结构与算法分析
+    
   </span>
   
 
@@ -300,6 +512,98 @@
             高级数据结构与算法分析
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Final/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Review
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Lec8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lec8 Dynamic Programming
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Lec%209/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lec9 Greedy Algorithm
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Lec%2010/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lec10 NP-Completeness
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -320,8 +624,10 @@
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
+  
   <span class="md-ellipsis">
     Lec11 Approximation
+    
   </span>
   
 
@@ -331,16 +637,16 @@
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
+  
   <span class="md-ellipsis">
     Lec11 Approximation
+    
   </span>
   
 
       </a>
       
         
-
-  
 
 <nav class="md-nav md-nav--secondary" aria-label="目录">
   
@@ -371,6 +677,96 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="2 集装箱问题（Approximate Bin Packing）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-online-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Online Algorithms
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-offline-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 Offline Algorithms
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-knapsack-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      3 Knapsack Problems
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3 Knapsack Problems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-0-1-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 0-1 version
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-k-center-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      4 K-center Problems
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4 K-center Problems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-naive-greedy" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Naive Greedy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-2-r-greedy" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 2-r Greedy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-smarter-greedy" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 Smarter Greedy
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -389,11 +785,36 @@
   
   
     <li class="md-nav__item">
+      <a href="../Lec%2012/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lec12 Local Search
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Lec14/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Lec14 Parallel Algorithm
+    
   </span>
   
 
@@ -419,6 +840,22 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -431,8 +868,10 @@
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     计算机组成
+    
   </span>
   
 
@@ -456,8 +895,10 @@
       <a href="../../computer_organization/Chapter%201/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Chapter 1
+    
   </span>
   
 
@@ -477,8 +918,10 @@
       <a href="../../computer_organization/Chapter%202/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Chapter 2
+    
   </span>
   
 
@@ -498,8 +941,10 @@
       <a href="../../computer_organization/Chapter%204/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Chapter 4
+    
   </span>
   
 
@@ -519,8 +964,10 @@
       <a href="../../computer_organization/Chapter%205/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Chapter 5
+    
   </span>
   
 
@@ -540,8 +987,662 @@
       <a href="../../computer_organization/Chapter%206/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Chapter 6
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../physics/%E5%A4%A7%E7%89%A9%E5%AE%9E%E9%AA%8C%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    大学物理实验
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    数据库系统
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            数据库系统
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database%20system/chaper%201%20Introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chpater 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database%20system/Chapter%202%20Relational%20Modeling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database%20system/Chapter%203/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database%20system/Chapter%204/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database%20system/Chapter%205/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 5
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    计算机体系结构
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            计算机体系结构
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Computer%20Architecture/Chapter%201%20Fundamentals%20of%20computer%20design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Computer%20Architecture/Chapter%202/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Computer%20Architecture/Chapter%203/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Computer%20Architecture/Chapter%204/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Computer%20Architecture/Chapter%205/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 5
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    人工智能
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            人工智能
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/Chapter%202/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/Chapter%203/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/Chapter%204/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/Chapter%205/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 5
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/Chapter%206/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 6
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    面向对象程序设计
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            面向对象程序设计
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP/Lecture%208%20Stream/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lec8
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP/Lecture%209%20Exception/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lec9
+    
   </span>
   
 
@@ -566,6 +1667,534 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    自学
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            自学
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    EECS498-005
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            EECS498-005
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../self-study/EECS498/Lec2%20Image%20Classification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Image Classification
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../self-study/EECS498/Lec3%20Linear%20Classifiers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linear Classifiers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../self-study/EECS498/Lec4%20Optimization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Optimization
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../self-study/EECS498/Lec5%20Neural%20Network/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Neural Network
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../self-study/EECS498/Lec6%20Backpropagation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Backpropagation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../self-study/EECS498/Lec8%20CNN%20Architectures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CNN Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../self-study/EECS498/Lec9%20Hardware%20and%20Software/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hardware and Software
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../self-study/EECS498/Lec10%20Training%201/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Training 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../self-study/EECS498/Lec11%20Training%202/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Training 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../self-study/EECS498/Lec12%20Recurrent%20Neural%20Networks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Recurrent Neural Networks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../self-study/EECS498/Lec13%20Attention/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Attention
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../self-study/EECS498/Lec14%20Visualizing%20and%20Understanding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Visualizing and Understanding
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../self-study/EECS498/Lec15%20Object%20Detection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Object Detection
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    工具
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            工具
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../self-study/tools/conda/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    conda
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../use/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ZJU工具
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -578,8 +2207,6 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
-
-  
 
 <nav class="md-nav md-nav--secondary" aria-label="目录">
   
@@ -610,6 +2237,96 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="2 集装箱问题（Approximate Bin Packing）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-online-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Online Algorithms
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-offline-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 Offline Algorithms
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-knapsack-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      3 Knapsack Problems
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3 Knapsack Problems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-0-1-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 0-1 version
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-k-center-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      4 K-center Problems
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4 K-center Problems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-naive-greedy" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Naive Greedy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-2-r-greedy" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 2-r Greedy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-smarter-greedy" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 Smarter Greedy
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -627,6 +2344,10 @@
                   
 
 
+  
+  
+
+
 <h1 id="approximation">Approximation<a class="headerlink" href="#approximation" title="Permanent link">&para;</a></h1>
 <p>————Dealing with Hard problems
 几种思路：
@@ -636,7 +2357,7 @@
 <h2 id="1-approximation-ratio">1 Approximation Ratio<a class="headerlink" href="#1-approximation-ratio" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p>[!note] Definition
-<a class="glightbox" href="../assets/Approximation/file-20241125131219685.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/Approximation/file-20241125131219685.png" /></a></p>
+<img alt="" src="../assets/Approximation/file-20241125131219685.png" /></p>
 </blockquote>
 <p>对于一个优化问题，假设 ( <span class="arithmatex">\(\text{OPT}\)</span>) 是最优解的值，( <span class="arithmatex">\(\text{ALG}\)</span>) 是近似算法给出的解的值。近似比定义为：</p>
 <ul>
@@ -647,12 +2368,131 @@
 - ( <span class="arithmatex">\(\text{ALG}\)</span> ) 是近似算法的解的值。
 - ( <span class="arithmatex">\(\text{OPT}\)</span>) 是最优解的值。</p>
 <p>近似比越接近1，表示近似算法的解越接近最优解。一个近似比为 ( <span class="arithmatex">\(\rho(n)\)</span> ) 的算法被称为 ( <span class="arithmatex">\(\rho(n)\)</span> )-近似算法。</p>
-<p><strong><em>近似模式（Approximation Scheme)</em></strong>:
- 给定了一个问题的实例，还给定了一个常数<span class="arithmatex">\(\varepsilon\)</span>,如果对于这个实例，我们可以得到一个近似比为<span class="arithmatex">\(1+\varepsilon\)</span>的近似算法的话，我们就称其为近似模式。近似算法的事件复杂度可能和问题规模和近似比都成多项式的关系</p>
-<p><strong><em>完全多项式时间的近似算法（PTAS）：</em></strong>
-和问题规模和近似比都成多项式的关系</p>
+<p>最优解的<strong>近似方案</strong>(approximation scheme)指的是一类近似算法，它不仅能够将输入作为问题的实例，而且对于任意给定值<span class="arithmatex">\(\varepsilon &gt; 0\)</span>，它是一个<span class="arithmatex">\((1 + \varepsilon)\)</span>近似算法。</p>
+<ul>
+<li><strong>多项式时间近似方案</strong>(polynomial-time approximation scheme, PTAS)：对于任意给定值<span class="arithmatex">\(\varepsilon &gt; 0\)</span>，当输入实例规模为<span class="arithmatex">\(n\)</span>时，该方案能在多项式时间内完成计算，时间复杂度可记为<span class="arithmatex">\(O(n^{f(\frac{1}{\varepsilon})})\)</span><ul>
+<li><strong>满多项式时间近似方案</strong>(fully polynomial-time approximation scheme, FPTAS)：在PTAS的基础上，要求该方案的运行时间关于<span class="arithmatex">\(n\)</span>和<span class="arithmatex">\(\varepsilon\)</span>都是多项式级的，时间复杂度可记为<span class="arithmatex">\(O(n^{O(1)} (\dfrac{1}{\varepsilon})^{O(1)})\)</span></li>
+<li><strong>高效多项式时间近似方案</strong>(efficient polynomial-time approximation scheme, <strong>EPTAS</strong>)：在 PTAS 的基础上，要求该方案的运行时间是与 εε 无关，关于 nn 的多项式时间，即时间复杂度为<span class="arithmatex">\(O(n^{O(1)f(\frac{1}{\varepsilon})})\)</span></li>
+</ul>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>如果A问题能被规约到B，且B问题有一个<span class="arithmatex">\(\belta\)</span>-近似算法，那么并不能说明A一定也有一个<span class="arithmatex">\(\belta\)</span>近似算法</p>
+</div>
 <h2 id="2-approximate-bin-packing">2 集装箱问题（Approximate Bin Packing）<a class="headerlink" href="#2-approximate-bin-packing" title="Permanent link">&para;</a></h2>
 <p>给定 N 个大小分别为 <span class="arithmatex">\(S_1,S_2,S_N\)</span> 的物品，满足 <span class="arithmatex">\(\forall 1≤i≤N,0&lt;S_i≤1\)</span>，并假设有若干个容量为 1 的桶。现在请你求出能够装下所有物品的最小桶数。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>这是一个NPH问题，而其决策版本，给定K个桶，能否装下N个物品是一个NPC问题</p>
+</div>
+<h3 id="21-online-algorithms">2.1 Online Algorithms<a class="headerlink" href="#21-online-algorithms" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Next Fit : 按照输入顺序一个个方物品,<span class="arithmatex">\(O(N)\)</span>;令M为装下这些物品的最优解桶数，那么该方法所得同属不超过2M-1</li>
+<li>First Fit : 对于当前物品，找到第一个现存的能够容得下它的桶，如果不存在这样的桶再添加新的桶。<span class="arithmatex">\(O(NlogN)\)</span>,所得桶数不超过<span class="arithmatex">\(\frac{17M}{10}\)</span></li>
+<li>Best Fit: 和FF差不多</li>
+</ul>
+<p>对于本题所有的近似算法，得到的近似解桶数至少是最优解的5/3倍</p>
+<h3 id="22-offline-algorithms">2.2 Offline Algorithms<a class="headerlink" href="#22-offline-algorithms" title="Permanent link">&para;</a></h3>
+<p>先将物品按大小的非递增顺序排序，然后用FF or BF</p>
+<p>FFD所得桶数不超过<span class="arithmatex">\(\frac {11M}9+\frac 69\)</span></p>
+<h2 id="3-knapsack-problems">3 Knapsack Problems<a class="headerlink" href="#3-knapsack-problems" title="Permanent link">&para;</a></h2>
+<p>问题： 分数版本的0-1背包问题</p>
+<p>按价值密度的降序挑选物品，直到背包被填满</p>
+<h3 id="31-0-1-version">3.1 0-1 version<a class="headerlink" href="#31-0-1-version" title="Permanent link">&para;</a></h3>
+<p><strong>NPH</strong></p>
+<p>同上的贪心法是一个2-近似算法</p>
+<p>通常解法（dp）：</p>
+<ul>
+<li>令<span class="arithmatex">\(W_{i, p}\)</span>为物品1到物品<span class="arithmatex">\(i\)</span>之间的最小质量，总价值为<span class="arithmatex">\(p\)</span></li>
+<li>分类讨论：<ul>
+<li>取物品<span class="arithmatex">\(i\)</span>：<span class="arithmatex">\(W_{i, p} = w_i + W_{i - 1, p - p_i}\)</span></li>
+<li>不取物品<span class="arithmatex">\(i\)</span>：<span class="arithmatex">\(W_{i, p} = W_{i - 1, p}\)</span></li>
+<li>不可能得到价值<span class="arithmatex">\(p\)</span>：<span class="arithmatex">\(W_{i, p} = \infty\)</span></li>
+</ul>
+</li>
+<li>状态转移方程为：</li>
+</ul>
+<p>Wi,p={∞i=0 Wi−1,ppi&gt;p minWi−1,p,wi+Wi−1,p−piotherwise</p>
+<ul>
+<li>其中，<span class="arithmatex">\(i = 1, \dots, n, p = 1, \dots, np_{\text{max}}\)</span>，因此时间复杂度为<span class="arithmatex">\(O(n^2 p_{\text{max}})\)</span></li>
+</ul>
+<h2 id="4-k-center-problems">4 K-center Problems<a class="headerlink" href="#4-k-center-problems" title="Permanent link">&para;</a></h2>
+<div class="admonition question 问题描述">
+<p class="admonition-title">Question</p>
+<p>给定<span class="arithmatex">\(n\)</span>个地址<span class="arithmatex">\(s_1, \dots, s_n\)</span>，在地图上选择<span class="arithmatex">\(K\)</span>个中心点<span class="arithmatex">\(c\)</span>，使任意地址到离它距离最近的中心点之间的距离中的最大值最小化。</p>
+<p><div style="text-align: center">
+    <img src="assets/Lec11/file-20241228160343703.png" width="60%">
+</div>  </p>
+<hr />
+<p>这么说可能不太好理解，下面给出符号化的定义：</p>
+<p>本问题提到的距离(distance)不同于图论中边的权重，实际上它就是数学上本来的意思：</p>
+<ul>
+<li>同一性(identity)：<span class="arithmatex">\(dist(x, x) = 0\)</span></li>
+<li>对称性(symmetry)：<span class="arithmatex">\(dist(x, y) = dist(y, x)\)</span></li>
+<li>三角不等式(triangle inequality)：<span class="arithmatex">\(dist(x, y) \le dist(x, z) + dist(z, y)\)</span></li>
+</ul>
+<p>令：</p>
+<ul>
+<li><span class="arithmatex">\(dist(s_i, C) = \min\limits_{c \in C} \{dist(s_i, c)\}\)</span>，即<span class="arithmatex">\(s_i\)</span>到最近中心点间的距离</li>
+<li><span class="arithmatex">\(r(C) = \max\limits_{i} \{dist(s_i, C)\}\)</span>，即所有中心点中最大的最小覆盖半径</li>
+</ul>
+<p>目标：找到一组中心点集<span class="arithmatex">\(C\)</span>，使得<span class="arithmatex">\(r(C)\)</span>最小化，且保证<span class="arithmatex">\(|C| = K\)</span>（<span class="arithmatex">\(K\)</span>为常数）</p>
+</div>
+<h3 id="41-naive-greedy">4.1 Naive Greedy<a class="headerlink" href="#41-naive-greedy" title="Permanent link">&para;</a></h3>
+<ul>
+<li>让第一个中心点作为所有地址的中点</li>
+<li>随后加入的中心点能够减少r(C)的值</li>
+</ul>
+<p>但是在整个点集包括两个相隔很远的子集且K=2时，这种贪心策略就失效了</p>
+<h3 id="42-2-r-greedy">4.2 2-r Greedy<a class="headerlink" href="#42-2-r-greedy" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Centers Greedy-2r(Sites S[], int n, int K, double r) {
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    Sites S`[] = S[];  // S` is the set of the remaining sites
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    Centers C[] = NULL;
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    while (S`[] != NULL) {
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>        Select any s form S` and add it to C;
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        Delete all s` from S` that are at dist(s`, s) &lt;= 2r;
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    } // end-while
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    if (|C| &lt;= K) 
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>        return C;
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    else
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>        ERROR(&quot;No set of K centers with covering radius at most r&quot;);
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>}
+</code></pre></div>
+<p>二分法不断减小r的值直到找到合适的r,时间复杂度<span class="arithmatex">\(O(log r_{max})\)</span></p>
+<ul>
+<li>从输入点集中随机选取第一个点作为第一个中心，然后删除该点为中心，<span class="arithmatex">\(2r\)</span>为半径的所有点</li>
+<li>然后在剩余点中随机选择第二个中心，以此类推</li>
+<li>如果该<span class="arithmatex">\(r\)</span>值确实是最优解，那么这一算法在<span class="arithmatex">\(K\)</span>步之内必然停止，且得到的解是最优解的2倍，即该算法是一个<strong>2-近似算法</strong></li>
+<li>定理：假设该算法选择的中心点数超过<span class="arithmatex">\(K\)</span>，那么对于任意规模至多为<span class="arithmatex">\(K\)</span>的中心点集<span class="arithmatex">\(C^_\)</span>，覆盖半径为<span class="arithmatex">\(r(C_) &gt; r\)</span></li>
+</ul>
+<h3 id="43-smarter-greedy">4.3 Smarter Greedy<a class="headerlink" href="#43-smarter-greedy" title="Permanent link">&para;</a></h3>
+<p>这个贪心法还可以再改进！还是先给出伪代码：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">Centers</span><span class="w"> </span><span class="n">Greedy</span><span class="o">-</span><span class="n">Kcenter</span><span class="p">(</span><span class="n">Sites</span><span class="w"> </span><span class="n">S</span><span class="p">[],</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">K</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="n">Centers</span><span class="w"> </span><span class="n">C</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="n">Select</span><span class="w"> </span><span class="n">any</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">S</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">add</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">C</span><span class="p">;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">|</span><span class="n">C</span><span class="o">|</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">K</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">        </span><span class="n">Select</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">S</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">maximum</span><span class="w"> </span><span class="n">dist</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">C</span><span class="p">);</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">        </span><span class="n">Add</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">C</span><span class="p">;</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="p">}</span><span class="w">  </span><span class="c1">// end-while</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">C</span><span class="p">;</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="p">}</span>
+</code></pre></div>
+<ul>
+<li>
+<p>这里的贪心法与上面的贪心法区别在于：后者是任意选取输入点集中的点作为中心点，而前者的策略是：</p>
+<ul>
+<li>第一个点还是任意取的</li>
+<li>之后选择离中心点集中的点尽可能远的点作为新的中心点，这样的选择方法更加聪明些</li>
+<li>循环<span class="arithmatex">\(K\)</span>遍就结束循环了</li>
+<li>定理：该算法返回包含规模为<span class="arithmatex">\(K\)</span>的中心点集<span class="arithmatex">\(C\)</span>，使得<span class="arithmatex">\(r(C) \le 2r(C^_)\)</span>，其中<span class="arithmatex">\(C^_\)</span>表示最优中心点集</li>
+</ul>
+</li>
+<li>
+<p>很可惜的是，这种做法属于“换汤不换药”，本质上依旧是一个2-近似算法。</p>
+</li>
+</ul>
+<p>很遗憾的是，对于该问题（中间选择问题），不存在<span class="arithmatex">\(\rho &lt; 2\)</span>的近似算法</p>
 
 
 
@@ -673,6 +2513,12 @@
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
       </main>
       
         <footer class="md-footer">
@@ -680,6 +2526,10 @@
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; hhhjyz/All Rights Reserved.
+    </div>
   
   
     Made with
@@ -699,10 +2549,12 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": [], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.annotate", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top"], "search": "../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
         <script src="../../../../javascripts/mathjax.js"></script>
       
@@ -715,7 +2567,5 @@
         <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
       
     
-  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
-document$.subscribe(() => { lightbox.reload() });
-</script></body>
+  </body>
 </html>

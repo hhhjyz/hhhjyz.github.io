@@ -1,28 +1,36 @@
 
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="zh" class="no-js">
   <head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="hhhjyz的笔记本">
       
+      
+        <meta name="author" content="hhhjyz">
+      
+      
+        <link rel="canonical" href="https://hhhjyz.github.io/note/courses/computer_organization/Chapter%206/">
       
       
         <link rel="prev" href="../Chapter%205/">
       
       
+        <link rel="next" href="../../physics/%E5%A4%A7%E7%89%A9%E5%AE%9E%E9%AA%8C%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/">
+      
       
       <link rel="icon" href="../../../../image/head.jpg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
     
     
       
-        <title>Chapter 6 - hhhjyz</title>
+        <title>Chapter 6 - hhhjyz的笔记本</title>
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6f8fc17f.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.342714a4.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -36,13 +44,9 @@
     
     
       
-        
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-      
     
+    
+      <link rel="stylesheet" href="../../../../css/round.css">
     
       <link rel="stylesheet" href="../../../../css/extra.css">
     
@@ -59,24 +63,17 @@
     
     
     
-   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-    html.glightbox-open { overflow: initial; height: 100%; }
-    .gslide-title { margin-top: 0px; user-select: text; }
-    .gslide-desc { color: #666; user-select: text; }
-    .gslide-image img { background: white; }
-    .gscrollbar-fixer { padding-right: 15px; }
-    .gdesc-inner { font-size: 0.75rem; }
-    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
+  </head>
   
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo">
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="light">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -86,7 +83,7 @@
       
         
         <a href="#the-hardwaresoftware-interface" class="md-skip">
-          Skip to content
+          跳转至
         </a>
       
     </div>
@@ -97,11 +94,9 @@
     
       
 
-  
-
-<header class="md-header md-header--shadow" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../.." title="hhhjyz" class="md-header__button md-logo" aria-label="hhhjyz" data-md-component="logo">
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../../.." title="hhhjyz的笔记本" class="md-header__button md-logo" aria-label="hhhjyz的笔记本" data-md-component="logo">
       
   <img src="../../../../image/head.jpg" alt="logo">
 
@@ -114,7 +109,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            hhhjyz
+            hhhjyz的笔记本
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -128,28 +123,56 @@
     </div>
     
       
+        <form class="md-header__option" data-md-component="palette">
+  
     
     
     
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="light"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
       </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Search">
+      <nav class="md-search__options" aria-label="查找">
         
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
@@ -160,7 +183,7 @@
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Initializing search
+            正在初始化搜索引擎
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -168,7 +191,20 @@
     </div>
   </div>
 </div>
+      
     
+    
+      <div class="md-header__source">
+        <a href="https://github.com/hhhjyz/hhhjyz.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hhhjyz/note
+  </div>
+</a>
+      </div>
     
   </nav>
   
@@ -178,6 +214,121 @@
       
       
         
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../ads/Final/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  课程笔记
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../self-study/EECS498/Lec2%20Image%20Classification/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  自学
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../use/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  ZJU工具
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
           
         
       
@@ -192,16 +343,30 @@
                     
 
 
+  
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../.." title="hhhjyz" class="md-nav__button md-logo" aria-label="hhhjyz" data-md-component="logo">
+    <a href="../../../.." title="hhhjyz的笔记本" class="md-nav__button md-logo" aria-label="hhhjyz的笔记本" data-md-component="logo">
       
   <img src="../../../../image/head.jpg" alt="logo">
 
     </a>
-    hhhjyz
+    hhhjyz的笔记本
   </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hhhjyz/hhhjyz.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hhhjyz/note
+  </div>
+</a>
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -215,8 +380,10 @@
       <a href="../../../.." class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Home
+    
   </span>
   
 
@@ -235,20 +402,45 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
+  
   
   <span class="md-ellipsis">
     课程笔记
+    
   </span>
   
 
@@ -270,6 +462,26 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -282,8 +494,10 @@
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     高级数据结构与算法分析
+    
   </span>
   
 
@@ -304,11 +518,128 @@
   
   
     <li class="md-nav__item">
+      <a href="../../ads/Final/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Review
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ads/Lec8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lec8 Dynamic Programming
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ads/Lec%209/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lec9 Greedy Algorithm
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ads/Lec%2010/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lec10 NP-Completeness
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../ads/Lec11/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Lec11 Approximation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ads/Lec%2012/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lec12 Local Search
+    
   </span>
   
 
@@ -328,8 +659,10 @@
       <a href="../../ads/Lec14/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Lec14 Parallel Algorithm
+    
   </span>
   
 
@@ -357,6 +690,22 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
     
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
@@ -369,8 +718,10 @@
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
     计算机组成
+    
   </span>
   
 
@@ -394,8 +745,10 @@
       <a href="../Chapter%201/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Chapter 1
+    
   </span>
   
 
@@ -415,8 +768,10 @@
       <a href="../Chapter%202/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Chapter 2
+    
   </span>
   
 
@@ -436,8 +791,10 @@
       <a href="../Chapter%204/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Chapter 4
+    
   </span>
   
 
@@ -457,8 +814,10 @@
       <a href="../Chapter%205/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Chapter 5
+    
   </span>
   
 
@@ -487,8 +846,10 @@
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
+  
   <span class="md-ellipsis">
     Chapter 6
+    
   </span>
   
 
@@ -498,16 +859,16 @@
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
+  
   <span class="md-ellipsis">
     Chapter 6
+    
   </span>
   
 
       </a>
       
         
-
-  
 
 <nav class="md-nav md-nav--secondary" aria-label="目录">
   
@@ -626,48 +987,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#243-raid-redundant-arrays-of-inexpensive-disks" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.4.3 RAID: Redundant Arrays of Inexpensive Disks
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2.4.3 RAID: Redundant Arrays of Inexpensive Disks">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#2431-raid-0-no-redundancy" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.4.3.1 RAID 0: No Redundancy
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2432-raid-3" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.4.3.2 RAID 3: 位交叉校验盘
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2433-raid-4-block-interleaved-parity" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.4.3.3 RAID 4: Block-Interleaved Parity
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -698,18 +1017,27 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#32-types-of-buses" class="md-nav__link">
+  <a href="#32-synchronous-vs-asynchronous" class="md-nav__link">
     <span class="md-ellipsis">
-      3.2 Types of Buses
+      3.2 Synchronous vs Asynchronous
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#33-synchronous-vs-asynchronous" class="md-nav__link">
+  <a href="#33-bus-arbitration" class="md-nav__link">
     <span class="md-ellipsis">
-      3.3 Synchronous vs. Asynchronous
+      3.3 Bus Arbitration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-increasing-the-bancwidth" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4 Increasing the Bancwidth
     </span>
   </a>
   
@@ -717,6 +1045,33 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-interfacing-io-devices-to-the-memory-processor-and-operating-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      4 Interfacing I/O Devices to the Memory, Processor, and Operating System
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-io-performance-measures" class="md-nav__link">
+    <span class="md-ellipsis">
+      5 I/O Performance Measures
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-designing-an-io-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      6 Designing an I/O System
+    </span>
+  </a>
   
 </li>
       
@@ -737,9 +1092,1189 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../physics/%E5%A4%A7%E7%89%A9%E5%AE%9E%E9%AA%8C%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    大学物理实验
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    数据库系统
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            数据库系统
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database%20system/chaper%201%20Introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chpater 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database%20system/Chapter%202%20Relational%20Modeling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database%20system/Chapter%203/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database%20system/Chapter%204/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database%20system/Chapter%205/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 5
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    计算机体系结构
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            计算机体系结构
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Computer%20Architecture/Chapter%201%20Fundamentals%20of%20computer%20design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Computer%20Architecture/Chapter%202/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Computer%20Architecture/Chapter%203/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Computer%20Architecture/Chapter%204/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Computer%20Architecture/Chapter%205/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 5
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    人工智能
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            人工智能
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/Chapter%202/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/Chapter%203/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/Chapter%204/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/Chapter%205/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 5
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/Chapter%206/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 6
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    面向对象程序设计
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            面向对象程序设计
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP/Lecture%208%20Stream/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lec8
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP/Lecture%209%20Exception/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lec9
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    自学
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            自学
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    EECS498-005
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            EECS498-005
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../self-study/EECS498/Lec2%20Image%20Classification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Image Classification
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../self-study/EECS498/Lec3%20Linear%20Classifiers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linear Classifiers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../self-study/EECS498/Lec4%20Optimization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Optimization
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../self-study/EECS498/Lec5%20Neural%20Network/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Neural Network
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../self-study/EECS498/Lec6%20Backpropagation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Backpropagation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../self-study/EECS498/Lec8%20CNN%20Architectures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CNN Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../self-study/EECS498/Lec9%20Hardware%20and%20Software/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hardware and Software
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../self-study/EECS498/Lec10%20Training%201/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Training 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../self-study/EECS498/Lec11%20Training%202/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Training 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../self-study/EECS498/Lec12%20Recurrent%20Neural%20Networks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Recurrent Neural Networks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../self-study/EECS498/Lec13%20Attention/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Attention
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../self-study/EECS498/Lec14%20Visualizing%20and%20Understanding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Visualizing and Understanding
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../self-study/EECS498/Lec15%20Object%20Detection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Object Detection
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    工具
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            工具
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../self-study/tools/conda/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    conda
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../use/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ZJU工具
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -756,8 +2291,6 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
-
-  
 
 <nav class="md-nav md-nav--secondary" aria-label="目录">
   
@@ -876,48 +2409,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#243-raid-redundant-arrays-of-inexpensive-disks" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.4.3 RAID: Redundant Arrays of Inexpensive Disks
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2.4.3 RAID: Redundant Arrays of Inexpensive Disks">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#2431-raid-0-no-redundancy" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.4.3.1 RAID 0: No Redundancy
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2432-raid-3" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.4.3.2 RAID 3: 位交叉校验盘
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2433-raid-4-block-interleaved-parity" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.4.3.3 RAID 4: Block-Interleaved Parity
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -948,18 +2439,27 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#32-types-of-buses" class="md-nav__link">
+  <a href="#32-synchronous-vs-asynchronous" class="md-nav__link">
     <span class="md-ellipsis">
-      3.2 Types of Buses
+      3.2 Synchronous vs Asynchronous
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#33-synchronous-vs-asynchronous" class="md-nav__link">
+  <a href="#33-bus-arbitration" class="md-nav__link">
     <span class="md-ellipsis">
-      3.3 Synchronous vs. Asynchronous
+      3.3 Bus Arbitration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-increasing-the-bancwidth" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4 Increasing the Bancwidth
     </span>
   </a>
   
@@ -967,6 +2467,33 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-interfacing-io-devices-to-the-memory-processor-and-operating-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      4 Interfacing I/O Devices to the Memory, Processor, and Operating System
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-io-performance-measures" class="md-nav__link">
+    <span class="md-ellipsis">
+      5 I/O Performance Measures
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-designing-an-io-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      6 Designing an I/O System
+    </span>
+  </a>
   
 </li>
       
@@ -985,16 +2512,29 @@
                   
 
 
+  
+  
+
+
 <h1 id="the-hardwaresoftware-interface">The  Hardware/Software Interface<a class="headerlink" href="#the-hardwaresoftware-interface" title="Permanent link">&para;</a></h1>
 <h2 id="1-introduction">1 Introduction<a class="headerlink" href="#1-introduction" title="Permanent link">&para;</a></h2>
 <ul>
-<li>I/O设计考虑多方面的因素</li>
-<li>度量I/O系统的表现是非常困难的</li>
+<li>
+<p>I/O设计考虑多方面的因素</p>
+<ul>
+<li>可扩展性（Expandability）</li>
+<li>恢复力（Resilience）</li>
+<li>性能（Performance）</li>
+</ul>
+</li>
+<li>
+<p>度量I/O系统的表现是非常困难的</p>
+</li>
 <li>I/O系统的性能依赖于设备和系统之间的链接，内存层次，操作系统</li>
 </ul>
 <blockquote>
 <p>[!note] Typical connection of I/O device
-<a class="glightbox" href="../assets/Chapter%206/file-20241210210521927.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="600" src="../assets/Chapter%206/file-20241210210521927.png" /></a></p>
+<img alt="600" src="../assets/Chapter%206/file-20241210210521927.png" /></p>
 </blockquote>
 <p><strong><em>IO的三个特性:</em></strong>
 - Behavior: Input, Output ,or storage
@@ -1014,110 +2554,502 @@
 <p>磁盘的两种主要类型：
 - floppy disks: 
 - hard disks:larger, higher density , higher data rate , more than one platter</p>
-<div class="codehilite"><pre><span></span><code>磁盘存储是非易失性的
-</code></pre></div>
-
+<p>磁盘存储是非易失性的</p>
 <h3 id="21-the-organization-of-hard-disk">2.1 The organization of hard disk<a class="headerlink" href="#21-the-organization-of-hard-disk" title="Permanent link">&para;</a></h3>
 <p>一个磁盘包括一组盘片（platters），每张盘片有课记录的两个盘面。每个盘表面被分为许多被称为轨道(tracks)的同心圆,每条轨道又被分成一些记录信息的扇区（sectors），在磁介质中一次存放着扇区号、间隔、带有纠错码的扇区信息、间隔、下一个扇区的 扇区号······</p>
 <h3 id="22-disk">2.2 加载disk中的数据<a class="headerlink" href="#22-disk" title="Permanent link">&para;</a></h3>
-<p>寻道(Seek):将磁头单位到正确的轨道上，磁头找到正确轨道的时间被称为寻道时间（Seek Time）</p>
-<p>旋转延迟（Rotational latency):等待正确扇区转到读写头下的时间，取得所要信息的平均时延是磁盘旋转半周所需的时间</p>
-<p>传输时间（transfer）：传输一块（一般是一个扇区）需要的时间，传输时间是扇区大小、旋转速度、磁道记录密度的函数</p>
-<p>磁盘控制器（disk controller）：通常用来精细地控制磁盘以及磁盘与内存之间的数据传输，其存在是的磁盘存取时间又多了一项<strong>控制器时间(controller time)</strong></p>
-<div class="admonition example 读磁盘时间">
-<p class="admonition-title">Example</p>
-<p><a class="glightbox" href="../assets/Chapter%206/40a6db8bd0711d6b4d1dec4ac32ea60.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="400" src="../assets/Chapter%206/40a6db8bd0711d6b4d1dec4ac32ea60.jpg" /></a></p>
-</div>
+<p><strong>寻道(Seek)</strong>:将磁头单位到正确的轨道上，磁头找到正确轨道的时间被称为寻道时间（Seek Time）</p>
+<p><strong>旋转延迟（Rotational latency)</strong>:等待正确扇区转到读写头下的时间，取得所要信息的平均时延是磁盘旋转半周所需的时间,即<span class="arithmatex">\(\frac{0.5转}{转速}\)</span></p>
+<p><strong>传输时间（transfer）</strong>：传输一块（一般是一个扇区）需要的时间，传输时间是扇区大小、旋转速度、磁道记录密度的函数</p>
+<p><strong>磁盘控制器（disk controller）</strong>：通常用来精细地控制磁盘以及磁盘与内存之间的数据传输，其存在是的磁盘存取时间又多了一项<strong>控制器时间(controller time)</strong></p>
+<p>read time=seek time + rotational latency + transfer time + controller time</p>
+<p>!!!  example "读磁盘时间"
+    === "question"
+        <img alt="400" src="../assets/Chapter%206/40a6db8bd0711d6b4d1dec4ac32ea60.jpg" />
+    === "answer" 
+        <span class="arithmatex">\(t=6.0ms+\frac{0.5r}/{10000r/min}+\frac{0.5KB}{50MB/s}+0.2ms=9.2ms\)</span></p>
 <h3 id="23-flash-storage">2.3 flash storage<a class="headerlink" href="#23-flash-storage" title="Permanent link">&para;</a></h3>
+<p>闪存具有如下特性：</p>
+<ul>
+<li>是一种非易失性（即断电数据也不会丢失）、电子可擦除、可编程只读的半导体存储器（EEPROM） </li>
+<li>比磁盘快百倍到千倍</li>
+<li>更小型、耗电更小、但是也更贵，介于磁盘和DRAM</li>
+<li>写操作可能会磨损存储器内的树<ul>
+<li>在1000次访问后数据位会有所磨损</li>
+<li>因此它不适合作为RAM/DISK  的替代</li>
+<li>为减缓磨损，闪存会用一个控制器来spread 写操作到被更少使用的区域，这被称为（wear leveling）</li>
+</ul>
+</li>
+</ul>
 <h4 id="231-flash-types">2.3.1 flash types<a class="headerlink" href="#231-flash-types" title="Permanent link">&para;</a></h4>
+<ul>
+<li>NOR flash :每一个cell像是一个或非门<ul>
+<li>随机读写更快</li>
+<li>通常用于存储嵌入式系统的指令</li>
+</ul>
+</li>
+<li>NAND flash : 每一个cell像是一个与非门<ul>
+<li>更为密集，但是以块为单位进行操作</li>
+<li>更便宜</li>
+<li>通常用于存储USB密钥、媒体数据等等</li>
+</ul>
+</li>
+</ul>
 <h3 id="24-disk-performance-issues">2.4 Disk performance Issues<a class="headerlink" href="#24-disk-performance-issues" title="Permanent link">&para;</a></h3>
-<p><strong><em>Dependability:</em></strong></p>
-<p><strong><em>Reliability:</em></strong></p>
-<p><strong><em>Availability：</em></strong></p>
+<ul>
+<li>局部性和OS规划，控制器，利用cache技术加速</li>
+</ul>
+<p><strong>系统传递给用户的服务（Service）有两种状态：</strong>
+- 服务实现（Service Accomplishment）： 传递的服务与指定的服务相同
+- 服务中断（Service interrupt）： 传递的服务与指定的服务不同</p>
+<p>从服务实现到服务中断的过程称为<strong>失败</strong>（Failures），从服务中断到服务实现的过程称为<strong>恢复</strong>（Restorations）。失败可以分为永久性的（Permenant）和间歇性的（Intermittent），其中前者较好诊断出来，而后者由于会在两个状态间振荡，因此不太好诊断。由此，我们引出了以下相关术语：</p>
+<p><strong><em>Dependability（可依赖性）:</em></strong>提供服务的质量</p>
+<p>每个模块都有一个理想的指定行为，其中服务说明应是对期望行为广泛认同的描述，当实际行为偏离指定行为时，系统发生错误</p>
+<p><strong><em>Reliability（可靠性）:</em></strong></p>
+<p>是连续服务时间的量度，或者从参照点至出现故障所需时间的量度，磁盘平均故障时间（MTTF）是一个可靠性的量度</p>
+<p><strong><em>Availability（可用性）：</em></strong></p>
+<p>如果说服务在是实现和中断两个状态之间变化的化，那么可用性为服务实现的量度。
+<span class="arithmatex">\(<span class="arithmatex">\(可用性=\frac{MTTF}{MTTF=MTTR}\)</span>\)</span></p>
 <h4 id="241-measure">2.4.1 Measure<a class="headerlink" href="#241-measure" title="Permanent link">&para;</a></h4>
 <ul>
 <li>MTTF 平均无故障时间</li>
 <li>MTTR 平均修复时间</li>
 <li>MTBF=MTTF+MTTR平均故障间隔时间</li>
-<li>Availability=<span class="arithmatex">\(\frac{MTTF}{MTTF+MTTR}\)</span></li>
+<li>
+<p>Availability=<span class="arithmatex">\(\frac{MTTF}{MTTF+MTTR}\)</span></p>
+</li>
+<li>
+<p>Fault(错误)：系统中某个部件(Component)的失败</p>
+</li>
 </ul>
-<p><strong><em>提升MTTF的三种方式：</em></strong>
-- Fault avoidance:通过结构来预防fault的发生
-- Fault tolerance:使用冗余来允许服务规范，尽管发生故障，应用于硬件错误
-- Fault forecasting:预测错误，应用于软硬件错误</p>
-<h4 id="242-redundant-arrays-of-disks">2.4.2 Redundant arrays of disks<a class="headerlink" href="#242-redundant-arrays-of-disks" title="Permanent link">&para;</a></h4>
+<p><strong><em>提升MTTF的三种方式：</em></strong></p>
 <ul>
+<li>Fault avoidance:通过结构来预防fault的发生</li>
+<li>Fault tolerance:使用冗余技术允许服务在错误发生时仍能照常工作，这里错误主要指硬件错误</li>
+<li>Fault forecasting:预测错误的存在和创造，允许部件在失败之气那被替换，应用于软硬件错误</li>
+</ul>
+<h4 id="242-redundant-arrays-of-disks">2.4.2 Redundant arrays of disks<a class="headerlink" href="#242-redundant-arrays-of-disks" title="Permanent link">&para;</a></h4>
+<p><strong>RAID</strong>：独立/廉价硬盘冗余阵列 (Redundant Arrays of Inexpensive/Independent Disks)</p>
+<ul>
+<li>用硬盘阵列取代一个容量更大的硬盘</li>
 <li>文件被存储在多个硬盘中</li>
 <li>增加校验盘/冗余盘，来提高存储的可依赖性</li>
-<li></li>
+<li>文件会分散存储在多个硬盘（形成一个阵列）内</li>
+<li>通过冗余（Redundancy）得到更高的数据可用性（即使某个磁盘坏了，我们还可以从别的硬盘中获取文件）</li>
+<li>冗余的代价：<ul>
+<li>容量损失：存储冗余信息</li>
+<li>带宽损失：更新冗余信息</li>
+</ul>
+</li>
 </ul>
 <p>使用一系列小的磁盘来提高存储的可依赖性</p>
-<blockquote>
-<p>[!note] Array Reliability
-<a class="glightbox" href="../assets/Chapter%206/file-20241211102036027.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="600" src="../assets/Chapter%206/file-20241211102036027.png" /></a></p>
-<p>[!example] a disk arrays repalce lager disk
-<a class="glightbox" href="../assets/Chapter%206/file-20241211102551066.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../assets/Chapter%206/file-20241211102551066.png" /></a></p>
-</blockquote>
-<h4 id="243-raid-redundant-arrays-of-inexpensive-disks">2.4.3 RAID: Redundant Arrays of Inexpensive Disks<a class="headerlink" href="#243-raid-redundant-arrays-of-inexpensive-disks" title="Permanent link">&para;</a></h4>
-<h5 id="2431-raid-0-no-redundancy">2.4.3.1 RAID 0: No Redundancy<a class="headerlink" href="#2431-raid-0-no-redundancy" title="Permanent link">&para;</a></h5>
-<h5 id="2432-raid-3">2.4.3.2 RAID 3: 位交叉校验盘<a class="headerlink" href="#2432-raid-3" title="Permanent link">&para;</a></h5>
-<p>问题在于只读一个数据时无法判断数据正确与否，所以要把一行的数据都读取出来
-写入之后要重新计算校验盘的数据</p>
-<h5 id="2433-raid-4-block-interleaved-parity">2.4.3.3 RAID 4: Block-Interleaved Parity<a class="headerlink" href="#2433-raid-4-block-interleaved-parity" title="Permanent link">&para;</a></h5>
-<p>把自己每个block做了校验位，放到备份盘中</p>
-<h2 id="3-buses-and-other-connections-between-processors-memory-and-io-devices">3 Buses and Other Connections between Processors Memory, and I/O Devices<a class="headerlink" href="#3-buses-and-other-connections-between-processors-memory-and-io-devices" title="Permanent link">&para;</a></h2>
-<p><strong>bus:</strong> 共享通信的链接</p>
-<p><strong>Difficult Design:</strong></p>
+<p><span class="arithmatex">\(Reliability~of~N~disks = Reliability~of~1~Disk/N\)</span></p>
+<div class="admonition example raid">
+<p class="admonition-title">Example</p>
+<p><img alt="" src="../assets/Chapter%206/file-20241227204430205.png" width="400" />
+ <img alt="" src="../assets/Chapter%206/file-20241227204654903.png" width="400" /></p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">注意</p>
+<p>不能同时对一个磁盘进行多个操作，因为磁盘是通过旋转······来实现访问的，例如之后会提到的对一个校验磁盘不能同时进行写或者读操作，构成了瓶颈</p>
+</div>
+<div class="admonition info types of raid">
+<p class="admonition-title">Info</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:6"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><input id="__tabbed_1_6" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">RAID 0</label><label for="__tabbed_1_2">RAID 1</label><label for="__tabbed_1_3">RAID 3</label><label for="__tabbed_1_4">RAID 4</label><label for="__tabbed_1_5">RAID 5</label><label for="__tabbed_1_6">RAID 6</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>RAID 0 不使用冗余</p>
 <ul>
-<li>may be bottleneck<br />
-    很容易成为性能的 bottleneck(瓶颈).</li>
-<li>length of the bus</li>
-<li>number of devices</li>
-<li>tradeoffs (fast bus accesses and high bandwidth)</li>
-<li>support for many different devices</li>
-<li>cost</li>
+<li>虽然数据分散在硬盘阵列里，但是未采用冗余来应对硬盘故障</li>
+<li>但是该方法对于大量的访问而言提升了表现，因为只需对磁盘操作一次</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p>RAID 1 为硬盘镜像 / 投影（Disk Mirroring/Shadowing）</p>
+<ul>
+<li>每个磁盘都有一份对应的完整拷贝，称为<strong>镜像</strong>（Mirror)，因而该方法具备很高的可用性</li>
+<li>该方法牺牲了写操作的带宽：一次逻辑写操作 = 两次物理写操作；但是读操作可能得到优化</li>
+<li>由于是“完整拷贝”，所以它需要额外 100% 的容量开销，因而是最昂贵的方法</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p><img alt="" src="../assets/Chapter%206/file-20241227222109874.png" />
+RAID 3 为位交错奇偶校验硬盘（Bit-Interleaved Parity Disk）</p>
+<ul>
+<li>我们让某几个硬盘共用一个冗余的磁盘 P，P 的数据的每一位等于“这些硬盘对应位之和 mod 2”（即奇偶位（Parity））</li>
+<li>如果某个硬盘出现故障，可以用“磁盘 P - 其他正常的硬盘的数据之和”来还原因故障遗失的信息</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p>RAID 4 为块交错奇偶校验（Block-Interleaved Parity）
+<img alt="" src="../assets/Chapter%206/file-20241228175918807.png" />
+我们希望自己的盘有自己的错误检测，不需要校验盘来检验自己对不对，盘与盘之间没有依赖关系。事实上，硬盘的每个扇区都有一个错误检测字段</p>
+<ul>
+<li>把自己每个 Block 做了校验位，放到备份盘中</li>
+<li>该方法允许同步、独立地读取不同硬盘的数据,同一行也可以同时写，small write 有问题（不在同一行上）</li>
+<li>对于小范围读操作而言，不需要去读parity位</li>
+<li>采用小范围写算法：1 次逻辑写 = 2 次物理读 + 2 次物理写（每次写操作都会涉及到奇偶校验硬盘 P），成本较高。具体过程如下所示：
+<img alt="" src="../assets/Chapter%206/file-20241227223356078.png" /></li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p>RAID 5 为高 I/O 速率交错奇偶校验（High I/O Rate Interleaved Parity）
+<img alt="" src="../assets/Chapter%206/file-20241228175659694.png" />
+- 交错的奇偶校验块
+- 独立的读写操作
+- 校验信息在不同的磁盘上,这种组织方式使得多个写操作可以同时进行</p>
+</div>
+<div class="tabbed-block">
+<p>RAID 6 为 P+Q 冗余校验</p>
+<p>有 P, Q 两位，当单次错误纠正仍然无法满足要求时，可以从数据中再次计算得到奇偶校验位，以进行额外的信息检查，可以恢复出两个盘的内容。二次校验块机制可使系统从二次错误中恢复过来，因此它的开销是RAID的两倍，进行小数据量写的时候要访问6个盘</p>
+</div>
+</div>
+</div>
+</div>
+<h2 id="3-buses-and-other-connections-between-processors-memory-and-io-devices">3 Buses and Other Connections between Processors Memory, and I/O Devices<a class="headerlink" href="#3-buses-and-other-connections-between-processors-memory-and-io-devices" title="Permanent link">&para;</a></h2>
+<div align=center><img src="../assets/Chapter%206/Pasted%20image%2020241211162651.png" alt="structure" width="50%" height="50%" ></div>
+
+<ul>
+<li>Bus 总线： 共用的通信线路（包含一根或者多根线路）</li>
+</ul>
+<p><strong>总线设计上的困难：</strong></p>
+<ul>
+<li>总线长度和设备数量限制了最高总线速度</li>
+<li>要支持一系列的延迟和数据传输率各不相同的设备</li>
+<li>时钟偏差和信号反射的问题导致高速的并行线路很难设计</li>
 </ul>
 <h3 id="31-bus-basics">3.1 Bus Basics<a class="headerlink" href="#31-bus-basics" title="Permanent link">&para;</a></h3>
-<p>总线包含两种线： 
- - Control lines:  信号的请求和回应，指示data lines中有什么类型的数据
- - Data lines: 携带源与目标之间的数据，地址，复杂指令</p>
-<p><strong>Bus transaction</strong><br />
-sending the address and receiving or sending the data<br />
-总线传输的两部分，送地址，送数据</p>
-<blockquote>
-<p>[!example] Output and Input operation
-<a class="glightbox" href="../assets/Chapter%206/file-20241211110255245.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="600" src="../assets/Chapter%206/file-20241211110255245.png" /></a>
-<strong>input operation:从设备输入数据到内存中</strong>
-<a class="glightbox" href="../assets/Chapter%206/file-20241211110305523.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="600" src="../assets/Chapter%206/file-20241211110305523.png" /></a>
-<strong>output operation: 把处理器写入内存的数据输出到设备上</strong></p>
-</blockquote>
-<h3 id="32-types-of-buses">3.2 Types of Buses<a class="headerlink" href="#32-types-of-buses" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Processor-memory bus 处理器-内存总线: 长度短，高速，定制</li>
-<li>backplane bus: 高速，标准化，使处理器、内存和I/O设备能够同时接在单条总线上的总线</li>
-<li>I/O总线: 长的，链接不同设备， 标准化</li>
-</ul>
-<h3 id="33-synchronous-vs-asynchronous">3.3 Synchronous vs. Asynchronous<a class="headerlink" href="#33-synchronous-vs-asynchronous" title="Permanent link">&para;</a></h3>
+<li>
+<p>总线包含两类线路：</p>
 <ul>
-<li><strong>Synchronous bus</strong>: use a clock and a fixed <em>protocol</em>, fast and small but every device must operate at same rate and clock skew requires the bus to be short<br />
-    所有设备需要以同样的频率。<br />
-    clock skew, 即上升沿无法对齐</li>
-<li><strong>Asynchronous bus</strong>: don’t use a clock and instead use <em>handshaking</em><br />
-    A serial of steps used to coordinate asynchronous bus transfers</li>
+<li>控制线路：信号的请求（Request）和确认（Acknowledgement），并表明数据线路上信息的类型</li>
+<li>数据线路：在源和目的之间传递信息（数据、地址、复杂命令等）</li>
 </ul>
-<blockquote>
-<p>[!example] 异步总线是如何工作的
-<a class="glightbox" href="http://cdn.hobbitqia.cc/202306231653192.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="http://cdn.hobbitqia.cc/202306231653192.png" /></a>
-1. When memory sees the ReadReq line, it reads the address from the data bus, begin the memory read operation，then raises Ack to tell the device that the ReadReq signal has been seen.
-2. I/O device sees the Ack line high and releases the ReadReq data lines.
-3. Memory sees that ReadReq is low and drops the Ack line.
-1. When the memory has the data ready, it places the data on the data lines and raises DataRdy.
-2. The I/O device sees DataRdy, reads the data from the bus , and signals that it has the data by raising ACK.
-3. The memory sees Ack signals, drops DataRdy, and releases the data lines.
-4. Finally, the I/O device, seeing DataRdy go low, drops the ACK line, which indicates that the transmission is completed.</p>
-<p>读数据时, CPU 把 read request 拉起来。内存看到后，会把 Data 总线上的读走（即地址），随后进行内存读取，同时把 Ack 信号拉起来，告诉 IO 设备我们已经接收到 read request 了. IO 设备看到 Ack 后把自己的 read request 放下，内存看到 read request 放下后，把 Ack 也放下。</p>
-<p>内存读出数据后，会把 data ready 拉起来，把数据放在 data line 上. IO 设备看到 data ready 后会把数据取走，并把 Ack 信号拉起。内存看到 Ack 信号后会放下 data ready 信号，随后 IO 设备放下 ack 信号。</p>
-</blockquote>
+</li>
+<li>
+<p>总线事务（Transaction）：发送地址，以及接收或发送数据</p>
+</li>
+<li>输出操作：</li>
+</ul>
+<div align=center><img src="../assets/Chapter%206/file-20241228190137615.png"></div>
+
+<ul>
+<li>输入操作：</li>
+</ul>
+<div align=center><img src="../assets/Chapter%206/file-20241228190847363.png" alt="Input operation" ></div>
+
+<ul>
+<li>总线类型：<ul>
+<li>处理器 - 内存：较高的速度，个性化设计</li>
+<li>底板（Backplane）：高速，标准化设计（例如 PCI）</li>
+<li>I/O：低速，不同设备，标准化（例如 SCSI）</li>
+</ul>
+</li>
+</ul>
+<div align=center><img src="../assets/Chapter%206/file-20241228191133906.png" alt="Image 1" ></div>
+
+<div align=center><img src="../assets/Chapter%206/file-20241228191146868.png" alt="Image 2"  ></div>
+
+<h3 id="32-synchronous-vs-asynchronous">3.2 Synchronous vs Asynchronous<a class="headerlink" href="#32-synchronous-vs-asynchronous" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>同步总线：使用<strong>时钟</strong>和固定的协议，快而小，但是所有设备需要保持相同的运作速率，且为避免时钟偏斜（Clock Skew）问题，总线需要短一些</p>
+</li>
+<li>
+<p>异步总线：不用时钟，而采用<strong>握手</strong>协议（Handshaking Protocol）——一种用于协调异步总线传输的串行步骤，具体过程如下：
+<img alt="" src="../assets/Chapter%206/file-20241228191753259.png" /></p>
+</li>
+</ul>
+<ol>
+<li>当 <code>ReadReq</code> 处于高电平时，内存从数据总线中读取地址，执行读操作，然后抬高 <code>Ack</code> 的电平，告诉设备它看到了 <code>ReadReq</code> 信号</li>
+<li>I/O 设备看到 <code>Ack</code> 处于高电平后，将 <code>ReadReq</code> 置于低电平状态</li>
+<li>内存看到 <code>ReadReq</code> 处于低电平后，将 <code>Ack</code> 置于低电平状态</li>
+<li>当内存完成数据读取后，它将数据放在数据线路上，并抬高 <code>DataRdy</code> 的电平</li>
+<li>I/O 设备看到 <code>DataRdy</code> 处于高电平后，将从总线中读取数据，然后抬高 <code>Ack</code> 电平来表明 I/O 设备完成对数据的读取</li>
+<li>内存看到 <code>Ack</code> 处于高电平后，将 <code>DataRdy</code> 置于低电平状态</li>
+<li>I/O 设备看到 <code>DataRdy</code> 处于低电平后，将 <code>Ack</code> 置于低电平状态，表明完成了整个传输过程</li>
+</ol>
+<div class="admonition example">
+<p class="admonition-title">二者性能比较</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Question</label><label for="__tabbed_2_2">Answer</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>假设同步总线时钟周期为 50ns，每条总线的传输需要一个时钟周期；异步总线每次握手需要 40ns。两种总线的数据宽度都为 32 位</p>
+<p>求出每种总线从一个 200ns 的内存当中读取数据的带宽</p>
+</div>
+<div class="tabbed-block">
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Synchronous</label><label for="__tabbed_3_2">Asynchronous</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>对于同步总线，它执行以下步骤：</p>
+<ul>
+<li>将地址送给内存：50ns</li>
+<li>读取内存：200ns</li>
+<li>将数据送回设备：50ns</li>
+</ul>
+<p>所以需要的总时间为 300ns，带宽 <span class="arithmatex">\(\text{Bandwidth}=\frac{4\text{ Bytes}}{300ns}=13.3\text{ MB/s}\)</span></p>
+</div>
+<div class="tabbed-block">
+<p>对于异步总线来说，七个步骤有些可以同时进行，具体来说，Step1 结束时内存已经拿到地址了，这个过程中 Step234 可以同时做：</p>
+<ul>
+<li>Step 1: 40ns</li>
+<li>Step 2,3,4: <span class="arithmatex">\(\max(2\times 40ns+40ns, 200ns)=200ns\)</span></li>
+<li>Step 5,6,7: <span class="arithmatex">\(3\times 40ns=120ns\)</span></li>
+</ul>
+<p>所以需要的总时间为 360ns，带宽 <span class="arithmatex">\(\text{Bandwidth}=\frac{4\text{ Bytes}}{360ns}=11.1\text{ MB/s}\)</span></p>
+</div>
+</div>
+</div>
+<p>综上所述同步总线大约快 20%</p>
+</div>
+</div>
+</div>
+</div>
+<h3 id="33-bus-arbitration">3.3 Bus Arbitration<a class="headerlink" href="#33-bus-arbitration" title="Permanent link">&para;</a></h3>
+<ul>
+<li>如果不加任何控制，许多设备都期望获得对控制 / 数据总线的控制权，以便实现自己这部分的数据传递，这样显然会出乱子</li>
+<li>因此需要用一个<strong>总线控制器</strong>（Bus master）来发起和控制所有的总线请求</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">单个控制器在总线事务中的初始化</p>
+<p><img alt="" src="../assets/Chapter%206/file-20241228193341428.png" />
+<img alt="" src="../assets/Chapter%206/file-20241228193346993.png" /></p>
+</div>
+<p>我们有以下方法进行总线仲裁：</p>
+<ul>
+<li>菊式链（Daisy Chain）仲裁（并不是很公平）</li>
+<li>集中（Centralized）并行仲裁（需要一个仲裁者，例如 PCI）</li>
+<li>自选（Self Selection）（例如 Macintosh 用的 NuBus）</li>
+<li>冲突检测（Collision Detection）（例如以太网）</li>
+</ul>
+<p>为设备分配总线需要考虑的因素：</p>
+<ul>
+<li>总线优先级</li>
+<li>公平性（Fairness）</li>
+</ul>
+<h3 id="34-increasing-the-bancwidth">3.4 Increasing the Bancwidth<a class="headerlink" href="#34-increasing-the-bancwidth" title="Permanent link">&para;</a></h3>
+<p>假设我们有一个具有如下特征的系统：</p>
+<ul>
+<li>一个内存和总线系统，支持 4 到 16 字大小的块访问</li>
+<li>一条 64 位同步总线，时钟频率为 200MHz，每次传输 64 位数据需要一个时钟周期，每次把地址传给内存需要一个时钟周期</li>
+<li>每次总线操作之间需要两个时钟周期</li>
+<li>从内存读取前 4 个字需要的时间为 200ns，每多读取 4 字需要 20ns，并且假设传输最近读取的数据和读取接下来的四个字操作可以同时进行</li>
+</ul>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Question</label><label for="__tabbed_4_2">Answer</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>分别求出访问 4 字大小块用于传输和访问 16 字大小块用于传输时，读取 256 字数据的带宽和延迟。同时分别计算出每秒的有效总数事务数</p>
+</div>
+<div class="tabbed-block">
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">4 字大小块</label><label for="__tabbed_5_2">16 字大小块</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>每个块需要：</p>
+<ul>
+<li>1 个时钟周期把地址送给内存</li>
+<li><span class="arithmatex">\(\frac{200ns}{5ns/cycle}=40\)</span> 个时钟周期来读取内存</li>
+<li>2 个时钟周期把数据从内存送回来</li>
+<li>在每次总线操作之间需要 2 个时钟周期</li>
+</ul>
+<p>总共 45 个时钟周期，而总共有 <span class="arithmatex">\(\frac{256}{4}=64\)</span> 个块</p>
+<p>所以传输 256 个字需要 <span class="arithmatex">\(45\times 64=2880\)</span> 个时钟周期</p>
+<p>传输 256 个字的延迟为 <span class="arithmatex">\(2880Cycles\times(5ns/cycle)=14400ns\)</span></p>
+<p>所以总线带宽为 <span class="arithmatex">\((256\times 4)Bytes\times\frac{1\text{ second}}{14400ns}=71.11MB/s\)</span></p>
+<p>每秒的总线事务数为 <span class="arithmatex">\(64\text{transactions}\times\frac{1\text{ second}}{14400ns}=4.44M\text{ transactions/s}\)</span></p>
+</div>
+<div class="tabbed-block"></div>
+</div>
+</div>
+<p><img alt="" src="../assets/Chapter%206/file-20241228215241116.png" />
+    第一个块需要：</p>
+<div class="highlight"><pre><span></span><code>- 1 个时钟周期把地址送给内存
+- $\frac{200ns}{5ns/cycle}=40$ 个时钟周期来读取内存
+- 2 个时钟周期将数据传送回来，同时接下来 4 个字被读取
+- 在每次总线操作之间需要 2 个时钟周期
+
+根据上面的示意图，总共需要 $1+40+4\times 3+2+2=57$ 个时钟周期，而总共有 $\frac{256}{16}=16$ 个块
+
+所以传输 256 个字需要 $57\times 16=912$ 个时钟周期
+
+传输 256 个字的延迟为 $912Cycles\times(5ns/cycle)=4560ns$
+
+所以总线带宽为 $(256\times 4)Bytes\times\frac{1\text{ second}}{45600ns}=224.56MB/s$
+
+每秒的总线事务数为 $16\text{transactions}\times\frac{1\text{ second}}{4560ns}=3.51M\text{ transactions/s}$
+</code></pre></div>
+<p>所以 16 字大小的块带宽比 4 字大小的块带宽高 3.16 倍</p>
+</div>
+</div>
+</div>
+</div>
+<p>从上面例子我们可以得知，如果想要提高带宽，可以：</p>
+<ul>
+<li>增大数据总线的宽度</li>
+<li>使用分开的地址和数据块</li>
+<li>传输多个字</li>
+</ul>
+<h2 id="4-interfacing-io-devices-to-the-memory-processor-and-operating-system">4 Interfacing I/O Devices to the Memory, Processor, and Operating System<a class="headerlink" href="#4-interfacing-io-devices-to-the-memory-processor-and-operating-system" title="Permanent link">&para;</a></h2>
+<p>I/O 系统的三大特征：</p>
+<ul>
+<li>多个程序共用（Share）I/O 系统</li>
+<li>通常使用<strong>中断</strong>（Interrupt）来实现 I/O 操作的信息传递（Communicate）<ul>
+<li>必需的传递类型有：<ul>
+<li>OS 必须能够为 I/O 设备提供<strong>命令</strong>（Commands）<ul>
+<li>内存映射 I/O：部分的内存地址空间会被分配给 I/O 设备，且 <code>lw</code> 和 <code>sw</code> 指令能够访问 I/O 端口</li>
+<li>特殊 I/O 指令<ul>
+<li>输入：<code>in al, port</code></li>
+<li>输出：<code>out port, al</code></li>
+</ul>
+</li>
+<li>命令端口、数据端口<ul>
+<li>状态寄存器（记录完成位（Done Bit）、错误位（Error Bit）等）</li>
+<li>数据寄存器、命令寄存器</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>当 I/O 设备完成操作或遇到错误时，必须<strong>通知</strong>（Notify）OS</li>
+<li>数据必须在内存和 I/O 设备之间传输</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>对 I/O 设备的底层控制较为复杂</li>
+</ul>
+<p>处理器与 I/O 设备之间的通信：</p>
+<ul>
+<li><strong>轮询</strong>（Polling）：处理器周期性地检查状态位，观察当前是否需要进行下一步 I/O 操作<ul>
+<li>缺点：浪费大量的处理器时间</li>
+</ul>
+</li>
+<li>
+<p><strong>中断</strong>（Interrupt）</p>
+<ul>
+<li>中断驱动的 I/O 模式，中断用来通知处理器I/O设备需要处理器 的注意优点是并发操作（Concurrent Operation）</li>
+<li>一个I/O中断就像异常一样，但是有两个重要区别：从指令执行的角度说，I/O中断是异步的，中断与任何指令不想管且不影响任何指令的完成；中断代表的设备有不同的优先级
+<img alt="" src="../assets/Chapter%206/file-20241228201059813.png" /></li>
+</ul>
+</li>
+</ul>
+<p><strong>直接内存访问</strong>（Direct Memory Access, DMA）：设备控制器直接向/从内存传输数据，不需要处理器的介入</p>
+<ul>
+<li>
+<p>DMA 传输模式</p>
+<ul>
+<li>首先处理器通过提供一些信息来设置 DMA 模式，具体包括：设备 ID、操作、待传输数据的内存源地址和目标地址、需要传输的字节数等</li>
+<li>DMA 开始执行操作，并对总线进行仲裁。若某个请求需要在总线上多次传输数据，那么 DMA 单元生成下一个内存的地址，并发起下一次传输</li>
+<li>一旦 DMA 传输完成，控制器向处理器发起中断，随后检查是否发生错误
+<img alt="" src="../assets/Chapter%206/file-20241228202228540.png" /></li>
+</ul>
+</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">比较三种通信方式的开销</p>
+<p>假设：</p>
+<ul>
+<li>处理器的时钟频率为 500 MHz</li>
+<li>软盘以 16 位为单元传输数据给处理器，并且传输速度为 50KB/s</li>
+<li>硬盘以 4 字的块为单元传输数据，传输速度为 4MB/s</li>
+<li>没有错漏任何数据传输</li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:3"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><input id="__tabbed_6_3" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">轮询</label><label for="__tabbed_6_2">中断</label><label for="__tabbed_6_3">DMA</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Question</label><label for="__tabbed_7_2">Answer</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>假设：</p>
+<ul>
+<li>轮询操作需要的时钟周期数为 400</li>
+<li>轮询操作足够频繁，所有的数据都没有缺失</li>
+<li>所有设备大概率一直都非常忙碌（应该是被占用的意思）</li>
+<li>鼠标必须每秒钟轮询 30 次，确保我们没有错漏用户的任何动作</li>
+</ul>
+<p>求出 CPU 浪费在鼠标、软盘和硬盘的时间比例</p>
+</div>
+<div class="tabbed-block">
+<p>对于鼠标来说：每秒为了轮询需要的时钟周期为 <span class="arithmatex">\(30\times 400=12000\text{ Cycles}\)</span>，则浪费比例为 <span class="arithmatex">\(\frac{12\times 10^3}{500\times 10^6}=0.002\%\)</span></p>
+<p>对于软盘来说，每秒需要的轮询次数为 <span class="arithmatex">\(\frac{50KB}{2B}=25K\)</span>，需要的时钟周期为 <span class="arithmatex">\(25K\times 400=10\times 10^6\)</span>，则浪费比例为 <span class="arithmatex">\(\frac{10\times 10^6}{500\times 10^6}=2\%\)</span></p>
+<p>对于硬盘来说，每秒需要的轮询次数为 <span class="arithmatex">\(\frac{4MB}{16B}=0.25M\)</span>，需要的时钟周期为 <span class="arithmatex">\(0.25M\times 400=10\times 10^7\)</span>，则浪费比例为 <span class="arithmatex">\(\frac{10\times 10^7}{500\times 10^6}=20\%\)</span></p>
+<p>可以看出，对于鼠标来说，轮询是不会太大影响到处理器的性能的，但是对于硬盘来说就是不可接受的了</p>
+</div>
+</div>
+</div>
+</div>
+<div class="tabbed-block">
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">Question</label><label for="__tabbed_8_2">Answer</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>假设每次数据传输，包括中断时间，加起来一共需要 500 个时钟周期</p>
+<p>如果硬盘只在 5% 的时间中传输数据，求出处理器浪费的时间比例</p>
+</div>
+<div class="tabbed-block">
+<p>我们首先假设硬盘在 100% 的时间中传输数据，此时中断率和轮询率是一样的，对于硬盘来说每秒的时钟周期为 <span class="arithmatex">\(0.25M\times 500=125\times 10^6\text{ Cycles Per Second}\)</span>，此时的浪费比例为 <span class="arithmatex">\(\frac{125\times 10^6}{500\times 10^6}=25\%\)</span></p>
+<p>实际上硬盘只在 5% 的时间中传输数据，那么浪费比例即为 <span class="arithmatex">\(25%\times 5\%=1.25\%\)</span></p>
+<p>我们可以看到，一个中断驱动的 I/O 设备如果并没有在传输数据时，是不需要 CPU 时间的。这便是终端驱动相对于轮询的优点。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="tabbed-block">
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">Question</label><label for="__tabbed_9_2">Answer</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>假设：</p>
+<ul>
+<li>DMA 传输的初始设置需要 1000 个时钟周期</li>
+<li>DMA 结束后的中断处理需要 500 个时钟周期</li>
+<li>从磁盘中传输数据的平均大小为 8KB</li>
+<li>磁盘在 100% 的时间都在传输数据</li>
+</ul>
+<p>求出处理器浪费的时间比例</p>
+</div>
+<div class="tabbed-block">
+<p>每次传输 8KB 的时间为 <span class="arithmatex">\(\frac{8KB}{4MB/\text{second}}=2\times 10^{-3}\text{seconds}\)</span></p>
+<p>那么每秒需要的时钟周期数为 <span class="arithmatex">\(\frac{(1000+500)\frac{\text{Cycles}}{\text{Transfer}}}{2\times 10^{-3}\frac{\text{Seconds}}{\text{Transfer}}}=750\times 10^3\frac{\text{Clock Cycles}}{\text{Second}}\)</span></p>
+<p>则浪费时间比例为 <span class="arithmatex">\(\frac{750\times 10^3}{500\times 10^6}=0.2%\)</span></p>
+<p>与轮询和中断驱动的 I/O 都不相同，DMA 可以被用于连接硬盘，而不会消耗单个 I/O 的所有处理器周期</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="5-io-performance-measures">5 I/O Performance Measures<a class="headerlink" href="#5-io-performance-measures" title="Permanent link">&para;</a></h2>
+<p>几类关于 I/O 的基准测试（Benchmark）：</p>
+<ul>
+<li>超级计算机 I/O 基准测试</li>
+<li>事务处理 I/O 基准测试<ul>
+<li>I/O 速率：每秒访问硬盘的数量（数据速率的倒数）</li>
+</ul>
+</li>
+<li>文件系统 I/O 基准测试：包括 MakeDir、Copy、ScanDir、ReadAll、Make 操作等</li>
+</ul>
+<hr />
+<h2 id="6-designing-an-io-system">6 Designing an I/O System<a class="headerlink" href="#6-designing-an-io-system" title="Permanent link">&para;</a></h2>
+<p>设计 I/O 系统的通用方法：</p>
+<ul>
+<li>找到 I/O 系统最弱的连接，它是 I/O 通路上限制设计的一个组件。工作负载和配置限制都可以决定最弱链接的位置</li>
+<li>通过配置该部件来维持所需带宽。确定系统其余部分的要求，并配置它们以支持此带宽</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">Question</label><label for="__tabbed_10_2">Answer</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img alt="" src="../assets/Chapter%206/file-20241228202417643.png" /></p>
+</div>
+<div class="tabbed-block">
+<p><img alt="" src="../assets/Chapter%206/file-20241228202423801.png" /></p>
+</div>
+</div>
+</div>
+</div>
 
 
 
@@ -1138,6 +3070,12 @@ sending the address and receiving or sending the data<br />
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
       </main>
       
         <footer class="md-footer">
@@ -1145,6 +3083,10 @@ sending the address and receiving or sending the data<br />
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; hhhjyz/All Rights Reserved.
+    </div>
   
   
     Made with
@@ -1164,10 +3106,12 @@ sending the address and receiving or sending the data<br />
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": [], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.annotate", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top"], "search": "../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
         <script src="../../../../javascripts/mathjax.js"></script>
       
@@ -1180,7 +3124,5 @@ sending the address and receiving or sending the data<br />
         <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
       
     
-  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
-document$.subscribe(() => { lightbox.reload() });
-</script></body>
+  </body>
 </html>

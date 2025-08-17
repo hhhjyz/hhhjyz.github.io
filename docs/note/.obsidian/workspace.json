@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "80cd63c8936ad9d5",
+        "id": "7cc0841406251016",
         "type": "tabs",
         "children": [
           {
-            "id": "de4096c59602b3e2",
+            "id": "6b5b92fcee00d32b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "courses/医药人工智能/模型.md",
+                "file": "self-study/EECS498/Lec16 Detection and Segmentation.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "模型"
+              "title": "Lec16 Detection and Segmentation"
             }
           }
         ]
@@ -40,7 +40,7 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "byModifiedTime",
+                "sortOrder": "alphabeticalReverse",
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#NF",
+                "query": " ",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 261.50499725341797
+    "width": 261.50499725341797,
+    "collapsed": true
   },
   "right": {
     "id": "096679337ec0e429",
@@ -140,13 +141,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "courses/医药人工智能/模型.md",
+                "file": "self-study/EECS498/Lec7 ConvNets.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "模型 的大纲"
+              "title": "Lec7 ConvNets 的大纲"
             }
           }
         ],
@@ -154,7 +155,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -166,54 +168,54 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "de4096c59602b3e2",
+  "active": "6b5b92fcee00d32b",
   "lastOpenFiles": [
-    "courses/医药人工智能/assets/模型/file-20250502143459699.png",
-    "courses/医药人工智能/assets/模型/file-20250502101854729.png",
-    "courses/医药人工智能/assets/模型/file-20250501212230103.png",
+    "self-study/EECS498/assets/Pasted image 20250817172745.png",
+    "self-study/EECS498/assets/Pasted image 20250817172449.png",
+    "self-study/EECS498/assets/Pasted image 20250817172131.png",
+    "self-study/EECS498/assets/Pasted image 20250817170826.png",
+    "self-study/EECS498/Lec16 Detection and Segmentation.md",
+    "self-study/EECS498/assets/Pasted image 20250817170321.png",
+    "self-study/EECS498/Lec15 Object Detection.md",
+    "self-study/EECS498/assets/Pasted image 20250817131346.png",
+    "self-study/EECS498/assets/Pasted image 20250817130749.png",
+    "self-study/EECS498/assets/Pasted image 20250817130011.png",
+    "self-study/EECS498/assets/Pasted image 20250817122007.png",
+    "self-study/EECS498/assets/Pasted image 20250817120906.png",
+    "self-study/EECS498/assets/Pasted image 20250817120013.png",
+    "self-study/EECS498/Lec14 Visualizing and Understanding.md",
+    "self-study/EECS498/Lec13 Attention.md",
+    "self-study/EECS498/Lec12 Recurrent Neural Networks.md",
+    "self-study/EECS498/Lec11 Training 2.md",
+    "self-study/EECS498/Lec10 Training 1.md",
+    "self-study/EECS498/Lec4 Optimization.md",
+    "self-study/EECS498/Lec9 Hardware and Software.md",
+    "self-study/EECS498/Lec8 CNN Architectures.md",
+    "self-study/EECS498/Lec7 ConvNets.md",
+    "self-study/EECS498/未命名",
+    "attachments",
+    "courses/Computer Architecture/Chapter 4.md",
+    "courses/database system/Chapter 13.md",
+    "courses/OOP/Lecture 9 异常处理.md",
+    "courses/OOP/Lecture 9 Exception.md",
+    "courses/OOP/assets/Lecture 9 异常处理",
+    "courses/OOP/assets",
+    "courses/database system/assets/Chapter 13",
+    "courses/database system/Chapter 12.md",
+    "courses/Computer Architecture/Chapter 3.md",
+    "courses/Computer Architecture/Chapter 5.md",
+    "courses/AI/Chapter 6.md",
+    "courses/AI/assets/Chapter 6",
+    "courses/医药人工智能/模型.md",
+    "courses/Computer Architecture/assets/Chapter 5",
     "courses/医药人工智能/assets/模型",
     "courses/database system/Chapter 9.md",
-    "courses/医药人工智能/模型.md",
     "courses/database system/Chapter 7.md",
     "courses/database system/Chapter 8.md",
     "courses/database system/Chapter 11.md",
-    "courses/database system/Chapter 12.md",
-    "courses/database system/assets/Chapter 12/file-20250428143259731.png",
-    "courses/database system/assets/Chapter 12/file-20250428142623813.png",
     "courses/database system/assets/Chapter 12",
     "self-study/cs106L/Lec11.md",
-    "courses/AI/Chapter 6.md",
-    "courses/AI/Chapter 4.md",
-    "courses/AI/Chapter 3.md",
-    "courses/Computer Architecture/Chapter 4.md",
-    "未命名.md",
-    "courses/Computer Architecture/assets/Chapter 4/file-20250422142045244.png",
-    "courses/Computer Architecture/assets/Chapter 4/file-20250422141935954.png",
-    "courses/Computer Architecture/assets/Chapter 4/file-20250422134852283.png",
-    "courses/OOP/Lec5.md",
-    "courses/OOP/Lec4.md",
-    "courses/database system/Chapter 2 Relational Modeling.md",
-    "courses/database system/Chapter 3.md",
-    "self-study/LHY MachineLearning/Lec2 What to do if my network fails to train.md",
-    "courses/database system/Chapter 4.md",
-    "courses/database system/Chapter 6.md",
-    "courses/hpc/note.md",
-    "俄语听写.md",
-    "社会实践分工.md",
-    "计算医疗.md",
-    "srtp.md",
     "未命名.canvas",
-    "backgrounds.md",
-    "self-study/LHY MachineLearning/assets/Lec2 What to do if my network fails to train/file-20250417154756142.png",
-    "self-study/LHY MachineLearning/assets/Lec2 What to do if my network fails to train/file-20250417153211813.png",
-    "self-study/LHY MachineLearning/assets/Lec2 What to do if my network fails to train/file-20250417152812060.png",
-    "self-study/LHY MachineLearning/assets/Lec2 What to do if my network fails to train",
-    "self-study/CS231n/assets/Lecture 1 Introduction of Deep Learning",
-    "self-study/CS231n/assets",
-    "self-study/CS231n",
-    "self-study/LHY MachineLearning/未命名",
-    "self-study/LHY MachineLearning/assets/Lecture 1 Introduction of Deep Learning",
-    "self-study/LHY MachineLearning/assets",
-    "self-study/LHY MachineLearning"
+    "self-study/LHY MachineLearning/assets/Lec2 What to do if my network fails to train"
   ]
 }

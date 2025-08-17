@@ -1,0 +1,2565 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="hhhjyz的笔记本">
+      
+      
+        <meta name="author" content="hhhjyz">
+      
+      
+        <link rel="canonical" href="https://hhhjyz.github.io/note/courses/%E5%8C%BB%E8%8D%AF%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%A8%A1%E5%9E%8B/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../image/head.jpg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>模型 - hhhjyz的笔记本</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../../../css/round.css">
+    
+      <link rel="stylesheet" href="../../../../css/extra.css">
+    
+      <link rel="stylesheet" href="https://fonts.loli.net/css2?family=Noto+Serif+SC&display=swap">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="light">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../../.." title="hhhjyz的笔记本" class="md-header__button md-logo" aria-label="hhhjyz的笔记本" data-md-component="logo">
+      
+  <img src="../../../../image/head.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            hhhjyz的笔记本
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              模型
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="light"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/hhhjyz/hhhjyz.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hhhjyz/note
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ads/Final/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  课程笔记
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../self-study/EECS498/Lec2%20Image%20Classification/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  自学
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../use/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  ZJU工具
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="hhhjyz的笔记本" class="md-nav__button md-logo" aria-label="hhhjyz的笔记本" data-md-component="logo">
+      
+  <img src="../../../../image/head.jpg" alt="logo">
+
+    </a>
+    hhhjyz的笔记本
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hhhjyz/hhhjyz.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hhhjyz/note
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    课程笔记
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            课程笔记
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    高级数据结构与算法分析
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            高级数据结构与算法分析
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ads/Final/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Review
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ads/Lec8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lec8 Dynamic Programming
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ads/Lec%209/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lec9 Greedy Algorithm
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ads/Lec%2010/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lec10 NP-Completeness
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ads/Lec11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lec11 Approximation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ads/Lec%2012/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lec12 Local Search
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ads/Lec14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lec14 Parallel Algorithm
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    计算机组成
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            计算机组成
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computer_organization/Chapter%201/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computer_organization/Chapter%202/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computer_organization/Chapter%204/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computer_organization/Chapter%205/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 5
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computer_organization/Chapter%206/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 6
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../physics/%E5%A4%A7%E7%89%A9%E5%AE%9E%E9%AA%8C%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    大学物理实验
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    数据库系统
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            数据库系统
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database%20system/chaper%201%20Introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chpater 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database%20system/Chapter%202%20Relational%20Modeling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database%20system/Chapter%203/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database%20system/Chapter%204/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database%20system/Chapter%205/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 5
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    计算机体系结构
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            计算机体系结构
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Computer%20Architecture/Chapter%201%20Fundamentals%20of%20computer%20design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Computer%20Architecture/Chapter%202/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Computer%20Architecture/Chapter%203/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Computer%20Architecture/Chapter%204/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Computer%20Architecture/Chapter%205/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 5
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    人工智能
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            人工智能
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/Chapter%202/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/Chapter%203/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/Chapter%204/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/Chapter%205/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 5
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/Chapter%206/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapter 6
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    面向对象程序设计
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            面向对象程序设计
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP/Lecture%208%20Stream/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lec8
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP/Lecture%209%20Exception/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lec9
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    自学
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            自学
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    EECS498-005
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            EECS498-005
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../self-study/EECS498/Lec2%20Image%20Classification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Image Classification
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../self-study/EECS498/Lec3%20Linear%20Classifiers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linear Classifiers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../self-study/EECS498/Lec4%20Optimization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Optimization
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../self-study/EECS498/Lec5%20Neural%20Network/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Neural Network
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../self-study/EECS498/Lec6%20Backpropagation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Backpropagation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../self-study/EECS498/Lec8%20CNN%20Architectures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CNN Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../self-study/EECS498/Lec9%20Hardware%20and%20Software/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hardware and Software
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../self-study/EECS498/Lec10%20Training%201/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Training 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../self-study/EECS498/Lec11%20Training%202/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Training 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../self-study/EECS498/Lec12%20Recurrent%20Neural%20Networks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Recurrent Neural Networks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../self-study/EECS498/Lec13%20Attention/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Attention
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../self-study/EECS498/Lec14%20Visualizing%20and%20Understanding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Visualizing and Understanding
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../self-study/EECS498/Lec15%20Object%20Detection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Object Detection
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    工具
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            工具
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../self-study/tools/conda/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    conda
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../use/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ZJU工具
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1 蛋白质功能注释的原理与方法
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2 模型构建
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2 模型构建">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#211" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.1 蛋白质序列信息
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 示例（GO术语）：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      模型构建
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      模型评估
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<p><img alt="" src="../assets/%E6%A8%A1%E5%9E%8B/file-20250501212230103.png" /></p>
+<h2 id="1">1 蛋白质功能注释的原理与方法<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<p>在蛋白质研究中，遵循“序列-结构-功能”的范式。目前，蛋白质功能由基因本体论 （GO）标准化，它包括三个方面：生物过程本体论 （BPO）、分子功能本体论 （MFO） 和细胞成分本体论 （CCO）
+<img alt="" src="../assets/%E6%A8%A1%E5%9E%8B/file-20250502101854729.png" /></p>
+<p>“序列-结构-函数”范式的示意图。序列是指蛋白质中氨基酸的排列。结构是指蛋白质原子的三维排列。功能是指蛋白质在生物体内发挥的特殊作用 。通常，蛋白质序列决定了它的结构，而结构又决定了它的功能。</p>
+<p>在过去的几十年里，已经提出了许多计算方法来预测蛋白质功能。这些方法根据它们使用的信息类型可分为四组：基于序列的方法、基于 3D 结构的方法、基于 PPI 网络的方法和基于混合信息的方法。需要注意的是，这些类别并不严格不同，它们之间存在重叠和相关性。例如，一些基于结构或 PPI 信息的计算方法也使用序列信息来预测蛋白质功能。</p>
+<h2 id="2">2 模型构建<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<h4 id="211">2.1.1 蛋白质序列信息<a class="headerlink" href="#211" title="Permanent link">&para;</a></h4>
+<p><strong>蛋白质序列信息</strong>是指蛋白质中氨基酸残基的线性排列顺序，这是蛋白质最基本的结构特征。</p>
+<p>主要特点：
+- <strong>表示方式</strong>：通常用20种标准氨基酸的单字母或三字母缩写表示（例如：A代表丙氨酸Alanine，R代表精氨酸Arginine等）
+- <strong>标准格式</strong>：常见的序列格式包括FASTA格式、UniProt格式等
+- <strong>序列长度</strong>：从几十到几千个氨基酸不等，平均约300个氨基酸</p>
+<p>示例（FASTA格式）：
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>&gt;sp|P99999|CYC_HUMAN Cytochrome c
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>MGDVEKGKKIFIMKCSQCHTVEKGGKHKTGPNLHGLFGRKTGQAPGYSYTAANKNKGIIWGEDTLMEYLENPKKYIPGTKMIFVGIKKKEERADLIAYLKKATNE
+</code></pre></div></p>
+<p>重要性：
+- 序列决定蛋白质的折叠方式和最终三维结构
+- 是预测蛋白质功能的基本输入数据
+- 通过序列比对可以推断蛋白质的进化关系</p>
+<p>蛋白质功能信息</p>
+<p><strong>蛋白质功能信息</strong>描述蛋白质在生物体内执行的生物学任务或角色。</p>
+<p>主要分类：
+- <strong>分子功能(Molecular Function)</strong>：描述蛋白质的分子活性，如催化活性或结合活性
+- <strong>生物过程(Biological Process)</strong>：描述蛋白质参与的生物学过程，如细胞凋亡、信号传导等
+- <strong>细胞组分(Cellular Component)</strong>：描述蛋白质在细胞中的定位，如细胞核、线粒体等</p>
+<p>功能注释系统：
+- <strong>基因本体论(GO，Gene Ontology)</strong>：最广泛使用的功能注释系统，提供标准化词汇表描述蛋白质功能
+- <strong>酶委员会编号(EC Number)</strong>：对酶的功能进行分类的数字代码系统
+- <strong>KEGG通路</strong>：描述蛋白质参与的代谢和信号通路</p>
+<h3 id="22-go">2.2 示例（GO术语）：<a class="headerlink" href="#22-go" title="Permanent link">&para;</a></h3>
+<ul>
+<li>GO:0005515 - 蛋白质结合(protein binding)</li>
+<li>GO:0006915 - 细胞凋亡过程(apoptotic process)</li>
+<li>GO:0005739 - 线粒体(mitochondrion)</li>
+</ul>
+<p>序列相似的蛋白质通常具有相似的功能，这是序列比对方法的基础</p>
+<p>基于序列的方法侧重于蛋白质序列，通过从中提取与功能相关的潜在特征来预测蛋白质功能。这些方法深入研究氨基酸序列中包含的信息，并试图捕捉嵌入其中的与蛋白质功能相关的细微特征</p>
+<p><img alt="" src="../assets/%E6%A8%A1%E5%9E%8B/file-20250502143459699.png" /></p>
+<p>首先，通过不同的方法从序列中提取特征。其次，将提取的特征输入到某种算法中。最后，通过训练模型预测未知蛋白质的功能，并计算它们属于特定 GO 项的概率。但是，BLAST 工具会在数据库中搜索与目标蛋白相似的序列，无需从序列中提取特征。</p>
+<p>以下是推荐的3-4个分类角度：</p>
+<ol>
+<li>
+<p><strong>代谢酶 (Metabolic Enzymes):</strong></p>
+<ul>
+<li><strong>功能：</strong> 这类蛋白质的主要作用是催化细胞内各种生物化学反应，是新陈代谢途径（如糖酵解、三羧酸循环、脂肪酸合成与分解等）的核心参与者。</li>
+<li><strong>特点：</strong> 通常具有特定的活性位点，序列上可能包含与辅酶或底物结合相关的保守模体（motifs）。</li>
+<li>
+<p><strong>例子：</strong> 己糖激酶、丙酮酸脱氢酶、脂肪酸合酶。
+2. <strong>转录调控因子 (Transcription Regulators):</strong></p>
+</li>
+<li>
+<p><strong>功能：</strong> 这类蛋白质通过与DNA特定序列结合，调控基因的转录（即基因的“开启”或“关闭”），从而控制细胞的功能和命运。</p>
+</li>
+<li><strong>特点：</strong> 通常包含DNA结合域（如锌指、螺旋-转角-螺旋等）以及与其他调控蛋白相互作用的结构域。</li>
+<li>
+<p><strong>例子：</strong> p53抑癌蛋白、Hox蛋白、类固醇激素受体。
+3. <strong>跨膜转运蛋白 (Transporters):</strong></p>
+</li>
+<li>
+<p><strong>功能：</strong> 这类蛋白质镶嵌在细胞膜或细胞器膜上，负责选择性地将离子、营养物质、代谢产物等分子跨膜运输。</p>
+</li>
+<li><strong>特点：</strong> 其序列通常包含一个或多个跨膜区域（疏水性氨基酸富集），形成通道或载体结构。</li>
+<li>
+<p><strong>例子：</strong> 葡萄糖转运蛋白 (GLUTs)、水通道蛋白 (Aquaporins)、钠钾泵 (Na+/K+-ATPase)。
+4. <strong>细胞骨架蛋白 (Cytoskeletal Proteins):</strong> (如果需要第四类)</p>
+</li>
+<li>
+<p><strong>功能：</strong> 这类蛋白质构成细胞的骨架系统，为细胞提供结构支持、维持细胞形态、参与细胞运动、细胞分裂以及细胞内物质运输等。</p>
+</li>
+<li><strong>特点：</strong> 通常能自组装成长丝状结构，具有重复性的结构单元。</li>
+<li><strong>例子：</strong> 肌动蛋白 (Actin)、微管蛋白 (Tubulin)、角蛋白 (Keratin)。</li>
+</ul>
+</li>
+</ol>
+<p><strong>选择这些角度的理由：</strong></p>
+<ul>
+<li><strong>功能相对明确且重要：</strong> 这几类蛋白质代表了细胞内一些最基本和核心的功能活动。</li>
+<li><strong>结构与序列特征的潜在差异：</strong> 不同功能的蛋白质往往在序列组成、结构域、二级结构和三级结构上有一定的差异，这为机器学习模型提供了学习和区分的基础。例如，跨膜蛋白通常有明显的疏水跨膜区，DNA结合蛋白有特定的DNA结合域。</li>
+<li><strong>数据可获得性：</strong> 这些类别的蛋白质在公共数据库 (如UniProt) 中有大量的注释信息和序列数据，便于收集训练样本。</li>
+<li><strong>符合项目要求：</strong> 能够满足你项目初期对3-4类进行多分类的需求。</li>
+</ul>
+<p><strong>在实际操作中，你需要注意：</strong></p>
+<ul>
+<li><strong>明确分类标准：</strong> 在收集数据时，要确保每个蛋白质被明确地归入一个类别。可以参考Gene Ontology (GO) 等数据库中的注释，选择那些主要功能明确属于某一类的蛋白质。</li>
+<li><strong>避免高度重叠：</strong> 虽然蛋白质功能复杂，可能存在“兼职”现象，但在初期进行多分类时，尽量选择功能界限相对清晰的类别和蛋白质样本。</li>
+</ul>
+<p>从代谢酶的角度，它们最主要和最系统化的分类方式是根据<strong>国际酶学委员会 (Enzyme Commission, EC)</strong> 的分类系统。这个系统根据酶所催化的化学反应类型将酶分为七大类，每一类下面又进一步细分为亚类和次亚类。</p>
+<p>对于代谢途径中的酶，它们都会归属于这七大类之一：</p>
+<ol>
+<li>
+<p><strong>EC 1: 氧化还原酶 (Oxidoreductases)</strong></p>
+<ul>
+<li><strong>功能：</strong> 催化氧化还原反应，即电子的转移。这些酶通常需要辅酶（如NAD<span class="arithmatex">\(^+\)</span>、FAD）作为电子的载体。</li>
+<li>
+<p><strong>代谢中的例子：</strong></p>
+<ul>
+<li><strong>脱氢酶 (Dehydrogenases)：</strong> 如乳酸脱氢酶（催化乳酸和丙酮酸之间的转化）、乙醇脱氢酶。</li>
+<li><strong>氧化酶 (Oxidases)：</strong> 如细胞色素c氧化酶（电子传递链的最终氧化酶）。</li>
+<li><strong>过氧化物酶 (Peroxidases)：</strong> 清除过氧化氢。
+2. <strong>EC 2: 转移酶 (Transferases)</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>功能：</strong> 催化一个分子官能团（如甲基、乙酰基、氨基、磷酸基等）从一个分子（供体）转移到另一个分子（受体）。</p>
+</li>
+<li>
+<p><strong>代谢中的例子：</strong></p>
+<ul>
+<li><strong>激酶 (Kinases)：</strong> 转移磷酸基，通常由ATP提供磷酸基，如己糖激酶（催化葡萄糖磷酸化）、蛋白激酶。</li>
+<li><strong>氨基转移酶 (Aminotransferases/Transaminases)：</strong> 转移氨基，在氨基酸代谢中非常重要，如丙氨酸氨基转移酶。</li>
+<li><strong>甲基转移酶 (Methyltransferases)：</strong> 转移甲基。
+3. <strong>EC 3: 水解酶 (Hydrolases)</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>功能：</strong> 催化化学键的水解反应，即利用水分子将一个大分子断裂成两个小分子。</p>
+</li>
+<li>
+<p><strong>代谢中的例子：</strong></p>
+<ul>
+<li><strong>蛋白酶/肽酶 (Proteases/Peptidases)：</strong> 水解蛋白质中的肽键，如胃蛋白酶、胰蛋白酶。</li>
+<li><strong>脂肪酶 (Lipases)：</strong> 水解甘油三酯（脂肪）生成甘油和脂肪酸。</li>
+<li><strong>糖苷酶 (Glycosidases)：</strong> 水解糖苷键，如淀粉酶（水解淀粉）、乳糖酶。</li>
+<li><strong>磷酸酶 (Phosphatases)：</strong> 去除磷酸基团，与激酶功能相反。
+4. <strong>EC 4: 裂解酶 (Lyases)</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>功能：</strong> 催化非水解、非氧化的方式裂解化学键，或从底物移去一个基团形成双键（或反向反应，将基团加到双键上）。</p>
+</li>
+<li>
+<p><strong>代谢中的例子：</strong></p>
+<ul>
+<li><strong>脱羧酶 (Decarboxylases)：</strong> 移去羧基并释放CO<span class="arithmatex">\(_2\)</span>，如丙酮酸脱羧酶。</li>
+<li><strong>醛缩酶 (Aldolases)：</strong> 如糖酵解中的果糖-1,6-二磷酸醛缩酶。</li>
+<li><strong>水合酶/脱水酶 (Hydratases/Dehydratases)：</strong> 如延胡索酸酶（催化延胡索酸水合生成苹果酸）。
+5. <strong>EC 5: 异构酶 (Isomerases)</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>功能：</strong> 催化分子内的结构重排，将一个分子转变为其同分异构体。</p>
+</li>
+<li>
+<p><strong>代谢中的例子：</strong></p>
+<ul>
+<li><strong>消旋酶 (Racemases) 和差向异构酶 (Epimerases)：</strong> 改变手性中心的构型，如丙氨酸消旋酶。</li>
+<li><strong>顺反异构酶 (Cis-trans isomerases)：</strong> 催化顺反异构。</li>
+<li><strong>分子内转移酶 (Intramolecular transferases)：</strong> 如磷酸葡萄糖异构酶（催化葡萄糖-6-磷酸和果糖-6-磷酸之间的转化）。
+6. <strong>EC 6: 连接酶 (Ligases)</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>功能：</strong> 催化两个分子连接形成新化学键的反应，此过程通常与ATP（或其他类似的核苷三磷酸）的水解相偶联以提供能量。</p>
+</li>
+<li>
+<p><strong>代谢中的例子：</strong></p>
+<ul>
+<li><strong>合成酶 (Synthetases)：</strong> 如谷氨酰胺合成酶（利用ATP连接谷氨酸和氨生成谷氨酰胺）。</li>
+<li><strong>羧化酶 (Carboxylases) (某些类型)：</strong> 如丙酮酸羧化酶（利用ATP将CO<span class="arithmatex">\(_2\)</span>加到丙酮酸上生成草酰乙酸）。</li>
+<li><strong>DNA连接酶 (DNA ligase)：</strong> 连接DNA片段。
+7. <strong>EC 7: 转位酶 (Translocases)</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>功能：</strong> 催化离子或分子跨膜转运，或其在膜内的分离。这类酶通常是膜蛋白。</p>
+</li>
+<li><strong>代谢中的例子：</strong><ul>
+<li><strong>ATP酶（某些类型作为离子泵）：</strong> 如H<span class="arithmatex">\(^+\)</span>-ATP酶（质子泵）。</li>
+<li><strong>许多参与物质跨膜运输的蛋白质</strong>，如线粒体内膜上的某些载体。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h1 id="_1">模型构建<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>好的，我们来详细分析一下之前为你设计的1D CNN（一维卷积神经网络）模型的构建流程。这个流程主要指的是在Keras中使用<code>Sequential</code> API来逐层搭建网络结构，并最终编译模型以备训练。</p>
+<p>模型构建的目标：</p>
+<p>我们的目标是构建一个能够接收蛋白质序列作为输入，并输出该蛋白质属于预定义的几个酶类别（EC1, EC2, EC3, EC5, EC6）中哪一个的概率的模型。</p>
+<p>回顾模型输入：</p>
+<p>在进入模型之前，原始的蛋白质氨基酸序列（如 "MKT...Y"）经过了以下预处理：</p>
+<ol>
+<li><strong>整数编码：</strong> 每个氨基酸字符（A, C, D,...W, Y, 以及一个代表未知氨基酸的'X'）被映射为一个唯一的整数（例如，A-&gt;1, C-&gt;2,..., X-&gt;21）。</li>
+<li><strong>序列填充/截断：</strong> 所有整数编码后的序列都被处理成统一的长度 <code>MAX_SEQUENCE_LENGTH</code>。较短的序列会在末尾用0进行填充（padding），较长的序列会被截断。 所以，模型的直接输入是一个形状为 <code>(batch_size, MAX_SEQUENCE_LENGTH)</code> 的2D整数张量。</li>
+</ol>
+<hr />
+<p><strong>模型各层详细分析 (Keras <code>Sequential</code> 模型)</strong></p>
+<p>我们使用的是Keras的<code>Sequential</code>模型，这意味着各层是线性堆叠的，前一层的输出是后一层的输入。</p>
+<p>Python</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>model = Sequential(name=&quot;Protein_1D_CNN&quot;)
+</code></pre></div>
+<ol>
+<li>
+<p><strong><code>Embedding</code>层 (嵌入层)</strong></p>
+<p>Python</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>model.add(Embedding(input_dim=VOCAB_SIZE,
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>                    output_dim=EMBEDDING_DIM,
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>                    input_length=MAX_SEQUENCE_LENGTH,
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>                    name=&quot;embedding_layer&quot;))
+</code></pre></div>
+<ul>
+<li><strong>目的：</strong> 将输入的整数编码的氨基酸序列转换为稠密的向量表示。这一层的主要作用是学习氨基酸之间的“语义”关系，并将每个氨基酸映射到一个固定维度的“嵌入向量”中。相比于稀疏的独热编码 (One-hot encoding)，嵌入层能更有效地表示特征，并且可以减少后续层的参数量。</li>
+<li><strong>参数解释：</strong><ul>
+<li><code>input_dim=VOCAB_SIZE</code>: 输入数据的词汇表大小。这里是不同氨基酸（加上填充符0和未知符'X'）的总数。例如，如果20种标准氨基酸+1个'X'+1个padding=0，那么可能是22。在我们的代码中，<code>VOCAB_SIZE</code> 被设置为 <code>len(char_to_int) + 1</code>，其中 <code>char_to_int</code> 包含了20个标准氨基酸和'X'，索引从1开始，所以 <code>VOCAB_SIZE</code> 实际上是 <code>(20+1) + 1 = 22</code>，代表索引0到21。</li>
+<li><code>output_dim=EMBEDDING_DIM</code>: 每个氨基酸嵌入向量的维度。这是一个超参数，例如设置为64，意味着每个氨基酸会被表示成一个64维的浮点数向量。</li>
+<li><code>input_length=MAX_SEQUENCE_LENGTH</code>: 输入序列的长度。</li>
+</ul>
+</li>
+<li><strong>输出：</strong> 形状为 <code>(batch_size, MAX_SEQUENCE_LENGTH, EMBEDDING_DIM)</code> 的3D张量。现在，序列中的每个位置不再是一个整数，而是一个 <code>EMBEDDING_DIM</code> 维的向量。
+2. <strong>第一个卷积块 (<code>Conv1D</code>, <code>MaxPooling1D</code>, <code>Dropout</code>)</strong></li>
+</ul>
+<p>Python</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>model.add(Conv1D(filters=NUM_FILTERS_1,
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>                 kernel_size=KERNEL_SIZE_1,
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>                 activation=&#39;relu&#39;,
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>                 padding=&#39;same&#39;,
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>                 name=&quot;conv1d_1&quot;))
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>model.add(MaxPooling1D(pool_size=2, name=&quot;maxpool1d_1&quot;))
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>model.add(Dropout(DROPOUT_RATE, name=&quot;dropout_1&quot;))
+</code></pre></div>
+<ul>
+<li><strong><code>Conv1D</code> (一维卷积层)</strong>:<ul>
+<li><strong>目的：</strong> 充当“模体扫描器”(motif scanner)。它在输入的氨基酸嵌入序列上滑动一个固定大小的卷积核（滤波器），以检测局部的氨基酸模式（例如，连续<code>KERNEL_SIZE_1</code>个氨基酸组成的短序列模式）。不同的滤波器会学习识别不同类型的模式。</li>
+<li><strong>参数解释：</strong><ul>
+<li><code>filters=NUM_FILTERS_1</code>: 卷积核的数量（也是输出特征图的深度）。例如128个，意味着这一层会学习128种不同的局部模式。</li>
+<li><code>kernel_size=KERNEL_SIZE_1</code>: 1D卷积窗口的长度。例如7，表示卷积核一次查看7个连续的氨基酸（的嵌入向量）。</li>
+<li><code>activation='relu'</code>: 激活函数，引入非线性，使得模型能学习更复杂的模式。ReLU (Rectified Linear Unit) 是常用的激活函数。</li>
+<li><code>padding='same'</code>: 填充策略。<code>'same'</code>表示在输入序列的两端进行填充，使得卷积操作后的输出序列长度与输入序列长度相同（对于卷积的“时间”维度而言）。</li>
+</ul>
+</li>
+<li><strong>输出：</strong> 形状为 <code>(batch_size, MAX_SEQUENCE_LENGTH, NUM_FILTERS_1)</code> 的3D张量。</li>
+</ul>
+</li>
+<li><strong><code>MaxPooling1D</code> (一维最大池化层)</strong>:<ul>
+<li><strong>目的：</strong> 对卷积层输出的特征图进行下采样。它通过取特征图局部区域的最大值来减少数据的维度，有助于：<ul>
+<li>减少后续层的计算量。</li>
+<li>提取最显著的特征，使得模型对模体在序列中的具体位置不那么敏感（平移不变性）。</li>
+</ul>
+</li>
+<li><strong>参数解释：</strong><ul>
+<li><code>pool_size=2</code>: 池化窗口的大小。这里为2，意味着将序列长度减半（大约）。</li>
+</ul>
+</li>
+<li><strong>输出：</strong> 形状为 <code>(batch_size, MAX_SEQUENCE_LENGTH / 2, NUM_FILTERS_1)</code> 的3D张量。</li>
+</ul>
+</li>
+<li><strong><code>Dropout</code> (丢弃层)</strong>:<ul>
+<li><strong>目的：</strong> 正则化技术，用于防止模型在训练数据上过拟合。它在训练过程中以一定的概率 (<code>DROPOUT_RATE</code>) 随机地将输入单元（神经元）的激活值设置为0。</li>
+<li><strong>参数解释：</strong><ul>
+<li><code>rate=DROPOUT_RATE</code>: 需要丢弃的输入单元的比例，例如0.4表示40%。</li>
+</ul>
+</li>
+<li><strong>工作方式：</strong> 迫使网络学习冗余表示，减少神经元之间的共同适应，从而提高模型的泛化能力。在测试时，Dropout层不起作用，所有单元都保持激活状态（但其输出会按比例缩小）。
+3. <strong>第二个卷积块 (与第一个类似，可选)</strong></li>
+</ul>
+</li>
+</ul>
+<p>Python</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>model.add(Conv1D(filters=NUM_FILTERS_2,
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>                 kernel_size=KERNEL_SIZE_2,
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>                 activation=&#39;relu&#39;,
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>                 padding=&#39;same&#39;,
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>                 name=&quot;conv1d_2&quot;))
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>model.add(MaxPooling1D(pool_size=2, name=&quot;maxpool1d_2&quot;))
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>model.add(Dropout(DROPOUT_RATE, name=&quot;dropout_2&quot;))
+</code></pre></div>
+<ul>
+<li><strong>目的：</strong> 在第一个卷积块提取的特征基础上，学习更高级别、更复杂的特征模式。通常，网络中更深的卷积层能捕捉到更大感受野的特征。</li>
+<li><strong>参数和工作方式</strong> 与第一个卷积块类似，但可以有不同的<code>filters</code>和<code>kernel_size</code>。</li>
+<li><strong>输出：</strong> 经过这个块后，序列长度会进一步减小（如果<code>pool_size=2</code>，则再减半），特征图的深度变为<code>NUM_FILTERS_2</code>。例如，形状变为 <code>(batch_size, MAX_SEQUENCE_LENGTH / 4, NUM_FILTERS_2)</code>。
+4. <strong><code>GlobalMaxPooling1D</code> (全局最大池化层)</strong></li>
+</ul>
+<p>Python</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>model.add(GlobalMaxPooling1D(name=&quot;global_maxpool1d&quot;))
+</code></pre></div>
+<ul>
+<li><strong>目的：</strong> 将前一个卷积块输出的每个特征图（对应每个滤波器）在整个序列维度上进行最大池化。也就是说，对于<code>NUM_FILTERS_2</code>个特征图中的每一个，它只保留该特征图在所有时间步（序列位置）上的最大值。</li>
+<li><strong>工作方式：</strong> 将形状为 <code>(batch_size, steps, features)</code> 的输入转换为形状为 <code>(batch_size, features)</code> 的输出。这有效地为每个输入序列生成了一个固定长度的特征向量，无论在卷积过程中序列长度如何变化。这个向量可以被看作是整个序列最重要的特征的总结。</li>
+<li><strong>替代方案：</strong> 可以使用<code>Flatten()</code>层，它会将所有特征图的所有值展平成一个长向量。但<code>GlobalMaxPooling1D</code> (或<code>GlobalAveragePooling1D</code>) 通常在序列分类中表现更好，因为它们对输入长度的变化更不敏感，并且能减少参数数量。</li>
+<li><strong>输出：</strong> 形状为 <code>(batch_size, NUM_FILTERS_2)</code> 的2D张量。
+5. <strong>第一个全连接（稠密）隐层 (<code>Dense</code>, <code>Dropout</code>)</strong></li>
+</ul>
+<p>Python</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>model.add(Dense(DENSE_UNITS, activation=&#39;relu&#39;, name=&quot;dense_hidden&quot;))
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>model.add(Dropout(DROPOUT_RATE, name=&quot;dropout_dense&quot;))
+</code></pre></div>
+<ul>
+<li><strong><code>Dense</code> (全连接层)</strong>:<ul>
+<li><strong>目的：</strong> 在卷积和池化层提取的特征基础上进行更高层次的非线性组合，以学习类别之间的复杂关系。</li>
+<li><strong>参数解释：</strong><ul>
+<li><code>units=DENSE_UNITS</code>: 该层神经元的数量，例如128。</li>
+<li><code>activation='relu'</code>: 激活函数。</li>
+</ul>
+</li>
+<li><strong>工作方式：</strong> 每个神经元都与前一层（<code>GlobalMaxPooling1D</code>的输出）的所有单元相连接。</li>
+<li><strong>输出：</strong> 形状为 <code>(batch_size, DENSE_UNITS)</code> 的2D张量。</li>
+</ul>
+</li>
+<li><strong><code>Dropout</code></strong>: 同样用于防止过拟合。
+6. <strong>输出层 (<code>Dense</code>)</strong></li>
+</ul>
+<p>Python</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>model.add(Dense(NUM_CLASSES, activation=&#39;softmax&#39;, name=&quot;output_softmax&quot;))
+</code></pre></div>
+<ul>
+<li><strong>目的：</strong> 最终的分类层，为每个输入序列输出其属于各个酶类别的概率。</li>
+<li><strong>参数解释：</strong><ul>
+<li><code>units=NUM_CLASSES</code>: 输出单元的数量，等于你要分类的酶的类别总数（例如5个类别）。</li>
+<li><code>activation='softmax'</code>: Softmax激活函数。它将输出层的原始输出（logits）转换为一个概率分布，确保所有输出概率值都在0到1之间，并且它们的总和为1。每个输出单元对应一个类别的概率。</li>
+</ul>
+</li>
+<li><strong>输出：</strong> 形状为 <code>(batch_size, NUM_CLASSES)</code> 的2D张量，其中每一行是一个概率分布。</li>
+</ul>
+</li>
+</ol>
+<hr />
+<p><strong>模型编译 (<code>model.compile(...)</code>)</strong></p>
+<p>在定义完模型结构后，需要编译模型来配置其学习过程：</p>
+<p>Python</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>model.compile(optimizer=&#39;adam&#39;,
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>              loss=&#39;categorical_crossentropy&#39;,
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>              metrics=[&#39;accuracy&#39;])
+</code></pre></div>
+<ul>
+<li><strong><code>optimizer='adam'</code> (优化器):</strong><ul>
+<li><strong>目的：</strong> 指定用于更新网络权重以最小化损失函数的算法。</li>
+<li><strong>'adam'</strong>: 一种常用的、自适应学习率的优化算法，通常在各种任务中表现良好，收敛速度较快。</li>
+</ul>
+</li>
+<li><strong><code>loss='categorical_crossentropy'</code> (损失函数):</strong><ul>
+<li><strong>目的：</strong> 衡量模型预测结果与真实标签之间的差异（“误差”）。训练过程的目标是最小化这个损失。</li>
+<li><strong>'categorical_crossentropy'</strong>: 适用于多分类问题，且真实标签是独热编码 (one-hot encoded) 形式（例如，<code>[0,1,0,0,0]</code> 代表属于第2类）。如果真实标签是整数形式（例如，<code>1</code> 代表属于第2类），则应使用 <code>sparse_categorical_crossentropy</code>。</li>
+</ul>
+</li>
+<li><strong><code>metrics=['accuracy']</code> (评估指标):</strong><ul>
+<li><strong>目的：</strong> 在训练和评估过程中监控的指标，用于判断模型的性能。</li>
+<li><strong>'accuracy'</strong>: 对于分类问题，准确率是最直观的指标之一，表示被正确分类的样本所占的比例。</li>
+</ul>
+</li>
+</ul>
+<hr />
+<p><strong>整体流程总结：</strong></p>
+<ol>
+<li><strong>输入序列</strong>首先通过<strong>嵌入层</strong>转换为向量序列，捕捉氨基酸的语义信息。</li>
+<li>然后，<strong>一系列卷积和池化层</strong>（卷积块）像特征提取器一样工作，从局部（短的氨基酸模式）到逐渐更全局的层面学习序列中的层次化特征。Dropout层在其中帮助防止过拟合。</li>
+<li><strong>全局池化层</strong>（如 <code>GlobalMaxPooling1D</code>）将卷积部分提取的可变长度特征图转换为固定长度的特征向量，代表了整个序列的关键信息。</li>
+<li>这个特征向量接着被送入<strong>一个或多个全连接（稠密）层</strong>，这些层进一步组合这些特征，并学习它们与最终酶类别之间的非线性映射关系。</li>
+<li>最后，<strong>带有Softmax激活的输出层</strong>产生每个类别的概率，从而完成分类任务。</li>
+<li><strong>编译步骤</strong>则为这个学习过程配置了优化器、损失函数和评估标准。</li>
+</ol>
+<p>这个流程体现了深度学习模型（特别是CNN）在处理序列数据时从原始输入中自动学习相关特征的强大能力。模型的参数（权重和偏置）会在训练过程中通过反向传播和优化器不断调整，以最小化损失函数。</p>
+<h1 id="_2">模型评估<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h1>
+<p>pip install <a href="https://ms-release.obs.cn-north-4.myhuaweicloud.com/2.2.14/MindSpore/cpu/x86_64/mindspore-2.2.14-cp37-cp37m-win_amd64.whl">https://ms-release.obs.cn-north-4.myhuaweicloud.com/2.2.14/MindSpore/cpu/x86_64/mindspore-2.2.14-cp37-cp37m-win_amd64.whl</a> --trusted-host ms-release.obs.cn-north-4.myhuaweicloud.com -i <a href="https://pypi.tuna.tsinghua.edu.cn/simple">https://pypi.tuna.tsinghua.edu.cn/simple</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; hhhjyz/All Rights Reserved.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.annotate", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top"], "search": "../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+        <script src="../../../../javascripts/mathjax.js"></script>
+      
+        <script src="../../../../javascripts/katex.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>
