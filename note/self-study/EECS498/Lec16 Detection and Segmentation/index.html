@@ -15,6 +15,10 @@
         <link rel="canonical" href="https://hhhjyz.github.io/note/self-study/EECS498/Lec16%20Detection%20and%20Segmentation/">
       
       
+        <link rel="prev" href="../Lec15%20Object%20Detection/">
+      
+      
+        <link rel="next" href="../../tools/conda/">
       
       
       <link rel="icon" href="../../../../image/head.jpg">
@@ -271,6 +275,8 @@
   
   
   
+    
+  
   
     
     
@@ -278,10 +284,12 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../Lec2%20Image%20Classification/" class="md-tabs__link">
           
   
@@ -1506,8 +1514,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -1519,17 +1529,20 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   
@@ -1542,7 +1555,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             自学
@@ -1553,8 +1566,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -1584,6 +1599,8 @@
       
         
       
+        
+      
     
     
     
@@ -1591,11 +1608,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
         
           
           <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
@@ -1611,7 +1628,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_1">
             <span class="md-nav__icon md-icon"></span>
             EECS498-005
@@ -1917,6 +1934,173 @@
 
               
             
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Detection and Segmentation
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Detection and Segmentation
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-slow-r-cnn-training" class="md-nav__link">
+    <span class="md-ellipsis">
+      1 Slow R-CNN Training
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-faster-r-cnn" class="md-nav__link">
+    <span class="md-ellipsis">
+      2 Faster R-CNN
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-object-detection-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      3 Object Detection Methods
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-cornernet" class="md-nav__link">
+    <span class="md-ellipsis">
+      4 CornerNet
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-semantic-segmentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      5 Semantic Segmentation 语义分割
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5 Semantic Segmentation 语义分割">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-sliding-window" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 Sliding Window
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-fully-convolutional-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 Fully Convolutional Network
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-instance-segmentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      6 Instance Segmentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6 Instance Segmentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-mask-r-cnn" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 Mask R-CNN
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-panoptic-segmentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      7 Panoptic Segmentation
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2125,6 +2309,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#6-instance-segmentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      6 Instance Segmentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6 Instance Segmentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-mask-r-cnn" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 Mask R-CNN
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-panoptic-segmentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      7 Panoptic Segmentation
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2173,6 +2390,36 @@
 <p>事先确定组别的数量</p>
 <p>为了做出更好的决策, 我们希望决策依赖于输入图像中一块较大的区域, 如果用 3<em> 3  的卷积核需要很多层才能积累到较大的感受野, 这样的计算可能在高精度图像上非常昂贵<br />
 于是我们需要通过</em><em>下采样(downsampling)</em><em> 和</em><em>上采样(upsampling)</em>* 来加速过程</p>
+<ul>
+<li>Downsampling: 池化，有一定步长的卷积</li>
+<li>Upsampling:  <ul>
+<li>Unpooling: <div align = center><img src="assets/Pasted%20image%2020250817182712.png" width = 50%></div><ul>
+<li>Nearest Neighbor: 用同样的数字填充</li>
+<li>Bilinear Interpolation:<img alt="" src="../assets/Pasted%20image%2020250817182837.png" /></li>
+<li>Max Unpooling: 记住MaxPooling 中，记住每个选取出的数字的位置，在Unpooing的过程中填回原来的位置</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>将每个下采样层和上采样层一一配对，选择哪种上采样取决于对应下采样的方式</p>
+<p><strong>Transposed Convolution:</strong> 可学习的上采样</p>
+<p>步长大于 1 的卷积可以理解为一种可学习的下采样, 我们如果使得步长小于 1, 岂不是就在做可学习的上采样, 输出大于输入了？</p>
+<p><img alt="" src="../assets/Pasted%20image%2020250817184129.png" /></p>
+<p>我们用输入张量的元素乘以卷积核得到 3<em> 3 的输出, 将输出加到输出张量上, 对重叠部分</em><em>求和</em>*, 然后移动一格输入, 移动两格输出, 继续反卷积下去</p>
+<h2 id="6-instance-segmentation">6 Instance Segmentation<a class="headerlink" href="#6-instance-segmentation" title="Permanent link">&para;</a></h2>
+<p>在计算机视觉和语义分割中, 有 "stuff" 和 "thing" 的概念  </p>
+<p>"stuff" 是不可数的, 通常为背景的物体, 例如草地, 天空, 
+没有明确的形状大小  </p>
+<p>"thing" 是可数的, 独立存在的物体, 例如人, 车, 有明确形状和大小, 可以被区别为不同的实例</p>
+<p>语义分割任务更进一步就到了<strong>实例分割(instance segmentation)</strong>, 要求把所有 "thing" 的实例都分割出来, 例如牛群中的每头牛, 这个任务基于目标检测算法, 对于每个检测出的对象, 要输出一个<strong>分割掩码(segmentation mask)</strong></p>
+<h3 id="61-mask-r-cnn">6.1 Mask R-CNN<a class="headerlink" href="#61-mask-r-cnn" title="Permanent link">&para;</a></h3>
+<p>建立在 Faster R-CNN 的基础上, 增加一个头，对每个检测出的对象上再跑一个 FCN 结构</p>
+<p><img alt="" src="../assets/Pasted%20image%2020250817184908.png" /></p>
+<p><img alt="" src="../assets/Pasted%20image%2020250817184920.png" /></p>
+<h2 id="7-panoptic-segmentation">7 Panoptic Segmentation<a class="headerlink" href="#7-panoptic-segmentation" title="Permanent link">&para;</a></h2>
+<p>为所有的像素打上标签，同时区分不同的things</p>
+<p>这些分割算法可以应用在人体位姿估计, 在人体各处设置多个关键点, 在 Mask R-CNN 上再加一个头(Head)来预测关键点就行</p>
 
 
 
