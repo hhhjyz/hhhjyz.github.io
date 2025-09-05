@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "7cc0841406251016",
+        "id": "1cfd9cd48f7338f1",
         "type": "tabs",
         "children": [
           {
-            "id": "6b5b92fcee00d32b",
+            "id": "1ec10af7a2067504",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "self-study/cs336/Lec01 Overview and Tokenization.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "Lec01 Overview and Tokenization"
             }
           }
         ]
@@ -49,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": " ",
+                "query": "`",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -155,6 +159,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:创建新数据库": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
@@ -163,24 +168,33 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "6b5b92fcee00d32b",
+  "active": "1ec10af7a2067504",
   "lastOpenFiles": [
+    "self-study/cs336/assets/Pasted image 20250903165956.png",
+    "self-study/cs336/assets/Pasted image 20250903164819.png",
+    "self-study/cs336/assets/Pasted image 20250903164350.png",
+    "self-study/cs336/assets",
+    "self-study/未命名.md",
+    "self-study/cs336/Lec01 Overview and Tokenization.md",
+    "self-study/cs336",
+    "self-study/EECS498/Lec19&20 Generative Models.md",
+    "self-study/EECS498/assets/Pasted image 20250819152041.png",
+    "self-study/EECS498/assets/Pasted image 20250819151426.png",
+    "self-study/EECS498/assets/Pasted image 20250819145637.png",
+    "self-study/EECS498/assets/Pasted image 20250819143819.png",
+    "self-study/EECS498/assets/Pasted image 20250819143544.png",
+    "self-study/EECS498/assets/Pasted image 20250819143450.png",
+    "self-study/EECS498/assets/Pasted image 20250819141432.png",
+    "self-study/EECS498/assets/Pasted image 20250819140030.png",
+    "self-study/EECS498/Lec18 Videos.md",
+    "self-study/EECS498/Lec17 3D Vision.md",
+    "self-study/EECS498/Lec16 Detection and Segmentation.md",
     "self-study/数据要素交易/课程知识框架.md",
     "self-study/数据要素交易/论文研读.md",
     "self-study/数据要素交易/大作业_备份.md",
     "self-study/数据要素交易/大作业_修复版.md",
     "self-study/数据要素交易/大作业.md",
     "self-study/数据要素交易/quiz.md",
-    "self-study/数据要素交易/assets/Pasted image 20250706161802.png",
-    "self-study/数据要素交易/assets/Pasted image 20250706092954.png",
-    "self-study/数据要素交易/assets/Pasted image 20250705220246.png",
-    "self-study/数据要素交易/assets/Pasted image 20250705220102.png",
-    "self-study/数据要素交易/assets/Pasted image 20250705220043.png",
-    "self-study/数据要素交易/assets/Pasted image 20250705215907.png",
-    "self-study/数据要素交易/assets/Pasted image 20250705215854.png",
-    "self-study/数据要素交易/assets/Pasted image 20250705215841.png",
-    "self-study/数据要素交易/assets/Pasted image 20250705215310.png",
-    "self-study/数据要素交易/assets/Pasted image 20250705214815.png",
     "self-study/数据要素交易/assets",
     "self-study/数据要素交易/Lec4 非合作博弈论基础（二）.md",
     "self-study/数据要素交易/Lec2 数据合规与安全.md",
@@ -198,19 +212,10 @@
     "self-study/EECS498/Lec4 Optimization.md",
     "self-study/EECS498/Lec3 Linear Classifiers.md",
     "self-study/EECS498/Lec2 Image Classification.md",
-    "self-study/EECS498/Lec16 Detection and Segmentation.md",
     "self-study/EECS498/Lec15 Object Detection.md",
-    "self-study/EECS498/Lec14 Visualizing and Understanding.md",
-    "self-study/EECS498/Lec13 Attention.md",
-    "self-study/EECS498/Lec12 Recurrent Neural Networks.md",
-    "self-study/EECS498/Lec11 Training 2.md",
-    "self-study/EECS498/Lec10 Training 1.md",
-    "self-study/EECS498/Lec1.md",
     "attachments",
     "self-study/d2l/assets/1 引言",
     "self-study/d2l/assets",
-    "self-study/d2l",
-    "self-study/cs106L",
     "未命名.canvas"
   ]
 }

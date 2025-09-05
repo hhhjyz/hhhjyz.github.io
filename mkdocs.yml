@@ -134,6 +134,8 @@ nav:
             - Attention: note/self-study/EECS498/Lec13 Attention.md
             - Visualizing and Understanding: note/self-study/EECS498/Lec14 Visualizing and Understanding.md
             - Object Detection: note/self-study/EECS498/Lec15 Object Detection.md
+            - Detection and Segmentation: note/self-study/EECS498/Lec16 Detection and Segmentation.md
+            - 3D Vision: note/self-study/EECS498/Lec17 3D Vision.md
         - 工具:
             - conda: note/self-study/tools/conda.md
     - ZJU工具: use.md
